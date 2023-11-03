@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BusinessDashboardComponent } from './BusinessUI/business-dashboard/business-dashboard.component';
 import { CompanySignupComponent } from './BusinessUI/company-signup/company-signup.component';
 import { CompanyLoginComponent } from './BusinessUI/company-login/company-login.component';
 
@@ -14,6 +15,7 @@ const routes: Routes = [
 
   { path: 'landing-page', component:LandingComponent},
   { path: 'track-page', component:TrackOrderComponent},
+  {path: 'dashboard', component:BusinessDashboardComponent},
   { path: "signup", component: CompanySignupComponent},
   {  path: "login", component: CompanyLoginComponent },
    

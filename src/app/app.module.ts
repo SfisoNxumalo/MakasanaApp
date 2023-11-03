@@ -7,7 +7,7 @@ import { CompanySignupComponent } from './BusinessUI/company-signup/company-sign
 import { CompanyLoginComponent } from './BusinessUI/company-login/company-login.component';
 import { LandingComponent } from './landing/landing.component';
 import { LandingNavBarComponent } from './landing-nav-bar/landing-nav-bar.component';
-// import {MatIconModule} from '@angu
+import {MatIconModule} from '@angular/material/icon';
 import { BusinessDashboardComponent } from './BusinessUI/business-dashboard/business-dashboard.component';
 import { TrackOrderComponent } from './UserUI/track-order/track-order.component';
 
@@ -24,8 +24,8 @@ import { TrackOrderComponent } from './UserUI/track-order/track-order.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
-    // MatIconModule
+    BrowserAnimationsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
