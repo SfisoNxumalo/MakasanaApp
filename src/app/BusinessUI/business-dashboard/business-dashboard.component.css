@@ -3,20 +3,27 @@
     .dash-holder{
         display: flex;
         flex-direction: column;
-        background-color: #63B8FF;
+        background-color: white;
     }
 
     /* ----------NAV---------- */
 
     nav
     {
+        background-color: blueviolet;
+        border-radius: 10px;
         padding: 10px;
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        height: 150px;
+        gap: 20px;
+    }
+
+    .nav-holder{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: normal;
-        height: 100px;
-        border-radius: 0px 0px;
     }
     
     .c-details{
@@ -26,16 +33,13 @@
         height: 100%;
         gap: 5px;
         color: white;
-        position: relative;
         width: 100%;
     }
 
     
     .c-details label:nth-child(1){
-        font-size: 22px;
-        font-weight: 700;
+        font-size: 18px;
         letter-spacing: 1px;
-        position: absolute;
         bottom: 0;
     }
     
@@ -50,18 +54,27 @@
         justify-content: center;
         align-items: center;
         display: flex;
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
         border-radius: 50%;
         background-color: white;
          /* margin-right: 3%; */
     }
 
     .prof {
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
         border-radius: 50%;
          /* margin-right: 3%; */
+    }
+
+    .stock-details{
+        margin: 10px 0px 0px 0px;
+        padding: 10px;
+        background-color: white;
+        height: 100%;
+        border-radius: 8px;
+        color: rgb(0, 0, 0);
     }
     
     .main-logo{
@@ -71,8 +84,7 @@
 
     .holder{
         background-color: white;
-        border-radius: 30px 30px 0 0;
-        padding: 10px;
+        padding: 12px 10px 10px 10px;
         display: flex; 
         gap: 10px;
         flex-direction: column;
@@ -99,13 +111,19 @@
         
     }
 
-    .products-div .labels label:nth-child(1){
-        font-size: 18px;
-        font-weight: 600;
-        text-align: center;
+    .item-holder{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
     }
 
-    .products-div .labels label:nth-child(2){
+    .lblHeaders{
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .products-div .labels label:nth-child(1){
         font-size: 14px;
         font-weight: 500;
         text-align: center;
@@ -115,9 +133,8 @@
         background-color: white;
         border-radius: 30px 30px 0 0;
         display: grid;
-        padding: 10px;
         grid-template-columns: repeat(2, 1fr);
-        gap: 5px; 
+        gap: 10px; 
     }
 
     .menu-item{
@@ -128,7 +145,26 @@
         align-items: center;
         border-radius: 15px;
         box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2);
-        
-        }
+    }
+
+    .main-logo2{
+        width: 120px;
+        height: 90px;
+    }
     
+    .menu-item2{
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2);
+    }
+
+    .menu-item2 label{ 
+        padding: 5px 0px;
+
+    }
+
 }
