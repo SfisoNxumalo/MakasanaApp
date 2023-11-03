@@ -1,0 +1,29 @@
+.bg-top{
+    background-color: purple;
+    height: 80px;
+    border-bottom-left-radius: 50px ;
+    border-bottom-right-radius: 50px;
+}
+.w-10{
+    width: 200px;
+}
+.ml{
+    margin-left: 20px;
+}
+.m{
+    margin-top: 7px;
+}
+.point{
+    width: 9px;
+    height: 9px;
+    font-size: 20px;
+    color: white;
+    border-radius: 100px;
+    background-color: black ;
+}
+
+
+
+.border-none{
+    border: none;
+}
