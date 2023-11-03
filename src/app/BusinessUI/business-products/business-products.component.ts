@@ -15,13 +15,13 @@ export class BusinessProductsComponent implements OnInit {
   ngOnInit(): void {
     this.mGet();
   }
-  products:any = [];
+  products:any = [{name:"b",}];
 
   mGet(){
     this.fakeApi.mGetProducts().subscribe({
       next: (res) => {(
-        this.products.push(res),
-        console.log(typeof(res))
+        this.products = res,
+        console.log(res)
       )},
       error: (err) => {
         console.log(err)

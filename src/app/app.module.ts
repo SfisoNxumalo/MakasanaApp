@@ -14,6 +14,7 @@ import { CompanyLoginComponent } from './BusinessUI/company-login/company-login.
 import { TrackOrderComponent } from './UserUI/track-order/track-order.component';
 import { OrderComponent } from './BusinessUI/order/order.component';
 import { ProcessComponent } from './BusinessUI/process/process.component';
+import { BusinessProductsComponent } from './BusinessUI/business-products/business-products.component';
 
 
 @NgModule({
@@ -24,12 +25,14 @@ import { ProcessComponent } from './BusinessUI/process/process.component';
     LandingComponent,
     LandingNavBarComponent,
     BusinessDashboardComponent,
-    TrackOrderComponent
+    TrackOrderComponent,
+    BusinessProductsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -35,13 +35,18 @@
         </div>
         
 
-        <div *ngFor="let product of products" class="item-holder">
+        <div  class="item-holder">
             <div class="products-div-ii">
-            
-                <div class="menu-item2">
-                        <img class="main-logo2" src="https://i.postimg.cc/t4jvtHq4/Package-box-brown-removebg-preview.png">
                 
-                        <label>Analytics</label>
+                <div *ngFor="let product of products" class="menu-item2">
+
+                    <img class="main-logo2" src="{{product.image}}">
+            
+                    <div class="prod-text">
+                        <label>{{product.title}}</label>
+                        <!-- <label>{{product.rating.rate}}</label> -->
+                        <label class="price">R{{product.price}}</label>
+                    </div>
             
                 </div>
             </div>
