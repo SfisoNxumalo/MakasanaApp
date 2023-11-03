@@ -4,7 +4,16 @@ import { BusinessProfileComponent } from './business-profile/business-profile.co
 import { CompanySignupComponent } from './company-signup/company-signup.component';
 import { CompanyLoginComponent } from './company-login/company-login.component';
 
+import { LandingComponent } from './landing/landing.component';
+import { TrackOrderComponent } from './UserUI/track-order/track-order.component';
+
+
+
 const routes: Routes = [
+
+  {path:'',redirectTo:'landing-page', pathMatch: 'full' },
+  { path: 'landing-page', component:LandingComponent},
+  { path: 'track-page', component:TrackOrderComponent},
 
   {
     path: "profile", component: BusinessProfileComponent
