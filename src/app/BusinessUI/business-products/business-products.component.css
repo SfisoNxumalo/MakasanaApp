@@ -5,6 +5,8 @@
         flex-direction: column;
         background-color: white;
         padding: 10px 12px;
+        height: 100vh;
+        max-height: 100%;
     }
 
     /* ----------NAV---------- */
@@ -16,7 +18,8 @@
         padding: 10px;
         display: flex;
         flex-direction: column;
-        height: 160px;
+        max-height: 160px;
+        min-height: auto;
         gap: 10px;
     }
 
@@ -70,11 +73,31 @@
 
     .stock-details{
         margin: 10px 0px 0px 0px;
-        padding: 10px;
+        padding: 5px;
         background-color: white;
-        height: 100%;
+        height: auto;
         border-radius: 8px;
         color: rgb(0, 0, 0);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        bottom: 0;
+    }
+
+    .stock-details mat-icon{
+    }
+
+    .stock-details input{
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+    }
+
+    .stock-details input:focus{
+        width: 100%;
+        border: none;
     }
     
     .main-logo{
@@ -88,6 +111,23 @@
         gap: 20px;
         flex-direction: column;
         padding-top: 13px;
+    }
+
+    .holder1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .holder1 label{
+        color: rgb(160, 160, 160);
+    }
+
+    .holder1 img{
+        width: 100px;
+        height: 100px;
     }
 
     .products-div{
@@ -123,7 +163,7 @@
     }
 
     .lblHeaders{
-        font-size: 16px;
+        font-size: 18px;
         font-weight: 600;
     }
 
