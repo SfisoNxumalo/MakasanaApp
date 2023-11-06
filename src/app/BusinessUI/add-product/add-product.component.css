@@ -1,3 +1,5 @@
+@media only screen and (max-width:700px){
+
 .holder{
     background-color: white;
     min-width: 100%;
@@ -5,6 +7,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 10px;
+}
+
+.image-view{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.details-view{
+  width: 100%;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 /* __________ IMAGE SELECTOR _______ */
@@ -42,12 +62,10 @@
   .btn-upload img{
     width: 150px;
     height: 150px;
-    position: absolute;
     border-radius: 10px;
     border: none;
     outline: none;
-    background-repeat: no-repeat;
-    background-size: cover;
+    position: absolute;
   }
 
   .btn-upload input mat-icon {
@@ -65,3 +83,20 @@
     border: none;
     cursor: pointer;
   }
+
+  .input-field{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input-field input, .input-field textarea{
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+  }
+
+  .input-field textarea{
+    resize: none
+  }
+}
