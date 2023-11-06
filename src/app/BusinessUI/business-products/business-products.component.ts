@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { FakeStoreService } from 'src/app/fake-store.service';
 
 @Component({
@@ -15,19 +16,23 @@ export class BusinessProductsComponent implements OnInit {
   ngOnInit(): void {
     this.mGet();
   }
-  products:any = [{name:"b",}];
+  blLoadComplete = true;
+  products:any = [];
 
   mGet(){
     this.fakeApi.mGetProducts().subscribe({
       next: (res) => {(
         this.products = res,
-        console.log(res)
+        console.log(res),
+        this.blLoadComplete = false
       )},
       error: (err) => {
         console.log(err)
+        this.blLoadComplete = false
       }
 
     })
+
 
     
   }

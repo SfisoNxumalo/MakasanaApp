@@ -9,7 +9,7 @@
             </div>
     
             <div class="hamburger-icon">
-                <div class="noti">
+                <div class="noti" routerLink="/add-product">
                     <mat-icon>add</mat-icon>
                 </div>
                 
@@ -24,7 +24,7 @@
            <input type="search" placeholder="Search..">
 
         </div>
-        
+        <mat-progress-bar *ngIf="blLoadComplete" mode="indeterminate"></mat-progress-bar>
         
     </nav>
 
@@ -32,6 +32,7 @@
 
         <div class="item-holder">
             <label class="lblHeaders">Products</label>
+            
         </div>
         
 

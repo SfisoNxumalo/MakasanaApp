@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import {MatIconModule} from '@angular/material/icon';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,6 +16,7 @@ import { TrackOrderComponent } from './UserUI/track-order/track-order.component'
 import { OrderComponent } from './BusinessUI/order/order.component';
 import { ProcessComponent } from './BusinessUI/process/process.component';
 import { BusinessProductsComponent } from './BusinessUI/business-products/business-products.component';
+import { AddProductComponent } from './BusinessUI/add-product/add-product.component';
 
 
 @NgModule({
@@ -26,13 +28,15 @@ import { BusinessProductsComponent } from './BusinessUI/business-products/busine
     LandingNavBarComponent,
     BusinessDashboardComponent,
     TrackOrderComponent,
-    BusinessProductsComponent
+    BusinessProductsComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
