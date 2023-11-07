@@ -12,10 +12,11 @@ import { BusinessProductsComponent } from './BusinessUI/business-products/busine
 import { AddProductComponent } from './BusinessUI/add-product/add-product.component';
 import { ProductDetailComponent } from './UserUI/cart/product-detail/product-detail.component';
 import { CartComponent } from './UserUI/cart/cart.component';
+import { ViewAProductComponent } from './BusinessUI/view-a-product/view-a-product.component';
 
 const routes: Routes = [
 
-  {path:'',redirectTo:'landing-page', pathMatch: 'full' },
+  {path:'',redirectTo:'view-product', pathMatch: 'full' },
 
   { path: 'landing-page', component:LandingComponent},
   { path: 'track-page', component:TrackOrderComponent},
@@ -27,7 +28,8 @@ const routes: Routes = [
   {  path: "my-products", component: BusinessProductsComponent },
   {path: "cart", component: CartComponent},
   {path: "add-product", component: AddProductComponent},
-  {path: "product-detail", component: ProductDetailComponent}
+  {path: "product-detail", component: ProductDetailComponent},
+  {path:"view-product", component:ViewAProductComponent}
 
 ];
 
