@@ -45,6 +45,7 @@ import { CartComponent } from './UserUI/cart/cart.component';
     ViewAProductComponent,
     CartComponent
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,

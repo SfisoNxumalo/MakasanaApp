@@ -13,6 +13,10 @@ export class FakeStoreService {
   constructor(private httpclient: HttpClient) { }
 
   mGetProducts(){
-    return this.httpclient.get(endpoint+"products")
+    return this.httpclient.get(endpoint + "products")
+  }
+
+  mGetSelectedProduct(id:any){
+    return this.httpclient.get(endpoint + `${id}`)
   }
 }
