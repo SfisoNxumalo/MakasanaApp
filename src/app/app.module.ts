@@ -20,7 +20,7 @@ import { OrderComponent } from './BusinessUI/order/order.component';
 import { ProcessComponent } from './BusinessUI/process/process.component';
 import { BusinessProductsComponent } from './BusinessUI/business-products/business-products.component';
 import { AddProductComponent } from './BusinessUI/add-product/add-product.component';
-import { ProductsComponent } from './User/products/products.component';
+import { UserProductsComponent } from './UserUI/user-products/user-products.component';
 
 
 @NgModule({
@@ -34,7 +34,8 @@ import { ProductsComponent } from './User/products/products.component';
     TrackOrderComponent,
     BusinessProductsComponent,
     AddProductComponent,
-    ProductsComponent
+    UserProductsComponent,
+    
   ],
   imports: [
     BrowserModule,
