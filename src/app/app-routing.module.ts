@@ -6,6 +6,10 @@ import { CompanyLoginComponent } from './BusinessUI/company-login/company-login.
 
 import { LandingComponent } from './landing/landing.component';
 import { TrackOrderComponent } from './UserUI/track-order/track-order.component';
+import { OrderComponent } from './BusinessUI/order/order.component';
+import { ProcessComponent } from './BusinessUI/process/process.component';
+import { BusinessProductsComponent } from './BusinessUI/business-products/business-products.component';
+import { AddProductComponent } from './BusinessUI/add-product/add-product.component';
 
 
 
@@ -15,13 +19,13 @@ const routes: Routes = [
 
   { path: 'landing-page', component:LandingComponent},
   { path: 'track-page', component:TrackOrderComponent},
+  { path: 'orders', component:OrderComponent},
+  { path: 'process', component:ProcessComponent},
   {path: 'dashboard', component:BusinessDashboardComponent},
   { path: "company-signup", component: CompanySignupComponent},
   {  path: "company-login", component: CompanyLoginComponent },
-   
- 
-  
-
+  {  path: "my-products", component: BusinessProductsComponent },
+  {path: "add-product", component: AddProductComponent}
 ];
 
 @NgModule({

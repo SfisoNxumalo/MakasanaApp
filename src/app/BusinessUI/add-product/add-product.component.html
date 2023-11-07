@@ -1,0 +1,48 @@
+<div class="holder">
+    <div class="details-holder">
+        <div class="image-view">
+        
+            <div class="btn-upload">
+                <mat-icon>camera_enhance</mat-icon>
+                <input type="file" accept="image/png, image/jpeg" (change)= "loadImage($event)">
+                <img [src]="track.path">
+            </div>
+
+        </div>
+
+        <div class="details-view">
+
+            <div class="input-field">
+                <label>Product title:</label>
+                <input type="text" placeholder="Title">
+            </div>
+
+            <div class="input-field">
+                <label>Product Description:</label>
+                <textarea rows="6" autocomplete="on" autocorrect="true" cols="33"  type="text" placeholder="Tell customer more about your product"></textarea>
+            </div>
+
+            <button class="btnmeta-data">Meta data +</button>
+
+            <div class="input-field">
+                <label>Product Price:</label>
+                <input type="text" placeholder="Price">
+            </div>
+
+            <div class="input-field">
+                <label>Product Quantity:</label>
+                <input type="number" placeholder="Quantity">
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="btnSave">
+            <button>Save</button>
+    </div>
+
+</div>    
+
+
+
