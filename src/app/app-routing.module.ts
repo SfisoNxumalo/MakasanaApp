@@ -10,6 +10,12 @@ import { OrderComponent } from './BusinessUI/order/order.component';
 import { ProcessComponent } from './BusinessUI/process/process.component';
 import { BusinessProductsComponent } from './BusinessUI/business-products/business-products.component';
 import { AddProductComponent } from './BusinessUI/add-product/add-product.component';
+import { ProductDetailComponent } from './BusinessUI/product-detail/product-detail.component';
+import { CartComponent } from './UserUI/cart/cart.component';
+import { ProfileComponent } from './profiles/profile/profile.component';
+import { SlidebarComponent } from './profiles/slidebar/slidebar.component';
+import { AboutUsComponent } from './profiles/about-us/about-us.component';
+import { ContactUsComponent } from './profiles/contact-us/contact-us.component';
 import { UserProductsComponent } from './UserUI/user-products/user-products.component';
 
 
@@ -26,8 +32,15 @@ const routes: Routes = [
   { path: "company-signup", component: CompanySignupComponent},
   {  path: "company-login", component: CompanyLoginComponent },
   {  path: "my-products", component: BusinessProductsComponent },
+  {path: "cart", component: CartComponent},
   {path: "add-product", component: AddProductComponent},
-  {  path: "products", component: UserProductsComponent },
+  {  path: "products", component: UserProductsComponent },,
+  { path: 'Profile-component', component: ProfileComponent },
+  {path: 'Slide-component', component: SlidebarComponent},
+  {path: 'AboutUs-component', component: AboutUsComponent},
+  {path: 'ContactUs-component', component: ContactUsComponent},
+  {path: "product-detail", component: ProductDetailComponent}
+
 ];
 
 @NgModule({
