@@ -30,6 +30,10 @@ import { UserProductsComponent } from './UserUI/user-products/user-products.comp
 
 
 
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { CartComponent } from './UserUI/cart/cart.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,10 +47,11 @@ import { UserProductsComponent } from './UserUI/user-products/user-products.comp
     BusinessProductsComponent,
     AddProductComponent,
     ViewAProductComponent,
+    CartComponent,
     UserProductsComponent,
     OrderComponent,
     ProcessComponent,
-    ContactUsComponent,
+    
     
   ],
   imports: [

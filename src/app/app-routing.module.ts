@@ -35,10 +35,6 @@ const routes: Routes = [
   {path: "cart", component: CartComponent},
   {path: "add-product", component: AddProductComponent},
   {  path: "products", component: UserProductsComponent },,
-  { path: 'Profile-component', component: ProfileComponent },
-  {path: 'Slide-component', component: SlidebarComponent},
-  {path: 'AboutUs-component', component: AboutUsComponent},
-  {path: 'ContactUs-component', component: ContactUsComponent},
   {path: "product-detail", component: ProductDetailComponent}
 
 ];
