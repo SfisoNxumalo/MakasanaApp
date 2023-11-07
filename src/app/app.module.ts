@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import {MatIconModule} from '@angular/material/icon';
@@ -9,6 +12,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LandingComponent } from './landing/landing.component';
 import { LandingNavBarComponent } from './landing-nav-bar/landing-nav-bar.component';
@@ -26,6 +30,7 @@ import { ViewAProductComponent } from './BusinessUI/view-a-product/view-a-produc
 @NgModule({
   declarations: [
     AppComponent,
+
     CompanySignupComponent,
     CompanyLoginComponent,
     LandingComponent,
@@ -44,7 +49,11 @@ import { ViewAProductComponent } from './BusinessUI/view-a-product/view-a-produc
     MatProgressBarModule,
     MatFormFieldModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatSlideToggleModule,
+    MatSidenavModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
