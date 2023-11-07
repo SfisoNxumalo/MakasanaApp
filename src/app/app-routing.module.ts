@@ -10,6 +10,8 @@ import { OrderComponent } from './BusinessUI/order/order.component';
 import { ProcessComponent } from './BusinessUI/process/process.component';
 import { BusinessProductsComponent } from './BusinessUI/business-products/business-products.component';
 import { AddProductComponent } from './BusinessUI/add-product/add-product.component';
+import { ProductDetailComponent } from './BusinessUI/product-detail/product-detail.component';
+import { CartComponent } from './UserUI/cart/cart.component';
 
 
 
@@ -25,7 +27,11 @@ const routes: Routes = [
   { path: "signup", component: CompanySignupComponent},
   {  path: "login", component: CompanyLoginComponent },
   {  path: "my-products", component: BusinessProductsComponent },
-  {path: "add-product", component: AddProductComponent}
+  {path: "cart", component: CartComponent},
+  {path: "add-product", component: AddProductComponent},
+
+  {path: "product-detail", component: ProductDetailComponent}
+
 ];
 
 @NgModule({
