@@ -16,8 +16,8 @@ const routes: Routes = [
   { path: 'landing-page', component:LandingComponent},
   { path: 'track-page', component:TrackOrderComponent},
   {path: 'dashboard', component:BusinessDashboardComponent},
-  { path: "signup", component: CompanySignupComponent},
-  {  path: "login", component: CompanyLoginComponent },
+  { path: "company-signup", component: CompanySignupComponent},
+  {  path: "company-login", component: CompanyLoginComponent },
    
  
   

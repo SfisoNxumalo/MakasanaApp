@@ -22,12 +22,12 @@
     <div class="sidenav no" *ngIf="sidebar">
         <a href="javascript:void(0)" class="closebtn text-white" (click)="closeBar()" >&times;</a>
         <div class="d-flex">
-            <button class="btn border-white border-radius-10 text-white mt-2 pt-2 "  style="margin-left: 23px; ">
+            <button class="btn border-white border-radius-10 text-white mt-2 pt-2 "  style="margin-left: 23px; "  routerLink="/company-login">
                 Login
             </button>
-            <button class="btn border-white border-radius-10 text-white mt-2 pt-2 "  style="margin-left: 23px; width: 100px;">
+            <button class="btn border-white border-radius-10 text-white mt-2 pt-2 "  style="margin-left: 23px; width: 100px;" routerLink="/company-signup">
                 Sign Up
             </button>
         </div>
-        <a class="text-white mt-3" style="font-size: 17px;">Sign up your business</a>
+        <a class="text-white mt-3" style="font-size: 17px;" routerLink="/company-signup">Sign up your business</a>
     </div>
