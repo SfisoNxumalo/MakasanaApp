@@ -5,16 +5,27 @@
     height: 65px;
 
 }
+.postion-fixed-1{
+
+    position: fixed;
+    bottom: 70px;
+    height: 65px;
+
+}
 .home-icon{
     height: 35px;
     width: 37px;
 }
 
 .justify-content-space-between{
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .justify-content-space-around{
-    justify-content: space-between;
+    justify-content: space-around;
+
+}
+.font-total{
+    font-size: 30px;
 }
 .font-amount-items{
 font-size: 19px;
@@ -25,6 +36,20 @@ height: 40px;
 /* width:  30px; */
 }
 .img{
-    width: 60px;
+    width: 90px;
     height: 60px;
+}
+.ml{
+    margin-left: 50px;
+    width: 100px;
+}
+.pl{
+ 
+    padding-left: 16px;
+    height: 29px;
+    border-radius: 20px;
+}
+.ml-2{
+    margin-left: 20px;
+
 }
