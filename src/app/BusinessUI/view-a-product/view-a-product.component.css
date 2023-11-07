@@ -16,6 +16,7 @@
     flex-direction: column;
     background-color: white;
     min-height: 100%;
+    padding: 0px 5px;
   
   }
   
@@ -110,6 +111,26 @@
     .input-field textarea{
       resize: none
     }
+
+    
+    .input-fieldD{
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .input-fieldD input, 
+    .input-fieldD textarea, 
+    .input-fieldD select{
+      padding: 5px;
+      border: 0px solid black;
+      border-radius: 5px;
+      outline: none;
+      background-color: transparent;
+    }
+  
+    .input-fieldD textarea{
+      resize: none
+    }
   
     .btnmeta-data{
       width: fit-content;
@@ -148,7 +169,7 @@
     }
   
     .btnSave button mat-icon{
-      color: green;
+      color: black;
       font-weight: bold;
     }
   

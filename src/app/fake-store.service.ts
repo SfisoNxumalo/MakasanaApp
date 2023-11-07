@@ -17,6 +17,6 @@ export class FakeStoreService {
   }
 
   mGetSelectedProduct(id:any){
-    return this.httpclient.get(endpoint + `${id}`)
+    return this.httpclient.get(endpoint + "products/" + `${id}`)
   }
 }
