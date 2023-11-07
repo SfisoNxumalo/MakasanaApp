@@ -30,7 +30,7 @@
 
 .details-view{
   width: 100%;
-  padding: 10px 12px 55px 10px;
+  padding: 10px 12px 60px 10px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -121,6 +121,39 @@
   }
 
   .btnSave{
+    background-color: transparent;
+    padding: 0px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-self: end;
+    border: none;
+    outline: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+  }
+
+  .btnSave button{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    font-size: 18px;
+    width: 100%;
+    border-radius: 8px;
+
+  }
+
+  .btnSave button mat-icon{
+    color: green;
+    font-weight: bold;
+  }
+
+  .bottom-nav{
+    background-color: brown;
     background-color: white;
     padding: 8px;
     position: fixed;
@@ -136,15 +169,36 @@
     width: 100%;
   }
 
-  .btnSave button{
-    background-color: black;
-    outline: none;
-    border: none;
-    color: white;
-    padding: 10px 5px;
-    font-size: 18px;
+  .nav-options{
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: transparent;
     width: 100%;
-    border-radius: 8px;
+    border: none;
+    gap: 0px;
+  }
 
+  .nav-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-item button{
+    background-color: transparent;
+    padding: 0px;
+    border: none;
+    outline: none;
+  }
+
+  .nav-options .nav-item:nth-child(3),
+  .nav-options .nav-item:nth-child(3) mat-icon{
+    color: blueviolet;
+  }
+  .nav-item label{
+    font-size: 11px;
   }
 }

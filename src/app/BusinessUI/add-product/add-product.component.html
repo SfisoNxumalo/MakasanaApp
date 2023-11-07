@@ -1,4 +1,8 @@
 <div class="holder">
+    <div class="btnSave">
+        <button><mat-icon>done</mat-icon></button>
+    </div>
+
     <div class="details-holder">
         <div class="image-view">
         
@@ -13,13 +17,17 @@
         <div class="details-view">
 
             <div class="input-field">
-                <label>Product title:</label>
+                
+                <div class="">
+                    <label>Product Title:</label>
+                    <label>*</label>
+                </div>
                 <input type="text" placeholder="Title">
             </div>
 
             <div class="input-field">
                 <label>Product Description:</label>
-                <textarea rows="6" autocomplete="on" autocorrect="true" cols="33"  type="text" placeholder="Tell customer more about your product"></textarea>
+                <textarea rows="6" autocomplete="on" autocorrect="true" cols="33"  type="text" placeholder="Tell customers more about your product"></textarea>
             </div>
 
             <button class="btnmeta-data">Meta data +</button>
@@ -45,8 +53,36 @@
     </div>
     
 
-    <div class="btnSave">
-            <button>Save</button>
+    <div class="bottom-nav">
+
+        <div class="nav-options" >
+
+            <div class="nav-item">
+                <button routerLink="/dashboard"><mat-icon>home</mat-icon></button>
+            </div>
+
+            <div class="nav-item">
+                <button><mat-icon>assignment</mat-icon></button>
+                
+            </div>
+
+            <div class="nav-item">
+                <button routerLink="/my-products"><mat-icon>store</mat-icon></button>
+                <label>Products</label>
+            </div>
+
+            <div class="nav-item">
+                <button><mat-icon>launch</mat-icon></button>
+                
+            </div>
+
+            <div class="nav-item">
+                <button><mat-icon>account_circle</mat-icon></button>
+                
+            </div>
+
+        </div>
+            
     </div>
 
 </div>    
