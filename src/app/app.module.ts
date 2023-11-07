@@ -26,14 +26,9 @@ import { BusinessProductsComponent } from './BusinessUI/business-products/busine
 import { AddProductComponent } from './BusinessUI/add-product/add-product.component';
 import { ViewAProductComponent } from './BusinessUI/view-a-product/view-a-product.component';
 
-
-import { ProfileComponent } from './profiles/profile/profile.component';
-import { SlidebarComponent } from './profiles/slidebar/slidebar.component';
-
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatSidenavModule} from '@angular/material/sidenav';
-import { AboutUsComponent } from './profiles/about-us/about-us.component';
-import { ContactUsComponent } from './profiles/contact-us/contact-us.component';
+import { CartComponent } from './UserUI/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +42,8 @@ import { ContactUsComponent } from './profiles/contact-us/contact-us.component';
     TrackOrderComponent,
     BusinessProductsComponent,
     AddProductComponent,
-    ViewAProductComponent
+    ViewAProductComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

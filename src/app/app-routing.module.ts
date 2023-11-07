@@ -12,12 +12,6 @@ import { BusinessProductsComponent } from './BusinessUI/business-products/busine
 import { AddProductComponent } from './BusinessUI/add-product/add-product.component';
 import { ProductDetailComponent } from './BusinessUI/product-detail/product-detail.component';
 import { CartComponent } from './UserUI/cart/cart.component';
-import { ProfileComponent } from './profiles/profile/profile.component';
-import { SlidebarComponent } from './profiles/slidebar/slidebar.component';
-import { AboutUsComponent } from './profiles/about-us/about-us.component';
-import { ContactUsComponent } from './profiles/contact-us/contact-us.component';
-
-
 
 const routes: Routes = [
 
@@ -33,10 +27,6 @@ const routes: Routes = [
   {  path: "my-products", component: BusinessProductsComponent },
   {path: "cart", component: CartComponent},
   {path: "add-product", component: AddProductComponent},
-  { path: 'Profile-component', component: ProfileComponent },
-  {path: 'Slide-component', component: SlidebarComponent},
-  {path: 'AboutUs-component', component: AboutUsComponent},
-  {path: 'ContactUs-component', component: ContactUsComponent},
   {path: "product-detail", component: ProductDetailComponent}
 
 ];
