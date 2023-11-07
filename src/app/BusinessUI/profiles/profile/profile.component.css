@@ -1,0 +1,132 @@
+ /* .form-control{
+  position: relative;
+  left: 500px;
+margin-bottom: 20px;
+
+
+}
+.labels{
+  position: relative;
+  left: 400px;
+
+
+}
+.text-right{
+  position: relative;
+  left: 500px;
+
+}
+.button{
+  position: relative;
+  left: 500px;
+  top: 300px;
+}  */
+/* .form-group{
+  position: relative;
+  bottom: 20px;
+} */
+
+.form-control{
+  width: 150px;
+}
+.btn {
+  position: relative;
+  left: 50px;
+  top:50px;
+  width: 300px;
+}
+form{
+  position: relative;
+ margin-top: 10px;
+}
+.form-group{
+  position: relative;
+  left: 40px;
+  top: 30px;
+}
+h2{
+  position: relative;
+  left: 40px;
+  top: 30px;
+}
+#exampleInputPassword1{
+  position: relative;
+ margin-left: 15px;
+}
+.names{
+  position: relative;
+  left: 2px;
+}
+.email{
+  margin-left: 10%;
+}
+.industry{
+margin-left:10%;
+}
+.Zip{
+  margin-left: 10%;
+}
+.State{
+  margin-left: 10px;
+}
+.form-controls{
+  width: 0px;
+}
+/* img{
+  position: relative;
+  margin-left: 30px;
+} */
+/* .container{
+
+  border-color: rgb(20, 7, 10); */
+   /* background-color:rgb(250, 249, 249) ; */
+
+   /* height: 80px; */
+  /* border-bottom: 100%; */
+ /* /* border-width: 50px; */
+ /* border: 1px solid black; */
+ /* padding-left: 200px */
+
+
+ .button{
+   position: relative;
+   left: 20px;
+   bottom: 0px;
+}
+
+#Address{
+  width: 312px;
+}
+
+img{
+  margin-left: 200px;
+  border-radius:20px ;
+  top: 80px;
+
+}
+.containers{
+  background-color: blueviolet;
+  margin-left: 10px;
+  margin-top: 10px;
+  height: 65px;
+  width: 360px;
+ border-width: 50px;
+
+
+}
+/* h2{
+  margin-left: 300px;
+} */
+/* .form-group{
+  margin-left: %;
+  margin-top: 300px;
+  top: 200px;
+  margin-top: 2%;
+  position: relative;
+} */
+.container1{
+
+  padding-left: 20px;
+
+}
+
