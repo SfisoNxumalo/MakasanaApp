@@ -10,13 +10,16 @@ import { OrderComponent } from './BusinessUI/order/order.component';
 import { ProcessComponent } from './BusinessUI/process/process.component';
 import { BusinessProductsComponent } from './BusinessUI/business-products/business-products.component';
 import { AddProductComponent } from './BusinessUI/add-product/add-product.component';
+import { ProductDetailComponent } from './UserUI/cart/product-detail/product-detail.component';
+import { CartComponent } from './UserUI/cart/cart.component';
+import { ViewAProductComponent } from './BusinessUI/view-a-product/view-a-product.component';
 import { UserOrderComponent } from './UserUI/user-order/user-order.component';
 
 
 
 const routes: Routes = [
 
-  {path:'',redirectTo:'landing-page', pathMatch: 'full' },
+  {path:'',redirectTo:'view-product', pathMatch: 'full' },
 
   { path: 'landing-page', component:LandingComponent},
   { path: 'track-order', component:TrackOrderComponent},
@@ -24,6 +27,12 @@ const routes: Routes = [
   { path: 'process', component:ProcessComponent},
   { path: 'dashboard', component:BusinessDashboardComponent},
   { path: "signup", component: CompanySignupComponent},
+  {  path: "login", component: CompanyLoginComponent },
+  {  path: "my-products", component: BusinessProductsComponent },
+  {path: "cart", component: CartComponent},
+  {path: "add-product", component: AddProductComponent},
+  {path: "product-detail", component: ProductDetailComponent},
+  {path:"view-product/:id", component:ViewAProductComponent}
   { path: "login", component: CompanyLoginComponent },
   { path: "my-products", component: BusinessProductsComponent },
   { path: "add-product", component: AddProductComponent},

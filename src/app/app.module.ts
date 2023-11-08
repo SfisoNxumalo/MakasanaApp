@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import {MatIconModule} from '@angular/material/icon';
@@ -9,6 +12,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LandingComponent } from './landing/landing.component';
 import { LandingNavBarComponent } from './landing-nav-bar/landing-nav-bar.component';
@@ -22,10 +26,20 @@ import { BusinessProductsComponent } from './BusinessUI/business-products/busine
 import { AddProductComponent } from './BusinessUI/add-product/add-product.component';
 import { UserOrderComponent } from './UserUI/user-order/user-order.component';
 
+import { ViewAProductComponent } from './BusinessUI/view-a-product/view-a-product.component';
+
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { CartComponent } from './UserUI/cart/cart.component';
+import { AboutUsComponent } from './BusinessUI/profiles/about-us/about-us.component';
+import { ProfileComponent } from './BusinessUI/profiles/profile/profile.component';
+import { ContactUsComponent } from './BusinessUI/profiles/contact-us/contact-us.component';
+import { SlidebarComponent } from './BusinessUI/profiles/slidebar/slidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+
     CompanySignupComponent,
     CompanyLoginComponent,
     LandingComponent,
@@ -35,7 +49,15 @@ import { UserOrderComponent } from './UserUI/user-order/user-order.component';
     BusinessProductsComponent,
     AddProductComponent,
     UserOrderComponent
+    AddProductComponent,
+    ViewAProductComponent,
+    CartComponent,
+    AboutUsComponent,
+    ProfileComponent,
+    ContactUsComponent,
+    SlidebarComponent
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -44,7 +66,11 @@ import { UserOrderComponent } from './UserUI/user-order/user-order.component';
     MatProgressBarModule,
     MatFormFieldModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatSlideToggleModule,
+    MatSidenavModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
