@@ -19,8 +19,6 @@ import { OrderComfirmationComponent } from './order-comfirmation/order-comfirmat
 
 const routes: Routes = [
 
-  {path:'',redirectTo:'view-product', pathMatch: 'full' },
-
   { path: 'landing-page', component:LandingComponent},
   { path: 'track-order', component:TrackOrderComponent},
   { path: 'orders', component:OrderComponent},
@@ -38,7 +36,8 @@ const routes: Routes = [
   { path: "my-products", component: BusinessProductsComponent },
   { path: "add-product", component: AddProductComponent},
   { path: "user-order", component:UserOrderComponent},
-  {path: "order-comfirmation", component:OrderComfirmationComponent}
+  {path: "order-comfirmation", component:OrderComfirmationComponent},
+  {path:'',redirectTo:'/login', pathMatch: 'full' }
 ];
 
 @NgModule({
