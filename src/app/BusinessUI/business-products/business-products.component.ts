@@ -30,11 +30,7 @@ export class BusinessProductsComponent implements OnInit {
         console.log(err)
         this.blLoadComplete = false
       }
-
     })
-
-
-    
   }
   
   

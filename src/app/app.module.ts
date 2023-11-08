@@ -27,6 +27,10 @@ import { BusinessProductsComponent } from './BusinessUI/business-products/busine
 import { AddProductComponent } from './BusinessUI/add-product/add-product.component';
 import { ViewAProductComponent } from './BusinessUI/view-a-product/view-a-product.component';
 import { UserProductsComponent } from './UserUI/user-products/user-products.component';
+import { AboutUsComponent } from './BusinessUI/profiles/about-us/about-us.component';
+import { SlidebarComponent } from './BusinessUI/profiles/slidebar/slidebar.component';
+import { ProfileComponent } from './BusinessUI/profiles/profile/profile.component';
+import { ContactUsComponent } from './BusinessUI/profiles/contact-us/contact-us.component';
 
 
 
@@ -48,6 +52,10 @@ import { CartComponent } from './UserUI/cart/cart.component';
     AddProductComponent,
     ViewAProductComponent,
     CartComponent,
+    AboutUsComponent,
+    ProfileComponent,
+    ContactUsComponent,
+    SlidebarComponent,
     UserProductsComponent,
     OrderComponent,
     ProcessComponent,
