@@ -48,7 +48,7 @@ import { SlidebarComponent } from './BusinessUI/profiles/slidebar/slidebar.compo
     TrackOrderComponent,
     BusinessProductsComponent,
     AddProductComponent,
-    UserOrderComponent
+    UserOrderComponent,
     AddProductComponent,
     ViewAProductComponent,
     CartComponent,
