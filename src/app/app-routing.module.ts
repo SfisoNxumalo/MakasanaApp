@@ -10,6 +10,7 @@ import { OrderComponent } from './BusinessUI/order/order.component';
 import { ProcessComponent } from './BusinessUI/process/process.component';
 import { BusinessProductsComponent } from './BusinessUI/business-products/business-products.component';
 import { AddProductComponent } from './BusinessUI/add-product/add-product.component';
+import { UserOrderComponent } from './UserUI/user-order/user-order.component';
 
 
 
@@ -18,14 +19,15 @@ const routes: Routes = [
   {path:'',redirectTo:'landing-page', pathMatch: 'full' },
 
   { path: 'landing-page', component:LandingComponent},
-  { path: 'track-page', component:TrackOrderComponent},
+  { path: 'track-order', component:TrackOrderComponent},
   { path: 'orders', component:OrderComponent},
   { path: 'process', component:ProcessComponent},
-  {path: 'dashboard', component:BusinessDashboardComponent},
+  { path: 'dashboard', component:BusinessDashboardComponent},
   { path: "signup", component: CompanySignupComponent},
-  {  path: "login", component: CompanyLoginComponent },
-  {  path: "my-products", component: BusinessProductsComponent },
-  {path: "add-product", component: AddProductComponent}
+  { path: "login", component: CompanyLoginComponent },
+  { path: "my-products", component: BusinessProductsComponent },
+  { path: "add-product", component: AddProductComponent},
+  { path: "user-order", component:UserOrderComponent}
 ];
 
 @NgModule({
