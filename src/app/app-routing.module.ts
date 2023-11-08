@@ -13,24 +13,31 @@ import { AddProductComponent } from './BusinessUI/add-product/add-product.compon
 import { ProductDetailComponent } from './UserUI/cart/product-detail/product-detail.component';
 import { CartComponent } from './UserUI/cart/cart.component';
 import { ViewAProductComponent } from './BusinessUI/view-a-product/view-a-product.component';
+import { UserOrderComponent } from './UserUI/user-order/user-order.component';
+
+
 
 const routes: Routes = [
 
   {path:'',redirectTo:'view-product', pathMatch: 'full' },
 
   { path: 'landing-page', component:LandingComponent},
-  { path: 'track-page', component:TrackOrderComponent},
+  { path: 'track-order', component:TrackOrderComponent},
   { path: 'orders', component:OrderComponent},
   { path: 'process', component:ProcessComponent},
-  {path: 'dashboard', component:BusinessDashboardComponent},
+  { path: 'dashboard', component:BusinessDashboardComponent},
   { path: "signup", component: CompanySignupComponent},
-  {  path: "login", component: CompanyLoginComponent },
-  {  path: "my-products", component: BusinessProductsComponent },
-  {path: "cart", component: CartComponent},
-  {path: "add-product", component: AddProductComponent},
-  {path: "product-detail", component: ProductDetailComponent},
-  {path:"view-product/:id", component:ViewAProductComponent},
-  {path:"checkout",component:CheckoutComponent}
+  { path: "login", component: CompanyLoginComponent },
+  { path: "my-products", component: BusinessProductsComponent },
+  { path: "cart", component: CartComponent},
+  { path: "add-product", component: AddProductComponent},
+  { path: "product-detail", component: ProductDetailComponent},
+  { path:"view-product/:id", component:ViewAProductComponent},
+  {path:"checkout",component:CheckoutComponent},
+  { path: "login", component: CompanyLoginComponent },
+  { path: "my-products", component: BusinessProductsComponent },
+  { path: "add-product", component: AddProductComponent},
+  { path: "user-order", component:UserOrderComponent}
 ];
 
 @NgModule({
