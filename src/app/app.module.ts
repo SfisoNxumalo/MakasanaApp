@@ -29,6 +29,7 @@ import { ViewAProductComponent } from './BusinessUI/view-a-product/view-a-produc
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { CartComponent } from './UserUI/cart/cart.component';
+import { WishlistComponent } from './UserUI/wishlist/wishlist.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { CartComponent } from './UserUI/cart/cart.component';
     BusinessProductsComponent,
     AddProductComponent,
     ViewAProductComponent,
-    CartComponent
+    CartComponent,
+    WishlistComponent
   ],
   imports: [
     BrowserModule,
