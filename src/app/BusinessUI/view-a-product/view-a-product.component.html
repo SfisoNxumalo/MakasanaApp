@@ -1,1 +1,78 @@
-<p>view-a-product works!</p>
+<div class="holder">
+    <div class="btnSave">
+        <button><mat-icon>edit</mat-icon></button>
+    </div>
+
+    <div class="details-holder">
+        <img src="{{product.image}}"/>
+
+        <!-- <label>Hisense 441L Fridge Freezer Silver H620BS-WD</label> -->
+        <div class="input-fieldD">
+                
+            <div class="input-fieldD">
+                <label>Product Title:</label>
+                <label></label>
+            </div>
+            <input disabled="true" type="text" placeholder="Title" value="{{product.title}}">
+        </div>
+
+        <div class="input-fieldD">
+            <label>Product Description:</label>
+            <textarea disabled="true" rows="6" autocomplete="on" autocorrect="true" cols="33"  type="text" placeholder="Tell customers more about your product">{{product.description}}</textarea>
+        </div>
+
+        <div class="input-fieldD">
+            <label>Product Condition:</label>
+            <select disabled="true" type="number" placeholder="Quantity">
+                <option>New</option>
+                <option>Used</option>
+            </select>
+        </div>
+
+        <div class="input-fieldD">
+            <label>Product Price:</label>
+            <input disabled="true" type="text" value="{{product.price}}" placeholder="Price">
+        </div>
+
+        <div class="input-fieldD">
+            <label>Product Quantity:</label>
+            <input disabled="true" type="number" placeholder="Quantity">
+        </div>
+
+        
+        
+    </div>
+
+    <div class="bottom-nav">
+
+        <div class="nav-options" >
+
+            <div class="nav-item">
+                <button routerLink="/dashboard"><mat-icon>home</mat-icon></button>
+            </div>
+
+            <div class="nav-item">
+                <button><mat-icon>assignment</mat-icon></button>
+                
+            </div>
+
+            <div class="nav-item">
+                <button routerLink="/my-products"><mat-icon>store</mat-icon></button>
+                <label>Products</label>
+            </div>
+
+            <div class="nav-item">
+                <button><mat-icon>launch</mat-icon></button>
+                
+            </div>
+
+            <div class="nav-item">
+                <button><mat-icon>account_circle</mat-icon></button>
+                
+            </div>
+
+        </div>
+            
+    </div>
+
+</div>    
