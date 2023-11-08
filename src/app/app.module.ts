@@ -36,6 +36,7 @@ import { ProfileComponent } from './BusinessUI/profiles/profile/profile.componen
 import { ContactUsComponent } from './BusinessUI/profiles/contact-us/contact-us.component';
 import { SlidebarComponent } from './BusinessUI/profiles/slidebar/slidebar.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { OrderComfirmationComponent } from './order-comfirmation/order-comfirmation.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
     ProfileComponent,
     ContactUsComponent,
     SlidebarComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    OrderComfirmationComponent
   ],
   
   imports: [

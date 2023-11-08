@@ -14,7 +14,7 @@ import { ProductDetailComponent } from './UserUI/cart/product-detail/product-det
 import { CartComponent } from './UserUI/cart/cart.component';
 import { ViewAProductComponent } from './BusinessUI/view-a-product/view-a-product.component';
 import { UserOrderComponent } from './UserUI/user-order/user-order.component';
-
+import { OrderComfirmationComponent } from './order-comfirmation/order-comfirmation.component';
 
 
 const routes: Routes = [
@@ -37,7 +37,8 @@ const routes: Routes = [
   { path: "login", component: CompanyLoginComponent },
   { path: "my-products", component: BusinessProductsComponent },
   { path: "add-product", component: AddProductComponent},
-  { path: "user-order", component:UserOrderComponent}
+  { path: "user-order", component:UserOrderComponent},
+  {path: "order-comfirmation", component:OrderComfirmationComponent}
 ];
 
 @NgModule({
