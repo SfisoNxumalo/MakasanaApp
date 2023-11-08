@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BusinessDashboardComponent } from './BusinessUI/business-dashboard/business-dashboard.component';
 import { CompanySignupComponent } from './BusinessUI/company-signup/company-signup.component';
 import { CompanyLoginComponent } from './BusinessUI/company-login/company-login.component';
-
+import { CheckoutComponent } from './checkout/checkout.component';
 import { LandingComponent } from './landing/landing.component';
 import { TrackOrderComponent } from './UserUI/track-order/track-order.component';
 import { OrderComponent } from './BusinessUI/order/order.component';
@@ -29,7 +29,8 @@ const routes: Routes = [
   {path: "cart", component: CartComponent},
   {path: "add-product", component: AddProductComponent},
   {path: "product-detail", component: ProductDetailComponent},
-  {path:"view-product/:id", component:ViewAProductComponent}
+  {path:"view-product/:id", component:ViewAProductComponent},
+  {path:"checkout",component:CheckoutComponent}
 ];
 
 @NgModule({

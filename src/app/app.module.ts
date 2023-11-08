@@ -33,6 +33,7 @@ import { AboutUsComponent } from './BusinessUI/profiles/about-us/about-us.compon
 import { ProfileComponent } from './BusinessUI/profiles/profile/profile.component';
 import { ContactUsComponent } from './BusinessUI/profiles/contact-us/contact-us.component';
 import { SlidebarComponent } from './BusinessUI/profiles/slidebar/slidebar.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { SlidebarComponent } from './BusinessUI/profiles/slidebar/slidebar.compo
     AboutUsComponent,
     ProfileComponent,
     ContactUsComponent,
-    SlidebarComponent
+    SlidebarComponent,
+    CheckoutComponent
   ],
   
   imports: [
