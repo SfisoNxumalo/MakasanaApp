@@ -63,7 +63,10 @@ import { UserprofileComponent } from './UserUI/Userprofile/userprofile/userprofi
     WishlistComponent,
     CheckoutComponent,
     OrderComfirmationComponent,
-    UserprofileComponent
+    UserprofileComponent,
+    OrderComponent,
+
+    ProcessComponent,
   ],
 
   imports: [

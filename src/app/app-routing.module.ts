@@ -22,37 +22,40 @@ import { UserprofileComponent } from './UserUI/Userprofile/userprofile/userprofi
 
 const routes: Routes = [
 
-  {path:'',redirectTo:'view-product', pathMatch: 'full' },
-
   { path: 'landing-page', component:LandingComponent},
+  { path: "login", component: CompanyLoginComponent },
+  { path: "signup", component: CompanySignupComponent},
+
+  { path: 'dashboard', component:BusinessDashboardComponent},
+
+  { path: 'orders', component:OrderComponent},
+
+   { path: "my-products", component: BusinessProductsComponent },
+   { path: "add-product", component: AddProductComponent},
+   { path:"view-product/:id", component:ViewAProductComponent},
+
   { path: 'track-order', component:TrackOrderComponent},
   { path: 'orders', component:OrderComponent},
   { path: 'process', component:ProcessComponent},
-  { path: 'dashboard', component:BusinessDashboardComponent},
-  { path: "signup", component: CompanySignupComponent},
-  { path: "login", component: CompanyLoginComponent },
-  { path: "my-products", component: BusinessProductsComponent },
+  
+ 
   { path: "cart", component: CartComponent},
-  { path: "add-product", component: AddProductComponent},
+ 
   { path: "product-detail", component: ProductDetailComponent},
-  { path:"view-product/:id", component:ViewAProductComponent},
+  
   {path:"checkout",component:CheckoutComponent},
-  { path: "login", component: CompanyLoginComponent },
-  { path: "my-products", component: BusinessProductsComponent },
-  { path: 'dashboard', component:BusinessDashboardComponent},
-  { path: "add-product", component: AddProductComponent},
+  
   { path: "user-order", component:UserOrderComponent},
   {path: "product-detail", component: ProductDetailComponent},
   {path: "wish-list", component: WishlistComponent},
-  { path: 'landing-page', component:LandingComponent},
+  
   { path: 'track-order', component:TrackOrderComponent},
-  { path: 'orders', component:OrderComponent},
-  { path: 'process', component:ProcessComponent},
+
   {path: "cart", component: CartComponent},
 
   {path: "order-comfirmation", component:OrderComfirmationComponent},
   {path:"user-profile",component:UserprofileComponent},
-  {path:'',redirectTo:'/login', pathMatch: 'full' },
+  {path:'',redirectTo:'/landing-page', pathMatch: 'full' },
 
 ];
 
