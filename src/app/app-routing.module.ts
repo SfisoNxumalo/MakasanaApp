@@ -17,6 +17,7 @@ import { UserOrderComponent } from './UserUI/user-order/user-order.component';
 import { WishlistComponent } from './UserUI/wishlist/wishlist.component';
 
 import { OrderComfirmationComponent } from './order-comfirmation/order-comfirmation.component';
+import { UserprofileComponent } from './UserUI/Userprofile/userprofile/userprofile.component';
 
 
 const routes: Routes = [
@@ -50,6 +51,9 @@ const routes: Routes = [
   {path: "cart", component: CartComponent},
 
   {path: "order-comfirmation", component:OrderComfirmationComponent},
+  {path:"user-profile",component:UserprofileComponent},
+  {path:'',redirectTo:'/login', pathMatch: 'full' },
+
 ];
 
 @NgModule({
