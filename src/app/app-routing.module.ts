@@ -10,18 +10,17 @@ import { OrderComponent } from './BusinessUI/order/order.component';
 import { ProcessComponent } from './BusinessUI/process/process.component';
 import { BusinessProductsComponent } from './BusinessUI/business-products/business-products.component';
 import { AddProductComponent } from './BusinessUI/add-product/add-product.component';
-import { ProductDetailComponent } from './UserUI/product-detail/product-detail.component';
+import { ProductDetailComponent } from './BusinessUI/product-detail/product-detail.component';
 import { CartComponent } from './UserUI/cart/cart.component';
-import { WishlistComponent } from './UserUI/wishlist/wishlist.component';
 import { ViewAProductComponent } from './BusinessUI/view-a-product/view-a-product.component';
 import { UserOrderComponent } from './UserUI/user-order/user-order.component';
+import { WishlistComponent } from './UserUI/wishlist/wishlist.component';
 
 
 
 const routes: Routes = [
 
   {path:'',redirectTo:'view-product', pathMatch: 'full' },
-
 
   { path: "login", component: CompanyLoginComponent },
   { path: "my-products", component: BusinessProductsComponent },
@@ -31,10 +30,17 @@ const routes: Routes = [
   { path:"view-product/:id", component:ViewAProductComponent},
   { path: "login", component: CompanyLoginComponent },
   { path: "my-products", component: BusinessProductsComponent },
+  { path: 'dashboard', component:BusinessDashboardComponent},
   { path: "add-product", component: AddProductComponent},
   { path: "user-order", component:UserOrderComponent},
   {path: "product-detail", component: ProductDetailComponent},
   {path: "wish-list", component: WishlistComponent},
+  { path: 'landing-page', component:LandingComponent},
+  { path: 'track-order', component:TrackOrderComponent},
+  { path: 'orders', component:OrderComponent},
+  { path: 'process', component:ProcessComponent},
+  {path: "cart", component: CartComponent},
+
 ];
 
 @NgModule({
