@@ -5,7 +5,7 @@
             <a href="" class=" d-con navlink text-white m-3">
                 <b> Sign up your business</b>
             </a>
-            <a href="" class=" d-con navlink text-white m-3 me-4">
+            <a href="" routerLink="/login" class=" d-con navlink text-white m-3 me-4">
                 <b>Sign Up</b>
             </a>
         <button class="btn d-con border-white border-radius-10 text-white mt-2 " >
@@ -22,10 +22,10 @@
     <div class="sidenav no" *ngIf="sidebar">
         <a href="javascript:void(0)" class="closebtn text-white" (click)="closeBar()" >&times;</a>
         <div class="d-flex">
-            <button class="btn border-white border-radius-10 text-white mt-2 pt-2 "  style="margin-left: 23px; ">
+            <button routerLink="/login" class="btn border-white border-radius-10 text-white mt-2 pt-2 "  style="margin-left: 23px; ">
                 Login
             </button>
-            <button class="btn border-white border-radius-10 text-white mt-2 pt-2 "  style="margin-left: 23px; width: 100px;">
+            <button routerLink="/signup" class="btn border-white border-radius-10 text-white mt-2 pt-2 "  style="margin-left: 23px; width: 100px;">
                 Sign Up
             </button>
         </div>

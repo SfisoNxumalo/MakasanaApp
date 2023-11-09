@@ -1,25 +1,50 @@
-th, td {
-    border-bottom: 1px solid #ddd;
-    padding: 15px;
-    text-align: left;
-    text-align: center;
 
+.bottom-nav{
+  background-color: brown;
+  background-color: white;
+  padding: 8px;
+  position: fixed;
+  bottom: 0;
+  display: flex;
 
+  border: none;
+  outline: none;
+  border-top: 1px solid rgb(204, 204, 204);
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 
-  }
-  /* tr:hover {background-color: rgb(182, 65, 23);} */
+.nav-options{
+  display: grid;
+  flex-direction: row;
+  grid-template-columns: repeat(5, 1fr);
+  background-color: transparent;
+  width: 100%;
+  border: none;
+  gap: 0px;
+}
 
-  table {
-    width: 100%;
-    margin-top: 0%;
-  }
-  
-  th {
-    height: 30px;
-    background-color:azure;
-  }
-  h2{
-    margin-top: 10%;
-    margin-left: 30px;
-   
-  }
+.nav-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.nav-item button{
+  background-color: transparent;
+  padding: 0px;
+  border: none;
+  outline: none;
+}
+
+.nav-options .nav-item:nth-child(2),
+.nav-options .nav-item:nth-child(2) mat-icon{
+  color: blueviolet;
+}
+.nav-item label{
+  font-size: 11px;
+}
