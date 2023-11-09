@@ -48,3 +48,27 @@
 .nav-item label{
   font-size: 11px;
 }
+
+.containe{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+}
+.containe img{
+  width:100px;
+  height:100px;
+  margin-top: 15%;
+  margin-left: 10%;
+  
+}
+.containe{
+  align-items: right;
+}
+
+.h1{
+  align-items: center;
+}
+
+
+

@@ -6,46 +6,30 @@
 
 
 <div class="side">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKdeQTRwjdevF4W0leHML8ot1MSz_7whrJFQ&usqp=CAU">
+    <img src="https://cdn-icons-png.flaticon.com/512/471/471662.png">
 </div>
 
 <div class="container">
 
 
-
-  <div class="div-form" >
-
-    <div class="form-group">
-      <!-- <label for="OrderNo" class="OrderNo">Order Number:</label> -->
-      <input id="OrderNo" type="text" [disabled]="true" required placeholder="Order Number" class="form-control" name="OrderNo">
- 
+  <div class="card containe p-2 mt-4">
+    <div class="containe row">
+        <div class="col-6">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png">
+        </div>
+        <div class="col-6">
+          <p class="font2 mb-1"><b>Toolz</b></p>
+          <p class="font-w mb-1"><b><i>#555676</i></b></p>
+          <p class="font-w mb-1">078 768 6655</p>
+          <p class="font-w mb-1">R275</p>
+          <p class="font-w mb-1">Cash</p>
+          <br/>
+          <p class="font-w mb-1">16-11-2023</p>
+      </div>
+        
     </div>
-
-    <div class="form-group">
-      <!-- <label for="CustomerName" class="CustomerName">Customer Name:</label> -->
-      <input id="CustomerName" type="text" [disabled]="true"  required  placeholder="Customer Name" class="form-control" name="CustomerName" >
-     
-    </div>
-
-    <div class="form-group">
-      <!-- <label for="Quantity" class="Quantity">Quantity:</label> -->
-      <input id="Quantity" required type="text" [disabled]="true"  placeholder="Quantity" class="form-control" name="Quantity" >
-      
-    </div>
-
-    <div class="form-group">
-      <!-- <label for="Contact" class="cellNo">Contact Details:</label> -->
-      <input id="Contact" required type="text" [disabled]="true"  placeholder="Contact Details" class="form-control"  name="Contact" >
-    
-    </div>
-
-    <div class="form-group">
-      <!-- <label for="Address" class="Address">Physical Address:</label> -->
-      <input id="Address" required type="text" rows="6" cols="150%" [disabled]="true" placeholder="Physical Address"   class="form-control" name="Address" >
-    </div>
-
-    <div class="form-group ">
-        <!-- <div class="label"><label for="progress " class="progress">Order Status:</label></div> -->
+<br/>
+        <div class="form-group ">
       
       <select id="progress" required type="text"  placeholder="Order progress"  class="form-control" name="progress" >
 
@@ -58,9 +42,44 @@
       </select>
     </div>
 
-    <button type="submit">Confirm</button>
+</div>
+<br/>
 
 
+    <button type="submit">Change customer order state</button>
+
+
+    <div class="bottom-nav">
+
+      <div class="nav-options" >
+
+          <div class="nav-item">
+              <button routerLink="/dashboard"><mat-icon>home</mat-icon></button>
+          </div>
+
+          <div class="nav-item">
+              <button><mat-icon>assignment</mat-icon></button>
+              <label>Orders</label>
+          </div>
+
+          <div class="nav-item">
+              <button routerLink="/my-products"><mat-icon>store</mat-icon></button>
+              
+          </div>
+
+          <div class="nav-item">
+              <button><mat-icon>launch</mat-icon></button>
+              
+          </div>
+
+          <div class="nav-item">
+              <button><mat-icon>account_circle</mat-icon></button>
+              
+          </div>
+
+      </div>
+          
+  </div>
 
 
  
