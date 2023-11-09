@@ -29,28 +29,48 @@ const routes: Routes = [
   {path:'',redirectTo:'/login', pathMatch: 'full' },
 
   { path: 'landing-page', component:LandingComponent},
-  { path: 'track-order', component:TrackOrderComponent},
+  { path: "login", component: CompanyLoginComponent },
+  { path: "signup", component: CompanySignupComponent},
+
+  { path: 'dashboard', component:BusinessDashboardComponent},
+
   { path: 'orders', component:OrderComponent},
+
+   { path: "my-products", component: BusinessProductsComponent },
+   { path: "add-product", component: AddProductComponent},
+   { path:"view-product/:id", component:ViewAProductComponent},
+
+  { path: 'track-order', component:TrackOrderComponent},
+  // { path: 'orders', component:OrderComponent},
   { path: 'process', component:ProcessComponent},
   {path: 'dashboard', component:BusinessDashboardComponent},
   { path: "company-signup", component: CompanySignupComponent},
   { path: "company-login", component: CompanyLoginComponent },
   { path: "my-products", component: BusinessProductsComponent },
+  {path: "products", component: UserProductsComponent},
+  
+ 
   { path: "cart", component: CartComponent},
-  { path: "add-product", component: AddProductComponent},
+ 
   { path: "product-detail", component: ProductDetailComponent},
   {path:"buss-profile", component:BusinessProfileComponent},
-  { path:"view-product/:id", component:ViewAProductComponent},
+  
   {path:"checkout",component:CheckoutComponent},
   { path: "login", component: CompanyLoginComponent },
   { path: "my-products", component: BusinessProductsComponent },
   { path: "add-product", component: AddProductComponent},
+  
   { path: "user-order", component:UserOrderComponent},
+  {path: "product-detail", component: ProductDetailComponent},
+  {path: "wish-list", component: WishlistComponent},
+  
+  { path: 'track-order', component:TrackOrderComponent},
+
+  {path: "cart", component: CartComponent},
+
   {path: "order-comfirmation", component:OrderComfirmationComponent},
   {path:"user-profile",component:UserprofileComponent},
-  { path: "wish-list", component: WishlistComponent},
-  { path: "products", component: UserProductsComponent},
-  
+  {path:'',redirectTo:'/landing-page', pathMatch: 'full' },
 
 ];
 
