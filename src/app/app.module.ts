@@ -36,6 +36,9 @@ import { ProfileComponent } from './BusinessUI/profiles/profile/profile.componen
 import { ContactUsComponent } from './BusinessUI/profiles/contact-us/contact-us.component';
 import { SlidebarComponent } from './BusinessUI/profiles/slidebar/slidebar.component';
 import { WishlistComponent } from './UserUI/wishlist/wishlist.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { OrderComfirmationComponent } from './order-comfirmation/order-comfirmation.component';
+import { UserprofileComponent } from './UserUI/Userprofile/userprofile/userprofile.component';
 
 @NgModule({
   declarations: [
@@ -57,9 +60,12 @@ import { WishlistComponent } from './UserUI/wishlist/wishlist.component';
     ProfileComponent,
     ContactUsComponent,
     SlidebarComponent,
-    WishlistComponent
+    WishlistComponent,
+    CheckoutComponent,
+    OrderComfirmationComponent,
+    UserprofileComponent
   ],
-  
+
   imports: [
     BrowserModule,
     AppRoutingModule,

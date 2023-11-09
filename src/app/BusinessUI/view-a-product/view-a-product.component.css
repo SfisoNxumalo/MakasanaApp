@@ -8,6 +8,11 @@
       flex-direction: column;
       align-items: center;
       padding: 10px;
+      padding-bottom: 65px;
+  }
+
+  hr{
+    margin: 12px 0;
   }
   
   .details-holder{
@@ -23,10 +28,14 @@
   .image-view{
     display: flex;
     flex-direction: row;
-    width: 100%;
     justify-content: center;
     align-items: center;
-  
+
+  }
+
+  .image-view img{
+    max-width: 70%;
+    max-height: 70%;
   }
   
   .details-view{
@@ -127,6 +136,10 @@
       outline: none;
       background-color: transparent;
     }
+
+    .input-fieldD label{
+      padding: 5px;
+    }
   
     .input-fieldD textarea{
       resize: none
@@ -141,7 +154,7 @@
   
     }
   
-    .btnSave{
+    /* .btnSave{
       background-color: transparent;
       padding: 0px;
       position: fixed;
@@ -154,13 +167,13 @@
       justify-content: center;
       align-items: center;
       width: auto;
-    }
+    } */
   
-    .btnSave button{
-      background-color: transparent;
+    .btn-edit button{
+      background-color: rgb(224, 224, 224);
       outline: none;
       border: none;
-      color: white;
+      color: black;
       padding: 10px 10px;
       font-size: 18px;
       width: 100%;
@@ -221,5 +234,24 @@
     }
     .nav-item label{
       font-size: 11px;
+    }
+
+    .prod-options{
+      padding: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 0px;
+    }
+
+    .crt-promo{
+      width: fit-content;
+      background-color: transparent;
+      border: none;
+      align-self:flex-end;
+      color: blue;
+      font-size: 16px;
+  
     }
   }
