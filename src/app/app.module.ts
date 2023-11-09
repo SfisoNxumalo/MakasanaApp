@@ -33,6 +33,7 @@ import { AboutUsComponent } from './BusinessUI/profiles/about-us/about-us.compon
 import { ProfileComponent } from './BusinessUI/profiles/profile/profile.component';
 import { ContactUsComponent } from './BusinessUI/profiles/contact-us/contact-us.component';
 import { SlidebarComponent } from './BusinessUI/profiles/slidebar/slidebar.component';
+import { UserprofileComponent } from './Userprofile/userprofile/userprofile.component';
 
 @NgModule({
   declarations: [
@@ -51,9 +52,10 @@ import { SlidebarComponent } from './BusinessUI/profiles/slidebar/slidebar.compo
     AboutUsComponent,
     ProfileComponent,
     ContactUsComponent,
-    SlidebarComponent
+    SlidebarComponent,
+    UserprofileComponent
   ],
-  
+
   imports: [
     BrowserModule,
     AppRoutingModule,
