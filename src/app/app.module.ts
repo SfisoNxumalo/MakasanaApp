@@ -35,6 +35,7 @@ import { AboutUsComponent } from './BusinessUI/profiles/about-us/about-us.compon
 import { ProfileComponent } from './BusinessUI/profiles/profile/profile.component';
 import { ContactUsComponent } from './BusinessUI/profiles/contact-us/contact-us.component';
 import { SlidebarComponent } from './BusinessUI/profiles/slidebar/slidebar.component';
+import { WishlistComponent } from './UserUI/wishlist/wishlist.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { OrderComfirmationComponent } from './order-comfirmation/order-comfirmation.component';
 import { UserprofileComponent } from './UserUI/Userprofile/userprofile/userprofile.component';
@@ -59,6 +60,7 @@ import { UserprofileComponent } from './UserUI/Userprofile/userprofile/userprofi
     ProfileComponent,
     ContactUsComponent,
     SlidebarComponent,
+    WishlistComponent,
     CheckoutComponent,
     OrderComfirmationComponent,
     UserprofileComponent
