@@ -35,8 +35,12 @@ import { AboutUsComponent } from './BusinessUI/profiles/about-us/about-us.compon
 import { ProfileComponent } from './BusinessUI/profiles/profile/profile.component';
 import { ContactUsComponent } from './BusinessUI/profiles/contact-us/contact-us.component';
 import { SlidebarComponent } from './BusinessUI/profiles/slidebar/slidebar.component';
+<<<<<<< HEAD
 import { CheckoutComponent } from './checkout/checkout.component';
 import { OrderComfirmationComponent } from './order-comfirmation/order-comfirmation.component';
+=======
+import { UserprofileComponent } from './Userprofile/userprofile/userprofile.component';
+>>>>>>> feature/profle
 
 @NgModule({
   declarations: [
@@ -58,10 +62,14 @@ import { OrderComfirmationComponent } from './order-comfirmation/order-comfirmat
     ProfileComponent,
     ContactUsComponent,
     SlidebarComponent,
+<<<<<<< HEAD
     CheckoutComponent,
     OrderComfirmationComponent
+=======
+    UserprofileComponent
+>>>>>>> feature/profle
   ],
-  
+
   imports: [
     BrowserModule,
     AppRoutingModule,
