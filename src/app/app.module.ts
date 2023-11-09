@@ -40,8 +40,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { CartComponent } from './UserUI/cart/cart.component';
 import { BusinessProfileComponent } from './BusinessUI/business-profile/business-profile.component';
-import { CheckoutComponent } from './checkout/checkout.component';
-import { OrderComfirmationComponent } from './order-comfirmation/order-comfirmation.component';
+import { CheckoutComponent } from './UserUI/checkout/checkout.component';
+import { OrderComfirmationComponent } from './UserUI/order-comfirmation/order-comfirmation.component';
 import { UserprofileComponent } from './UserUI/Userprofile/userprofile/userprofile.component';
 
 @NgModule({
