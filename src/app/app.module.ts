@@ -15,9 +15,9 @@ import {FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LandingComponent } from './components/landing/landing.component';
-import { LandingNavBarComponent } from './components/landing-nav-bar/landing-nav-bar.component';
-import { BusinessDashboardComponent } from '.components//BusinessUI/business-dashboard/business-dashboard.component';
+import { LandingNavBarComponent } from './Home/landing-nav-bar/landing-nav-bar.component';
+import { LandingComponent } from './Home/landing/landing.component'; 
+import { BusinessDashboardComponent } from './components/BusinessUI/business-dashboard/business-dashboard.component';
 import { CompanySignupComponent } from './components/BusinessUI/company-signup/company-signup.component';
 import { CompanyLoginComponent } from './components/BusinessUI/company-login/company-login.component';
 import { TrackOrderComponent } from './components/UserUI/track-order/track-order.component';

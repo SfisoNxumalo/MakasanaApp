@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
+import { FakeStoreService } from 'src/app/services/fake-store.service';
 
-import { FakeStoreService } from 'src/app/fake-store.service';
 
 @Component({
   selector: 'app-user-products',

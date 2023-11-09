@@ -1,3 +1,60 @@
-label{
-    margin-top: 5px;
+.logo{
+    margin-top:3% ;
+    width: 100px;
+    border-radius: 50px;
+    height: 100px;
+    margin-left: 35%;
+    justify-content:center ;
+    align-items: center;
+    position: relative;
+}
+.label{
+    margin-top: 3%;
+    margin-left: 30%;
+    position: relative;
+    font-size: medium;
+}
+
+.mail{
+    margin-left: 20%;
+    margin-top: 2%;
+}
+
+
+.container{
+    background-color: blueviolet;
+    color: white;
+    width: 300px;
+    height: 150px;
+    border-radius: 20px;
+    border-bottom: white;
+
+}
+
+
+
+.container1{
+    background-color: blueviolet;
+    border-radius: 20px;
+    width: 300px;
+    height: 200px;
+    left: 10%;
+    margin-top: 8%;
+    color: white;
+    position: relative;
+
+}
+
+.location{
+    margin-left: 3%;
+    position: relative;
+    margin-top: 5%;
+
+}
+
+.address{
+    margin-left: 10%;
+    font-size: medium;
+    margin-top: -5% ;
+    position: relative;
 }

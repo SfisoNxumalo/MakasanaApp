@@ -22,11 +22,13 @@ import { UserProductsComponent } from './components/UserUI/user-products/user-pr
 import { BusinessProfileComponent } from './components/BusinessUI/business-profile/business-profile.component';
 
 import { UserprofileComponent } from './components/UserUI/Userprofile/userprofile/userprofile.component';
+import { ProfileComponent } from './components/BusinessUI/profiles/profile/profile.component';
 
 
 const routes: Routes = [
 
-  {path:'',redirectTo:'/login', pathMatch: 'full' },
+  {path:'',redirectTo:'/landing-page', pathMatch: 'full' },
+
 
   { path: 'landing-page', component:LandingComponent},
   { path: "login", component: CompanyLoginComponent },
@@ -67,10 +69,10 @@ const routes: Routes = [
   { path: 'track-order', component:TrackOrderComponent},
 
   {path: "cart", component: CartComponent},
+  {path: "prof", component:ProfileComponent},
 
   {path: "order-comfirmation", component:OrderComfirmationComponent},
   {path:"user-profile",component:UserprofileComponent},
-  {path:'',redirectTo:'/landing-page', pathMatch: 'full' },
 
 ];
 
