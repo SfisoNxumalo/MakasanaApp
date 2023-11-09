@@ -52,7 +52,7 @@ const routes: Routes = [
 
   {path: "order-comfirmation", component:OrderComfirmationComponent},
   {path:"user-profile",component:UserprofileComponent},
-  {path:'',redirectTo:'/login', pathMatch: 'full' },
+  {path:'',redirectTo:'/login', pathMatch: 'full' }
 
 ];
 
