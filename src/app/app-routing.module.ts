@@ -14,6 +14,7 @@ import { ProductDetailComponent } from './UserUI/cart/product-detail/product-det
 import { CartComponent } from './UserUI/cart/cart.component';
 import { ViewAProductComponent } from './BusinessUI/view-a-product/view-a-product.component';
 import { UserProductsComponent } from './UserUI/user-products/user-products.component';
+import { BusinessProfileComponent } from './BusinessUI/business-profile/business-profile.component';
 
 
 
@@ -27,13 +28,14 @@ const routes: Routes = [
   { path: 'process', component:ProcessComponent},
   {path: 'dashboard', component:BusinessDashboardComponent},
   { path: "company-signup", component: CompanySignupComponent},
-  {  path: "company-login", component: CompanyLoginComponent },
-  {  path: "my-products", component: BusinessProductsComponent },
+  { path: "company-login", component: CompanyLoginComponent },
+  { path: "my-products", component: BusinessProductsComponent },
   {path: "cart", component: CartComponent},
   {path: "add-product", component: AddProductComponent},
-  {  path: "products", component: UserProductsComponent },
+  { path: "products", component: UserProductsComponent },
   {path: "product-detail", component: ProductDetailComponent},
-  {path:"view-product/:id", component:ViewAProductComponent}
+  {path:"view-product/:id", component:ViewAProductComponent},
+  {path:"buss-profile", component:BusinessProfileComponent}
 ];
 
 @NgModule({

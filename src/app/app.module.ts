@@ -37,6 +37,7 @@ import { ContactUsComponent } from './BusinessUI/profiles/contact-us/contact-us.
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { CartComponent } from './UserUI/cart/cart.component';
+import { BusinessProfileComponent } from './BusinessUI/business-profile/business-profile.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { CartComponent } from './UserUI/cart/cart.component';
     UserProductsComponent,
     OrderComponent,
     ProcessComponent,
+    BusinessProfileComponent,
     
     
   ],
