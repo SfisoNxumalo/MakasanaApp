@@ -15,8 +15,8 @@ import {FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LandingComponent } from './landing/landing.component';
-import { LandingNavBarComponent } from './landing-nav-bar/landing-nav-bar.component';
+import { LandingComponent } from '../components/landing/landing.component';
+import { LandingNavBarComponent } from '../components/landing-nav-bar/landing-nav-bar.component';
 import { BusinessDashboardComponent } from './BusinessUI/business-dashboard/business-dashboard.component';
 import { CompanySignupComponent } from './BusinessUI/company-signup/company-signup.component';
 import { CompanyLoginComponent } from './BusinessUI/company-login/company-login.component';
@@ -40,6 +40,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { CartComponent } from './UserUI/cart/cart.component';
 import { BusinessProfileComponent } from './BusinessUI/business-profile/business-profile.component';
+import { WishlistComponent } from './UserUI/wishlist/wishlist.component';
 import { CheckoutComponent } from './UserUI/checkout/checkout.component';
 import { OrderComfirmationComponent } from './UserUI/order-comfirmation/order-comfirmation.component';
 import { UserprofileComponent } from './UserUI/Userprofile/userprofile/userprofile.component';
@@ -65,12 +66,17 @@ import { UserprofileComponent } from './UserUI/Userprofile/userprofile/userprofi
     ContactUsComponent,
     CartComponent,
     AboutUsComponent,
-    UserprofileComponent,
+    ProfileComponent,
+    ContactUsComponent,
+    SlidebarComponent,
+    WishlistComponent,
+    CheckoutComponent,
     OrderComfirmationComponent,
     BusinessProfileComponent,
     CheckoutComponent,
     SlidebarComponent,
-    ProfileComponent
+    ProfileComponent,
+    UserprofileComponent
     
   ],
   imports: [
