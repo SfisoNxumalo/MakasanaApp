@@ -39,6 +39,7 @@ import { WishlistComponent } from './UserUI/wishlist/wishlist.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { OrderComfirmationComponent } from './order-comfirmation/order-comfirmation.component';
 import { UserprofileComponent } from './UserUI/Userprofile/userprofile/userprofile.component';
+import { HomeUiComponent } from './UserUI/home-ui/home-ui.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +68,7 @@ import { UserprofileComponent } from './UserUI/Userprofile/userprofile/userprofi
     OrderComponent,
 
     ProcessComponent,
+      HomeUiComponent,
   ],
 
   imports: [

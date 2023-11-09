@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { BusinessDashboardComponent } from './BusinessUI/business-dashboard/business-dashboard.component';
 import { CompanySignupComponent } from './BusinessUI/company-signup/company-signup.component';
 import { CompanyLoginComponent } from './BusinessUI/company-login/company-login.component';
@@ -15,9 +16,9 @@ import { CartComponent } from './UserUI/cart/cart.component';
 import { ViewAProductComponent } from './BusinessUI/view-a-product/view-a-product.component';
 import { UserOrderComponent } from './UserUI/user-order/user-order.component';
 import { WishlistComponent } from './UserUI/wishlist/wishlist.component';
-
 import { OrderComfirmationComponent } from './order-comfirmation/order-comfirmation.component';
 import { UserprofileComponent } from './UserUI/Userprofile/userprofile/userprofile.component';
+import { HomeUiComponent } from './UserUI/home-ui/home-ui.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'landing-page', component:LandingComponent},
   { path: "login", component: CompanyLoginComponent },
   { path: "signup", component: CompanySignupComponent},
+  {path:"home", component:HomeUiComponent},
 
   { path: 'dashboard', component:BusinessDashboardComponent},
 
