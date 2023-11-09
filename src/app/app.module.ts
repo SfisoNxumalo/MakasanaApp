@@ -25,6 +25,8 @@ import { OrderComponent } from './BusinessUI/order/order.component';
 import { ProcessComponent } from './BusinessUI/process/process.component';
 import { BusinessProductsComponent } from './BusinessUI/business-products/business-products.component';
 import { AddProductComponent } from './BusinessUI/add-product/add-product.component';
+import { UserOrderComponent } from './UserUI/user-order/user-order.component';
+
 import { ViewAProductComponent } from './BusinessUI/view-a-product/view-a-product.component';
 import { UserProductsComponent } from './UserUI/user-products/user-products.component';
 import { AboutUsComponent } from './BusinessUI/profiles/about-us/about-us.component';
@@ -38,6 +40,9 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { CartComponent } from './UserUI/cart/cart.component';
 import { BusinessProfileComponent } from './BusinessUI/business-profile/business-profile.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { OrderComfirmationComponent } from './order-comfirmation/order-comfirmation.component';
+import { UserprofileComponent } from './UserUI/Userprofile/userprofile/userprofile.component';
 
 @NgModule({
   declarations: [
@@ -51,17 +56,21 @@ import { BusinessProfileComponent } from './BusinessUI/business-profile/business
     TrackOrderComponent,
     BusinessProductsComponent,
     AddProductComponent,
+    UserOrderComponent,
+    AddProductComponent,
     ViewAProductComponent,
-    CartComponent,
-    AboutUsComponent,
-    ProfileComponent,
-    ContactUsComponent,
-    SlidebarComponent,
     UserProductsComponent,
     OrderComponent,
     ProcessComponent,
+    ContactUsComponent,
+    CartComponent,
+    AboutUsComponent,
+    UserprofileComponent,
+    OrderComfirmationComponent,
     BusinessProfileComponent,
-    
+    CheckoutComponent,
+    SlidebarComponent,
+    ProfileComponent
     
   ],
   imports: [
