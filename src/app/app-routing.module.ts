@@ -35,7 +35,7 @@ const routes: Routes = [
    { path:"view-product/:id", component:ViewAProductComponent},
 
   { path: 'track-order', component:TrackOrderComponent},
-  { path: 'orders', component:OrderComponent},
+  // { path: 'orders', component:OrderComponent},
   { path: 'process', component:ProcessComponent},
   
  
