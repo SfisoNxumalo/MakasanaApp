@@ -46,6 +46,7 @@ import { OrderComfirmationComponent } from './components/UserUI/order-comfirmati
 import { UserprofileComponent } from './components/UserUI/Userprofile/userprofile/userprofile.component';
 import { HomeUiComponent } from './Home/home-ui/home-ui.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -75,7 +76,8 @@ import { HomeUiComponent } from './Home/home-ui/home-ui.component';
     OrderComfirmationComponent,
     BusinessProfileComponent,
     UserprofileComponent,
-    HomeUiComponent
+    HomeUiComponent,
+  
   ],
   imports: [
     BrowserModule,

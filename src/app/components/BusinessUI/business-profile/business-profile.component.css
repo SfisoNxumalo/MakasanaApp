@@ -8,17 +8,41 @@
     align-items: center;
     position: relative;
 }
+
 .label{
     margin-top: 3%;
     margin-left: 30%;
     position: relative;
-    font-size: medium;
+    font-size: large;
+}
+
+.category{
+    margin-top: 3%;
+}
+
+.clothing{
+    position: relative;
+    margin-top: -9%;
+    margin-left: 15%;
+
 }
 
 .mail{
-    margin-left: 20%;
-    margin-top: 2%;
+    position: relative;
+    margin-left: 3%;
 }
+
+.email{
+    position: relative;
+    margin-top: -7%;
+    margin-left: 13%;
+}
+
+.time{
+    margin-left: 3%;
+}
+
+
 
 
 .container{
@@ -53,8 +77,25 @@
 }
 
 .address{
-    margin-left: 10%;
-    font-size: medium;
-    margin-top: -5% ;
+    margin-left: 15%;
+    /* font-size: medium; */
+    margin-top: -7% ;
     position: relative;
+}
+
+.hours{
+    position: relative;
+    margin-left: 12%;
+    margin-top: -7%;
+}
+
+.circle{
+    position: relative;
+    margin-left: 3%;
+}
+
+.information{
+    position: relative;
+    margin-left: 15%;
+    margin-top: -9%;
 }
