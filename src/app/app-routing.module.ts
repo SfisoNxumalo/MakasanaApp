@@ -53,7 +53,7 @@ const routes: Routes = [
  
   { path: "cart", component: CartComponent},
  
-  { path: "product-detail", component: ProductDetailComponent},
+ 
   {path:"buss-profile", component:BusinessProfileComponent},
   { path:"view-product/:id", component:ViewAProductComponent},
   { path:"checkout",component:CheckoutComponent},
@@ -63,7 +63,7 @@ const routes: Routes = [
   { path: "product-detail", component: ProductDetailComponent},
   { path: "wish-list", component: WishlistComponent},
   
-  { path: 'track-order', component:TrackOrderComponent},
+
 
   {path: "prof", component:ProfileComponent},
 
