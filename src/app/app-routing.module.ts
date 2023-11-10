@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { LandingComponent } from './Home/landing/landing.component';
+import { HomeUiComponent } from './Home/home-ui/home-ui.component';
 
 import { BusinessDashboardComponent } from './components/BusinessUI/business-dashboard/business-dashboard.component';
 import { CompanySignupComponent } from './components/BusinessUI/company-signup/company-signup.component';
@@ -25,7 +26,7 @@ import { OrderComfirmationComponent } from './components/UserUI/order-comfirmati
 import { UserProductsComponent } from './components/UserUI/user-products/user-products.component';
 import { UserprofileComponent } from './components/UserUI/Userprofile/userprofile/userprofile.component';
 
-import { HomeUiComponent } from './UserUI/home-ui/home-ui.component';
+
 
 
 
