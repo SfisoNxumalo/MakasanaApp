@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { FakeStoreService } from 'src/app/fake-store.service';
+import { FakeStoreService } from 'src/app/services/fake-store.service';
 
 
 
