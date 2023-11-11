@@ -23,18 +23,18 @@ import { CartComponent } from './components/UserUI/cart/cart.component';
 import { UserOrderComponent } from './components/UserUI/user-order/user-order.component';
 import { WishlistComponent } from './components/UserUI/wishlist/wishlist.component';
 import { OrderComfirmationComponent } from './components/UserUI/order-comfirmation/order-comfirmation.component';
-import { UserProductsComponent } from './components/UserUI/user-products/user-products.component';
+
 import { UserprofileComponent } from './components/UserUI/Userprofile/userprofile/userprofile.component';
+import { ProductsUiComponent } from './Home/products-ui/products-ui.component';
 
 
-
+import { UserViewProductComponent } from './Home/user-view-product/user-view-product.component';
+import { AnalyticsUiComponent } from './analytics-ui/analytics-ui.component';
 
 
 const routes: Routes = [
 
   {path:'',redirectTo:'/landing-page', pathMatch: 'full' },
-
-
   { path: 'landing-page', component:LandingComponent},
  
   { path: 'dashboard', component:BusinessDashboardComponent},
@@ -42,21 +42,20 @@ const routes: Routes = [
   { path: 'orders', component:OrderComponent},
   {path:"home", component:HomeUiComponent},
 
-
    { path: "my-products", component: BusinessProductsComponent },
+   { path: "analytics", component: AnalyticsUiComponent },
    { path: "add-product", component: AddProductComponent},
    { path:"view-product/:id", component:ViewAProductComponent},
 
   { path: 'track-order', component:TrackOrderComponent},
-  // { path: 'orders', component:OrderComponent},
+  { path: 'product-details/:id', component:UserViewProductComponent},
   { path: 'process', component:ProcessComponent},
   
   { path: "company-signup", component: CompanySignupComponent},
   { path: "company-login", component: CompanyLoginComponent },
   { path: "my-products", component: BusinessProductsComponent },
-  {path: "products", component: UserProductsComponent},
-  
- 
+  {path: "products", component: ProductsUiComponent},
+
   { path: "cart", component: CartComponent},
  
  
