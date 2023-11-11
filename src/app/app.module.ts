@@ -36,7 +36,7 @@ import { ContactUsComponent } from './components/BusinessUI/profiles/contact-us/
 
 
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatSidenavModule} from '@angular/material/sidenav';
 import { CartComponent } from './components/UserUI/cart/cart.component';
 import { BusinessProfileComponent } from './components/BusinessUI/business-profile/business-profile.component';
 import { WishlistComponent } from './components/UserUI/wishlist/wishlist.component';
