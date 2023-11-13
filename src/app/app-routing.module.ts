@@ -4,8 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LandingComponent } from './Home/landing/landing.component';
 import { HomeUiComponent } from './Home/home-ui/home-ui.component';
 import { ProductsUiComponent } from './Home/products-ui/products-ui.component';
-import { UserViewProductComponent } from './Home/user-view-product/user-view-product.component';
-
+import { UserViewProductComponent } from './components/UserUI/user-view-product/user-view-product.component';
 import { BusinessDashboardComponent } from './components/BusinessUI/business-dashboard/business-dashboard.component';
 import { CompanySignupComponent } from './components/BusinessUI/company-signup/company-signup.component';
 import { CompanyLoginComponent } from './components/BusinessUI/company-login/company-login.component';
@@ -27,6 +26,9 @@ import { WishlistComponent } from './components/UserUI/wishlist/wishlist.compone
 import { OrderComfirmationComponent } from './components/UserUI/order-comfirmation/order-comfirmation.component';
 import { UserprofileComponent } from './components/UserUI/Userprofile/userprofile/userprofile.component';
 import { UserProfilePageComponent } from './components/UserUI/user-profile-page/user-profile-page.component';
+
+import { UserSignupComponent } from './components/UserUI/user-signup/user-signup.component';
+import { UserLoginComponent } from './components/UserUI/user-login/user-login.component';
 
 
 const routes: Routes = [
@@ -50,6 +52,10 @@ const routes: Routes = [
 
   { path: "company-signup", component: CompanySignupComponent},
   { path: "company-login", component: CompanyLoginComponent },
+  { path: "user-signup", component: UserSignupComponent},
+  { path: "user-login", component: UserLoginComponent},
+
+
   { path: "my-products", component: BusinessProductsComponent },
   { path: "products", component: ProductsUiComponent},
 
