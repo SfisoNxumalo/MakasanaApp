@@ -1,5 +1,5 @@
 
-<!-- 
+<!--
 <div class="row">
     <div class="col-3 ml-2 ">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-left mt-3" viewBox="0 0 16 16">
@@ -7,7 +7,7 @@
           </svg>
     </div>
     <div class="col-3 ml">
-        <h4 class="mt-3">My Cart</h4> 
+        <h4 class="mt-3">My Cart</h4>
     </div>
 </div> -->
 <div class="container d-flex">
@@ -38,7 +38,7 @@
             <div class="container-img p-2">
                 <img src="https://i.postimg.cc/PqHwgjxX/banner-product.png" class="img p" alt="">
             </div>
-            
+
             <div class="container">
                 <p class="mb-0 d-flex jusify-content-end">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
@@ -50,22 +50,22 @@
                 <div class="d-flex jusify-content-between">
                     <p class="w-1"><b>R 200</b></p>
                     <div class="container d-flex w-1 jusify-content-space-around">
-                        <mat-icon class="me-2">add_circle</mat-icon>
+                        <mat-icon class="me-2" >add_circle</mat-icon>
                         <p class="me-2 " style="font-size: 19px; margin-top: 2px;"><b>2</b></p>
-                        <mat-icon>remove_circle</mat-icon>
+                        <mat-icon (click)="decrementQuantity(products.quantity, i)">remove_circle</mat-icon>
                     </div>
                 </div>
             </div>
         </div>
         <hr>
-    
+
     </div>
     <div class="container mt-4">
         <div class="d-flex">
             <div class="container-img p-2">
                 <img src="https://i.postimg.cc/PqHwgjxX/banner-product.png" class="img p" alt="">
             </div>
-            
+
             <div class="container">
                 <p class="mb-0 d-flex jusify-content-end">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
@@ -85,14 +85,14 @@
             </div>
         </div>
         <hr>
-    
+
     </div>
     <div class="container mt-4">
         <div class="d-flex">
             <div class="container-img p-2">
                 <img src="https://i.postimg.cc/PqHwgjxX/banner-product.png" class="img p" alt="">
             </div>
-            
+
             <div class="container">
                 <p class="mb-0 d-flex jusify-content-end">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
@@ -112,14 +112,14 @@
             </div>
         </div>
         <hr>
-    
+
     </div>
     <div class="container mt-4">
         <div class="d-flex">
             <div class="container-img p-2">
                 <img src="https://i.postimg.cc/PqHwgjxX/banner-product.png" class="img p" alt="">
             </div>
-            
+
             <div class="container">
                 <p class="mb-0 d-flex jusify-content-end">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
@@ -139,7 +139,7 @@
             </div>
         </div>
         <hr>
-    
+
     </div>
 </div>
 
@@ -183,32 +183,32 @@
     <div class="nav-options" >
 
         <div class="nav-item">
-            <button routerLink="/dashboard"><mat-icon>home</mat-icon></button>
+            <button routerLink="/home-page"><mat-icon>home</mat-icon></button>
         </div>
 
         <div class="nav-item">
             <button><mat-icon>assignment</mat-icon></button>
-            
+
         </div>
 
         <div class="nav-item">
-            <button><mat-icon>shopping_cart</mat-icon></button>
+            <button ><mat-icon>shopping_cart</mat-icon></button>
             <label>Cart</label>
         </div>
         <div class="nav-item">
             <button><mat-icon>account_circle</mat-icon></button>
-            
+
         </div>
         <div class="nav-item">
             <button class="mb-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi svg bi-bag-heart-fill" viewBox="0 0 16 16">
                 <path d="M11.5 4v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5ZM8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1Zm0 6.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z"/>
               </svg></button>
-            
+
         </div>
 
     </div>
-        
+
 </div>
 
 

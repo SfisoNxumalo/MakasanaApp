@@ -46,6 +46,7 @@ import { UserprofileComponent } from './components/UserUI/Userprofile/userprofil
 import { HomeUiComponent } from './Home/home-ui/home-ui.component';
 import { ProductsUiComponent } from './Home/products-ui/products-ui.component';
 import { UserViewProductComponent } from './components/UserUI/user-view-product/user-view-product.component';
+import { UserProfilePageComponent } from './components/UserUI/user-profile-page/user-profile-page.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +78,8 @@ import { UserViewProductComponent } from './components/UserUI/user-view-product/
     UserprofileComponent,
     HomeUiComponent,
     ProductsUiComponent,
-    UserViewProductComponent
+    UserViewProductComponent,
+    UserProfilePageComponent
   ],
   imports: [
     BrowserModule,
