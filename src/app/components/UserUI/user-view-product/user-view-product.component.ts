@@ -17,6 +17,8 @@ export class UserViewProductComponent {
 
   productID:any;
 
+  liked = "prod-not-liked";
+
   ngOnInit(): void {
     // this.route.paramMap.subscribe(params => {
     //   this.product = params.get("id");
@@ -39,6 +41,17 @@ export class UserViewProductComponent {
       }
 
     })
+  }
+
+  mLike(){
+
+    if(this.liked === 'prod-not-liked'){
+      this.liked = 'prod-liked'
+    }
+    else{
+      this.liked = 'prod-not-liked'
+    }
+
   }
 
 }

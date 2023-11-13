@@ -8,12 +8,17 @@
             <img src="{{product.image}}"/>
             <!-- <img src="https://images.samsung.com/is/image/samsung/p6pim/za/rb30j3611sa-fa/gallery/za-bottom-freezer-303l-rb30j3611sa-fa-536308508?$2160_1728_PNG$"/> -->
         </div>
-        
+
+        <div class="action-btn">
+            <button type="button" (click)="mLike()" [class]="liked"><mat-icon>favorite</mat-icon></button>
+            <button type="button"><mat-icon>add_shopping_cart</mat-icon></button>
+        </div>
+
         <div class="prod-options">
+            
             <div>
                 <label>Sold by</label>
                 <p>Rocklandss Designer</p>
-
             </div>
             
         </div>
@@ -61,7 +66,7 @@
             </div>
 
             <div class="nav-item">
-                <button routerLink="/my-products"><mat-icon>store</mat-icon></button>
+                <button routerLink="/products"><mat-icon>store</mat-icon></button>
                 <label>Products</label>
             </div>
 

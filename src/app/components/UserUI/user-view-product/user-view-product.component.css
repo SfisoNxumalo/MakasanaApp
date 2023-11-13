@@ -92,6 +92,33 @@
        background-color: transparent;
        cursor: pointer;
       }
+
+      .action-btn{
+        display: flex;
+        padding: 10px;
+        gap: 5px;
+        justify-content: space-around;
+      }
+
+      .action-btn button{
+        justify-content: center;
+        align-items: center;
+        flex-basis: 1;
+        width: 20%;
+        background-color: transparent;
+        border: none;
+      }
+
+      .prod-liked{
+        transition: all ease-in 0.2s;
+        color: red;
+      }
+
+      .prod-not-liked{
+        color: gray;
+        transition: all ease-in 0.2s;
+
+      }
     
     
     .btn-upload input::file-selector-button {

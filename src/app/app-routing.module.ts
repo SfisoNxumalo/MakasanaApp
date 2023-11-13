@@ -11,7 +11,6 @@ import { OrderComponent } from './components/BusinessUI/order/order.component';
 import { BusinessProductsComponent } from './components/BusinessUI/business-products/business-products.component';
 import { AddProductComponent } from './components/BusinessUI/add-product/add-product.component';
 import { ProcessComponent } from './components/BusinessUI/process/process.component';
-import { ProductDetailComponent } from './components/BusinessUI/product-detail/product-detail.component';
 import { ViewAProductComponent } from './components/BusinessUI/view-a-product/view-a-product.component';
 import { BusinessProfileComponent } from './components/BusinessUI/business-profile/business-profile.component';
 import { ProfileComponent } from './components/BusinessUI/profiles/profile/profile.component';
@@ -28,7 +27,7 @@ import { UserprofileComponent } from './components/UserUI/Userprofile/userprofil
 import { ProductsUiComponent } from './Home/products-ui/products-ui.component';
 
 
-import { UserViewProductComponent } from './Home/user-view-product/user-view-product.component';
+import { UserViewProductComponent } from './components/UserUI/user-view-product/user-view-product.component';
 
 
 const routes: Routes = [
@@ -62,7 +61,6 @@ const routes: Routes = [
   
 
   { path: "user-order", component:UserOrderComponent},
-  { path: "product-detail", component: ProductDetailComponent},
   { path: "wish-list", component: WishlistComponent},
   
 
