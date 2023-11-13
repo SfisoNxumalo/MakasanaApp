@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { LandingComponent } from './Home/landing/landing.component';
 import { HomeUiComponent } from './Home/home-ui/home-ui.component';
+import { ProductsUiComponent } from './Home/products-ui/products-ui.component';
+import { UserViewProductComponent } from './Home/user-view-product/user-view-product.component';
 
 import { BusinessDashboardComponent } from './components/BusinessUI/business-dashboard/business-dashboard.component';
 import { CompanySignupComponent } from './components/BusinessUI/company-signup/company-signup.component';
@@ -23,12 +25,12 @@ import { CartComponent } from './components/UserUI/cart/cart.component';
 import { UserOrderComponent } from './components/UserUI/user-order/user-order.component';
 import { WishlistComponent } from './components/UserUI/wishlist/wishlist.component';
 import { OrderComfirmationComponent } from './components/UserUI/order-comfirmation/order-comfirmation.component';
-
 import { UserprofileComponent } from './components/UserUI/Userprofile/userprofile/userprofile.component';
-import { ProductsUiComponent } from './Home/products-ui/products-ui.component';
+import { UserProfilePageComponent } from './components/UserUI/user-profile-page/user-profile-page.component';
 
 
-import { UserViewProductComponent } from './Home/user-view-product/user-view-product.component';
+
+
 
 
 const routes: Routes = [
@@ -56,6 +58,7 @@ const routes: Routes = [
   {path: "products", component: ProductsUiComponent},
 
   { path: "cart", component: CartComponent},
+  { path:"consumer-profile",component: UserProfilePageComponent},
  
  
   {path:"buss-profile", component:BusinessProfileComponent},
@@ -72,6 +75,7 @@ const routes: Routes = [
 
   {path: "order-comfirmation", component:OrderComfirmationComponent},
   {path:"user-profile",component:UserprofileComponent},
+  
 
 ];
 
