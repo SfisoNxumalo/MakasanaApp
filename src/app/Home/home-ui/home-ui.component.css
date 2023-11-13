@@ -34,7 +34,7 @@
         outline: none;
         padding: 5px;
         display: flex;
-        gap: 4px;
+        gap: 3px;
         flex-direction: column;
         justify-content:center ;
         align-items: center;
@@ -110,22 +110,27 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
+        justify-content: center;
     }
 
     .category-item{
         background-color: white;
         min-width: 140px;
         border: 1px solid rgb(170, 170, 170);
-        min-height: 170px;
+        min-height: 140px;
         box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.2);
         border-radius: 10px;
+        display: flex;
+        flex-direction: column;
 
     }
 
     .cate-image{
         width: 100%;
-        max-height: 110px;
         border-radius: 10px 10px 0px 0px;
+        flex-grow: 1;
+        
+        
     }
     .cate-text{
         padding: 5px;

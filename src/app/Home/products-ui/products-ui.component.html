@@ -1,0 +1,117 @@
+<div class="dash-holder">
+
+    <!-- https://i.postimg.cc/dVGXVhgP/2-people-shaking-hands-for-business-purposes-generated-removebg-preview.png -->
+
+    <div class="Top-section">
+
+        <div class="top-bar">
+            <button>
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <button><mat-icon>shopping_cart</mat-icon></button>
+        </div>
+
+        <div class="top-det">
+            
+            <div class="stock-details">
+                <mat-icon>search</mat-icon>
+                <input type="search" placeholder="Search..">
+            </div>
+
+            <div class="fil-sor">
+                <div class="filter-item">
+                    <mat-icon>filter_list</mat-icon>
+                    <select>
+                        <option>Filter</option>
+                        <option>Sale</option>
+                        <option>Sale</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <mat-icon>sort</mat-icon>
+                    <select>
+                        <option>Sort</option>
+                        <option>A-Z</option>
+                        <option>Latest</option>
+                        <option>Oldest</option>
+                        <option>Price(High)</option>
+                        <option>Price(low)</option>
+                    </select>
+                    
+                </div>
+            </div>
+        </div>
+        <mat-progress-bar *ngIf="blLoadComplete" mode="indeterminate"></mat-progress-bar>
+    </div>
+
+    <div *ngIf="products.length" class="holder">
+
+        <div class="item-holder">
+            <label class="lblHeaders">Clothing</label>
+        </div>
+        
+
+        <div  class="item-holder">
+            <div class="products-div-ii">
+                
+                <div *ngFor="let product of products" class="menu-item2" routerLink="/product-details/{{product.id}}">
+
+                    <img class="main-logo2" src="{{product.image}}">
+            
+                    <div class="prod-text">
+                        <label>{{product.title}}</label>
+                        <!-- <label>{{product.rating.rate}}</label> -->
+                        <label class="price">R{{product.price}}</label>
+                    </div>
+            
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div *ngIf="!products.length" class="holder1">
+        
+            <img src="https://i.postimg.cc/t4jvtHq4/Package-box-brown-removebg-preview.png">
+    
+            <label>You don't have any product yet</label>
+
+    </div>
+
+    <div class="bottom-nav">
+
+        <div class="nav-options" >
+
+            <div class="nav-item">
+                <button routerLink="/dashboard"><mat-icon>home</mat-icon></button>
+            </div>
+
+            <div class="nav-item">
+                <button routerLink="/orders"><mat-icon>assignment</mat-icon></button>
+                
+            </div>
+
+            <div class="nav-item">
+                <button routerLink="/my-products"><mat-icon>store</mat-icon></button>
+                <label>Products</label>
+            </div>
+
+            <div class="nav-item">
+                <button><mat-icon>launch</mat-icon></button>
+                
+            </div>
+
+            <div class="nav-item">
+                <button><mat-icon>account_circle</mat-icon></button>
+                
+            </div>
+
+        </div>
+            
+    </div>
+
+</div>

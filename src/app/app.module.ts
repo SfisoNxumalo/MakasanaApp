@@ -28,7 +28,6 @@ import { AddProductComponent } from './components/BusinessUI/add-product/add-pro
 import { UserOrderComponent } from './components/UserUI/user-order/user-order.component';
 
 import { ViewAProductComponent } from './components/BusinessUI/view-a-product/view-a-product.component';
-import { UserProductsComponent } from './components/UserUI/user-products/user-products.component';
 import { AboutUsComponent } from './components/BusinessUI/profiles/about-us/about-us.component';
 import { SlidebarComponent } from './components/BusinessUI/profiles/slidebar/slidebar.component';
 import { ProfileComponent } from './components/BusinessUI/profiles/profile/profile.component';
@@ -45,6 +44,8 @@ import { CheckoutComponent } from './components/UserUI/checkout/checkout.compone
 import { OrderComfirmationComponent } from './components/UserUI/order-comfirmation/order-comfirmation.component';
 import { UserprofileComponent } from './components/UserUI/Userprofile/userprofile/userprofile.component';
 import { HomeUiComponent } from './Home/home-ui/home-ui.component';
+import { ProductsUiComponent } from './Home/products-ui/products-ui.component';
+import { UserViewProductComponent } from './Home/user-view-product/user-view-product.component';
 
 
 @NgModule({
@@ -62,7 +63,6 @@ import { HomeUiComponent } from './Home/home-ui/home-ui.component';
     UserOrderComponent,
     AddProductComponent,
     ViewAProductComponent,
-    UserProductsComponent,
     OrderComponent,
     ProcessComponent,
     ContactUsComponent,
@@ -77,7 +77,8 @@ import { HomeUiComponent } from './Home/home-ui/home-ui.component';
     BusinessProfileComponent,
     UserprofileComponent,
     HomeUiComponent,
-  
+    ProductsUiComponent,
+    UserViewProductComponent
   ],
   imports: [
     BrowserModule,
