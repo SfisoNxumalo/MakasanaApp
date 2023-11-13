@@ -12,34 +12,44 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
 
+
 import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LandingComponent } from './landing/landing.component';
-import { LandingNavBarComponent } from './landing-nav-bar/landing-nav-bar.component';
-import { BusinessDashboardComponent } from './BusinessUI/business-dashboard/business-dashboard.component';
-import { CompanySignupComponent } from './BusinessUI/company-signup/company-signup.component';
-import { CompanyLoginComponent } from './BusinessUI/company-login/company-login.component';
-import { TrackOrderComponent } from './UserUI/track-order/track-order.component';
-import { OrderComponent } from './BusinessUI/order/order.component';
-import { ProcessComponent } from './BusinessUI/process/process.component';
-import { BusinessProductsComponent } from './BusinessUI/business-products/business-products.component';
-import { AddProductComponent } from './BusinessUI/add-product/add-product.component';
-import { UserOrderComponent } from './UserUI/user-order/user-order.component';
+import { LandingNavBarComponent } from './Home/landing-nav-bar/landing-nav-bar.component';
+import { LandingComponent } from './Home/landing/landing.component'; 
+import { BusinessDashboardComponent } from './components/BusinessUI/business-dashboard/business-dashboard.component';
+import { CompanySignupComponent } from './components/BusinessUI/company-signup/company-signup.component';
+import { CompanyLoginComponent } from './components/BusinessUI/company-login/company-login.component';
+import { TrackOrderComponent } from './components/UserUI/track-order/track-order.component';
+import { OrderComponent } from './components/BusinessUI/order/order.component';
+import { ProcessComponent } from './components/BusinessUI/process/process.component';
+import { BusinessProductsComponent } from './components/BusinessUI/business-products/business-products.component';
+import { AddProductComponent } from './components/BusinessUI/add-product/add-product.component';
+import { UserOrderComponent } from './components/UserUI/user-order/user-order.component';
 
-import { ViewAProductComponent } from './BusinessUI/view-a-product/view-a-product.component';
+import { ViewAProductComponent } from './components/BusinessUI/view-a-product/view-a-product.component';
+import { AboutUsComponent } from './components/BusinessUI/profiles/about-us/about-us.component';
+import { SlidebarComponent } from './components/BusinessUI/profiles/slidebar/slidebar.component';
+import { ProfileComponent } from './components/BusinessUI/profiles/profile/profile.component';
+import { ContactUsComponent } from './components/BusinessUI/profiles/contact-us/contact-us.component';
+
+
 
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import { CartComponent } from './UserUI/cart/cart.component';
-import { AboutUsComponent } from './BusinessUI/profiles/about-us/about-us.component';
-import { ProfileComponent } from './BusinessUI/profiles/profile/profile.component';
-import { ContactUsComponent } from './BusinessUI/profiles/contact-us/contact-us.component';
-import { SlidebarComponent } from './BusinessUI/profiles/slidebar/slidebar.component';
-import { WishlistComponent } from './UserUI/wishlist/wishlist.component';
-import { CheckoutComponent } from './checkout/checkout.component';
-import { OrderComfirmationComponent } from './order-comfirmation/order-comfirmation.component';
-import { UserprofileComponent } from './UserUI/Userprofile/userprofile/userprofile.component';
+import { MatSidenavModule} from '@angular/material/sidenav';
+import { CartComponent } from './components/UserUI/cart/cart.component';
+import { BusinessProfileComponent } from './components/BusinessUI/business-profile/business-profile.component';
+import { WishlistComponent } from './components/UserUI/wishlist/wishlist.component';
+import { CheckoutComponent } from './components/UserUI/checkout/checkout.component';
+import { OrderComfirmationComponent } from './components/UserUI/order-comfirmation/order-comfirmation.component';
+import { UserprofileComponent } from './components/UserUI/Userprofile/userprofile/userprofile.component';
+import { HomeUiComponent } from './Home/home-ui/home-ui.component';
+import { ProductsUiComponent } from './Home/products-ui/products-ui.component';
+import { UserViewProductComponent } from './components/UserUI/user-view-product/user-view-product.component';
+import { UserProfilePageComponent } from './components/UserUI/user-profile-page/user-profile-page.component';
+import { UserLoginComponent } from './components/UserUI/user-login/user-login.component';
+import { UserSignupComponent } from './components/UserUI/user-signup/user-signup.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +66,9 @@ import { UserprofileComponent } from './UserUI/Userprofile/userprofile/userprofi
     UserOrderComponent,
     AddProductComponent,
     ViewAProductComponent,
+    OrderComponent,
+    ProcessComponent,
+    ContactUsComponent,
     CartComponent,
     AboutUsComponent,
     ProfileComponent,
@@ -64,14 +77,12 @@ import { UserprofileComponent } from './UserUI/Userprofile/userprofile/userprofi
     WishlistComponent,
     CheckoutComponent,
     OrderComfirmationComponent,
+    BusinessProfileComponent,
     UserprofileComponent,
-    OrderComponent,
-    
-
-    ProcessComponent,
-           
+    HomeUiComponent,
+    ProductsUiComponent,
+    UserViewProductComponent
   ],
-
   imports: [
     BrowserModule,
     AppRoutingModule,

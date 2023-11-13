@@ -1,0 +1,92 @@
+.bottom-nav{
+    background-color: brown;
+    background-color: white;
+    padding: 8px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+
+    border: none;
+    outline: none;
+    border-top: 1px solid rgb(204, 204, 204);
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-options{
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: transparent;
+    width: 100%;
+    border: none;
+    gap: 0px;
+  }
+
+  .nav-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-item button{
+    background-color: transparent;
+    padding: 0px;
+    border: none;
+    outline: none;
+  }
+
+  .nav-options .nav-item:nth-child(3),
+  .nav-options .nav-item:nth-child(3) button{
+    color: blueviolet;
+  }
+  .nav-item label{
+    font-size: 11px;
+  }
+
+  .cart{
+    color: blueviolet;
+
+
+  }
+  .jusify-content-center{
+    justify-content: center;
+  }
+  .card{
+    border: none;
+    background-color: gainsboro;
+    width: 245px;
+  }
+  .img{
+    width: 150px;
+    height: 130px;
+  }
+
+  .text-wishlist{
+    width: 200px;
+  }
+  .btn-a{
+    width: 200px;
+    text-align: start;
+    position: relative;
+    bottom: 15px;
+    border-radius: 50px;
+  }
+  .jusify-content-between{
+    justify-content: space-between;
+  }
+  .mat-icon{
+    background-repeat: no-repeat;
+    display: inline-block;
+    fill: currentColor;
+    font-size: 17px;
+    margin-bottom: 6px;
+  }
+  .btn-cart{
+    height: 28px;
+    border-radius: 100px;
+  }
