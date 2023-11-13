@@ -1,0 +1,146 @@
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
+  }
+
+
+.container{
+    background-color: blueviolet;
+    /* border-top-right-radius: 60%; */
+    border-bottom-left-radius: 90%;
+    height: 200px;
+    width: 435px;
+}
+
+.join{
+    color: white;
+    position: fixed;
+    margin-top: 20%;
+    margin-left: 30%;
+}
+
+.create{
+    margin-left: 20%;
+    margin-top: 29px;
+    position: fixed;
+    /* font-weight: bold; */
+    /* font-size: large; */
+}
+
+form{
+    margin-left: 6%;
+    margin-top: 8%;
+}
+label{
+    font-size: medium;
+}
+
+.companynameInput{
+    position: fixed;
+    margin-top: 60px; 
+}
+
+#companynameInput{
+    position: fixed;
+    margin-left: 34%;
+    margin-top: 55px;
+    border-radius: 10px;
+    height: 30px;
+    width: 250px;
+
+}
+
+.emailInput{
+    position: fixed;
+    margin-top: 112px; 
+}
+
+#emailInput{
+    position: fixed;
+    margin-left: 34%;
+    margin-top: 110px;
+    border-radius: 10px;
+    height: 30px;
+    width: 250px;
+
+}
+
+.contactpersonInput{
+    position: fixed;
+    margin-top: 170px; 
+
+}
+
+#contactpersonInput{
+    position: fixed;
+    margin-left: 34%;
+    margin-top: 160px;
+    border-radius: 10px;
+    height: 30px;
+    width: 250px;
+
+}
+.addressInput{
+    position: fixed;
+    margin-top: 217px;   
+}
+
+#addressInput{
+    position: fixed;
+    margin-left: 34%;
+    margin-top: 210px;
+    border-radius: 10px;
+    height: 30px;
+    width: 250px;
+
+}
+.passwordInput{
+    position: fixed;
+    margin-top: 270px; 
+} 
+ #passwordInput{
+    position: fixed;
+    margin-left: 34%;
+    margin-top: 260px;
+    border-radius: 10px;
+    height: 30px;
+    width: 250px;
+
+}
+
+
+/* .rpasswordInput{
+    position: fixed;
+    margin-top: 325px; 
+}
+
+#rpasswordInput{
+    position: fixed;
+    margin-left: 34%;
+    margin-top: 320px;
+    border-radius: 10px;
+    height: 30px;
+    width: 250px;
+
+} */
+
+.submit{
+    background-color: blueviolet;
+    margin-top: 330px;
+    margin-left: 10%;
+    height: 50px;
+    width: 320px;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    font-size: medium;
+}
+
+h5{
+    margin-left: 15%;
+    position: fixed;
+    font-size: large;
+}

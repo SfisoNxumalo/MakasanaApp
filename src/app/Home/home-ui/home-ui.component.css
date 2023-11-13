@@ -69,8 +69,6 @@
 
     }
 
-    .stock-details mat-icon{
-    }
 
     .stock-details input{
         width: 100%;
@@ -144,3 +142,54 @@
         font-weight: bold;
     }
 }
+ 
+.bottom-nav{
+    background-color: brown;
+    background-color: white;
+    padding: 8px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+
+    border: none;
+    outline: none;
+    border-top: 1px solid rgb(204, 204, 204);
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-options{
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: transparent;
+    width: 100%;
+    border: none;
+    gap: 0px;
+  }
+
+  .nav-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-item button{
+    background-color: transparent;
+    padding: 0px;
+    border: none;
+    outline: none;
+  }
+
+  .nav-options .nav-item:nth-child(3),
+  .nav-options .nav-item:nth-child(3) button{
+    color: blueviolet;
+  }
+  .nav-item label{
+    font-size: 11px;
+  }
+  

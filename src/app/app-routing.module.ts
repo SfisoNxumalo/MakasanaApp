@@ -29,6 +29,8 @@ import { ProductsUiComponent } from './Home/products-ui/products-ui.component';
 
 
 import { UserViewProductComponent } from './Home/user-view-product/user-view-product.component';
+import { UserSignupComponent } from './components/UserUI/user-signup/user-signup.component';
+import { UserLoginComponent } from './components/UserUI/user-login/user-login.component';
 
 
 const routes: Routes = [
@@ -52,6 +54,10 @@ const routes: Routes = [
   
   { path: "company-signup", component: CompanySignupComponent},
   { path: "company-login", component: CompanyLoginComponent },
+  { path: "user-signup", component: UserSignupComponent},
+  { path: "user-login", component: UserLoginComponent},
+
+
   { path: "my-products", component: BusinessProductsComponent },
   { path: "products", component: ProductsUiComponent},
 
