@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { LandingComponent } from './Home/landing/landing.component';
@@ -21,7 +21,8 @@ import { ProfileComponent } from './components/BusinessUI/profiles/profile/profi
 
 import { CheckoutComponent } from './components/UserUI/checkout/checkout.component';
 import { TrackOrderComponent } from './components/UserUI/track-order/track-order.component';
-import { CartComponent } from './components/UserUI/cart/cart.component';
+// import { CartComponent } from './components/UserUI/cart/cart.component';
+import { CartComponent} from './components/UserUI/cart/cart.component';
 import { UserOrderComponent } from './components/UserUI/user-order/user-order.component';
 import { WishlistComponent } from './components/UserUI/wishlist/wishlist.component';
 import { OrderComfirmationComponent } from './components/UserUI/order-comfirmation/order-comfirmation.component';
@@ -35,14 +36,14 @@ import { UserProfilePageComponent } from './components/UserUI/user-profile-page/
 
 const routes: Routes = [
 
-  {path:'',redirectTo:'/landing-page', pathMatch: 'full' },
+  { path:'',redirectTo:'/landing-page', pathMatch: 'full' },
   { path: 'landing-page', component:LandingComponent},
- 
+
   { path: 'dashboard', component:BusinessDashboardComponent},
 
   { path: 'orders', component:OrderComponent},
   {path:"home", component:HomeUiComponent},
- 
+
 
    { path: "my-products", component: BusinessProductsComponent },
    { path: "add-product", component: AddProductComponent},
@@ -51,11 +52,11 @@ const routes: Routes = [
   { path: 'track-order', component:TrackOrderComponent},
   { path: 'product-details/:id', component:UserViewProductComponent},
   { path: 'process', component:ProcessComponent},
-  
+
   { path: "company-signup", component: CompanySignupComponent},
   { path: "company-login", component: CompanyLoginComponent },
   { path: "my-products", component: BusinessProductsComponent },
-  {path: "products", component: ProductsUiComponent},
+  { path: "products", component: ProductsUiComponent},
 
   { path: "cart", component: CartComponent},
   { path:"consumer-profile",component: UserProfilePageComponent},
@@ -63,19 +64,18 @@ const routes: Routes = [
  
   {path:"buss-profile", component:BusinessProfileComponent},
   { path:"checkout",component:CheckoutComponent},
-  
+
 
   { path: "user-order", component:UserOrderComponent},
   { path: "product-detail", component: ProductDetailComponent},
   { path: "wish-list", component: WishlistComponent},
-  
 
 
-  {path: "prof", component:ProfileComponent},
 
-  {path: "order-comfirmation", component:OrderComfirmationComponent},
-  {path:"user-profile",component:UserprofileComponent},
-  
+  { path: "prof", component:ProfileComponent},
+
+  { path: "order-comfirmation", component:OrderComfirmationComponent},
+  { path:"user-profile",component:UserprofileComponent},
 
 ];
 
