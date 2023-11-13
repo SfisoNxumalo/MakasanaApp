@@ -1,0 +1,83 @@
+<div class="holder">
+    <!-- <div class="btnSave">
+        <button><mat-icon>edit</mat-icon></button>
+    </div> -->
+
+    <div class="details-holder">
+        <div class="image-view">
+            <img src="{{product.image}}"/>
+            <!-- <img src="https://images.samsung.com/is/image/samsung/p6pim/za/rb30j3611sa-fa/gallery/za-bottom-freezer-303l-rb30j3611sa-fa-536308508?$2160_1728_PNG$"/> -->
+        </div>
+        
+        <div class="prod-options">
+            <div>
+                <label>Sold by</label>
+                <p>Rocklandss Designer</p>
+
+            </div>
+            
+        </div>
+
+        <div class="input-fieldD">
+            <hr> 
+            <div class="input-fieldD">
+                <label>Product Title</label>
+            </div>
+
+            <p>{{product.title}}</p>
+            
+        </div>
+
+        <div class="input-fieldD">
+            <hr>
+            <label>Product Description</label>
+            <p>
+                {{product.description}}
+            </p>
+              </div>
+
+        <div class="input-fieldD">
+            <hr>
+            <label>Product Condition</label>
+            <p>New</p>
+        </div>
+
+        <div class="input-fieldD">
+            <hr>
+            <label>Product Price</label>
+            <p>R{{product.price}}</p>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <div class="nav-options">
+            <div class="nav-item">
+                <button routerLink="/dashboard"><mat-icon>home</mat-icon></button>
+            </div>
+
+            <div class="nav-item">
+                <button><mat-icon>assignment</mat-icon></button>
+                
+            </div>
+
+            <div class="nav-item">
+                <button routerLink="/my-products"><mat-icon>store</mat-icon></button>
+                <label>Products</label>
+            </div>
+
+            <div class="nav-item">
+                <button><mat-icon>launch</mat-icon></button>
+                
+            </div>
+
+            <div class="nav-item">
+                <button><mat-icon>account_circle</mat-icon></button>
+                
+            </div>
+
+        </div>
+            
+    </div>
+
+</div>    
+

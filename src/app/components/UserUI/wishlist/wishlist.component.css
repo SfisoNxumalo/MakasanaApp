@@ -41,7 +41,7 @@
   }
 
   .nav-options .nav-item:nth-child(3),
-  .nav-options .nav-item:nth-child(5) button{
+  .nav-options .nav-item:nth-child(3) button{
     color: blueviolet;
   }
   .nav-item label{

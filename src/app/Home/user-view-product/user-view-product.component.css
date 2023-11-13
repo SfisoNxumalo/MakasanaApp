@@ -1,0 +1,258 @@
+@media only screen and (max-width:700px){
+
+    .holder{
+        background-color: white;
+        min-width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        padding-bottom: 65px;
+    }
+  
+    hr{
+      margin: 12px 0;
+    }
+    
+    .details-holder{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      min-height: 100%;
+      padding: 0px 5px;
+    
+    }
+    
+    .image-view{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+  
+    }
+  
+    .image-view img{
+      max-width: 70%;
+      max-height: 70%;
+    }
+    
+    .details-view{
+      width: 100%;
+      padding: 10px 12px 60px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    /* __________ IMAGE SELECTOR _______ */
+    
+    
+    .btn-upload{
+        
+        background-color: rgb(211, 211, 211);
+         min-width: 150px;
+        min-height: 150px;
+        border-radius: 10px;
+        
+        width: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    .btn-upload input {
+        width: 150px;
+        height: 150px;
+        max-width: 100%;
+        min-height: 150px;
+        min-width: 150px;
+        position: absolute;
+        color: transparent;
+        background-color: transparent;
+        border: none;
+        z-index: 1000;
+        cursor: pointer;
+        outline: none;
+      }
+    
+      .btn-upload img{
+        width: 150px;
+        height: 150px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        position: absolute;
+      }
+    
+      .btn-upload input mat-icon {
+       z-index: 1000;
+       background-color: transparent;
+       cursor: pointer;
+      }
+    
+    
+    .btn-upload input::file-selector-button {
+        position: absolute;
+     
+        color: transparent;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+      }
+    
+      .input-field{
+        display: flex;
+        flex-direction: column;
+      }
+    
+      .input-field input, 
+      .input-field textarea, 
+      .input-field select{
+        padding: 5px;
+        border: 1px solid black;
+        border-radius: 5px;
+        outline: none;
+      }
+    
+      .input-field textarea{
+        resize: none
+      }
+  
+      
+      .input-fieldD{
+        display: flex;
+        flex-direction: column;
+      }
+    
+      .input-fieldD p, 
+      .input-fieldD textarea, 
+      .input-fieldD select{
+        padding: 5px;
+        border: 0px solid black;
+        border-radius: 5px;
+        outline: none;
+        margin: 0px 0px 0px 0px;
+        background-color: transparent;
+      }
+  
+      .input-fieldD label{
+        padding: 5px;
+      }
+    
+      .input-fieldD textarea{
+        resize: none
+      }
+    
+      .btnmeta-data{
+        width: fit-content;
+        background-color: transparent;
+        border: none;
+        align-self:flex-end;
+        color: blue;
+    
+      }
+    
+      /* .btnSave{
+        background-color: transparent;
+        padding: 0px;
+        position: fixed;
+        top: 0;
+        display: flex;
+        align-self: end;
+        border: none;
+        outline: none;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+      } */
+    
+      .btn-edit button{
+        background-color: rgb(224, 224, 224);
+        outline: none;
+        border: none;
+        color: black;
+        padding: 10px 10px;
+        font-size: 18px;
+        width: 100%;
+        border-radius: 8px;
+    
+      }
+    
+      .btnSave button mat-icon{
+        color: black;
+        font-weight: bold;
+      }
+    
+      .bottom-nav{
+        background-color: brown;
+        background-color: white;
+        padding: 8px;
+        position: fixed;
+        bottom: 0;
+        display: flex;
+    
+        border: none;
+        outline: none;
+        border-top: 1px solid rgb(204, 204, 204);
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+    
+      .nav-options{
+        display: grid;
+        flex-direction: row;
+        grid-template-columns: repeat(5, 1fr);
+        background-color: transparent;
+        width: 100%;
+        border: none;
+        gap: 0px;
+      }
+    
+      .nav-item{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+      }
+    
+      .nav-item button{
+        background-color: transparent;
+        padding: 0px;
+        border: none;
+        outline: none;
+      }
+    
+      .nav-options .nav-item:nth-child(3),
+      .nav-options .nav-item:nth-child(3) mat-icon{
+        color: blueviolet;
+      }
+      .nav-item label{
+        font-size: 11px;
+      }
+  
+      .prod-options{
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 0px;
+      }
+  
+      .crt-promo{
+        width: fit-content;
+        background-color: transparent;
+        border: none;
+        align-self:flex-end;
+        color: blue;
+        font-size: 16px;
+    
+      }
+    }
