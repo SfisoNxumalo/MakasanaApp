@@ -1,8 +1,8 @@
 .img-url{
     position: relative;
-    background-color: black;
-    background: url('https://i.postimg.cc/sxQJ212t/landing.jpg') no-repeat;
-    background-size: 100vw; 
+    /* background-color: black; */
+    /* background: url('https://i.postimg.cc/sxQJ212t/landing.jpg') no-repeat; */
+    background-size: 100vw;
     float: left;
     height: 450px;
     width: 100%;
@@ -10,7 +10,7 @@
 
     /* clip-path: polygon(0 0, 100% 0, 0 90%, 20 120% );  */
 
-}   
+}
 .word-warp{
     width: 300px;
 }
