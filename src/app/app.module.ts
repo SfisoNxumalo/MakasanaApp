@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {MatSelectModule} from '@angular/material/select';
+// import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -65,8 +66,10 @@ import { UserprofileComponent } from './UserUI/Userprofile/userprofile/userprofi
     OrderComfirmationComponent,
     UserprofileComponent,
     OrderComponent,
+    
 
     ProcessComponent,
+           
   ],
 
   imports: [
@@ -81,7 +84,10 @@ import { UserprofileComponent } from './UserUI/Userprofile/userprofile/userprofi
     BrowserAnimationsModule,
     MatSlideToggleModule,
     MatSidenavModule,
-
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -20,6 +20,7 @@ import { OrderComfirmationComponent } from './order-comfirmation/order-comfirmat
 import { UserprofileComponent } from './UserUI/Userprofile/userprofile/userprofile.component';
 
 
+
 const routes: Routes = [
 
   { path: 'landing-page', component:LandingComponent},
@@ -29,6 +30,9 @@ const routes: Routes = [
   { path: 'dashboard', component:BusinessDashboardComponent},
 
   { path: 'orders', component:OrderComponent},
+
+ 
+
 
    { path: "my-products", component: BusinessProductsComponent },
    { path: "add-product", component: AddProductComponent},
