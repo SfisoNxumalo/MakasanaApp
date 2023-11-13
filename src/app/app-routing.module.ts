@@ -34,13 +34,14 @@ import { UserViewProductComponent } from './Home/user-view-product/user-view-pro
 
 const routes: Routes = [
 
-  {path:'',redirectTo:'/landing-page', pathMatch: 'full' },
+  { path:'',redirectTo:'/landing-page', pathMatch: 'full' },
   { path: 'landing-page', component:LandingComponent},
 
   { path: 'dashboard', component:BusinessDashboardComponent},
 
   { path: 'orders', component:OrderComponent},
   {path:"home", component:HomeUiComponent},
+
 
    { path: "my-products", component: BusinessProductsComponent },
    { path: "add-product", component: AddProductComponent},
@@ -53,7 +54,7 @@ const routes: Routes = [
   { path: "company-signup", component: CompanySignupComponent},
   { path: "company-login", component: CompanyLoginComponent },
   { path: "my-products", component: BusinessProductsComponent },
-  {path: "products", component: ProductsUiComponent},
+  { path: "products", component: ProductsUiComponent},
 
   { path: "cart", component: CartComponent},
 
@@ -68,10 +69,10 @@ const routes: Routes = [
 
 
 
-  {path: "prof", component:ProfileComponent},
+  { path: "prof", component:ProfileComponent},
 
-  {path: "order-comfirmation", component:OrderComfirmationComponent},
-  {path:"user-profile",component:UserprofileComponent},
+  { path: "order-comfirmation", component:OrderComfirmationComponent},
+  { path:"user-profile",component:UserprofileComponent},
 
 ];
 
