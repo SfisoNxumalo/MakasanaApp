@@ -39,7 +39,8 @@ const routes: Routes = [
   { path: 'dashboard', component:BusinessDashboardComponent},
 
   { path: 'orders', component:OrderComponent},
-  { path:"home", component:HomeUiComponent},
+  {path:"home", component:HomeUiComponent},
+ 
 
    { path: "my-products", component: BusinessProductsComponent },
    { path: "add-product", component: AddProductComponent},

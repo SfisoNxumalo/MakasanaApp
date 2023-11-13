@@ -47,6 +47,7 @@ import { HomeUiComponent } from './Home/home-ui/home-ui.component';
 import { ProductsUiComponent } from './Home/products-ui/products-ui.component';
 import { UserViewProductComponent } from './Home/user-view-product/user-view-product.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
