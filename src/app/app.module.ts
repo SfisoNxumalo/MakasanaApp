@@ -80,7 +80,10 @@ import { UserSignupComponent } from './components/UserUI/user-signup/user-signup
     UserprofileComponent,
     HomeUiComponent,
     ProductsUiComponent,
-    UserViewProductComponent
+    UserViewProductComponent,
+    UserLoginComponent,
+    UserSignupComponent,
+    UserProfilePageComponent
   ],
   imports: [
     BrowserModule,
