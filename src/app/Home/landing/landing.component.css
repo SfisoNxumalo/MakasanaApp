@@ -1,7 +1,7 @@
 .img-url{
     position: relative;
-    /* background-color: black; */
-    /* background: url('https://i.postimg.cc/sxQJ212t/landing.jpg') no-repeat; */
+    background-color: black;
+    background: url('https://i.postimg.cc/sxQJ212t/landing.jpg') no-repeat;
     background-size: 100vw; 
     float: left;
     height: 450px;
@@ -18,5 +18,3 @@
 .about{
     left: 4%;
 }
-
-
