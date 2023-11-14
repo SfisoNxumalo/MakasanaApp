@@ -32,7 +32,7 @@ import { UserprofileComponent } from './components/UserUI/Userprofile/userprofil
 
 const routes: Routes = [
 
-  {path:'',redirectTo:'/landing-page', pathMatch: 'full' },
+  {path:'',redirectTo:'/landingpage', pathMatch: 'full' },
 
 
   { path: 'landing-page', component:LandingComponent},
