@@ -16,6 +16,10 @@ export class FakeStoreService {
     return this.httpclient.get(endpoint + "products")
   }
 
+  mGetFiveProducts(){
+    return this.httpclient.get(endpoint + "products?limit=6")
+  }
+
   mGetSelectedProduct(id:any){
     return this.httpclient.get(endpoint + "products/" + `${id}`)
   }

@@ -59,7 +59,7 @@ const routes: Routes = [
   { path: "my-products", component: BusinessProductsComponent },
   { path: "products", component: ProductsUiComponent},
 
-  { path: "cart", component: CartComponent},
+  { path: "your-cart", component: CartComponent},
   { path:"consumer-profile",component: UserProfilePageComponent},
  
  

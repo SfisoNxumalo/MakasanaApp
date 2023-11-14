@@ -1,83 +1,68 @@
 .holder{
     display: flex;
     flex-direction: column;
+    width: 100%;
+    height: 100%;
 }
 
-.login{
-    /* color: white; */
-    position: fixed;
-    margin-top: 10%;
-    margin-left: 18%;
-}
-form{
-    margin-top: 7%;
+.holder2{
+    padding: 20px;
+    height: 100%;
 }
 
-.emailInput{
-    position: fixed;
-    margin-top: 112px;
-    margin-left: 2%;
+.header{
+    
 }
 
-#emailInput{
-    position: fixed;
-    margin-left: 25%;
-    margin-top: 110px;
-    border-radius: 10px;
-    height: 30px;
-    width: 250px;
-
+.header h1{
+    font-weight: 600;
 }
 
-.passwordInput{
-    position: fixed;
-    margin-top: 170px;
-    margin-left: 2%; 
+.login-div{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 8px;
 }
 
-#passwordInput{
-    position: fixed;
-    margin-left: 25%;
-    margin-top: 160px;
-    border-radius: 10px;
-    height: 30px;
-    width: 250px;
-
-}
-
-.submit{
-    background-color: blueviolet;
-    margin-top: 290px;
-    margin-left: 8%;
-    height: 30px;
-    width: 320px;
-    color: white;
-    border-radius: 10px;
-    border: none;
-}
-
-
-
-.com{
-    color: white;
-    margin-top: 20%;
-    margin-left: 20%;
+.divvv{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .container{
     background-color: blueviolet;
-    /* border-top-right-radius: 60%; */
-    border-top-right-radius: 90%;
-    height: 200px;
-    width: 100%;
+    border-top-right-radius: 80%;
+    height: 170px;
+    width: 80%;
     position: absolute;
     bottom: 0;
+    z-index: 1000;
 }
 
+img{
+    width: 60%;
+    position:absolute;
+    height: auto;
+    z-index: 1111;
+}
+
+.submit{
+    margin-top: 10px;
+    background-color: blueviolet;
+    height: 35px;
+    width: 100%;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+}
 
 h5{
-    margin-left: 18%;
-    height: 87px;
-    position: fixed;
-    font-size: medium;
+font-size: medium;
+text-align: center;
+margin: 0px;
 }
