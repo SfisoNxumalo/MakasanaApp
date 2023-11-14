@@ -98,8 +98,8 @@
     outline: none;
   }
 
-  .nav-options .nav-item:nth-child(3),
-  .nav-options .nav-item:nth-child(3) button{
+  .nav-options .nav-item:nth-child(2),
+  .nav-options .nav-item:nth-child(2) button{
     color: blueviolet;
   }
   .nav-item label{

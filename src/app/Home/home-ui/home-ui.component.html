@@ -9,15 +9,16 @@
                 <span></span>
             </button>
 
-            <button><mat-icon>shopping_cart</mat-icon></button>
+            <button  routerLink="/your-cart"><mat-icon>shopping_cart</mat-icon></button>
         </div>
 
         <div class="top-det">
-            <p>What can we help you find?</p>
+            <p class="top-te">What can we help you find?</p>
                     <!-- <img src="https://media.istockphoto.com/id/1179274063/photo/women-hand-using-smartphone-do-online-selling-for-people-shopping-online-in-black-friday-with.webp?b=1&s=170667a&w=0&k=20&c=qu-5bLMcyGRls8xba1aSdTq4X4QtUzpbfF8eHUiWuPM="/> -->
             <div class="stock-details">
                 <mat-icon>search</mat-icon>
-                <input type="search" placeholder="Search..">
+                <input #searchBox type="search" placeholder="Search.." (input)="search(searchBox.value)">
+                <!-- *ngFor="let students of foundUsers$ | async" -->
             </div>
         </div>
 
@@ -160,4 +161,12 @@
                 </div>
             </div>
     </div>
+
+    <!-- <div *ngIf="!products.length" class="holder1">
+        
+        <img src="https://i.postimg.cc/t4jvtHq4/Package-box-brown-removebg-preview.png">
+
+        <label>You don't have any product yet</label> -->
+
+<!-- </div> -->
 </div>
