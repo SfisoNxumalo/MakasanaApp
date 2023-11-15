@@ -42,7 +42,6 @@ import { CartComponent } from './components/UserUI/cart/cart.component';
 import { BusinessProfileComponent } from './components/BusinessUI/business-profile/business-profile.component';
 import { WishlistComponent } from './components/UserUI/wishlist/wishlist.component';
 import { CheckoutComponent } from './components/UserUI/checkout/checkout.component';
-import { OrderComfirmationComponent } from './components/UserUI/order-comfirmation/order-comfirmation.component';
 import { UserprofileComponent } from './components/UserUI/Userprofile/userprofile/userprofile.component';
 import { HomeUiComponent } from './Home/home-ui/home-ui.component';
 import { ProductsUiComponent } from './Home/products-ui/products-ui.component';
@@ -76,12 +75,14 @@ import { UserSignupComponent } from './components/UserUI/user-signup/user-signup
     SlidebarComponent,
     WishlistComponent,
     CheckoutComponent,
-    OrderComfirmationComponent,
     BusinessProfileComponent,
     UserprofileComponent,
     HomeUiComponent,
     ProductsUiComponent,
-    UserViewProductComponent
+    UserViewProductComponent,
+    UserProfilePageComponent,
+    UserSignupComponent,
+    UserLoginComponent
   ],
   imports: [
     BrowserModule,

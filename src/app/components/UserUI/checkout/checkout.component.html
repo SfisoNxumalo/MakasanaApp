@@ -1,12 +1,11 @@
 
 <div class="container align-items-center">
 
-
     <div class="row">
         <div class="col-md-4 order-md-2 mb-4"  >
             <h4 class="d-flex justify-content-between align-items-center text-center mb-3">
-                <span class="text-muted text-center text-align-center">Your Order Summary</span>
-                <!-- <span class="badge badge-secondary badge-pill">3</span> -->
+                <label class="top-header">Your Order Summary</label>
+                
             </h4>
             <ul class="list-group mb-3 sticky-top">
                 <li class="list-group-item d-flex justify-content-between lh-condensed" *ngFor="let item of items">
@@ -14,14 +13,21 @@
                         <h6 class="my-0"> {{item.itemname}}</h6>
                         <small class="text-muted">{{item.quantity}}</small>
                     </div>
-                    <!-- <span class="text-muted">$12</span> -->
+                    
                 </li>
+<li class="list-group-item d-flex justify-content-between">
+<span>Item</span>
+<input type="number" name="">
+</li>
 
-
+<li class="list-group-item d-flex justify-content-between">
+  <span>Vat</span>
+  <input type="number" name="" id="">
+</li>
 
                 <li class="list-group-item d-flex justify-content-between">
                     <span>Total Amount</span>
-                    <strong>{{totalAmount | currency: 'R'}}</strong>
+                    <input type="number" value="{{totalAmount | currency: 'R'}}" />
                 </li>
 
             </ul>
@@ -29,38 +35,17 @@
         </div>
     </div>
 
-    <!-- Checkout -->
-
-    <!-- <form [formGroup]="profileForm" method="post" (submit)="onSubmit()">
-      <h2>USER infor</h2>
-    
-      <label for="name">Name: </label>
-      <input id="name" type="text" formControlName="name">
-    
-      <label for="Number">Cell: </label>
-      <input id="number" type="text" formControlName="number">
-    
-      <div class="col-12 mt-2 cc d-flex justify-content-between align-items-center mt-5">
-        <button [disabled]="isLoading" class="submit" type="submit" class="btn btn-primary btn1">Submit</button>
-        <button [formControl]="honeypot" routerLink="/cart"class="hidden" type="text" class="btn btn-primary btn0">Cancel</button>
-      </div>
-      <div [ngClass]="!submitted? 'hidden' : 'visible'" class="center-text">
-        <span>{{responseMessage}}</span>
-      </div>
-    </form> -->
 
 
 
 
-    <!-- end -->
-
-
+   
     <div class="d-flex justify-content-center" >
       <div class="dropdown">
         <button class="col-10 btn btn-outline-primary pe-4 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Pay</button>
         <ul class="dropdown-menu dropdown-menu-end ">
-          <li><a class="dropdown-item" (click)="payWithAyoba()">Pay with ayoba</a></li>
-          <li><a class="dropdown-item" routerLink="/closing-page">Test Payment</a></li>
+          <li><a class="dropdown-item" (click)="payWithAyoba()">Pay on delivery</a></li>
+          <li><a class="dropdown-item" routerLink="/closing-page">Pay on pick up</a></li>
         </ul>
       </div>
       <div class="dropdown">
