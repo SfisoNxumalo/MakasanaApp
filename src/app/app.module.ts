@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {MatSelectModule} from '@angular/material/select';
+// import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -9,7 +10,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {FormsModule} from '@angular/forms';
+import { NgForm } from '@angular/forms'; 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
@@ -41,7 +43,6 @@ import { CartComponent } from './components/UserUI/cart/cart.component';
 import { BusinessProfileComponent } from './components/BusinessUI/business-profile/business-profile.component';
 import { WishlistComponent } from './components/UserUI/wishlist/wishlist.component';
 import { CheckoutComponent } from './components/UserUI/checkout/checkout.component';
-import { OrderComfirmationComponent } from './components/UserUI/order-comfirmation/order-comfirmation.component';
 import { UserprofileComponent } from './components/UserUI/Userprofile/userprofile/userprofile.component';
 import { HomeUiComponent } from './Home/home-ui/home-ui.component';
 import { ProductsUiComponent } from './Home/products-ui/products-ui.component';
@@ -77,11 +78,14 @@ import {MatBadgeModule} from '@angular/material/badge';
     SlidebarComponent,
     WishlistComponent,
     CheckoutComponent,
-    OrderComfirmationComponent,
     BusinessProfileComponent,
     UserprofileComponent,
     HomeUiComponent,
     ProductsUiComponent,
+    UserViewProductComponent,
+    UserProfilePageComponent,
+    UserSignupComponent,
+    UserLoginComponent,
     UserViewProductComponent,
     UserProfilePageComponent,
     UserLoginComponent,
@@ -101,8 +105,10 @@ import {MatBadgeModule} from '@angular/material/badge';
     BrowserAnimationsModule,
     MatSlideToggleModule,
     MatSidenavModule,
-    MatBadgeModule
-
+    MatBadgeModule,
+    MatSelectModule,
+    MatInputModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

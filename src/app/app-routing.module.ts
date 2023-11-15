@@ -22,13 +22,13 @@ import { TrackOrderComponent } from './components/UserUI/track-order/track-order
 import { CartComponent} from './components/UserUI/cart/cart.component';
 import { UserOrderComponent } from './components/UserUI/user-order/user-order.component';
 import { WishlistComponent } from './components/UserUI/wishlist/wishlist.component';
-import { OrderComfirmationComponent } from './components/UserUI/order-comfirmation/order-comfirmation.component';
 import { UserprofileComponent } from './components/UserUI/Userprofile/userprofile/userprofile.component';
 import { UserProfilePageComponent } from './components/UserUI/user-profile-page/user-profile-page.component';
 
 import { UserSignupComponent } from './components/UserUI/user-signup/user-signup.component';
 import { UserLoginComponent } from './components/UserUI/user-login/user-login.component';
 import { AnalyticsUiComponent } from './components/BusinessUI/analytics-ui/analytics-ui.component';
+
 
 const routes: Routes = [
 
@@ -40,6 +40,9 @@ const routes: Routes = [
 
   { path: 'orders', component:OrderComponent},
   {path:"home", component:HomeUiComponent},
+
+
+ 
 
 
    { path: "my-products", component: BusinessProductsComponent },
@@ -74,7 +77,7 @@ const routes: Routes = [
 
   { path: "prof", component:ProfileComponent},
 
-  { path: "order-comfirmation", component:OrderComfirmationComponent},
+ 
   { path:"user-profile",component:UserprofileComponent},
 
 ];

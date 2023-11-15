@@ -116,13 +116,24 @@ form{
 
 .submit{
     background-color: blueviolet;
-    margin-top: 290px;
+    margin-top: 250px;
     margin-left: 8%;
     height: 30px;
     width: 320px;
     color: white;
     border-radius: 10px;
     border: none;
+}
+
+.sub{
+    background-color: blueviolet;
+    /* margin-top: 90px; */
+    margin-left: 30%;
+    height: 30px;
+    width: 320px;
+    color: white;
+    border-radius: 10px;
+    border: none; 
 }
 
 

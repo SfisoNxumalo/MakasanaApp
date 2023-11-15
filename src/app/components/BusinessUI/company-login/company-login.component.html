@@ -8,15 +8,15 @@
     <div class="login-div">
       <div class="form-group" id="email">
         <label class="emailInput" for="email">Email :</label>
-        <input type="email" name=" company_email" class="form-control" required placeholder="Company Email" id="emailInput">
+        <input type="email" name=" company_email" class="form-control" [(ngModel)]="form.email" required placeholder="Company Email" id="emailInput">
       </div>
       
       <div class="form-group" id="password">
         <label class="passwordInput" for="password">Password :</label> 
-        <input type="password" name="password" class="form-control" required placeholder="Password" id="passwordInput">
+        <input type="password" name="password" class="form-control" [(ngModel)]="form.password" required placeholder="Password" id="passwordInput">
       </div>
 
-      <button class="submit" routerLink="/dashboard" type="submit">Login</button>
+      <button class="submit"  type="submit" (click)="signIn()">Login</button>
 
       <div>
         <h5>Don't have an account? <a routerLink="/company-signup" id="loginName"> Register </a></h5>
@@ -56,8 +56,10 @@
 
     <button class="submit" routerLink="/dashboard" type="submit">login</button>
 
-    <h5>Don't have an account? <a routerLink="/company-signup" id="loginName"> Register </a></h5>
+    <button class="sub" routerLink="/home">Customer</button>
+   
 
+    <h5>Don't have an account? <a routerLink="/company-signup" id="loginName"> Register </a></h5>
 
   </form>
 
