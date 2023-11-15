@@ -83,10 +83,11 @@ import {MatBadgeModule} from '@angular/material/badge';
     HomeUiComponent,
     ProductsUiComponent,
     UserViewProductComponent,
-    UserLoginComponent,
-    UserSignupComponent,
     UserProfilePageComponent,
-    AnalyticsUiComponent
+    UserLoginComponent,
+    UserProfilePageComponent,
+    AnalyticsUiComponent,
+    UserSignupComponent
   ],
   imports: [
     BrowserModule,

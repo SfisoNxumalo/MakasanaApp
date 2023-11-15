@@ -16,7 +16,6 @@ import { ViewAProductComponent } from './components/BusinessUI/view-a-product/vi
 import { BusinessProfileComponent } from './components/BusinessUI/business-profile/business-profile.component';
 import { ProfileComponent } from './components/BusinessUI/profiles/profile/profile.component';
 
-
 import { CheckoutComponent } from './components/UserUI/checkout/checkout.component';
 import { TrackOrderComponent } from './components/UserUI/track-order/track-order.component';
 // import { CartComponent } from './components/UserUI/cart/cart.component';

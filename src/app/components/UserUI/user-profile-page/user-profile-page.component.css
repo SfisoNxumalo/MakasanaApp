@@ -142,8 +142,8 @@
     outline: none;
   }
   
-  .nav-options .nav-item:nth-child(5),
-  .nav-options .nav-item:nth-child(5) mat-icon{
+  .nav-options .nav-item:nth-child(4),
+  .nav-options .nav-item:nth-child(4) mat-icon{
     color: blueviolet;
   }
   .nav-item label{
