@@ -1,8 +1,63 @@
-<div class="img-url w-100"> 
+<div class="holder">
+    <section class="home"> 
     <app-landing-nav-bar></app-landing-nav-bar>
-    <div class="container mt-4">
-        <h1 class="text-white">Makasana</h1>
-        <p class="text-white word-warp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum beatae sed omnis tenetur suscipit sit, deleniti sapiente, doloremque, consequuntur et eligendi magnam ea. Ducimus pariatur quidem expedita, voluptas eos nulla.</p>
+    <div class="text-conta">
+        <div class="intros">
+            <h1 class="text-white">Makasana</h1>
+            <p class="slogan">The Online Store Near you!</p>
+        </div>
+        
+        <div class="home" >
+            <!-- <img src="https://i.postimg.cc/k5bNwfXG/Project-160-06-removebg-preview.png"/> -->
+            <img src="https://i.postimg.cc/h4z122V3/Project-160-06-removebg-preview.png" />
+
+        </div>
     </div>
- </div>
+ </section>
+
+
+
+ <section class="sec-2">
+    <h1 class="text-white2">L O C A L</h1>
+
+    <div class="div-d">
+         <p class="slogan2">We scream <em>LOCAL!</em></p>
+        <img class="afr" src="https://i.postimg.cc/L8rBVsWq/Africa-Map-removebgq-preview.png" alt="">
+    </div>
+
+    <p class="slogan3">We Provide businesses with digital solutions to help sell products.
+         Start selling <a routerLink="/company-signup">Sign up</a></p>
+ </section>
+
+  <section class="sec-3">
+    <div *ngIf="products.length" class="vholder">
+
+        <div class="item-holder">
+            <label class="lblHeaders">SHOP</label>
+        </div>
+        
+
+        <div class="item-holder">
+            <div class="products-div-ii">
+                
+                <div *ngFor="let product of products" class="menu-item2" routerLink="/product-details/{{product.id}}">
+
+                    <img class="main-logo2" src="{{product.image}}">
+            
+                    <div class="prod-text">
+                        <label>{{product.title}}</label>
+                        <!-- <label>{{product.rating.rate}}</label> -->
+                        <label class="price">R{{product.price}}</label>
+                    </div>
+            
+                </div>
+            </div>
+        </div>
+    </div>
+
+ </section>
+
+</div>
+
+
 
