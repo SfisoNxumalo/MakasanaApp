@@ -17,6 +17,8 @@ export class ViewAProductComponent implements OnInit {
 
   product:any = {}
 
+  boolEdit = true;
+
   productID:any;
 
   ngOnInit(): void {
@@ -41,6 +43,27 @@ export class ViewAProductComponent implements OnInit {
       }
 
     })
+  }
+
+  mEdit(){
+    this.boolEdit = false;
+  }
+
+  
+  async loadImage(event:any){
+    const selectedFile = event.target.files[0];
+    const reader = new FileReader();
+  
+    reader.onload = async (event:any) => {
+
+     this.productID.image = event.target.result,
+     
+      console.log(this.productID.image)
+    }
+
+   reader.readAsDataURL(selectedFile);
+
+ 
   }
 
 }
