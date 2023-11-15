@@ -1,0 +1,115 @@
+@media only screen and (max-width:700px){
+
+    p{
+        margin: 0;
+    }
+
+    .holder{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+        padding-bottom: 60px;
+    }
+    
+    .item{
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0px 1px 7px 0px rgba(0,0,0,0.2);
+        padding: 10px;
+        border-radius: 10px;
+        gap: 20px;
+        height: auto;
+    }
+    
+    .item .tit{
+        color: green;
+        font-size: 40px;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .lblStatus {
+        display: flex;
+        gap: 5px;
+    }
+
+    .lblStatus .status{
+        font-weight: bold;
+    }
+
+    .graph{
+        padding: 10px;
+        height: auto;
+    }
+
+    img{
+        width: 100px;
+        flex-basis: 1;
+        height: 100px;
+    }
+
+    .tite{
+        color: black;
+        font-size: 12px;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .daa{display: flex;}
+
+    
+  .bottom-nav{
+    background-color: brown;
+    background-color: white;
+    padding: 8px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+
+    border: none;
+    outline: none;
+    border-top: 1px solid rgb(204, 204, 204);
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-options{
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: transparent;
+    width: 100%;
+    border: none;
+    gap: 0px;
+  }
+
+  .nav-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-item button{
+    background-color: transparent;
+    padding: 0px;
+    border: none;
+    outline: none;
+  }
+
+  /* .nav-options .nav-item:nth-child(3),
+  .nav-options .nav-item:nth-child(3) mat-icon{
+    color: blueviolet;
+  } */
+  .nav-item label{
+    font-size: 11px;
+  }
+}
+

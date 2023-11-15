@@ -49,6 +49,8 @@ import { UserViewProductComponent } from './components/UserUI/user-view-product/
 import { UserProfilePageComponent } from './components/UserUI/user-profile-page/user-profile-page.component';
 import { UserLoginComponent } from './components/UserUI/user-login/user-login.component';
 import { UserSignupComponent } from './components/UserUI/user-signup/user-signup.component';
+import { AnalyticsUiComponent } from './components/BusinessUI/analytics-ui/analytics-ui.component';
+import {MatBadgeModule} from '@angular/material/badge';
 
 @NgModule({
   declarations: [
@@ -83,7 +85,8 @@ import { UserSignupComponent } from './components/UserUI/user-signup/user-signup
     UserViewProductComponent,
     UserLoginComponent,
     UserSignupComponent,
-    UserProfilePageComponent
+    UserProfilePageComponent,
+    AnalyticsUiComponent
   ],
   imports: [
     BrowserModule,
@@ -97,6 +100,7 @@ import { UserSignupComponent } from './components/UserUI/user-signup/user-signup
     BrowserAnimationsModule,
     MatSlideToggleModule,
     MatSidenavModule,
+    MatBadgeModule
 
   ],
   providers: [],

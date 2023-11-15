@@ -29,7 +29,7 @@ import { UserProfilePageComponent } from './components/UserUI/user-profile-page/
 
 import { UserSignupComponent } from './components/UserUI/user-signup/user-signup.component';
 import { UserLoginComponent } from './components/UserUI/user-login/user-login.component';
-
+import { AnalyticsUiComponent } from './components/BusinessUI/analytics-ui/analytics-ui.component';
 
 const routes: Routes = [
 
@@ -37,6 +37,7 @@ const routes: Routes = [
   { path: 'landing-page', component:LandingComponent},
 
   { path: 'dashboard', component:BusinessDashboardComponent},
+  {path:'my-analytics', component:AnalyticsUiComponent},
 
   { path: 'orders', component:OrderComponent},
   {path:"home", component:HomeUiComponent},
