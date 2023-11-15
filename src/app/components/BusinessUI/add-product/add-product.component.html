@@ -1,5 +1,5 @@
 <div class="holder">
-    <div class="btnSave">
+    <div class="btnSave"(click)="createProduct()">
         <button><mat-icon>add</mat-icon></button>
         <!-- <button style="background-color: blueviolet; width: 60px; margin-right: 2%; margin-top: 20%;">Add</button> -->
     </div>
@@ -23,17 +23,17 @@
                     <label>Product Title:</label>
                     <label>*</label>
                 </div>
-                <input type="text" placeholder="Title">
+                <input type="text" [(ngModel)]="productDetail.title"  placeholder="Title">
             </div>
 
             <div class="input-field">
                 <label>Product Description:</label>
-                <textarea rows="6" autocomplete="on" autocorrect="true" cols="33"  type="text" placeholder="Tell customers more about your product"></textarea>
+                <textarea rows="6" autocomplete="on"[(ngModel)]="productDetail.description" autocorrect="true" cols="33"  type="text" placeholder="Tell customers more about your product"></textarea>
             </div>
 
             <div class="input-field">
                 <label>Product Category:</label>
-                <select type="number" placeholder="Category">
+                <select type="number" [(ngModel)]="productDetail.category" placeholder="Category">
                     <option>Furniture</option>
                     <option>Electronics</option>
                     <option>Beauty, health, personal, and household care</option>
@@ -55,20 +55,20 @@
 
             <div class="input-field">
                 <label>Product Condition:</label>
-                <select type="number" placeholder="Quantity">
-                    <option>New</option>
-                    <option>Used</option>
+                <select type="number" [(ngModel)]="productDetail.condition" placeholder="Condition">
+                    <option value="New">New</option>
+                    <option value="Used" >Used</option>
                 </select>
             </div>
 
             <div class="input-field">
                 <label>Product Price:</label>
-                <input type="text" placeholder="Price">
+                <input type="number" placeholder="Price" [(ngModel)]="productDetail.price">
             </div>
 
             <div class="input-field">
                 <label>Product Quantity:</label>
-                <input type="number" placeholder="Quantity">
+                <input type="number" placeholder="Quantity" [(ngModel)]="productDetail.quantity">
             </div>
         </div>
     </div>
@@ -92,13 +92,18 @@
                 <label>Products</label>
             </div>
 
-            <div class="nav-item">
+            <!-- <div class="nav-item">
                 <button><mat-icon>launch</mat-icon></button>
+                
+            </div> -->
+
+            <div class="nav-item">
+                <button  routerLink="/buss-profile"><mat-icon>account_circle</mat-icon></button>
                 
             </div>
 
             <div class="nav-item">
-                <button  routerLink="/buss-profile"><mat-icon>account_circle</mat-icon></button>
+                <button><mat-icon>logout</mat-icon></button>
                 
             </div>
 

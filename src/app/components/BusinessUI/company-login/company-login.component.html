@@ -1,18 +1,56 @@
 <div class="holder">
 
+  <div class="holder2">
+    <div class="header">
+      <h1 >Login to your Business Account</h1>
+    </div>
+
+    <div class="login-div">
+      <div class="form-group" id="email">
+        <label class="emailInput" for="email">Email :</label>
+        <input type="email" name=" company_email" class="form-control" [(ngModel)]="form.email" required placeholder="Company Email" id="emailInput">
+      </div>
+      
+      <div class="form-group" id="password">
+        <label class="passwordInput" for="password">Password :</label> 
+        <input type="password" name="password" class="form-control" [(ngModel)]="form.password" required placeholder="Password" id="passwordInput">
+      </div>
+
+      <button class="submit"  type="submit" (click)="signIn()">Login</button>
+
+      <div>
+        <h5>Don't have an account? <a routerLink="/company-signup" id="loginName"> Register </a></h5>
+    <h5><a routerLink="/user-login" id="loginName">User </a> sign in</h5>
+      </div>
+    
+
+
+    </div>
+  </div>
+
+<div class="divvv"><img src="https://i.postimg.cc/xTv5HYJ3/vecteezy-cloud-computing-modern-flat-concept-for-web-banner-design-5879539-removebg-preview.png"/>
+  </div>
+  <div class="container"> 
+    
+</div>
+  
+  
+</div>
+
+
+<!-- <div class="holder">
+
     <h1 class="login">Login to your Business Account</h1>
 <form name="form" >
 
-
-    <div class="form-group" id="email">
-      <img src="../">
+    <div class="fo" id="email">
       <label class="emailInput" for="email">Email :</label>
-      <input type="text" name=" company_email" class="form-control" placeholder=" Company Email" id="emailInput">
+      <input type="text" name=" company_email" class="form-control" placeholder="Company Email" id="emailInput">
     </div>
     
     <div class="form-group" id="password">
        <label class="passwordInput" for="password">Password :</label> 
-       <input type="password" name="password" class="form-control" placeholder=" Password" id="passwordInput">
+       <input type="password" name="password" class="form-control" placeholder="Password" id="passwordInput">
     </div>
 
 
@@ -28,6 +66,6 @@
    <div class="container"> 
   <h2 class="com">Welcome back</h2>
 </div>
-</div>
+</div> -->
 
 

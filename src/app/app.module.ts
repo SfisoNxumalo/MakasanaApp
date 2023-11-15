@@ -10,7 +10,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {FormsModule} from '@angular/forms';
+import { NgForm } from '@angular/forms'; 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
@@ -83,6 +84,10 @@ import { UserSignupComponent } from './components/UserUI/user-signup/user-signup
     UserProfilePageComponent,
     UserSignupComponent,
     UserLoginComponent
+    UserViewProductComponent,
+    UserProfilePageComponent,
+    UserLoginComponent,
+    UserSignupComponent
   ],
   imports: [
     BrowserModule,
