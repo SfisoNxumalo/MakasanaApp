@@ -82,9 +82,9 @@ import { UserSignupComponent } from './components/UserUI/user-signup/user-signup
     HomeUiComponent,
     ProductsUiComponent,
     UserViewProductComponent,
+    UserProfilePageComponent,
     UserLoginComponent,
-    UserSignupComponent,
-    UserProfilePageComponent
+    UserSignupComponent
   ],
   imports: [
     BrowserModule,
@@ -98,7 +98,7 @@ import { UserSignupComponent } from './components/UserUI/user-signup/user-signup
     BrowserAnimationsModule,
     MatSlideToggleModule,
     MatSidenavModule,
-
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
