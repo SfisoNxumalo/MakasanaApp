@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {MatSelectModule} from '@angular/material/select';
+// import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -42,7 +43,6 @@ import { CartComponent } from './components/UserUI/cart/cart.component';
 import { BusinessProfileComponent } from './components/BusinessUI/business-profile/business-profile.component';
 import { WishlistComponent } from './components/UserUI/wishlist/wishlist.component';
 import { CheckoutComponent } from './components/UserUI/checkout/checkout.component';
-import { OrderComfirmationComponent } from './components/UserUI/order-comfirmation/order-comfirmation.component';
 import { UserprofileComponent } from './components/UserUI/Userprofile/userprofile/userprofile.component';
 import { HomeUiComponent } from './Home/home-ui/home-ui.component';
 import { ProductsUiComponent } from './Home/products-ui/products-ui.component';
@@ -50,6 +50,8 @@ import { UserViewProductComponent } from './components/UserUI/user-view-product/
 import { UserProfilePageComponent } from './components/UserUI/user-profile-page/user-profile-page.component';
 import { UserLoginComponent } from './components/UserUI/user-login/user-login.component';
 import { UserSignupComponent } from './components/UserUI/user-signup/user-signup.component';
+import { AnalyticsUiComponent } from './components/BusinessUI/analytics-ui/analytics-ui.component';
+import {MatBadgeModule} from '@angular/material/badge';
 
 @NgModule({
   declarations: [
@@ -76,14 +78,19 @@ import { UserSignupComponent } from './components/UserUI/user-signup/user-signup
     SlidebarComponent,
     WishlistComponent,
     CheckoutComponent,
-    OrderComfirmationComponent,
     BusinessProfileComponent,
     UserprofileComponent,
     HomeUiComponent,
     ProductsUiComponent,
     UserViewProductComponent,
     UserProfilePageComponent,
+    UserSignupComponent,
     UserLoginComponent,
+    UserViewProductComponent,
+    UserProfilePageComponent,
+    UserLoginComponent,
+    UserProfilePageComponent,
+    AnalyticsUiComponent,
     UserSignupComponent
   ],
   imports: [
@@ -98,7 +105,10 @@ import { UserSignupComponent } from './components/UserUI/user-signup/user-signup
     BrowserAnimationsModule,
     MatSlideToggleModule,
     MatSidenavModule,
-    ReactiveFormsModule
+    MatBadgeModule,
+    MatSelectModule,
+    MatInputModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

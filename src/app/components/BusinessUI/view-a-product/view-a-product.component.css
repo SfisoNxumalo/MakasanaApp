@@ -8,7 +8,7 @@
       flex-direction: column;
       align-items: center;
       padding: 10px;
-      padding-bottom: 65px;
+      padding-bottom: 75px;
   }
 
   hr{
@@ -36,7 +36,9 @@
   .image-view img{
     max-width: 70%;
     max-height: 70%;
+    /* z-index: 1000; */
   }
+
   
   .details-view{
     width: 100%;
@@ -108,14 +110,23 @@
       flex-direction: column;
     }
   
-    .input-field input, 
+    /* .input-field input, 
     .input-field textarea, 
     .input-field select{
       padding: 5px;
       border: 1px solid black;
       border-radius: 5px;
       outline: none;
+    } */
+
+    .clsZindex {
+      z-index: 1000;
     }
+  
+    .clsZindexii {
+      z-index: -1;
+    }
+  
   
     .input-field textarea{
       resize: none
@@ -131,11 +142,23 @@
     .input-fieldD textarea, 
     .input-fieldD select{
       padding: 5px;
+    }
+
+    .editable{
+      border: 1px solid black;
+      border-radius: 5px;
+      outline: none;
+
+    }
+
+    .nonEditable{
+      background-color: transparent;
       border: 0px solid black;
       border-radius: 5px;
       outline: none;
-      background-color: transparent;
     }
+
+
 
     .input-fieldD label{
       padding: 5px;
@@ -152,6 +175,58 @@
       align-self:flex-end;
       color: blue;
   
+    }
+
+    .btn-upload{
+    
+      background-color: transparent;
+       min-width: 150px;
+      min-height: 150px;
+      border-radius: 10px;
+      
+      width: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      position: absolute;
+  }
+  
+  .btn-upload input {
+      width: 150px;
+      height: 150px;
+      max-width: 100%;
+      min-height: 150px;
+      min-width: 150px;
+      position: absolute;
+      color: transparent;
+      background-color: transparent;
+      border: none;
+      z-index: 1000;
+      cursor: pointer;
+      outline: none;
+    }
+
+  
+    .btn-upload input mat-icon {
+     background-color: transparent;
+     cursor: pointer;
+    }
+
+    .btn-upload input mat-icon {
+      color: red;
+      fill: brown;
+      
+
+    }
+
+    .btn-upload input::file-selector-button {
+      position: absolute;
+   
+      color: transparent;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
     }
   
     /* .btnSave{

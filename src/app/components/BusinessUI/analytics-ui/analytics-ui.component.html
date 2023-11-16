@@ -1,0 +1,61 @@
+<div class="holder">
+    <p>Your Progress</p>
+
+    <div class="item">
+        <label class="lblheader">Total Available Products</label>
+        <p  class="tit">
+            1000
+        </p>
+        <div class="lblStatus">
+            <label class="status">Status:</label><label>HEALTHY</label>
+        </div>
+    </div>
+
+    <div class="item">
+        <label class="lblheader">Montly Product Sales</label>
+        <canvas class="graph" id="graph">
+
+        </canvas>
+    </div>
+
+    <div class="item">
+        <label class="lblheader">Fastest Selling</label>
+        <div class="daa">
+            <img src="{{product.image}}"/>
+            <p class="tite">
+                {{product.title}}
+            </p>
+        </div>
+    </div>
+    <div class="bottom-nav">
+
+        <div class="nav-options" >
+
+            <div class="nav-item">
+                <button routerLink="/dashboard"><mat-icon>home</mat-icon></button>
+            </div>
+
+            <div class="nav-item">
+                <button routerLink="/orders"><mat-icon>assignment</mat-icon></button>
+                
+            </div>
+
+            <div class="nav-item">
+                <button routerLink="/my-products"><mat-icon>store</mat-icon></button>
+            </div>
+
+            <div class="nav-item">
+                <button><mat-icon>launch</mat-icon></button>
+                
+            </div>
+
+            <div class="nav-item">
+                <button><mat-icon>account_circle</mat-icon></button>
+                
+            </div>
+
+        </div>
+            
+    </div>
+</div>
+
