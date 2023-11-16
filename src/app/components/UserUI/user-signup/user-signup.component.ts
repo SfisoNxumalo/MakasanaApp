@@ -13,11 +13,23 @@ export class UserSignupComponent {
     email:"",
     password:"",
     address:"",
-    contact:"",
+    phoneNumber:"",
     roles:"user"
   }
   constructor(private userService: UserService) { }
 
+
+
+  Register(){
+    this.userService.signup(this.form.username,this.form.email,this.form.password,this.form.address, this.form.phoneNumber,this.form.roles).subscribe({
+      next:data=>{
+        console.log(data)
+      }
+    })
+
+    console.log(this.form)
+
+  }
 
 
 }
