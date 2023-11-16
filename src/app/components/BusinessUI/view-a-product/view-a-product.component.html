@@ -8,11 +8,11 @@ class="left" srcset="" height="30px" width="30px">
 
     <div class="details-holder">
         <div class="image-view">
-            <!-- <div class="btn-upload"> -->
-                <mat-icon>camera_enhance</mat-icon>
-                <input [disabled]="boolEdit" type="file" accept="image/png, image/jpeg" (change)= "loadImage($event)">
-                <img [src]="product.image">
-            <!-- </div> -->
+            <div class="btn-upload">
+                <mat-icon [class]="z_index">camera_enhance</mat-icon>
+                <input [disabled]="boolEdit" type="file" accept="image/png, image/jpeg" (change)= "loadImage($event)">    
+            </div>
+            <img [src]="product.image">
             <!-- <img src="https://images.samsung.com/is/image/samsung/p6pim/za/rb30j3611sa-fa/gallery/za-bottom-freezer-303l-rb30j3611sa-fa-536308508?$2160_1728_PNG$"/> -->
         </div>
         
