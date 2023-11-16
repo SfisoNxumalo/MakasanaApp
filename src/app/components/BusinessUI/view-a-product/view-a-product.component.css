@@ -8,7 +8,7 @@
       flex-direction: column;
       align-items: center;
       padding: 10px;
-      padding-bottom: 65px;
+      padding-bottom: 75px;
   }
 
   hr{
@@ -108,14 +108,14 @@
       flex-direction: column;
     }
   
-    .input-field input, 
+    /* .input-field input, 
     .input-field textarea, 
     .input-field select{
       padding: 5px;
       border: 1px solid black;
       border-radius: 5px;
       outline: none;
-    }
+    } */
   
     .input-field textarea{
       resize: none
@@ -131,11 +131,23 @@
     .input-fieldD textarea, 
     .input-fieldD select{
       padding: 5px;
+    }
+
+    .editable{
+      border: 1px solid black;
+      border-radius: 5px;
+      outline: none;
+
+    }
+
+    .nonEditable{
+      background-color: transparent;
       border: 0px solid black;
       border-radius: 5px;
       outline: none;
-      background-color: transparent;
     }
+
+
 
     .input-fieldD label{
       padding: 5px;

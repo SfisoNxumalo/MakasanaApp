@@ -23,7 +23,7 @@ class="left" srcset="" height="30px" width="30px">
                 </button>
             </div>
             <div class="btn-edit">
-                <button (click)="mEdit()"><mat-icon>edit</mat-icon></button>
+                <button id="btnButtonn" (click)="mEdit()"><mat-icon>edit</mat-icon></button>
             </div>
         </div>
 
@@ -33,19 +33,19 @@ class="left" srcset="" height="30px" width="30px">
                 <label>Product Title</label>
             </div>
             
-            <input [disabled]="boolEdit" type="text" placeholder="Title" value="{{product.title}}">
+            <input [class]="clsEditable" [disabled]="boolEdit" type="text" placeholder="Title" value="{{product.title}}">
         </div>
 
         <div class="input-fieldD">
             <hr>
             <label>Product Description</label>
-            <textarea [disabled]="boolEdit" rows="5" autocomplete="on" autocorrect="true" cols="33" type="text" placeholder="Tell customers more about your product">{{product.description}}</textarea>
+            <textarea [class]="clsEditable" [disabled]="boolEdit" rows="5" autocomplete="on" autocorrect="true" cols="33" type="text" placeholder="Tell customers more about your product">{{product.description}}</textarea>
         </div>
 
         <div class="input-fieldD">
             <hr>
             <label>Product Condition</label>
-            <select [disabled]="boolEdit" type="number" placeholder="Quantity">
+            <select [class]="clsEditable" [disabled]="boolEdit" type="number" placeholder="Quantity">
                 <option>New</option>
                 <option>Used</option>
             </select>
@@ -54,12 +54,12 @@ class="left" srcset="" height="30px" width="30px">
         <div class="input-fieldD">
             <hr>
             <label>Product Price</label>
-            <input [disabled]="boolEdit" type="text" value="R{{product.price}}" placeholder="Price">
+            <input [class]="clsEditable" [disabled]="boolEdit" type="text" value="R{{product.price}}" placeholder="Price">
         </div>
 
         <div class="input-fieldD">
             <label>Product Quantity</label>
-            <input [disabled]="boolEdit" type="number" placeholder="Quantity">
+            <input [class]="clsEditable" [disabled]="boolEdit" type="number" placeholder="Quantity">
         </div>
     </div>
 
