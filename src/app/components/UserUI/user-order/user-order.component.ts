@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-user-order',
@@ -7,4 +8,18 @@ import { Component } from '@angular/core';
 })
 export class UserOrderComponent {
 
+  form={
+    username:"",
+    password:"",
+  }
+  constructor(private userService: UserService) { }
+
+
+
+  Register(){
+  
+
+    console.log(this.form)
+
+  }
 }

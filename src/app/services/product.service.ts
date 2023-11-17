@@ -29,4 +29,7 @@ export class ProductService {
       return this.http.put(this.api+"update/"+id,{title, image, price, description,category,
       quantity,conduction}, httpOptions)
   }
+  findAll(id:string):Observable<any>{
+    return this.http.get(this.api+"findAll/"+id,httpOptions)
+  }
 }
