@@ -50,6 +50,7 @@ import { UserViewProductComponent } from './components/UserUI/user-view-product/
 import { UserProfilePageComponent } from './components/UserUI/user-profile-page/user-profile-page.component';
 import { UserLoginComponent } from './components/UserUI/user-login/user-login.component';
 import { UserSignupComponent } from './components/UserUI/user-signup/user-signup.component';
+import { WebsiteComponent } from './website/website.component';
 
 @NgModule({
   declarations: [
@@ -83,11 +84,12 @@ import { UserSignupComponent } from './components/UserUI/user-signup/user-signup
     UserViewProductComponent,
     UserProfilePageComponent,
     UserSignupComponent,
-    UserLoginComponent
+    UserLoginComponent,
     UserViewProductComponent,
     UserProfilePageComponent,
     UserLoginComponent,
-    UserSignupComponent
+    UserSignupComponent,
+    WebsiteComponent
   ],
   imports: [
     BrowserModule,
