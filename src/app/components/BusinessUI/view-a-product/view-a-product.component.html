@@ -8,7 +8,11 @@ class="left" srcset="" height="30px" width="30px">
 
     <div class="details-holder">
         <div class="image-view">
-            <img src="{{product.image}}"/>
+            <div class="btn-upload">
+                <mat-icon [class]="z_index">camera_enhance</mat-icon>
+                <input [disabled]="boolEdit" type="file" accept="image/png, image/jpeg" (change)= "loadImage($event)">    
+            </div>
+            <img [src]="product.image">
             <!-- <img src="https://images.samsung.com/is/image/samsung/p6pim/za/rb30j3611sa-fa/gallery/za-bottom-freezer-303l-rb30j3611sa-fa-536308508?$2160_1728_PNG$"/> -->
         </div>
         
@@ -19,7 +23,7 @@ class="left" srcset="" height="30px" width="30px">
                 </button>
             </div>
             <div class="btn-edit">
-                <button><mat-icon>edit</mat-icon></button>
+                <button id="btnButtonn" (click)="mEdit()"><mat-icon>edit</mat-icon></button>
             </div>
         </div>
 
@@ -29,19 +33,19 @@ class="left" srcset="" height="30px" width="30px">
                 <label>Product Title</label>
             </div>
             
-            <input disabled="true" type="text" placeholder="Title" value="{{product.title}}">
+            <input [class]="clsEditable" [disabled]="boolEdit" type="text" placeholder="Title" value="{{product.title}}">
         </div>
 
         <div class="input-fieldD">
             <hr>
             <label>Product Description</label>
-            <textarea disabled="true" rows="5" autocomplete="on" autocorrect="true" cols="33" type="text" placeholder="Tell customers more about your product">{{product.description}}</textarea>
+            <textarea [class]="clsEditable" [disabled]="boolEdit" rows="5" autocomplete="on" autocorrect="true" cols="33" type="text" placeholder="Tell customers more about your product">{{product.description}}</textarea>
         </div>
 
         <div class="input-fieldD">
             <hr>
             <label>Product Condition</label>
-            <select disabled="true" type="number" placeholder="Quantity">
+            <select [class]="clsEditable" [disabled]="boolEdit" type="number" placeholder="Quantity">
                 <option>New</option>
                 <option>Used</option>
             </select>
@@ -50,12 +54,12 @@ class="left" srcset="" height="30px" width="30px">
         <div class="input-fieldD">
             <hr>
             <label>Product Price</label>
-            <input disabled="true" type="text" value="R{{product.price}}" placeholder="Price">
+            <input [class]="clsEditable" [disabled]="boolEdit" type="text" value="R{{product.price}}" placeholder="Price">
         </div>
 
         <div class="input-fieldD">
             <label>Product Quantity</label>
-            <input disabled="true" type="number" placeholder="Quantity">
+            <input [class]="clsEditable" [disabled]="boolEdit" type="number" placeholder="Quantity">
         </div>
     </div>
 

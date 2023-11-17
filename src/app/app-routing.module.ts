@@ -16,7 +16,6 @@ import { ViewAProductComponent } from './components/BusinessUI/view-a-product/vi
 import { BusinessProfileComponent } from './components/BusinessUI/business-profile/business-profile.component';
 import { ProfileComponent } from './components/BusinessUI/profiles/profile/profile.component';
 
-
 import { CheckoutComponent } from './components/UserUI/checkout/checkout.component';
 import { TrackOrderComponent } from './components/UserUI/track-order/track-order.component';
 // import { CartComponent } from './components/UserUI/cart/cart.component';
@@ -30,6 +29,7 @@ import { UserSignupComponent } from './components/UserUI/user-signup/user-signup
 import { UserLoginComponent } from './components/UserUI/user-login/user-login.component';
 import { WebsiteComponent } from './website/website.component';
 
+import { AnalyticsUiComponent } from './components/BusinessUI/analytics-ui/analytics-ui.component';
 
 
 const routes: Routes = [
@@ -38,6 +38,7 @@ const routes: Routes = [
   { path: 'landing-page', component:LandingComponent},
 
   { path: 'dashboard', component:BusinessDashboardComponent},
+  {path:'my-analytics', component:AnalyticsUiComponent},
 
   { path: 'orders', component:OrderComponent},
   {path:"home", component:HomeUiComponent},
