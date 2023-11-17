@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OrderService } from 'src/app/services/order.service';
 
 @Component({
   selector: 'app-order',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./order.component.css']
 })
 export class OrderComponent {
+
+  constructor(private orderService:  OrderService){}
+  ngOnInit(): void { 
+
+
+  }
+
+  
 
 }
