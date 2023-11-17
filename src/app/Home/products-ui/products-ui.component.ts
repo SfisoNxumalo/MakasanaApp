@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
+
+import {
+  debounceTime, distinctUntilChanged, switchMap
+} from 'rxjs/operators';
 import { FakeStoreService } from 'src/app/services/fake-store.service';
 
 @Component({
@@ -8,17 +13,51 @@ import { FakeStoreService } from 'src/app/services/fake-store.service';
 })
 export class ProductsUiComponent  implements OnInit {
 
+  foundUsers$!: Observable<any[]>;
+  private searchTerms = new Subject<string>();
+
+  search(term: string): void {
+    this.searchTerms.next(term);
+  }
+
   constructor(private fakeApi:FakeStoreService){}
+
   image = "https://media.istockphoto.com/id/620737858/photo/cape-town-and-the-12-apostels-from-above.jpg?s=612x612&w=is&k=20&c=WBxI8OmAFXoGz5I5QjU0eI87I5C6K8h0Xs4JmArrEQQ=";
 
 
   ngOnInit(): void {
+    // this.foundUsers$ = this.searchTerms.pipe(
+    //   // wait 300ms after each keystroke before considering the term
+    //   debounceTime(300),
+
+    //   // ignore new term if same as previous term
+    //   distinctUntilChanged(),
+
+    //   // switch to new search observable each time the term changes
+    //   switchMap((term: string) => this.fakeApi.mGetProducts()),
+    // );
     this.mGet();
   }
+
+  mGetSearch(term:string):Observable<any>{
+
+    const oo = [1, 2, 3, 5]
+
+    const ssearchData = new BehaviorSubject<any>({});
+
+    // BehaviorSubject bh = new BehaviorSubject();
+
+    return ssearchData;
+  }
+
   blLoadComplete = true;
   products:any = [];
 
   mGet(){
+
+    
+
+
     this.fakeApi.mGetProducts().subscribe({
       next: (res) => {(
         this.products = res,

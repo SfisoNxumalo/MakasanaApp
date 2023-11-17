@@ -11,14 +11,20 @@
                 <span></span>
             </button>
 
-            <button routerLink="/your-cart"><mat-icon>shopping_cart</mat-icon></button>
+            <button  routerLink="/your-cart"><mat-icon matBadge="8" matBadgeColor="warn">shopping_cart</mat-icon>
+                <!-- Include text description of the icon's meaning for screen-readers -->
+                <span class="cdk-visually-hidden">
+                  Example with a home icon with overlaid badge showing the number 15
+                </span>
+            </button>
+
         </div>
 
         <div *ngIf="products.length" class="top-det">
             
             <div class="stock-details">
                 <mat-icon>search</mat-icon>
-                <input type="search" placeholder="Search..">
+                <input #searchBox (input)="search(searchBox.value)" type="search" placeholder="Search..">
             </div>
 
             <div class="fil-sor">
@@ -57,17 +63,44 @@
         <div class="item-holder">
             <div class="products-div-ii">
                 
-                <div *ngFor="let product of products" class="menu-item2" routerLink="/product-details/{{product.id}}">
+                <div *ngFor="let product of products" class="menu-item4" routerLink="/product-details/{{product.id}}">
+                    <label class="promo">Sale</label>
+                    <div class="menu-item2">
 
-                    <img class="main-logo2" src="{{product.image}}">
+                        <img class="main-logo2" src="{{product.image}}">
+                
+                        <div class="prod-text">
+                            <label>{{product.title}}</label>
+                            <!-- <label>{{product.rating.rate}}</label> -->
+                            <div class="pr">
+                                <label class="price">R{{product.price}}</label>
+                                <button type="button"><mat-icon>add_shopping_cart</mat-icon></button>
+                            </div>
+                            
+                        </div>
             
-                    <div class="prod-text">
-                        <label>{{product.title}}</label>
-                        <!-- <label>{{product.rating.rate}}</label> -->
-                        <label class="price">R{{product.price}}</label>
                     </div>
-            
+                    
                 </div>
+
+                <!-- <div *ngFor="let product of foundUsers$ | async" class="menu-item4" routerLink="/product-details/{{product.id}}">
+                    <label class="promo">Sale</label>
+                    <div class="menu-item2">
+
+                        <img class="main-logo2" src="{{product.image}}">
+                
+                        <div class="prod-text">
+                            <label>{{product.title}}</label>
+                            <div class="pr">
+                                <label class="price">R{{product.price}}</label>
+                                <button type="button"><mat-icon>add_shopping_cart</mat-icon></button>
+                            </div>
+                            
+                        </div>
+            
+                    </div>
+                    
+                </div> -->
             </div>
         </div>
     </div>

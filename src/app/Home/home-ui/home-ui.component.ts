@@ -29,10 +29,6 @@ export class HomeUiComponent implements OnInit{
     //   // switch to new search observable each time the term changes
     //   switchMap((term: string) => this.mGetSearch(term)),
     // );
-    const oo = [1, 2, 3, 5]
-    oo.forEach(i =>{
-      console.log(i);
-    })
 
   }
 
