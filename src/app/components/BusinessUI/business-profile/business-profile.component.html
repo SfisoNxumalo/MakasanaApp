@@ -2,10 +2,11 @@
 
 <h2 style="font-size: large; margin-left: 25%; margin-top: 2%;">Business Infomation</h2>
 
+<div class="w-100 d-flex justify-content-center">
+  <img class="logo " [src]="business.image" >
+</div>
 
-<img class="logo" src="../../../assets/images/shop.jpg" >
-
-<h2 class="label">Rocklands Designer</h2>
+<h2 class="label text-center mt-2">{{business.username}}</h2>
 <!-- <h4 class="mail">rocklandsdesign@gmail.com</h4> -->
 
 <div class="container">
@@ -18,13 +19,13 @@
 
 <div class="container1" >
 <img class="location" src="../../../../assets/images/location-svgrepo-com.svg" alt="" style="width: 20px; height: 20px;">
-<p class="address">1234 Albertina Road, Cape Town</p>
+<p class="address">{{business.address}}</p>
 <hr>
 <img class="time" src="../../../../assets/images/time-svgrepo-com.svg" alt=""  style="width: 20px; height: 20px;">
 <p class="hours"> Monday-Friday  10:00 am - 5:00 pm</p>
 <hr>
 <img class="mail" src="../../../../assets/images/email-svgrepo-com.svg" alt="" style="width: 20px; height: 20px;">
-<p class="email">rocklandsdesign@gmail.com</p>
+<p class="email">{{business.email}}</p>
 </div>
 
 <!-- <img class="log" src="../../../../assets/images/logout-3-svgrepo-com.svg" alt="" style="width: 30px; height: 30px; margin-bottom: 5%;"> -->

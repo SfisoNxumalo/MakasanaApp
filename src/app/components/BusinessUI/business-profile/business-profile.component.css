@@ -1,20 +1,15 @@
 .logo{
-    margin-top:3% ;
     width: 100px;
     border-radius: 50px;
     height: 100px;
-    margin-left: 35%;
-    justify-content:center ;
-    align-items: center;
-    position: relative;
 }
 
-.label{
+/* .label{
     margin-top: 3%;
     margin-left: 30%;
     position: relative;
     font-size: large;
-}
+} */
 
 .category{
     margin-top: 3%;

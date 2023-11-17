@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FakeStoreService } from 'src/app/services/fake-store.service';
+import { ProductService } from 'src/app/services/product.service';
 
 
 
@@ -15,7 +16,7 @@ export class ViewAProductComponent implements OnInit {
 
   z_index = "clsZindexii";
  
-  constructor(private route:ActivatedRoute, private fakeApi:FakeStoreService){}
+  constructor(private route:ActivatedRoute, private fakeApi:FakeStoreService, private productService:ProductService){}
 
   product:any = {}
 
@@ -36,18 +37,23 @@ export class ViewAProductComponent implements OnInit {
 
   mGetProduct(){
     const id = this.route.snapshot.params[('id')]
-    this.fakeApi.mGetSelectedProduct(id).subscribe({
-      next: (res) => {(
-        this.product = res,
-        console.log(res)
-        // this.blLoadComplete = false
-      )},
-      error: (err) => {
-        console.log(err)
-        // this.blLoadComplete = false
+    this.productService.getProuctById(id).subscribe({
+      next:data=>{
+        this.product = data
       }
-
     })
+    // this.fakeApi.mGetSelectedProduct(id).subscribe({
+    //   next: (res) => {(
+    //     this.product = res,
+    //     console.log(res)
+    //     // this.blLoadComplete = false
+    //   )},
+    //   error: (err) => {
+    //     console.log(err)
+    //     // this.blLoadComplete = false
+    //   }
+
+    // })
   }
 
   mEdit()

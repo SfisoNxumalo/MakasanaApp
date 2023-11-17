@@ -21,7 +21,6 @@ export class AddProductComponent  {
 
   ngOnInit() {
     this.business = this.tokenService.getUser()
-    console.log(this.business.id)
   }
 
   async loadImage(event:any){
