@@ -11,21 +11,37 @@ export class UserService {
   api = "http://localhost:2023/app/"
 
   constructor(private http: HttpClient) { }
-  signup(username: string, email: string, password: string, address:string,phoneNumber:string , roles:string): Observable<any> {
-    return this.http.post(this.api + 'signup', {
-      username, email, password, address, phoneNumber,roles
-    },
-    httpOptions);
+
+  signup(username: string, email: string, 
+    password: string, address:string,
+    phoneNumber:string , roles:string): Observable<any> {
+
+      const body = {
+      username, email, password, address, phoneNumber, roles
+    };
+
+    return this.http.post(this.api + 'signup', body, httpOptions);
    }
-  register(username: string, industry:string, email: string, password: string, address:string,phoneNumber:string , roles:string): Observable<any> {
-    return this.http.post(this.api + 'signup', {
+
+  register(username: string, industry:string, 
+    email: string, password: string, 
+    address:string, phoneNumber:string , 
+    roles:string): Observable<any> 
+    {
+
+      const body = {
       username, email, password,  industry, address, phoneNumber,roles
-    },
-    httpOptions);
+    };
+
+    return this.http.post(this.api + 'signup', body, httpOptions);
    }
+
    signIn(email: string, password: string): Observable<any> {
-    return this.http.post(this.api + 'signin', {
+    
+    const body = {
       email, password, 
-    },httpOptions);}
+    }
+
+    return this.http.post(this.api + 'signin', body, httpOptions);}
 }
 

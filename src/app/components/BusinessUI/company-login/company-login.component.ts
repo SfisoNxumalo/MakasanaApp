@@ -13,12 +13,11 @@ export class CompanyLoginComponent {
     email:"",
     password:"",
   }
-  constructor(private userService: UserService,private tokenStorage: TokenstorageService) { }
+  constructor(private userService: UserService, private tokenStorage: TokenstorageService) { }
 
   signIn(){
     this.userService.signIn(this.form.email, this.form.password).subscribe({
-      next: data=>{
-      console.log(data)
+      next: data => {
       this.tokenStorage.saveToken(data.accessToken);
       this.tokenStorage.saveUser(data);
     }})
