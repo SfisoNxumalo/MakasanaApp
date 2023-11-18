@@ -27,6 +27,8 @@ import { UserProfilePageComponent } from './components/UserUI/user-profile-page/
 
 import { UserSignupComponent } from './components/UserUI/user-signup/user-signup.component';
 import { UserLoginComponent } from './components/UserUI/user-login/user-login.component';
+import { WebsiteComponent } from './website/website.component';
+
 import { AnalyticsUiComponent } from './components/BusinessUI/analytics-ui/analytics-ui.component';
 
 
@@ -57,7 +59,7 @@ const routes: Routes = [
   { path: "company-login", component: CompanyLoginComponent },
   { path: "user-signup", component: UserSignupComponent},
   { path: "user-login", component: UserLoginComponent},
-
+  {path: "website",component:WebsiteComponent},
 
   { path: "my-products", component: BusinessProductsComponent },
   { path: "products", component: ProductsUiComponent},
