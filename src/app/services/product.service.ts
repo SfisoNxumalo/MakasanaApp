@@ -21,14 +21,17 @@ export class ProductService {
     quantity,conduction},httpOptions)
 
   }
+  
   getProuctById(id:string):Observable<any>{
     return this.http.get(this.api+"getById/"+id,httpOptions)
   }
+
   updateProduct(id:string, title:string, image:string, price: string, description:string, 
     category:string,quantity:string,conduction:string):Observable<any>{
       return this.http.put(this.api+"update/"+id,{title, image, price, description,category,
       quantity,conduction}, httpOptions)
   }
+
   findAll(id:string):Observable<any>{
     return this.http.get(this.api+"findAll/"+id,httpOptions)
   }

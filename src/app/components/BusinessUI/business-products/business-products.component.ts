@@ -37,6 +37,7 @@ export class BusinessProductsComponent implements OnInit {
       }
     })
   }
+  
   getAllProduct(){
     this.productService.findAll(this.business.id).subscribe({
       next:data=>{
