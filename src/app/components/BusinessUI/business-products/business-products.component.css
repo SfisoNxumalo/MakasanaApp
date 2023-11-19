@@ -201,7 +201,7 @@ mat-progress-bar{
     }
     
     .menu-item2{
-        padding: 10px;
+        padding: 8px;
         background-color: white;
         display: flex;
         flex-direction: column;
@@ -233,7 +233,7 @@ mat-progress-bar{
         display: flex;
         flex-direction: column;
         padding: 5px;
-        gap: 15px;
+        gap: 8px;
     }
 
     .prod-text label:nth-child(1){

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Products } from 'src/app/Interfaces/products';
 import { FakeStoreService } from 'src/app/services/fake-store.service';
 import { ProductService } from 'src/app/services/product.service';
 
@@ -18,8 +19,26 @@ export class ViewAProductComponent implements OnInit {
  
   constructor(private route:ActivatedRoute, private fakeApi:FakeStoreService, private productService:ProductService){}
 
-  product:any = {}
-
+  products:Products = {
+    _id: '',
+    title: '',
+    image: '',
+    description: "",
+    category: '',
+    price: 0,
+    condition: '',
+    quantity: 0,
+    promo: {
+      onPromo: false,
+      promoDesc: '',
+      newPrice: 0,
+      startDate: new Date(),
+      endDate:  new Date()
+    },
+    added:  new Date(),
+    updated:  new Date()
+  };
+  
   boolEdit = true;
   clsEditable = "nonEditable";
 
@@ -27,33 +46,16 @@ export class ViewAProductComponent implements OnInit {
   productID:any;
 
   ngOnInit(): void {
-    // this.route.paramMap.subscribe(params => {
-    //   this.product = params.get("id");
-    // });
+    this.route.paramMap.subscribe(params => {
+      const product = params.get("id");
+      this.mViewProduct(product);
+    });
 
     this.mGetProduct()
-
   }
 
   mGetProduct(){
     const id = this.route.snapshot.params[('id')]
-    this.productService.getProuctById(id).subscribe({
-      next:data=>{
-        this.product = data
-      }
-    })
-    // this.fakeApi.mGetSelectedProduct(id).subscribe({
-    //   next: (res) => {(
-    //     this.product = res,
-    //     console.log(res)
-    //     // this.blLoadComplete = false
-    //   )},
-    //   error: (err) => {
-    //     console.log(err)
-    //     // this.blLoadComplete = false
-    //   }
-
-    // })
   }
 
   mEdit()
@@ -73,9 +75,32 @@ export class ViewAProductComponent implements OnInit {
       // this.button.value = "<mat-icon>edit</mat-icon>";
       this.z_index = "clsZindexii";
     }
-    
-   
-    
+  }
+
+  mCancel()
+  {
+    this.button = window.document.getElementById('btnButtonn');
+
+    if(this.button.innerText === "Save"){
+      this.boolEdit = true;
+      this.clsEditable = "nonEditable"; 
+      this.button.innerHTML = "<mat-icon>edit</mat-icon>";
+      // this.button.value = "<mat-icon>edit</mat-icon>";
+      this.z_index = "clsZindexii";
+    }
+  }
+
+  mViewProduct(id:any){
+    this.productService.getOneProduct(id).subscribe({
+      next: (product) => {(
+        this.products = product,
+        console.log(product)
+      )},
+      error: (err) => {
+        console.log(err)
+        // this.blLoadComplete = false
+      }
+    });
   }
 
   
@@ -85,9 +110,7 @@ export class ViewAProductComponent implements OnInit {
   
     reader.onload = async (event:any) => {
 
-     this.product.image = event.target.result
-     
-      // console.log(this.productID.image)
+     this.products.image = event.target.result
     }
 
    reader.readAsDataURL(selectedFile);

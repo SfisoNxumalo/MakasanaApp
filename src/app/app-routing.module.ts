@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { LandingComponent } from './Home/landing/landing.component';
 import { HomeUiComponent } from './Home/home-ui/home-ui.component';
-import { ProductsUiComponent } from './Home/products-ui/products-ui.component';
+import { ProductsUiComponent } from './components/UserUI/products-ui/products-ui.component';
 import { UserViewProductComponent } from './components/UserUI/user-view-product/user-view-product.component';
 import { BusinessDashboardComponent } from './components/BusinessUI/business-dashboard/business-dashboard.component';
 import { CompanySignupComponent } from './components/BusinessUI/company-signup/company-signup.component';

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { Products } from '../products';
+import { Products } from '../Interfaces/products';
 
 @Injectable({
   providedIn: 'root'
@@ -30,7 +30,7 @@ addToCart(product: any ) {
 
 
 
-  const productExistInCart = this.items.find(({productName}) => productName === product.productName);
+  const productExistInCart = this.items.find(({title}) => title === product.productName);
   // productExistInCart.quantity = 0
   if (!productExistInCart) {
   this.items.push({...product});

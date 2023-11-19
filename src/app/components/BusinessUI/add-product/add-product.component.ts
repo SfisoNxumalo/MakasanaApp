@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Products } from 'src/app/Interfaces/products';
 import { ProductService,  } from 'src/app/services/product.service';
 import { TokenstorageService } from 'src/app/services/tokenstorage.service';
 
@@ -9,18 +10,24 @@ import { TokenstorageService } from 'src/app/services/tokenstorage.service';
   styleUrls: ['./add-product.component.css']
 })
 export class AddProductComponent  {
+
   business:any ={}
-  track:any = "";
-  productDetail:any ={
-    title:"",
-    image:"https://i.postimg.cc/02V5gKJ8/pos.jpg",
-    description:"",
-    price:Number,
-    quantity:Number,
+
+  productDetail:Products = {
+    title: "",
+    image: "https://i.postimg.cc/02V5gKJ8/pos.jpg",
+    description: "",
+    category: "",
+    price: 0,
+    condition: "",
+    quantity: 0,
+    promo: {onPromo:false, promoDesc:"", newPrice:0, startDate : new Date(), endDate: new Date()},
+    added: new Date(),
+    updated: new Date()
   }
 
   ngOnInit() {
-    this.business = this.tokenService.getUser()
+    // this.business = this.tokenService.getUser()
   }
 
   async loadImage(event:any){
@@ -29,24 +36,27 @@ export class AddProductComponent  {
   
     reader.onload = async (event:any) => {
 
-     this.track  = {
-        path: event.target.result,
-     }
-      console.log(this.track.path)
+     this.productDetail.image  = event.target.result
+     
+      // console.log(this.track.path)
     }
 
    reader.readAsDataURL(selectedFile);
-
- 
   }
+
   constructor(private productService: ProductService, private tokenService: TokenstorageService){} 
 
   createProduct(){
 
-    this.productService.createProduct(this.business.id,this.productDetail.title,this.productDetail.image, this.productDetail.price, this.productDetail.description,
-      this.productDetail.category,this.productDetail.quantity,this.productDetail.condition).subscribe({
-        next:data =>{
-          console.log(data)
+    this.productService.mCreateProduct(this.productDetail).subscribe({
+        next: (message) => {(
+          // this.products = product,
+          console.log(message)
+          // alert(message)
+        )},
+        error: (err) => {
+          console.log(err)
+          // this.blLoadComplete = false
         }
       })
   }

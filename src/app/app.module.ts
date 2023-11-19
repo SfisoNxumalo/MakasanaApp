@@ -45,7 +45,7 @@ import { WishlistComponent } from './components/UserUI/wishlist/wishlist.compone
 import { CheckoutComponent } from './components/UserUI/checkout/checkout.component';
 import { UserprofileComponent } from './components/UserUI/Userprofile/userprofile/userprofile.component';
 import { HomeUiComponent } from './Home/home-ui/home-ui.component';
-import { ProductsUiComponent } from './Home/products-ui/products-ui.component';
+import { ProductsUiComponent } from './components/UserUI/products-ui/products-ui.component';
 import { UserViewProductComponent } from './components/UserUI/user-view-product/user-view-product.component';
 import { UserProfilePageComponent } from './components/UserUI/user-profile-page/user-profile-page.component';
 import { UserLoginComponent } from './components/UserUI/user-login/user-login.component';
