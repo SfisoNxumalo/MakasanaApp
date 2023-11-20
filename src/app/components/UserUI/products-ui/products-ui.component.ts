@@ -93,6 +93,6 @@ export class ProductsUiComponent  implements OnInit {
   }
 
   mAddToCart(){
-    console.log()
+    alert("added to cart")
   }
 }
