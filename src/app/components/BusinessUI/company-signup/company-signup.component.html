@@ -6,29 +6,27 @@
     </div>
 
     <div class="login-div">
-
   
   <div class="form-group" id="fullname">
     <label class="companynameInput" for="name">Company Name :</label>
-    <input type="text" name="companyname" [(ngModel)]="form.username" class="form-control" placeholder=" Company Name" id="companynameInput">
+    <input type="text" name="companyname" [(ngModel)]="form.name" class="form-control" placeholder="Company Name" id="companynameInput">
   </div>
 
 
   <div class="form-group" id="email">
     <label class="emailInput" for="email">Email :</label>
-    <input type="text" name=" company_email" class="form-control" [(ngModel)]="form.email" placeholder=" Company Email" id="emailInput">
+    <input type="text" name=" company_email" class="form-control" [(ngModel)]="form.email" placeholder="Company Email" id="emailInput">
   </div>
 
 
   <div class="form-group" id="Phone"> 
     <label class="contactpersonInput" for="name">Phone :</label>
-     <input type="number" name="phone" class="form-control" placeholder=" Phone" [(ngModel)]="form.contact" id="contactpersonInput" >
+     <input type="number" name="phone" class="form-control" placeholder="Phone" [(ngModel)]="form.phone" id="contactpersonInput" >
     </div>
-
 
   <div class="form-group" id="industry">
     <label class="industryInput" for="name">Industry :</label>
-    <input type="text" name=" industry" class="form-control" placeholder=" Industry" [(ngModel)]="form.industry" id="industryInput">
+    <input type="text" name="industry" class="form-control" placeholder="Industry" [(ngModel)]="form.industry" id="industryInput">
   </div>
 
   <div class="form-group" id="Address">
@@ -38,10 +36,10 @@
 
   <div class="form-group" id="password">
      <label class="passwordInput" for="password">Password :</label> 
-    <input type="password" name="password" class="form-control" placeholder=" Password" [(ngModel)]="form.password" id="passwordInput">
+    <input type="password" name="password" class="form-control" placeholder="Password" [(ngModel)]="form.password" id="passwordInput">
   </div>
 
-  <button class="submit" type="submit" (click)="signUp()" >Register</button>
+  <button class="submit" type="submit" (click)="signUp()">Register</button>
 
   <h5>Already registered? <a routerLink="/company-login" id="loginName"> Login </a></h5>
   <h5>User? <a routerLink="/user-login" id="loginName"> Login </a></h5>

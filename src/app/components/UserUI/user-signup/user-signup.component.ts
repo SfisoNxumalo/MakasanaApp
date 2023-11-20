@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { UserService } from 'src/app/services/user.service';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-user-signup',
@@ -9,19 +9,16 @@ import { UserService } from 'src/app/services/user.service';
 export class UserSignupComponent {
 
   form={
-    username:"",
+    name:"",
     email:"",
     password:"",
     address:"",
-    phoneNumber:"",
-    roles:"user"
+    phone:"",
   }
-  constructor(private userService: UserService) { }
-
-
+  constructor(private auth: AuthService) { }
 
   Register(){
-    this.userService.signup(this.form.username,this.form.email,this.form.password,this.form.address, this.form.phoneNumber,this.form.roles).subscribe({
+    this.auth.mCSignUp(this.form).subscribe({
       next:data=>{
         console.log(data)
       }

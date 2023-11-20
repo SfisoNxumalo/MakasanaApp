@@ -167,6 +167,7 @@
   
       .input-fieldD label{
         padding: 5px;
+        font-size: small;
       }
     
       .input-fieldD textarea{
@@ -270,7 +271,7 @@
         padding-bottom: 0px;
       }
   
-      .crt-promo{
+      /* .crt-promo{
         width: fit-content;
         background-color: transparent;
         border: none;
@@ -278,5 +279,41 @@
         color: blue;
         font-size: 16px;
     
+      } */
+
+
+      .promo{
+        padding: 10px;
+        background-color: wheat;
+        display: flex;
+      }
+
+      .promo p{
+        padding: 0;
+        margin: 0;
+        font-size: 12px;
+      }
+
+      .input-fieldD .price{
+        padding: 0;
+        margin: 0;
+        font-weight: 600;
+        font-size: x-large;
+        text-align: end;
+      }
+
+      .input-fieldD .prices-product{
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        gap: 5px;
+      }
+
+      .input-fieldD .prices-product .lblOld{
+        padding: 0;
+        margin: 0;
+        font-size: 13px;
+        text-align: end;
+        text-decoration: line-through;
       }
     }

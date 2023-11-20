@@ -13,10 +13,10 @@ mat-progress-bar{
         display: flex;
         flex-direction: column;
         background-color: white;
-        padding: 10px 12px;
         height: 100%;
         max-height: 100%;
         margin-bottom: 70px;
+        gap: 10px;
     }
 
     /* ----------NAV---------- */
@@ -25,15 +25,15 @@ mat-progress-bar{
         background-color: white;
         min-width: 100%;
         height: 30%;
-        padding: 5px 5px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        padding: 10px 12px 0px 12px;
 }
 
 .top-bar{
     height: auto;
-    background-color: tr;
+    background-color: transparent;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -97,8 +97,7 @@ mat-progress-bar{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 5px 8px;
-    padding-top: 20px;
+    padding: 15px 5px 0px 5px;
     height: 100%;
     gap: 5px;
 }
@@ -149,7 +148,8 @@ mat-progress-bar{
         gap: 10px;
         flex-direction: column;
         padding-top: 0px;
-        padding-bottom: 10px;
+        
+        padding: 5px 12px 10px 12px;
     }
 
     .holder1{
@@ -217,7 +217,8 @@ mat-progress-bar{
         border-radius: 30px 30px 0 0;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 12px; 
+        gap: 12px;
+        margin-bottom: 47px; 
     }
 
     .main-logo2{
@@ -234,10 +235,19 @@ mat-progress-bar{
         background-color: white;
         display: flex;
         flex-direction: column;
-        min-width: 140px;
+        width: 100%;
         border-radius: 10px;
+        height: 100%;
         box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.2);
     }
+
+    .menu-item4{
+        flex-basis: 1;
+        
+        min-width: 140px;
+    }
+
+   
 
     /* .menu-item2 label{ 
         
@@ -264,7 +274,7 @@ mat-progress-bar{
         gap: 10px;
     }
 
-    .prod-text label:nth-child(1){
+    .prod-text label{
         font-size: 12px;
         max-height: 30px;
         text-overflow: ellipsis;
@@ -285,11 +295,10 @@ mat-progress-bar{
     }
 
 
-
-    .prod-text label:nth-child(2){
+    /* .prod-text label:nth-child(2){
         font-size: 15px;
         font-weight: bold;
-    }
+    } */
 
     
     .bottom-nav{
@@ -337,6 +346,43 @@ mat-progress-bar{
       .nav-item label{
         font-size: 11px;
       }
+
+      .promo{
+        background-color: wheat;
+        position: absolute;
+        color: green;
+        margin-top: 15px;
+    }
+
+    .pr{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .pr button{
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        border: none;
+        padding: 0px;
+    }
+
+    .pr label{
+        font-size: 15px;
+        font-weight: bold;
+        flex-basis: 1;
+        width: 100% ;
+    }
+
+    .pr mat-icon{
+        font-size: 17px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+
+    }
 
 }
 

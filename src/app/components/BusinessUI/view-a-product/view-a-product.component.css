@@ -144,6 +144,12 @@
       padding: 5px;
     }
 
+    .input-fieldD textarea{
+      resize: none;
+      min-height: auto;
+      max-height: 100px;
+    }
+
     .editable{
       border: 1px solid black;
       border-radius: 5px;
@@ -251,6 +257,19 @@
       color: black;
       padding: 10px 10px;
       font-size: 18px;
+      width: 100%;
+      border-radius: 8px;
+  
+    }
+
+    .btn-cancel button{
+      background-color: rgb(224, 224, 224);
+      outline: none;
+      border: none;
+      color: red;
+      display: flex;
+      padding: 5px;
+      font-size: 17px;
       width: 100%;
       border-radius: 8px;
   

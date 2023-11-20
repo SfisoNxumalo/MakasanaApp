@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { LandingComponent } from './Home/landing/landing.component';
 import { HomeUiComponent } from './Home/home-ui/home-ui.component';
-import { ProductsUiComponent } from './Home/products-ui/products-ui.component';
+import { ProductsUiComponent } from './components/UserUI/products-ui/products-ui.component';
 import { UserViewProductComponent } from './components/UserUI/user-view-product/user-view-product.component';
 import { BusinessDashboardComponent } from './components/BusinessUI/business-dashboard/business-dashboard.component';
 import { CompanySignupComponent } from './components/BusinessUI/company-signup/company-signup.component';
@@ -27,6 +27,8 @@ import { UserProfilePageComponent } from './components/UserUI/user-profile-page/
 
 import { UserSignupComponent } from './components/UserUI/user-signup/user-signup.component';
 import { UserLoginComponent } from './components/UserUI/user-login/user-login.component';
+import { WebsiteComponent } from './website/website.component';
+
 import { AnalyticsUiComponent } from './components/BusinessUI/analytics-ui/analytics-ui.component';
 
 
@@ -57,10 +59,10 @@ const routes: Routes = [
   { path: "company-login", component: CompanyLoginComponent },
   { path: "user-signup", component: UserSignupComponent},
   { path: "user-login", component: UserLoginComponent},
-
+  {path: "website",component:WebsiteComponent},
 
   { path: "my-products", component: BusinessProductsComponent },
-  { path: "products", component: ProductsUiComponent},
+  { path: "products/:category", component: ProductsUiComponent},
 
   { path: "your-cart", component: CartComponent},
   { path:"consumer-profile",component: UserProfilePageComponent},

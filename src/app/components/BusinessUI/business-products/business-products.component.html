@@ -46,8 +46,9 @@
                         <label>{{product.title}}</label>
                         <!-- <label>{{product.rating.rate}}</label> -->
                         <label class="price">R{{product.price}}</label>
+                        
                     </div>
-            
+                    <label *ngIf="product.promo.onPromo">placed on sale</label>
                 </div>
             </div>
         </div>
