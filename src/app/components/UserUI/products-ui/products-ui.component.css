@@ -271,11 +271,11 @@ mat-progress-bar{
     .prod-text{
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 5px;
     }
 
     .prod-text label{
-        font-size: 12px;
+        font-size: 14px;
         max-height: 30px;
         text-overflow: ellipsis;
         /* white-space: nowrap; */

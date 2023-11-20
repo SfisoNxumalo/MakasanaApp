@@ -37,7 +37,7 @@ export class UserViewProductComponent {
       error: (error)=>{
         console.log("Some error occured",error)
       }
-    })
+    });
   }
 
   // mGetProduct(){
