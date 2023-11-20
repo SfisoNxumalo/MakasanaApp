@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TokenstorageService } from 'src/app/services/tokenstorage.service';
 
 @Component({
   selector: 'app-business-profile',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./business-profile.component.css']
 })
 export class BusinessProfileComponent {
+   
+  business:any={}
+   
+  constructor( private tokenService:TokenstorageService){
+   this.business = this.tokenService.getUser()
+   console.log(this.business)
+
+  }
+
 
 }

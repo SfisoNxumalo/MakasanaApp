@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
-import { UserService } from 'src/app/services/user.service';
+import { Component, TemplateRef } from '@angular/core';
+
+import {Router} from '@angular/router'; // import router from angular router
+import { AuthService } from 'src/app/services/auth.service';
+import { TokenService } from 'src/app/services/token.service';
 
 @Component({
   selector: 'app-user-login',
@@ -8,14 +11,34 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class UserLoginComponent {
   form={
-    username:"",
+    email:"",
     password:"",
   }
-  constructor(private userService: UserService) { }
 
-  signUp(){
-    this.userService.signIn(this.form.username, this.form.password).subscribe(data=>{
-      console.log(data)
+  toasts: any[] = [];
+
+  constructor(private auth: AuthService,private route:Router, private token:TokenService) { }
+
+  signIn(){
+    this.auth.mCSignIn(this.form).subscribe({
+      next: data=> {
+        console.log(data)
+        this.token.saveToken(data.accessToken),
+        this.route.navigate(["/home"])
+      }
     })
   }
+
+
+	show(textOrTpl: string | TemplateRef<any>, options: any = {}) {
+		this.toasts.push({ textOrTpl, ...options });
+	}
+
+	remove(toast: any) {
+		this.toasts = this.toasts.filter((t) => t !== toast);
+	}
+
+	clear() {
+		this.toasts.splice(0, this.toasts.length);
+	}
 }

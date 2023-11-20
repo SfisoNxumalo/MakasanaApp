@@ -10,34 +10,34 @@
   
   <div class="form-group" id="fullname">
     <label class="companynameInput" for="name">Name & Surname:</label>
-    <input type="text" name="companyname" class="form-control" placeholder="Name" [(ngModel)]="form" id="companynameInput">
+    <input type="text" name="companyname" class="form-control" placeholder="Name" [(ngModel)]="form.name" id="companynameInput">
   </div>
 
 
   <div class="form-group" id="email">
     <label class="emailInput" for="email">Email :</label>
-    <input type="text" name=" company_email" class="form-control" placeholder="Email" id="emailInput">
+    <input type="text" name=" company_email" class="form-control" placeholder="Email" [(ngModel)]="form.email" id="emailInput">
   </div>
 
 
   <div class="form-group" id="Phone"> 
     <label class="contactpersonInput" for="name">Phone :</label>
-     <input type="number" name="phone" class="form-control" placeholder=" Phone" id="contactpersonInput" >
+     <input type="number" name="phone" class="form-control" placeholder=" Phone" [(ngModel)]="form.phone" id="contactpersonInput" >
     </div>
 
   <div class="form-group" id="Address">
     <label class="addressInput" for="name">Address :</label>
-    <textarea class="form-control" cols="5" placeholder="Company Address"></textarea>
+    <textarea class="form-control" cols="5" placeholder="Company Address" [(ngModel)]="form.address"></textarea>
   </div>
 
   <div class="form-group" id="password">
      <label class="passwordInput" for="password">Password :</label> 
-    <input type="password" name="password" class="form-control" placeholder=" Password" id="passwordInput">
+    <input type="password" name="password" class="form-control" placeholder=" Password" id="passwordInput" [(ngModel)]="form.password">
   </div>
 
-  <button class="submit" type="submit">Register</button>
+  <button class="submit" type="submit" (click)="Register()">Register</button>
 
-  <h5>Already registered? <a routerLink="/user-login" id="loginName"> Login </a></h5>
+  <h5>Already registered? <a routerLink="/user-login" id="loginName" > Login </a></h5>
   <h5>Business? <a routerLink="/company-login" id="loginName"> Login </a></h5>
 
     </div>

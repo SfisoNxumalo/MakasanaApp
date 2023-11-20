@@ -16,7 +16,7 @@
         <input type="password" name="password" class="form-control" [(ngModel)]="form.password" required placeholder="Password" id="passwordInput">
       </div>
 
-      <button class="submit"  type="submit" (click)="signIn()">Login</button>
+      <button class="submit"  type="submit" (click)="mSignIn()">Login</button>
 
       <div>
         <h5>Don't have an account? <a routerLink="/company-signup" id="loginName"> Register </a></h5>
@@ -56,8 +56,10 @@
 
     <button class="submit" routerLink="/dashboard" type="submit">login</button>
 
-    <h5>Don't have an account? <a routerLink="/company-signup" id="loginName"> Register </a></h5>
+    <button class="sub" routerLink="/home">Customer</button>
+   
 
+    <h5>Don't have an account? <a routerLink="/company-signup" id="loginName"> Register </a></h5>
 
   </form>
 

@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { LandingComponent } from './Home/landing/landing.component';
 import { HomeUiComponent } from './Home/home-ui/home-ui.component';
-import { ProductsUiComponent } from './Home/products-ui/products-ui.component';
+import { ProductsUiComponent } from './components/UserUI/products-ui/products-ui.component';
 import { UserViewProductComponent } from './components/UserUI/user-view-product/user-view-product.component';
 import { BusinessDashboardComponent } from './components/BusinessUI/business-dashboard/business-dashboard.component';
 import { CompanySignupComponent } from './components/BusinessUI/company-signup/company-signup.component';
@@ -16,19 +16,20 @@ import { ViewAProductComponent } from './components/BusinessUI/view-a-product/vi
 import { BusinessProfileComponent } from './components/BusinessUI/business-profile/business-profile.component';
 import { ProfileComponent } from './components/BusinessUI/profiles/profile/profile.component';
 
-
 import { CheckoutComponent } from './components/UserUI/checkout/checkout.component';
 import { TrackOrderComponent } from './components/UserUI/track-order/track-order.component';
 // import { CartComponent } from './components/UserUI/cart/cart.component';
 import { CartComponent} from './components/UserUI/cart/cart.component';
 import { UserOrderComponent } from './components/UserUI/user-order/user-order.component';
 import { WishlistComponent } from './components/UserUI/wishlist/wishlist.component';
-import { OrderComfirmationComponent } from './components/UserUI/order-comfirmation/order-comfirmation.component';
 import { UserprofileComponent } from './components/UserUI/Userprofile/userprofile/userprofile.component';
 import { UserProfilePageComponent } from './components/UserUI/user-profile-page/user-profile-page.component';
 
 import { UserSignupComponent } from './components/UserUI/user-signup/user-signup.component';
 import { UserLoginComponent } from './components/UserUI/user-login/user-login.component';
+import { WebsiteComponent } from './website/website.component';
+
+import { AnalyticsUiComponent } from './components/BusinessUI/analytics-ui/analytics-ui.component';
 
 
 const routes: Routes = [
@@ -37,9 +38,13 @@ const routes: Routes = [
   { path: 'landing-page', component:LandingComponent},
 
   { path: 'dashboard', component:BusinessDashboardComponent},
+  {path:'my-analytics', component:AnalyticsUiComponent},
 
   { path: 'orders', component:OrderComponent},
   {path:"home", component:HomeUiComponent},
+
+
+ 
 
 
    { path: "my-products", component: BusinessProductsComponent },
@@ -54,10 +59,9 @@ const routes: Routes = [
   { path: "company-login", component: CompanyLoginComponent },
   { path: "user-signup", component: UserSignupComponent},
   { path: "user-login", component: UserLoginComponent},
+  {path: "website",component:WebsiteComponent},
 
-
-  { path: "my-products", component: BusinessProductsComponent },
-  { path: "products", component: ProductsUiComponent},
+  { path: "products/:category", component: ProductsUiComponent},
 
   { path: "your-cart", component: CartComponent},
   { path:"consumer-profile",component: UserProfilePageComponent},
@@ -74,7 +78,7 @@ const routes: Routes = [
 
   { path: "prof", component:ProfileComponent},
 
-  { path: "order-comfirmation", component:OrderComfirmationComponent},
+ 
   { path:"user-profile",component:UserprofileComponent},
 
 ];

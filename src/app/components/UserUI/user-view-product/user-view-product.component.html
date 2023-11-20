@@ -16,11 +16,24 @@
             <button type="button"><mat-icon>add_shopping_cart</mat-icon></button>
         </div>
 
+        <div *ngIf="product.promo.onPromo" class="promo">
+            <p>
+                product of promo
+            </p>
+
+        </div>
+
         <div class="prod-options">
-            
             <div>
                 <label>Sold by</label>
                 <p>Rocklandss Designer</p>
+            </div>
+        </div>
+
+        <div class="input-fieldD">
+            <div class="prices-product">
+                <p *ngIf="product.promo.onPromo" class="lblOld">R{{product.price}}</p>
+                <p class="price">R{{product.price}}</p>
             </div>
             
         </div>
@@ -47,12 +60,6 @@
             <hr>
             <label>Product Condition</label>
             <p>New</p>
-        </div>
-
-        <div class="input-fieldD">
-            <hr>
-            <label>Product Price</label>
-            <p>R{{product.price}}</p>
         </div>
     </div>
 
@@ -86,7 +93,6 @@
 
             <div class="nav-item">
                 <button routeLink="/landing-page"><mat-icon>logout</mat-icon></button>
-                
             </div>
     
         </div>

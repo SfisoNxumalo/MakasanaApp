@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class UserOrderComponent {
 
+  form={
+    username:"",
+    password:"",
+  }
+  constructor() { }
+
+
+
+  Register(){
+  
+
+    console.log(this.form)
+
+  }
 }
