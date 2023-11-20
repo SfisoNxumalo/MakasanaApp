@@ -81,12 +81,18 @@ export class ProductsUiComponent  implements OnInit {
   mViewProducts(category:any){
     this.productService.getProducts(category).subscribe({
       next: (response) => {(
-        this.products = response
+        this.products = response,
+        this.blLoadComplete = false
+
       )},
       error: (error) => {
         console.log(error)
 
       }
     })
+  }
+
+  mAddToCart(){
+    console.log()
   }
 }

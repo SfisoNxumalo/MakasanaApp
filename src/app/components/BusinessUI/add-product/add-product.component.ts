@@ -15,7 +15,7 @@ export class AddProductComponent  {
 
   productDetail:Products = {
     title: "",
-    image: "https://i.postimg.cc/02V5gKJ8/pos.jpg",
+    image: "https://paymentcloudinc.com/blog/wp-content/uploads/2021/08/product-ideas-to-sell-300x200.webp",
     description: "",
     category: "",
     price: 0,
@@ -47,7 +47,7 @@ export class AddProductComponent  {
   constructor(private productService: ProductService, private tokenService: TokenstorageService){} 
 
   createProduct(){
-
+    this.productDetail.image = "https://paymentcloudinc.com/blog/wp-content/uploads/2021/08/product-ideas-to-sell-300x200.webp"
     this.productService.mCreateProduct(this.productDetail).subscribe({
         next: (message) => {(
           // this.products = product,
@@ -64,7 +64,7 @@ export class AddProductComponent  {
   mClear(){
     this.productDetail = {
       title: "",
-      image: "https://i.postimg.cc/02V5gKJ8/pos.jpg",
+      image: "https://paymentcloudinc.com/blog/wp-content/uploads/2021/08/product-ideas-to-sell-300x200.webp",
       description: "",
       category: "",
       price: 0,

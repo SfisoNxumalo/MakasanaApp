@@ -6,6 +6,7 @@ const httpOptions = {
  
 import { Injectable } from '@angular/core';
 import { Products } from '../Interfaces/products';
+import { TokenService } from './token.service';
  
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class ProductService {
 
   api = "http://localhost:2023/makasana-api/business/"
 
-  constructor( private http: HttpClient){}
+  constructor( private http: HttpClient, private token:TokenService){}
 
   // createProduct(id:string,title:string, image:string, price:string, description:string, 
   //   category:string, quantity:string, conduction:string) :Observable<any> {
@@ -35,7 +36,9 @@ export class ProductService {
   // findAll(id:string):Observable<any>{
   //   return this.http.get(this.api+"findAll/"+id,httpOptions)
   // }
-   Token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NTkxNDU0OTkwZDU3ZDkzNGFmNTE1YiIsImlhdCI6MTcwMDQ1NjUyOCwiZXhwIjoxNzAwNDc0NTI4fQ._G5BGL4VD3MwBUGzFM9Tna-aeWcZLx3y98dVvYXNws0";
+
+
+   Token = this.token.getToken();
 
   getMyProducts():Observable<any>{
 

@@ -8,24 +8,36 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class UserSignupComponent {
 
-  form={
+  form = {
     name:"",
     email:"",
     password:"",
     address:"",
     phone:"",
   }
+  
   constructor(private auth: AuthService) { }
 
   Register(){
     this.auth.mCSignUp(this.form).subscribe({
-      next:data=>{
+      next: data => {
         console.log(data)
+        this.mClear();
       }
     })
 
     console.log(this.form)
 
+  }
+
+  mClear(){
+    this.form = {
+      name:"",
+      email:"",
+      password:"",
+      address:"",
+      phone:"",
+    }
   }
 
 

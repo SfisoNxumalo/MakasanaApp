@@ -25,7 +25,6 @@ export class BusinessProductsComponent implements OnInit {
     this.getAllProduct()
   }
 
-
   mGet(){
     this.fakeApi.mGetProducts().subscribe({
       next: (res) => {(

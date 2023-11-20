@@ -1,13 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { TokenService } from './token.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CustProductsService {
 
-  constructor( private http: HttpClient) { }
+  constructor( private http: HttpClient, private token:TokenService) { }
+
+  Token = this.token.getToken();
 
   api = "http://localhost:2023/makasana-api/products/"
 
