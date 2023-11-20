@@ -148,6 +148,7 @@ mat-progress-bar{
         gap: 10px;
         flex-direction: column;
         padding-top: 0px;
+        
         padding: 5px 12px 10px 12px;
     }
 

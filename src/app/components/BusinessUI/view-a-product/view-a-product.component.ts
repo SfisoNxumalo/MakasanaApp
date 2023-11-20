@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Products } from 'src/app/Interfaces/products';
 import { FakeStoreService } from 'src/app/services/fake-store.service';
-import { ProductService } from 'src/app/services/product.service';
+import { ProductService } from 'src/app/services/busi-product.service';
 
 
 
@@ -47,8 +47,8 @@ export class ViewAProductComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
-      const product = params.get("id");
-      this.mViewProduct(product);
+      this.productID = params.get("id");
+      this.mViewProduct(this.productID);
     });
 
     this.mGetProduct()
@@ -74,6 +74,7 @@ export class ViewAProductComponent implements OnInit {
       this.button.innerHTML = "<mat-icon>edit</mat-icon>";
       // this.button.value = "<mat-icon>edit</mat-icon>";
       this.z_index = "clsZindexii";
+      this.mUpdateProduct();
     }
   }
 
@@ -101,6 +102,21 @@ export class ViewAProductComponent implements OnInit {
         // this.blLoadComplete = false
       }
     });
+  }
+
+  mUpdateProduct(){
+console.log(this.products)
+    this.productService.updateProduct(this.products,this.productID).subscribe({
+      next: (response) => {(
+        console.log(response),
+        console.log("updated")
+      )},
+      error: (err) => {
+        console.log(err)
+        // this.blLoadComplete = false
+      }
+    })
+
   }
 
   

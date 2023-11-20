@@ -62,7 +62,7 @@ const routes: Routes = [
   {path: "website",component:WebsiteComponent},
 
   { path: "my-products", component: BusinessProductsComponent },
-  { path: "products", component: ProductsUiComponent},
+  { path: "products/:category", component: ProductsUiComponent},
 
   { path: "your-cart", component: CartComponent},
   { path:"consumer-profile",component: UserProfilePageComponent},

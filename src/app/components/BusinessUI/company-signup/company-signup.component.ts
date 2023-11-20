@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { UserService } from 'src/app/services/user.service';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-company-signup',
@@ -8,20 +8,18 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class CompanySignupComponent {
 
-  form={
-    username:"",
+  form = {
+    name:"",
     email:"",
     password:"",
+    industry: "",
     address:"",
-    contact:"",
-    industry:"",
-    roles:"business"
+    phone:"",
   }
-  constructor(private userService: UserService) { }
+  constructor(private authSer: AuthService) { }
 
   signUp(){
-    this.userService.register(this.form.username,this.form.industry,this.form.email,
-      this.form.password,this.form.address,this.form.contact, this.form.roles).subscribe(data=>[
+    this.authSer.mSignUp(this.form).subscribe(data=> [
         console.log(data)
       ])
   }

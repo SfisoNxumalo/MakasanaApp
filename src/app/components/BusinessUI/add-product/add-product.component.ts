@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Products } from 'src/app/Interfaces/products';
-import { ProductService,  } from 'src/app/services/product.service';
+import { ProductService,  } from 'src/app/services/busi-product.service';
 import { TokenstorageService } from 'src/app/services/tokenstorage.service';
 
 
@@ -51,14 +51,29 @@ export class AddProductComponent  {
     this.productService.mCreateProduct(this.productDetail).subscribe({
         next: (message) => {(
           // this.products = product,
-          console.log(message)
-          // alert(message)
+          console.log(message),
+          this.mClear()
         )},
         error: (err) => {
           console.log(err)
           // this.blLoadComplete = false
         }
       })
+  }
+
+  mClear(){
+    this.productDetail = {
+      title: "",
+      image: "https://i.postimg.cc/02V5gKJ8/pos.jpg",
+      description: "",
+      category: "",
+      price: 0,
+      condition: "",
+      quantity: 0,
+      promo: {onPromo:false, promoDesc:"", newPrice:0, startDate : new Date(), endDate: new Date()},
+      added: new Date(),
+      updated: new Date()
+    }
   }
 
   

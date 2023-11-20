@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-user-order',
@@ -12,7 +11,7 @@ export class UserOrderComponent {
     username:"",
     password:"",
   }
-  constructor(private userService: UserService) { }
+  constructor() { }
 
 
 

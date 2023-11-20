@@ -12,7 +12,7 @@ import { Products } from '../Interfaces/products';
 })
 export class ProductService {
 
-  api = "http://localhost:2023/makasana-api/"
+  api = "http://localhost:2023/makasana-api/business/"
 
   constructor( private http: HttpClient){}
 
@@ -35,7 +35,7 @@ export class ProductService {
   // findAll(id:string):Observable<any>{
   //   return this.http.get(this.api+"findAll/"+id,httpOptions)
   // }
-   Token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NTkxNDU0OTkwZDU3ZDkzNGFmNTE1YiIsImlhdCI6MTcwMDQxNzc2OCwiZXhwIjoxNzAwNDM1NzY4fQ.9vcyIqjHH1n-DAfK_FA9c0OM68ZVnj3pJQk-Z1cn_v0";
+   Token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NTkxNDU0OTkwZDU3ZDkzNGFmNTE1YiIsImlhdCI6MTcwMDQ1NjUyOCwiZXhwIjoxNzAwNDc0NTI4fQ._G5BGL4VD3MwBUGzFM9Tna-aeWcZLx3y98dVvYXNws0";
 
   getMyProducts():Observable<any>{
 
@@ -64,6 +64,14 @@ export class ProductService {
 
     return this.http.post(this.api + "create-product", body, {headers});
 
+  }
+
+    updateProduct(body:Products, id:any):Observable<any>{
+      const headers = new HttpHeaders()
+    .append('Authorization', 'Bearer ' + this.Token)
+    .append('content-type', 'application/json')
+
+      return this.http.put(this.api + "update/" + id, body, {headers})
   }
 
 

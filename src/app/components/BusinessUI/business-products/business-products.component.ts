@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Products } from 'src/app/Interfaces/products';
 import { FakeStoreService } from 'src/app/services/fake-store.service';
-import { ProductService } from 'src/app/services/product.service';
+import { ProductService } from 'src/app/services/busi-product.service';
 import { TokenstorageService } from 'src/app/services/tokenstorage.service';
 
 

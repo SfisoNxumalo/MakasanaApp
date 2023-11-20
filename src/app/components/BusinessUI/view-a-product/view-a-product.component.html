@@ -36,19 +36,19 @@ class="left" srcset="" height="30px" width="30px">
                 <label>Product Title</label>
             </div>
             
-            <input [class]="clsEditable" [disabled]="boolEdit" type="text" placeholder="Title" value="{{products.title}}">
+            <input [class]="clsEditable" [(ngModel)]="products.title" [disabled]="boolEdit" type="text" placeholder="Title" value="{{products.title}}">
         </div>
 
         <div class="input-fieldD">
             <hr>
             <label>Product Description</label>
-            <textarea [class]="clsEditable" [disabled]="boolEdit" autocomplete="on" autocorrect="true" cols="33" type="text" placeholder="Tell customers more about your product">{{products.description}}</textarea>
+            <textarea [class]="clsEditable" [disabled]="boolEdit" autocomplete="on" autocorrect="true" cols="33" type="text" [(ngModel)]="products.description" placeholder="Tell customers more about your product">{{products.description}}</textarea>
         </div>
 
         <div class="input-fieldD">
             <hr>
             <label>Product Condition</label>
-            <select [class]="clsEditable" [disabled]="boolEdit" type="number" placeholder="Quantity">
+            <select [class]="clsEditable" [disabled]="boolEdit" type="number" [(ngModel)]="products.condition" placeholder="Quantity">
                 <option>New</option>
                 <option>Used</option>
             </select>
@@ -57,12 +57,12 @@ class="left" srcset="" height="30px" width="30px">
         <div class="input-fieldD">
             <hr>
             <label>Product Price</label>
-            <input [class]="clsEditable" [disabled]="boolEdit" type="text" value="R{{products.price}}" placeholder="Price">
+            <input [class]="clsEditable" [(ngModel)]="products.price" [disabled]="boolEdit" type="text" value="R{{products.price}}" placeholder="Price">
         </div>
 
         <div class="input-fieldD">
             <label>Product Quantity</label>
-            <input [class]="clsEditable" [disabled]="boolEdit" type="number" placeholder="Quantity" value="{{products.quantity}}">
+            <input [class]="clsEditable" [disabled]="boolEdit" [(ngModel)]="products.quantity" type="number" placeholder="Quantity" value="{{products.quantity}}">
         </div>
     </div>
 
