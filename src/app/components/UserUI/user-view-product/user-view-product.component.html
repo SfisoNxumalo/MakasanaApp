@@ -1,6 +1,16 @@
-<img onclick="window.history.go(-1)" src="../../../../assets/images/back-svgrepo-com.svg" alt="" style="width: 30px; height: 30px;">
 
 <div class="holder">
+    <div class="top-bar">
+        <img onclick="window.history.go(-1)" src="../../../../assets/images/back-svgrepo-com.svg" alt="" style="width: 30px; height: 30px;">
+
+        <button  routerLink="/your-cart"><mat-icon [matBadge]="cartCount" matBadgeColor="warn">shopping_cart</mat-icon>
+            <!-- Include text description of the icon's meaning for screen-readers -->
+            <span class="cdk-visually-hidden">
+              Example with a home icon with overlaid badge showing the number 15
+            </span>
+        </button>
+
+    </div>
     <!-- <div class="btnSave">
         <button><mat-icon>edit</mat-icon></button>
     </div> -->
@@ -13,7 +23,7 @@
 
         <div class="action-btn">
             <button type="button" (click)="mLike()" [class]="liked"><mat-icon>favorite</mat-icon></button>
-            <button (click)="mAddToCart()" type="button"><mat-icon>add_shopping_cart</mat-icon></button>
+            <button (click)="mAddToCart(product)" type="button"><mat-icon>add_shopping_cart</mat-icon></button>
         </div>
 
         <div *ngIf="product.promo.onPromo" class="promo">
