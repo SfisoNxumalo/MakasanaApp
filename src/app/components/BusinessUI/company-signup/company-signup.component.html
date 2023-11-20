@@ -26,10 +26,23 @@
     </div>
 
 
-  <div class="form-group" id="industry">
+  <!-- <div class="form-group" id="industry">
     <label class="industryInput" for="name">Industry :</label>
     <input type="text" name=" industry" class="form-control" placeholder=" Industry" [(ngModel)]="form.industry" id="industryInput">
-  </div>
+  </div> -->
+
+  <select list="co" id="course" required type="text" placeholder="Course"  class="form-group" >
+    <label class="industryInput" for="name">Industry :</label>
+  <!-- <datalist id="co"> -->
+    <option value="clothing">Clothing</option>
+    <option value="Food">Food</option>
+    <option value="Furniture">Furniture</option>
+    <!-- <option value="IT"></option> -->
+    <!-- <option value="CivilEng">Civil Eng.</option>
+    <option value="Medicine">Medicine.</option>
+    <option value="Nursing">Nursing</option>
+    <option value="Networking">Networking</option> -->
+  </select>
 
   <div class="form-group" id="Address">
     <label class="addressInput" for="name">Address :</label>
