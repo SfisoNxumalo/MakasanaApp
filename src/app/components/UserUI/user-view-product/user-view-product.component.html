@@ -16,7 +16,7 @@
             <button type="button"><mat-icon>add_shopping_cart</mat-icon></button>
         </div>
 
-        <div class="promo">
+        <div *ngIf="product.promo.onPromo" class="promo">
             <p>
                 product of promo
             </p>
@@ -32,7 +32,7 @@
 
         <div class="input-fieldD">
             <div class="prices-product">
-                <p class="lblOld">R{{product.price}}</p>
+                <p *ngIf="product.promo.onPromo" class="lblOld">R{{product.price}}</p>
                 <p class="price">R{{product.price}}</p>
             </div>
             

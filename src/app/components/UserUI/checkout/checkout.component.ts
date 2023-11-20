@@ -45,9 +45,9 @@ ngOnInit(): void {
   this.retrieveCheckout()
   this.items
   this.totalAmount
-  console.log(this.items)
-  const user = this.tokenService.getUser()
-  this.userId = user.id
+  // console.log(this.items)
+  // const user = this.tokenService.getUser()
+  // this.userId = user.id
 
   //this.items =this.totalItems.length
 }

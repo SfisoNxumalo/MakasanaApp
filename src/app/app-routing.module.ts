@@ -61,7 +61,6 @@ const routes: Routes = [
   { path: "user-login", component: UserLoginComponent},
   {path: "website",component:WebsiteComponent},
 
-  { path: "my-products", component: BusinessProductsComponent },
   { path: "products/:category", component: ProductsUiComponent},
 
   { path: "your-cart", component: CartComponent},

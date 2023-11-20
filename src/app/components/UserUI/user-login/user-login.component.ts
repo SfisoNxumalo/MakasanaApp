@@ -2,6 +2,7 @@ import { Component, TemplateRef } from '@angular/core';
 
 import {Router} from '@angular/router'; // import router from angular router
 import { AuthService } from 'src/app/services/auth.service';
+import { TokenService } from 'src/app/services/token.service';
 
 @Component({
   selector: 'app-user-login',
@@ -16,12 +17,13 @@ export class UserLoginComponent {
 
   toasts: any[] = [];
 
-  constructor(private auth: AuthService,private route:Router) { }
+  constructor(private auth: AuthService,private route:Router, private token:TokenService) { }
 
   signIn(){
     this.auth.mCSignIn(this.form).subscribe({
-      next:data=>{
+      next: data=> {
         console.log(data)
+        this.token.saveToken(data.accessToken),
         this.route.navigate(["/home"])
       }
     })
