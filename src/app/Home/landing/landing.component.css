@@ -89,6 +89,11 @@ height: 100%;
     margin: 0px;
     text-align: center;
     line-height: 25px;
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
 }
 
 .slogan4{
