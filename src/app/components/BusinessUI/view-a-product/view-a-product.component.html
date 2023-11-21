@@ -65,7 +65,17 @@ class="left" srcset="" height="30px" width="30px">
             <input [class]="clsEditable" [disabled]="boolEdit" [(ngModel)]="products.quantity" type="number" placeholder="Quantity" value="{{products.quantity}}">
         </div>
     </div>
-
+  
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div #toastElement class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Makasna</strong>
+        <button type="button" class="btn-close" (click)="hideToast()" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Item updated successfully!.</div>
+    </div>
+  </div>
     <div class="bottom-nav">
         <div class="nav-options" >
             <div class="nav-item">
@@ -95,4 +105,5 @@ class="left" srcset="" height="30px" width="30px">
             
     </div>
 
-</div>    
+</div>   
+

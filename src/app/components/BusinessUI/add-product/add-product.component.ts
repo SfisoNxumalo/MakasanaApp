@@ -4,6 +4,13 @@ import { ProductService,  } from 'src/app/services/busi-product.service';
 import { TokenstorageService } from 'src/app/services/tokenstorage.service';
 
 
+import {  ViewChild, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
+
+declare var bootstrap: any; // Declare Bootstrap variable
+
+
+
 @Component({
   selector: 'app-add-product',
   templateUrl: './add-product.component.html',
@@ -12,6 +19,10 @@ import { TokenstorageService } from 'src/app/services/tokenstorage.service';
 export class AddProductComponent  {
 
   business:any ={}
+  @ViewChild('toastElement')
+  toastElement!: ElementRef;
+  private toastInstance: any;
+
 
   productDetail:Products = {
     title: "",
@@ -44,16 +55,22 @@ export class AddProductComponent  {
    reader.readAsDataURL(selectedFile);
   }
 
-  constructor(private productService: ProductService, private tokenService: TokenstorageService){} 
+  constructor(private productService: ProductService, private tokenService: TokenstorageService, private route:Router){} 
 
   createProduct(){
     this.productDetail.image = "https://paymentcloudinc.com/blog/wp-content/uploads/2021/08/product-ideas-to-sell-300x200.webp"
     this.productService.mCreateProduct(this.productDetail).subscribe({
-        next: (message) => {(
+        next: (message) => {
           // this.products = product,
           console.log(message),
+          this. showToast()
+          setInterval(()=>{          
+          this.route.navigate(["/my-products"])
+          window.location.reload()
+
+          },2000)
           this.mClear()
-        )},
+        },
         error: (err) => {
           console.log(err)
           // this.blLoadComplete = false
@@ -75,6 +92,18 @@ export class AddProductComponent  {
       updated: new Date()
     }
   }
+  
+  showToast() {
+    if (!this.toastInstance) {
+      this.toastInstance = new bootstrap.Toast(this.toastElement.nativeElement);
+    }
+    this.toastInstance.show();
+  }
 
+  hideToast() {
+    if (this.toastInstance) {
+      this.toastInstance.hide();
+    }
+  }
   
 }
