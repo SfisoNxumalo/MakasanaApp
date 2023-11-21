@@ -193,6 +193,30 @@ hr{
 
 }
 
+.total-btn {
+    display: flex;
+    width: 100%;
+    padding: 5px;
+   
+    
+}
+
+.total-btn button {
+    
+    background-color: blueviolet;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: white;
+    
+}
+.total-btn label {
+    
+    flex-grow: 1;
+    font-size: 17px;
+    font-weight: 600;
+    
+}
 
 
 .bottom-nav{
@@ -205,7 +229,7 @@ hr{
     border: none;
     outline: none;
     border-top: 1px solid rgb(204, 204, 204);
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;

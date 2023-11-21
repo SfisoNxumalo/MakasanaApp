@@ -26,6 +26,8 @@ export class CartComponent {
 
   sortedItems = [];
 
+  total = 0
+
   // totalAmount: this.bagService.totAmount
 
   ngOnInit(): void {
@@ -59,8 +61,7 @@ mSortCart(data:any){
     }
     else{
       this.cartMap.set(item.details, 1);
-    }
-    
+    } 
   }
 }
 
@@ -99,11 +100,8 @@ mDecrementCart(product:any) {
         else{
           this.cartMap.set(product, newItemCount);
         }
-        
-        // console.log("found")
       }
       else{
-        // this.cartMap.set(item.details, 1);
       }
       
     }
