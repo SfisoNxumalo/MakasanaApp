@@ -229,7 +229,7 @@
 
 <div class="bottom-nav">
 <div class="total-btn">
-    <label for="">Total: R5000</label><button>Checkout</button>
+    <label for="">Total: R{{total}}</label><button *ngIf="cartTotal" routerLink="/checkout">Checkout</button>
 </div>
     <div class="nav-options" >
 
