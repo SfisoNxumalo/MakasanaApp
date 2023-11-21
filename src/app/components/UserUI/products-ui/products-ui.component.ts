@@ -54,13 +54,15 @@ export class ProductsUiComponent  implements OnInit {
     this.route.paramMap.subscribe(params => {
       this.selectedCategory = params.get("category");
       this.mViewProducts(this.selectedCategory);
+      this.title = this.selectedCategory || "products";
       // this.mViewProduct(this.productID);
     });
 
     // this.mGet();
   }
 
-  cartCount =10
+  title:any = "products"
+  cartCount = 0
 
   mGetSearch(term:string):Observable<any>{
 
