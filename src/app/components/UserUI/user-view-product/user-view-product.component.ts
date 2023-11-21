@@ -7,6 +7,7 @@ import { FakeStoreService } from 'src/app/services/fake-store.service';
 
 import {  ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
+import { timeout } from 'rxjs';
 
 declare var bootstrap: any; // Declare Bootstrap variable
 
@@ -35,8 +36,11 @@ export class UserViewProductComponent {
   liked = "prod-not-liked";
 
   cartCount = 0
-
+  audio:any;
+  audio2:any;
   ngOnInit(): void {
+    this.audio = new Audio("../../../../assets/audio/mixkit-cooking-stopwatch-alert-1792.wav");
+    this.audio2 = new Audio("../../../../assets/audio/mixkit-hard-pop-click-2364.wav");
 
     this.cart.mShowCart().subscribe((data) => {
       this.cartCount = data.length;
@@ -57,12 +61,30 @@ export class UserViewProductComponent {
     });
   }
 
+icon = "add_shopping_cart";
+  
+
+  timeoutObj:any;
+
   mAddToCart(product:any){
-
     this.cart.AddToCart(product);
-    this.showToast()
+    this.icon = "done"
 
+    
+    this.audio.play()
+
+    if(this.timeoutObj){
+        clearTimeout(this.timeoutObj);
+    }
+
+    this.timeoutObj = setTimeout(() => {
+      this.icon = "add_shopping_cart";
+    }, 2000)
+    
+
+    this.showToast()
   }
+
   showToast() {
     if (!this.toastInstance) {
       this.toastInstance = new bootstrap.Toast(this.toastElement.nativeElement);
@@ -79,6 +101,7 @@ export class UserViewProductComponent {
 
     if(this.liked === 'prod-not-liked'){
       this.liked = 'prod-liked'
+      this.audio2.play()
     }
     else{
       this.liked = 'prod-not-liked'

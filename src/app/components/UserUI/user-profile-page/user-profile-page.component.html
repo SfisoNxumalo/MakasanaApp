@@ -1,11 +1,11 @@
 <!-- <img src="../../../../assets/images/back-svgrepo-com.svg" alt="" style="width: 25px; height: 25px; margin-top: 2%; margin-left: 3%;"> -->
 
-<h2 style="font-size: large; margin-left: 25%; margin-top: 2%;">Consumer Infomation</h2>
+<!-- <h2 style="font-size: large; margin-left: 25%; margin-top: 2%;">Consumer Infomation</h2>
 
 
 <img class="logo" src="../../../assets/images/shop.jpg" >
 
-<h2 class="label">Vicky Dena</h2>
+<h2 class="label">Vicky Dena</h2> -->
 <!-- <h4 class="mail">rocklandsdesign@gmail.com</h4> -->
 
 <!-- <div class="container"> -->
@@ -16,7 +16,7 @@
   <p class="information">We sell items of ready-made clothing</p>
 </div> -->
 
-<div class="container1" >
+<!-- <div class="container1" >
 <img class="location" src="../../../../assets/images/location-svgrepo-com.svg" alt="" style="width: 20px; height: 20px;">
 <p class="address">3425 Embor Road, Cape Town</p>
 <hr>
@@ -25,6 +25,55 @@
 <hr>
 <img class="mail" src="../../../../assets/images/email-svgrepo-com.svg" alt="" style="width: 20px; height: 20px;">
 <p class="email">Vickydena@gmail.com</p>
+</div> -->
+
+<div class="container1">
+  <div class="top-bar">
+
+    <button onclick="window.history.go(-1)" ><mat-icon>keyboard_arrow_left</mat-icon></button>
+
+    <!-- <img onclick="window.history.go(-1)" src="../../../../assets/images/back-svgrepo-com.svg" alt="" style="width: 30px; height: 30px;"> -->
+    <div class="text">
+        <b>Profile</b>
+    </div>
+
+    <button>
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+  </div>
+  <div class="holder-main">
+    <div class="img-lbl">
+      <img class="logo" src="../../../assets/images/shop.jpg">
+      <p>Vuyo Dana</p>
+    </div>
+    
+
+    <div>
+      <div class="container" > 
+        <div class="item">
+          <img class="location" src="../../../../assets/images/location-svgrepo-com.svg" alt="" style="width: 20px; height: 20px;">
+          <p class="address">3425 Embor Road, Cape Town</p>
+        </div>
+        <hr>
+        <div class="item">
+            <img class="time" src="../../../../assets/images/phone-flip-svgrepo-com.svg" alt=""  style="width: 20px; height: 20px;">
+            <p class="hours">067 345 6786</p>
+        </div>
+        <hr>
+        <div class="item">
+            <img class="mail" src="../../../../assets/images/email-svgrepo-com.svg" alt="" style="width: 20px; height: 20px;">
+            <p class="email">Vickydena</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  
 </div>
 
 <div class="bottom-nav">
@@ -32,16 +81,16 @@
   <div class="nav-options" >
 
       <div class="nav-item">
-          <button routerLink="/home"><mat-icon>home</mat-icon></button>
+          <button routerLink="/home"><mat-icon>store</mat-icon></button>
       </div>
 
       <div class="nav-item">
-          <button><mat-icon>assignment</mat-icon></button>
+          <button routerLink="/track-order"><mat-icon>assignment</mat-icon></button>
          
       </div>
 
       <div class="nav-item">
-          <button routerLink="/my-products"><mat-icon>store</mat-icon></button>
+          <button routerLink="/your-cart"><mat-icon>shopping_cart</mat-icon></button>
           
       </div>
 
