@@ -64,11 +64,6 @@ export class AddProductComponent  {
           // this.products = product,
           console.log(message),
           this. showToast()
-          setInterval(()=>{          
-          this.route.navigate(["/my-products"])
-          window.location.reload()
-
-          },2000)
           this.mClear()
         },
         error: (err) => {

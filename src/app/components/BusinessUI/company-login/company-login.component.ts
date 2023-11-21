@@ -35,7 +35,7 @@ export class CompanyLoginComponent {
         this.token.saveToken(response.accessToken),
         this.showToast();
         setTimeout(() => {
-          this.route.navigate(["/dashboard"])
+          this.route.navigate(["/home"])
         }, 2000);
       },
       error: (error) => {
