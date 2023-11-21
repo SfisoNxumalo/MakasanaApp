@@ -32,7 +32,7 @@ export class CompanySignupComponent {
         console.log(data)
         this.showToast();
         setTimeout(() => {
-          this.route.navigate(["/login"])
+          this.route.navigate(["/company-login"])
         }, 2000);
   })
   }

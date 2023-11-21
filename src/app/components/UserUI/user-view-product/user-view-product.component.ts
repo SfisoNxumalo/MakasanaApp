@@ -58,6 +58,7 @@ export class UserViewProductComponent {
   }
 
   mAddToCart(product:any){
+
     this.cart.AddToCart(product);
     this.showToast()
 
