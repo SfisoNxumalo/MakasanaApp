@@ -21,6 +21,7 @@ export class CompanySignupComponent {
   signUp(){
     this.authSer.mSignUp(this.form).subscribe(data=> [
         console.log(data)
+    
       ])
   }
 

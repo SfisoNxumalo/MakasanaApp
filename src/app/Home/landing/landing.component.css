@@ -82,13 +82,18 @@ height: 100%;
 .slogan3{
     padding-top: 25px;
     font-style: normal;
-    padding: 25px 10px 0px 10px;
+    padding: 10px 10px 0px 10px;
     font-size: 17px;
     font-weight: 500;
     color: blueviolet;
     margin: 0px;
     text-align: center;
     line-height: 25px;
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
 }
 
 .slogan4{
@@ -274,3 +279,18 @@ a{
     font-size: 15px;
     font-weight: bold;
 }
+
+.sec-2 h1:nth-child(5){
+    margin-top: 10px;
+}
+
+button{
+    padding: 5px;
+    background-color: blueviolet;
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+    border: none;
+
+}
+

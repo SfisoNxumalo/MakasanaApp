@@ -5,6 +5,8 @@ import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import {
   debounceTime, distinctUntilChanged, switchMap
 } from 'rxjs/operators';
+import { AddToCartService } from 'src/app/services/add-to-cart.service';
+import { CartserviceService } from 'src/app/services/cartservice.service';
 import { CustProductsService } from 'src/app/services/cust-products.service';
 import { FakeStoreService } from 'src/app/services/fake-store.service';
 
@@ -24,12 +26,20 @@ export class ProductsUiComponent  implements OnInit {
 
   constructor(private fakeApi:FakeStoreService, 
     private route:ActivatedRoute,
-    private productService:CustProductsService){}
+    private productService:CustProductsService,
+    private cart:AddToCartService
+    ){}
 
   image = "https://media.istockphoto.com/id/620737858/photo/cape-town-and-the-12-apostels-from-above.jpg?s=612x612&w=is&k=20&c=WBxI8OmAFXoGz5I5QjU0eI87I5C6K8h0Xs4JmArrEQQ=";
 
   selectedCategory?:String | null;
   ngOnInit(): void {
+    this.cart.mShowCart().subscribe((data) => {
+      this.cartCount = data.length;
+    })
+    
+
+
     // this.foundUsers$ = this.searchTerms.pipe(
     //   // wait 300ms after each keystroke before considering the term
     //   debounceTime(300),
@@ -49,6 +59,8 @@ export class ProductsUiComponent  implements OnInit {
 
     // this.mGet();
   }
+
+  cartCount =10
 
   mGetSearch(term:string):Observable<any>{
 
@@ -83,11 +95,9 @@ export class ProductsUiComponent  implements OnInit {
       next: (response) => {(
         this.products = response,
         this.blLoadComplete = false
-
       )},
       error: (error) => {
         console.log(error)
-
       }
     })
   }
