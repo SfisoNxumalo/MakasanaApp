@@ -58,9 +58,13 @@ mSortCart(data:any){
     if(this.cartMap.has(item.details)){
       let newItem = ((this.cartMap.get(item.details) || 0) + 1);
       this.cartMap.set(item.details, newItem);
+
+      this.total = this.total + item.details.price
+
     }
     else{
       this.cartMap.set(item.details, 1);
+      this.total = this.total + item.details.price
     } 
   }
 }
@@ -73,10 +77,14 @@ mDecrementCart(product:any) {
       let newItemCount = ((this.cartMap.get(product) || 0) - 1);
       
       if(newItemCount == 0){
+        this.cartTotal--
+        this.total = this.total - product.price
         this.cartMap.delete(product);
       }
       else{
         this.cartMap.set(product, newItemCount);
+        this.total = this.total - product.price
+        this.cartTotal--
       }
       
       // console.log("found")
@@ -86,7 +94,6 @@ mDecrementCart(product:any) {
     }
     
   }
-
   }
   mIncrementCart(product:any) {
     for(let obj of this.cartMap.entries()){
@@ -95,10 +102,14 @@ mDecrementCart(product:any) {
         let newItemCount = ((this.cartMap.get(product) || 0) + 1);
         
         if(newItemCount == 0){
+          this.total = this.total - product.price
           this.cartMap.delete(product);
+          this.cartTotal++
         }
         else{
+          this.total = this.total + product.price
           this.cartMap.set(product, newItemCount);
+          this.cartTotal++
         }
       }
       else{
