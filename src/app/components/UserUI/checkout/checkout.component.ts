@@ -62,13 +62,15 @@ ngOnInit(): void {
 
   this.cart.mShowCart().subscribe((data) => {
     this.cartTotal = data.length;
-    // this.mSortCart(data)
+    this.mSortCart(data)
     // console.log(data);
   })
 }
 
+subtotal = 0
 total = 0
 
+VatPrice = 0
 cartMap = new Map<any, any>();
 mSortCart(data:any){
 
@@ -78,14 +80,19 @@ mSortCart(data:any){
       let newItem = ((this.cartMap.get(item.details) || 0) + 1);
       this.cartMap.set(item.details, newItem);
 
-      this.total = this.total + item.details.price
+      this.subtotal = this.subtotal + item.details.price
 
     }
     else{
       this.cartMap.set(item.details, 1);
-      this.total = this.total + item.details.price
+      this.subtotal = this.subtotal + item.details.price
     } 
   }
+  this.VatPrice =  (this.subtotal * 0.15)
+  this.total = this.subtotal + (this.subtotal * 0.15)
+
+
+
 }
 
 
