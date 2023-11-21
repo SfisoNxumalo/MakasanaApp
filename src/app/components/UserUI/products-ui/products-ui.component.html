@@ -3,22 +3,7 @@
     <!-- https://i.postimg.cc/dVGXVhgP/2-people-shaking-hands-for-business-purposes-generated-removebg-preview.png -->
 
     <div class="Top-section">
-
-        <div class="top-bar">
-            <button>
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-            <button  routerLink="/your-cart"><mat-icon matBadge="8" matBadgeColor="warn">shopping_cart</mat-icon>
-                <!-- Include text description of the icon's meaning for screen-readers -->
-                <span class="cdk-visually-hidden">
-                  Example with a home icon with overlaid badge showing the number 15
-                </span>
-            </button>
-
-        </div>
+        <app-top-bar></app-top-bar>
 
         <div *ngIf="products.length" class="top-det">
             
