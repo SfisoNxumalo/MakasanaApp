@@ -291,10 +291,12 @@ button{
     color: white;
     font-weight: bold;
     border: none;
-    bottom: 0;
-    position: fixed;
-    justify-content: center;
-    align-items: center;
+    align-self: center;
+    margin-top: 10px;
+}
 
+section{
+    display: flex;
+    flex-direction: column;
 }
 
