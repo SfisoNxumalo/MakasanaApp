@@ -1,3 +1,8 @@
+
+<img onclick="window.history.go(-1)" src="../../../../assets/images/back-svgrepo-com.svg" alt=""
+class="left" srcset="" style="height: 25px; width: 25px; margin-top: 4%;" >
+
+
 <div class="holder">
 
   <div class="holder2">
@@ -42,7 +47,7 @@
   <button class="submit" type="submit" (click)="signUp()">Register</button>
 
   <h5>Already registered? <a routerLink="/company-login" id="loginName"> Login </a></h5>
-  <h5>User? <a routerLink="/user-login" id="loginName"> Login </a></h5>
+  <h5>Customer? <a routerLink="/user-login" id="loginName"> Login </a></h5>
 
     </div>
 
@@ -51,3 +56,16 @@
   
 </div>
 
+
+
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div #toastElement class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <strong class="me-auto">Welcome To Makasna</strong>
+      <button type="button" class="btn-close" (click)="hideToast()" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+      Registration successful! Welcome to our community. </div>
+  </div>
+</div>

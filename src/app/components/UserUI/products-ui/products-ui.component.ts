@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 
+
 import {
   debounceTime, distinctUntilChanged, switchMap
 } from 'rxjs/operators';
@@ -32,11 +33,16 @@ export class ProductsUiComponent  implements OnInit {
 
   image = "https://media.istockphoto.com/id/620737858/photo/cape-town-and-the-12-apostels-from-above.jpg?s=612x612&w=is&k=20&c=WBxI8OmAFXoGz5I5QjU0eI87I5C6K8h0Xs4JmArrEQQ=";
 
+  
   selectedCategory?:String | null;
   ngOnInit(): void {
     this.cart.mShowCart().subscribe((data) => {
       this.cartCount = data.length;
     })
+
+
+ 
+  
     
 
 
@@ -54,13 +60,15 @@ export class ProductsUiComponent  implements OnInit {
     this.route.paramMap.subscribe(params => {
       this.selectedCategory = params.get("category");
       this.mViewProducts(this.selectedCategory);
+      this.title = this.selectedCategory || "products";
       // this.mViewProduct(this.productID);
     });
 
     // this.mGet();
   }
 
-  cartCount =10
+  title:any = "products"
+  cartCount = 0
 
   mGetSearch(term:string):Observable<any>{
 

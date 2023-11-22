@@ -54,6 +54,7 @@ import { WebsiteComponent } from './website/website.component';
 import { AnalyticsUiComponent } from './components/BusinessUI/analytics-ui/analytics-ui.component';
 import {MatBadgeModule} from '@angular/material/badge';
 import { TopBarComponent } from './components/UserUI/top-bar/top-bar.component';
+import { ThanksComponent } from './components/UserUI/thanks/thanks.component';
 
 @NgModule({
   declarations: [
@@ -96,7 +97,8 @@ import { TopBarComponent } from './components/UserUI/top-bar/top-bar.component';
     UserProfilePageComponent,
     AnalyticsUiComponent,
     UserSignupComponent,
-    TopBarComponent
+    TopBarComponent,
+    ThanksComponent
   ],
   imports: [
     BrowserModule,

@@ -46,7 +46,7 @@
     <div *ngFor="let obj of cartMap.entries()">
         <div class="item">
         <div class="img">
-            <img src="https://i.postimg.cc/PqHwgjxX/banner-product.png"  alt="">
+            <img src="{{obj[0].image}}"  alt="">
         </div>
         
         <div class="item-details">
@@ -229,7 +229,7 @@
 
 <div class="bottom-nav">
 <div class="total-btn">
-    <label for="">Total: R5000</label><button>Checkout</button>
+    <label for="">Total: R{{total}}</label><button *ngIf="cartTotal" routerLink="/checkout">Checkout</button>
 </div>
     <div class="nav-options" >
 
@@ -259,7 +259,7 @@
         </div> -->
 
         <div class="nav-item">
-            <button routerLink="/landing-page"><mat-icon>logout</mat-icon></button>
+            <button routerLink="/makasana"><mat-icon>logout</mat-icon></button>
 
         </div>
 

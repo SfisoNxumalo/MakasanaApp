@@ -30,24 +30,28 @@ import { UserLoginComponent } from './components/UserUI/user-login/user-login.co
 import { WebsiteComponent } from './website/website.component';
 
 import { AnalyticsUiComponent } from './components/BusinessUI/analytics-ui/analytics-ui.component';
+import { ThanksComponent } from './components/UserUI/thanks/thanks.component';
 
 
 const routes: Routes = [
 
-  { path:'',redirectTo:'/landing-page', pathMatch: 'full' },
-  { path: 'landing-page', component:LandingComponent},
+  { path:'',redirectTo:'/makasana', pathMatch: 'full' },
+  { path: 'makasana', component:LandingComponent},
 
   { path: 'dashboard', component:BusinessDashboardComponent},
   {path:'my-analytics', component:AnalyticsUiComponent},
 
   { path: 'orders', component:OrderComponent},
   {path:"home", component:HomeUiComponent},
+  {path:"order-confirmation", component:ThanksComponent},
+
 
 
  
 
 
    { path: "my-products", component: BusinessProductsComponent },
+   { path: "thanks", component: ThanksComponent },
    { path: "add-product", component: AddProductComponent},
    { path:"view-product/:id", component:ViewAProductComponent},
 
