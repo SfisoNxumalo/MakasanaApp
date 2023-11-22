@@ -59,6 +59,7 @@ ngOnInit(): void {
   // this.userId = user.id
 
   //this.items =this.totalItems.length
+ 
 
   this.cart.mShowCart().subscribe((data) => {
     this.cartTotal = data.length;

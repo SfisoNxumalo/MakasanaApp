@@ -48,8 +48,6 @@ export class CompanySignupComponent {
     if (this.toastInstance) {
       this.toastInstance.hide();
     }
-    
-      
   }
 
 }

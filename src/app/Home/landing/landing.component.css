@@ -291,6 +291,12 @@ button{
     color: white;
     font-weight: bold;
     border: none;
+    align-self: center;
+    margin-top: 10px;
+}
 
+section{
+    display: flex;
+    flex-direction: column;
 }
 

@@ -43,7 +43,7 @@ const routes: Routes = [
 
   { path: 'orders', component:OrderComponent},
   {path:"home", component:HomeUiComponent},
-  {path:"thanks", component:ThanksComponent},
+  {path:"order-confirmation", component:ThanksComponent},
 
 
 
