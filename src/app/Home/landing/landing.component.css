@@ -327,6 +327,14 @@ button{
     border: none;
     align-self: center;
     margin-top: 10px;
+    bottom: 0;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+
+    margin: 25px 0px;
+
+
 }
 
 section{
