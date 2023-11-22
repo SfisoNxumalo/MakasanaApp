@@ -1,21 +1,21 @@
-.postion-fixed{
+    .postion-fixed{
 
-    position: fixed;
-    bottom: 0px;
-    height: 65px;
+        position: fixed;
+        bottom: 0px;
+        height: 65px;
 
-}
-.postion-fixed-1{
+    }
+    .postion-fixed-1{
 
-    position: fixed;
-    bottom: 70px;
-    height: 65px;
+        position: fixed;
+        bottom: 70px;
+        height: 65px;
 
-}
-.home-icon{
-    height: 35px;
-    width: 37px;
-}
+    }
+    .home-icon{
+        height: 35px;
+        width: 37px;
+    }
 
 .justify-content-space-between{
     justify-content: space-between;
