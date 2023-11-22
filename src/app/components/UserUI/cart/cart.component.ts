@@ -41,7 +41,6 @@ export class CartComponent implements OnInit {
     this.cart.mShowCart().subscribe((data) => {
       this.cartTotal = data.length;
       this.mSortCart(data)
-      // console.log(data);
     })
 
    //this.items
@@ -56,74 +55,90 @@ export class CartComponent implements OnInit {
     // window.sessionStorage.setItem("cart", JSON.stringify(this.products))
   // }
   }
- cartMap = new Map<any, any>();
-mSortCart(data:any){
 
-  for(let item of data){
+  cartMap = new Map<any, any>();
 
-    console.log(this.cartMap);
+  mSortCart(data:any){
+    this.cartMap.clear()
+    this.total = 0
 
-    if(this.cartMap.has(item.details)){
-      let newItem = ((this.cartMap.get(item.details) || 0) + 1);
-      this.cartMap.set(item.details, newItem);
+    for(let item of data){
 
-      this.total = this.total + item.details.price
+      if(this.cartMap.has(item.id))
+      {
+        let newItem = ((this.cartMap.get(item.id) || {}));
 
-    }
-    else{
-      this.cartMap.set(item.details, 1);
-      this.total = this.total + item.details.price
-    } 
-  }
-}
+        newItem.quantity = (newItem.quantity + 1);
 
-mDecrementCart(product:any) {
-
-  for(let obj of this.cartMap.entries()){
-
-    if(obj[0] == product){
-      let newItemCount = ((this.cartMap.get(product) || 0) - 1);
-      
-      if(newItemCount == 0){
-        this.cartTotal--
-        this.total = this.total - product.price
-        this.cartMap.delete(product);
+        this.cartMap.set(item.id, newItem)
+        this.total = this.total + item.details.price
       }
-      else{
-        this.cartMap.set(product, newItemCount);
-        this.total = this.total - product.price
-        this.cartTotal--
+      else
+      {
+        let prod_det_qua = {
+          quantity: 1,
+          product:item.details
+        }
+
+        this.cartMap.set(item.id, prod_det_qua);
+        this.total = this.total + item.details.price
       }
-      
-      // console.log("found")
-    }
-    else{
-      // this.cartMap.set(item.details, 1);
     }
     
   }
+  
+mDecrementCart(product:any) {
+
+  const prod = {
+    _id:product.id,
+    price:product.price,
+    business:{_id:product.business},
+    image:product.image,
+    title:product.title
   }
+
+  this.cart.RemoveFromCart(prod)
+  }
+
   mIncrementCart(product:any) {
     for(let obj of this.cartMap.entries()){
 
-      if(obj[0] == product){
-        let newItemCount = ((this.cartMap.get(product) || 0) + 1);
-        
-        if(newItemCount == 0){
-          this.total = this.total - product.price
-          this.cartMap.delete(product);
-          this.cartTotal++
+      if(obj[1].product == product){
+
+        const prod = {
+          _id:product.id,
+          price:product.price,
+          business:{_id:product.business},
+          image:product.image,
+          title:product.title
         }
-        else{
-          this.total = this.total + product.price
-          this.cartMap.set(product, newItemCount);
-          this.cartTotal++
-        }
+
+        this.cart.AddToCart(prod);
       }
       else{
       }
       
     }
+  }
+
+  mCheckout(){
+    const orders:any = []
+    
+
+    for (let prod of this.cartMap.entries()){
+      const orderItems:any = {}
+      orderItems.title = prod[1].product.title
+      orderItems.quantity = prod[1].quantity
+      orderItems.business = prod[1].product.business
+      orderItems.productId = prod[1].product.id
+      orderItems.price = prod[1].product.price
+
+      orders.push(orderItems);
+    }
+
+    this.cart.mCheckout(orders)
+
+    // console.log(orders)
   }
 
   // getUser() {

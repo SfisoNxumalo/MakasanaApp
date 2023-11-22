@@ -17,7 +17,7 @@ export class CustProductsService {
   getProducts(category:any):Observable<any>{
 
     const headers = new HttpHeaders()
-    // .append('Authorization', 'Bearer ' + this.Token)
+    .append('Authorization', 'Bearer ' + this.Token)
     .append('content-type', 'application/json')
     console.log(this.api+category)
     return this.http.get(this.api + category, {headers});
@@ -27,7 +27,7 @@ export class CustProductsService {
   getOneProduct(id:any):Observable<any>{
 
     const headers = new HttpHeaders()
-    // .append('Authorization', 'Bearer ' + this.Token)
+    .append('Authorization', 'Bearer ' + this.Token)
     .append('content-type', 'application/json')
 
     return this.http.get(this.api + "view-product/"+id, {headers});

@@ -49,6 +49,8 @@ onSubmi() {
 
 cartTotal = 0;
 
+order:any = []
+
 ngOnInit(): void {
   //console.log(this.dataForm)
   // this.retrieveCheckout()
@@ -65,6 +67,10 @@ ngOnInit(): void {
     this.cartTotal = data.length;
     this.mSortCart(data)
     // console.log(data);
+  })
+
+  this.cart.mGetOrders().subscribe((data) => {
+    this.order = data 
   })
 }
 
@@ -128,6 +134,20 @@ postToCart(){
 // pid = this.items[0].id
 // userId = this.userId  
 // console.log(this.userId)
+}
+
+mProcess(){
+
+  if(this.order.length == 0){
+    alert("Alert go back")
+  }
+  else{
+    console.log(this.order)
+  //  const body = {
+  //     orders:this.order
+  //   }
+  }
+
 }
 
 // clearCart() {
