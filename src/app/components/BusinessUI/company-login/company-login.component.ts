@@ -4,6 +4,11 @@ import { AuthService } from 'src/app/services/auth.service';
 import { TokenService } from 'src/app/services/token.service';
 import { TokenstorageService } from 'src/app/services/tokenstorage.service';
 
+import {  ViewChild, ElementRef } from '@angular/core';
+
+declare var bootstrap: any; // Declare Bootstrap variable
+
+
 @Component({
   selector: 'app-company-login',
   templateUrl: './company-login.component.html',
@@ -11,30 +16,46 @@ import { TokenstorageService } from 'src/app/services/tokenstorage.service';
 })
 export class CompanyLoginComponent {
 
+  @ViewChild('toastElement')
+  toastElement!: ElementRef;
+
+  private toastInstance: any;
   form={
     email:"",
     password:"",
   }
 
   constructor(private authSer: AuthService, private token:TokenService,private route:Router) { }
-  // signIn(){
-  //   this.userService.signIn(this.form.email, this.form.password).subscribe({
-  //     next: data => {
-  //     this.tokenStorage.saveToken(data.accessToken);
-  //     this.tokenStorage.saveUser(data);
-  //   }})
-  // }
+
 
   mSignIn(){
     this.authSer.mSignIn(this.form).subscribe({
-      next: (response) => {(
+      next: (response) => {
         console.log(response),
         this.token.saveToken(response.accessToken),
-        this.route.navigate(["/dashboard"])
-      )},
+        this.showToast();
+        setTimeout(() => {
+          this.route.navigate(["/dashboard"])
+        }, 2000);
+      },
       error: (error) => {
         console.log(error)
       }
     })
   }
+
+
+  showToast() {
+    if (!this.toastInstance) {
+      this.toastInstance = new bootstrap.Toast(this.toastElement.nativeElement);
+    }
+    this.toastInstance.show();
+  }
+
+  hideToast() {
+    if (this.toastInstance) {
+      this.toastInstance.hide();
+    }
+  }
 }
+

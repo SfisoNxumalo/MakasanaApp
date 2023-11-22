@@ -30,6 +30,7 @@ import { UserLoginComponent } from './components/UserUI/user-login/user-login.co
 import { WebsiteComponent } from './website/website.component';
 
 import { AnalyticsUiComponent } from './components/BusinessUI/analytics-ui/analytics-ui.component';
+import { ThanksComponent } from './components/UserUI/thanks/thanks.component';
 
 
 const routes: Routes = [
@@ -42,6 +43,8 @@ const routes: Routes = [
 
   { path: 'orders', component:OrderComponent},
   {path:"home", component:HomeUiComponent},
+  {path:"order-confirmation", component:ThanksComponent},
+
 
 
  

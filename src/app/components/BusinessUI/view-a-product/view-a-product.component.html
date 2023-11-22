@@ -49,15 +49,15 @@ class="left" srcset="" height="30px" width="30px">
             <hr>
             <label>Product Condition</label>
             <select [class]="clsEditable" [disabled]="boolEdit" type="text" [(ngModel)]="products.condition" placeholder="Quantity">
-                <option>new</option>
-                <option>used</option>
+                <option value="new">new</option>
+                <option value="used">used</option>
             </select>
         </div>
 
         <div class="input-fieldD">
             <hr>
             <label>Product Price</label>
-            <input [class]="clsEditable" [(ngModel)]="products.price" [disabled]="boolEdit" type="text" value="R{{products.price}}" placeholder="Price">
+            <input [class]="clsEditable" [(ngModel)]="products.price" [disabled]="boolEdit" type="text" value="{{products.price}}" placeholder="Price">
         </div>
 
         <div class="input-fieldD">
@@ -65,7 +65,17 @@ class="left" srcset="" height="30px" width="30px">
             <input [class]="clsEditable" [disabled]="boolEdit" [(ngModel)]="products.quantity" type="number" placeholder="Quantity" value="{{products.quantity}}">
         </div>
     </div>
-
+  
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div #toastElement class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Makasna</strong>
+        <button type="button" class="btn-close" (click)="hideToast()" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Item updated successfully!.</div>
+    </div>
+  </div>
     <div class="bottom-nav">
         <div class="nav-options" >
             <div class="nav-item">
@@ -73,7 +83,7 @@ class="left" srcset="" height="30px" width="30px">
             </div>
 
             <div class="nav-item">
-                <button><mat-icon>assignment</mat-icon></button>
+                <button  routerLink="/your-cart"><mat-icon>assignment</mat-icon></button>
                 
             </div>
 
@@ -88,11 +98,12 @@ class="left" srcset="" height="30px" width="30px">
             </div>
 
             <div class="nav-item">
-                <button routerLink="/buss-profile"><mat-icon>account_circle</mat-icon></button>
+                <button routerLink="/consumer-profile"><mat-icon>account_circle</mat-icon></button>
             </div>
 
         </div>
             
     </div>
 
-</div>    
+</div>   
+

@@ -29,7 +29,6 @@ class="left" srcset="" height="30px" width="30px">
                 </div>
                 <input type="text" [(ngModel)]="productDetail.title"  placeholder="Title">
             </div>
-
             <div class="input-field">
                 <label>Product Description:</label>
                 <textarea rows="6" autocomplete="on"[(ngModel)]="productDetail.description" autocorrect="true" cols="33"  type="text" placeholder="Tell customers more about your product"></textarea>
@@ -38,20 +37,18 @@ class="left" srcset="" height="30px" width="30px">
             <div class="input-field">
                 <label>Product Category:</label>
                 <select type="number" [(ngModel)]="productDetail.category" placeholder="Category">
-                    <option>Furniture</option>
-                    <option>Electronics</option>
-                    <option>Beauty, health, personal, and household care</option>
-                    <option>Clothing and footwear</option>
-                    <option>Toys, hobby, and DIY</option>
-                    <option>Food</option>
-                    <option>Media (books, disks and
+                    <option  value="furniture">Furniture</option>
+                    <option value="electronics">Electronics</option>
+                    <option  value="beauty_and_health">Beauty, health, personal, and household care</option>
+                    <option  value="clothing">Clothing and footwear</option>
+                    <option value="toys">Toys, hobby, and DIY</option>
+                    <option  value="food" >Food</option>
+                    <option  value="media">Media (books, disks and
                         concert tickets)
                         </option>
-                    <option>Jewellery and clocks</option>
-                    <option>Pets</option>
-                    <option>Sports</option>
-                    <option>Food</option>
-                    <option>Food</option>
+                    <option value="jewellery">Jewellery and clocks</option>
+                    <option value="pets">Pets</option>
+                    <option value="sports">Sports</option>
                 </select>
             </div>
 
@@ -117,4 +114,15 @@ class="left" srcset="" height="30px" width="30px">
 
 </div>
 
+
+<div class="toast-container  position-fixed bottom-0 end-0 p-3" style="">
+    <div #toastElement class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Makasna</strong>
+        <button type="button" class="btn-close" (click)="hideToast()" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Item added successfully!. </div>
+    </div>
+  </div>
 
