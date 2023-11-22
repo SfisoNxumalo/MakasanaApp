@@ -49,7 +49,7 @@ export class CompanySignupComponent {
       this.toastInstance.hide();
     }
     
-      ])
+      
   }
 
 }
