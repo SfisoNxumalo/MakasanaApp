@@ -84,7 +84,7 @@ const routes: Routes = [
 
   { path:"user-profile",component:UserprofileComponent},
 
-  { path:"ThanksComponent"}
+  { path:"thanks",component:ThanksComponent}
 ];
 
 @NgModule({
