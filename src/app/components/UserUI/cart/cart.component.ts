@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CartserviceService } from 'src/app/services/cartservice.service';
 import { Products } from 'src/app/Interfaces/products';
 import { AddToCartService } from 'src/app/services/add-to-cart.service';
@@ -10,7 +10,7 @@ import { AddToCartService } from 'src/app/services/add-to-cart.service';
 })
 
 
-export class CartComponent {
+export class CartComponent implements OnInit {
 
   //items = JSON.parse(localStorage.getItem('CartItems') || '[]')
   // totalAmount = this.cartService.totAmount
@@ -31,6 +31,12 @@ export class CartComponent {
   // totalAmount: this.bagService.totAmount
 
   ngOnInit(): void {
+
+//   const item = localStorage.getItem("cart") || "[]";
+//   const cartt = JSON.parse(item) || []
+// console.log(cartt.length)
+  // this.cartTotal = 5
+  // this.mSortCart(cartt)
 
     this.cart.mShowCart().subscribe((data) => {
       this.cartTotal = data.length;
@@ -54,6 +60,8 @@ export class CartComponent {
 mSortCart(data:any){
 
   for(let item of data){
+
+    console.log(this.cartMap);
 
     if(this.cartMap.has(item.details)){
       let newItem = ((this.cartMap.get(item.details) || 0) + 1);
