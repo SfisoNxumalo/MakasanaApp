@@ -1,13 +1,17 @@
 
 .container{
+    background-color:turquoise;
   margin-top: 90px;
+  justify-content: center;
 }
 .dropdown .dropdown-toggle::after {
     display:none;
     /* border-left: 0.3em solid transparent; */
 }
 
+
 .top-header {
+  
   color: black;
   text-align: center;
   font-weight: bold;
@@ -15,7 +19,15 @@
   justify-content: center;
 }
 
+.checkout{
+  text-align: center;
+  justify-content: center;
+
+}
+
 .order-summary {
+  height: 50px;
+  height: 50px;
   color: black;
   text-align: center;
   font-weight: bold;

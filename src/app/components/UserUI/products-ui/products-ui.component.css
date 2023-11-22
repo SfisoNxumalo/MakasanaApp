@@ -303,6 +303,7 @@ mat-progress-bar{
         justify-content: center;
         text-align: center;
         width: 100%;
+        margin-left: 50%;
       }
     
       .nav-item button{
