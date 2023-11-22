@@ -47,7 +47,7 @@ const routes: Routes = [
 
 
 
- 
+
 
 
    { path: "my-products", component: BusinessProductsComponent },
@@ -68,8 +68,8 @@ const routes: Routes = [
 
   { path: "your-cart", component: CartComponent},
   { path:"consumer-profile",component: UserProfilePageComponent},
- 
- 
+
+
   {path:"buss-profile", component:BusinessProfileComponent},
   { path:"checkout",component:CheckoutComponent},
 
@@ -81,9 +81,10 @@ const routes: Routes = [
 
   { path: "prof", component:ProfileComponent},
 
- 
+
   { path:"user-profile",component:UserprofileComponent},
 
+  { path:"ThanksComponent"}
 ];
 
 @NgModule({
