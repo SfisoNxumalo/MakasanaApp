@@ -17,88 +17,36 @@
 
         </div>
     </div>
-    <div class="container">
+    <div class="order-holder">
 
-        <div *ngFor="let orderDe of my_orders" class="order">
+        <div *ngFor="let orderDe of Maporders.entries()" (click)="OpenOrder(orderDe[0])" class="order">
 
-            <p class="order-number">{{orderDe.orderNo}}</p>
+            <p class="order-number"># {{orderDe[0]}}</p>
             <hr>
-            <p>Quantity:{{orderDe.quantity}}</p>
-            <p>Date:{{orderDe.date}}</p>
-            <p>Total:{{orderDe.price | currency: 'R'}}</p>
+            <div class="same-line">
+            <label>Quantity:</label>
+            <p class="info">{{orderDe[1].quantity}}</p>
+            </div>
+            <div class="same-line">
+            <label>Date:</label>
+            <p class="info">{{orderDe[1].order.date}}</p>
+            </div>
+            <div class="same-line">
+            <label>Total:</label>
+            <b><p class="info">{{orderDe[1].Total | currency: 'R'}}</p></b>
+            </div>
             <hr>
-            <p>Status:{{orderDe.order_status}}</p>
-        </div>
-
-        <!-- <div class="card containe p-2 mt-4">
-            <div class="containe row">
-                <div class="col-6">
-                    <p class="font2 mb-1"><b>Klean Kar Wash</b></p>
-                    <hr/>
-                    <p class="font-w mb-1">No: of items ordered</p>
-                    <p class="font-w mb-1">Price</p>
-                    <p class="font-w mb-1">DD-MM-YYYY</p>
-                </div>
+            <div class="same-line">
+            <label>Status:</label>
+            <p class="info it">{{orderDe[1].order.order_status}}</p>
             </div>
-        </div>
-        <div class="card containe p-2 mt-4" routerLink="/user-order">
-            <div class="containe row">
-                <div class="col-6">
-                    <img src="https://us.123rf.com/450wm/rachmatbudiaji/rachmatbudiaji2104/rachmatbudiaji210400074/168114280-food-burger-vector-logo-illustration.jpg?ver=6">
-                </div>
-                <div class="col-6">
-                    <p class="font2 mb-1"><b>Burger Pozi</b></p>
-                    <hr/>
-                    <p class="font-w mb-1">No: of items ordered</p>
-                    <p class="font-w mb-1">Price</p>
-                    <p class="font-w mb-1">Payment method</p>
-                    <p class="font-w mb-1">DD-MM-YYYY</p>
-                </div>
-            </div>
-        </div>
-        <div class="card containe p-2 mt-4">
-            <div class="containe row">
-                <div class="col-6">
-                    <img src="https://img.freepik.com/premium-vector/silhouette-casual-man-with-sewing-machine-vintage-fashion-tailor-logo-design_57043-656.jpg">
-                </div>
-                <div class="col-6">
-                    <p class="font2 mb-1"><b>Tailor Made</b></p>
-                    <hr/>
-                    <p class="font-w mb-1">No: of items ordered</p>
-                    <p class="font-w mb-1">Price</p>
-                    <p class="font-w mb-1">DD-MM-YYYY</p>
-                </div>
-            </div>
-        </div>
-        <div class="card containe p-2 mt-4">
-            <div class="containe row">
-                <div class="col-6">
-                    <img src="https://cdn4.vectorstock.com/i/thumb-large/53/28/tuck-shop-vector-10235328.jpg">
-                </div>
-                <div class="col-6">
-                    <p class="font2 mb-1"><b>Mohammed General Store</b></p>
-                    <hr/>
-                    <p class="font-w mb-1">No: of items ordered</p>
-                    <p class="font-w mb-1">Price</p>
-                    <p class="font-w mb-1">DD-MM-YYYY</p>
-                </div>
-            </div>
-        </div> -->
-        
-        <div class="card containe p-2 mt-4">
-            <p class="font2 mb-1"><b>Get Order Upates</b></p>
-            <p class="font-w mb-1">Track updates with Makasana Wallet</p>
-        </div>
-
-
-
-
-        <div class="button  justify-content-center">
-            <button class="btn border-radius-100  bg-dark text-white mt-3" routerLink="/makasana">
-                Continue To Home
-            </button>
+            
         </div>
     </div>
+</div>
+
+<div class="invi">
+
 </div>
 
 <div class="bottom-nav">

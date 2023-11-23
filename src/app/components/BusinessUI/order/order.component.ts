@@ -9,12 +9,6 @@ import { OrderService } from 'src/app/services/order.service';
 })
 export class OrderComponent {
 
-  constructor(private orderService :  OrderService)
-  {
-
-  }
-
-
 
 
 }

@@ -33,9 +33,6 @@
     background-color: black ;
 }
 
-
-
-
 .border-none{
     border: none;
 }
@@ -66,7 +63,6 @@
   .containe{
     margin-bottom: 10%;
     margin-top: 3%;
-    align-items: right;
   }
   
   .bottom-nav{
@@ -119,6 +115,12 @@
     font-size: 11px;
   }
 
+  .order-holder{
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+  }
+
   .order{
     border: 1px solid rgb(192, 192, 192);
     background-color: transparent;
@@ -136,3 +138,21 @@
     margin: 8px 0px;
   }
 
+  .same-line{
+    display: flex;
+    gap: 8px;
+    font-weight: 600;
+  }
+
+  .info{
+    width: 100%;
+  }
+
+  .it{
+    font-style: italic;
+  }
+
+
+  .invi{
+    height: 66px;
+  }
