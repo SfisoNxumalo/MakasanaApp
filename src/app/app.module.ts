@@ -12,7 +12,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { NgForm } from '@angular/forms'; 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 import { AppComponent } from './app.component';
 
@@ -115,7 +115,8 @@ import { ThanksComponent } from './components/UserUI/thanks/thanks.component';
     MatBadgeModule,
     MatSelectModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

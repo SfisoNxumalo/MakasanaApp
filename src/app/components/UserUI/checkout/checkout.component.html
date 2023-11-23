@@ -20,9 +20,6 @@
   <div class="illustration">
     <img  src="../../../../assets/images/Project_146-01.jpg"/>
   </div>
-
-  
-
   
     <div class="row">
         <div class="col-md-4 order-md-2 mb-4"  >
@@ -63,17 +60,8 @@
         </div>
     </div>
    
-    <div class="d-flex justify-content-center" >
       <div class="dropdown">
-        <button (click)="mProcess()" class="col-10 btn btn-outline-primary pe-4 dropdown-toggle">Pay</button>
-      </div>
-      <div class="dropdown">
-        <button  class="col-10 btn btn-outline-warning ms-3 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Cancel Order</button>
-        <ul class="dropdown-menu dropdown-menu-end ">
-          <li onclick="window.history.go(-1)"><a class="dropdown-item" >Yes</a></li>
-          <li ><a class="dropdown-item">No</a></li>
-        </ul>
-      </div>
+        <button (click)="mProcess()">Place Order</button>
 
     </div>
 </div>
@@ -116,5 +104,8 @@
   
   </div>
   
+  <div class="spn">
+
+  </div>
   
-  
+  <mat-spinner class="spinner"></mat-spinner>

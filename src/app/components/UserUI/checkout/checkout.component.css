@@ -1,27 +1,41 @@
 .illustration{
   display: flex;
   justify-content: center;
- 
   align-items: center;
 }
 
 .illustration img{
-  height: 150px;
+  height: 120px;
   width: auto;
 
 }
 
 
-
-
 .container{
     
-  margin-top: 90px;
+  margin-top: 53px;
   justify-content: center;
 }
 .dropdown .dropdown-toggle::after {
     display:none;
     /* border-left: 0.3em solid transparent; */
+}
+
+.dropdown{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+
+.dropdown button{
+  padding: 5px;
+  width: 60%;
+  background-color: transparent;
+  border: 1px solid rgb(65, 130, 226);
+  border-radius: 8px;
+  color: rgb(65, 130, 226);
+  font-weight: 600;
 }
 
 
@@ -397,4 +411,16 @@ color: blueviolet;
 }
 .nav-item label{
 font-size: 11px;
+}
+
+.spn{
+  background-color: brown;
+  height: auto;
+}
+
+.spinner{
+  /* position: absolute; */
+  justify-self: center;
+  align-self: center;
+  margin: auto;
 }
