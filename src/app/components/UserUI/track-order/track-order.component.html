@@ -1,10 +1,6 @@
 <div class="Top-section">
 <app-top-bar></app-top-bar>
 
-
-<div class="container">
-    <p class="mt-3"><b>Makasana</b></p>
-</div>
 <div class="container">
     <div class="d-flex justify-content-center">
         <div class="container">
@@ -13,23 +9,29 @@
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKdeQTRwjdevF4W0leHML8ot1MSz_7whrJFQ&usqp=CAU">
                 </div>
             
-                <br/>
-                <br/>
+                <br>
               <div class="container">
-                <p class="mb-0"><b>ORDER HISTORY</b></p>
-                <br/>
-                <p class="text-align font">View current and previous orders</p>
-                <hr/>
+                <p class="text-align font"><b>ORDER HISTORY</b></p>
+                <hr>
               </div>
 
         </div>
     </div>
     <div class="container">
-        <div class="card containe p-2 mt-4">
+
+        <div *ngFor="let orderDe of my_orders" class="order">
+
+            <p class="order-number">{{orderDe.orderNo}}</p>
+            <hr>
+            <p>Quantity:{{orderDe.quantity}}</p>
+            <p>Date:{{orderDe.date}}</p>
+            <p>Total:{{orderDe.price | currency: 'R'}}</p>
+            <hr>
+            <p>Status:{{orderDe.order_status}}</p>
+        </div>
+
+        <!-- <div class="card containe p-2 mt-4">
             <div class="containe row">
-                <div class="col-6">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVqjAa4AfBpy0LzJ6dRNkXlxpG3hEhRjdFRQ&usqp=CAU">
-                </div>
                 <div class="col-6">
                     <p class="font2 mb-1"><b>Klean Kar Wash</b></p>
                     <hr/>
@@ -81,7 +83,8 @@
                     <p class="font-w mb-1">DD-MM-YYYY</p>
                 </div>
             </div>
-        </div>
+        </div> -->
+        
         <div class="card containe p-2 mt-4">
             <p class="font2 mb-1"><b>Get Order Upates</b></p>
             <p class="font-w mb-1">Track updates with Makasana Wallet</p>
@@ -98,11 +101,6 @@
     </div>
 </div>
 
-
-
-
-
-</div>
 <div class="bottom-nav">
 
     <div class="nav-options" >

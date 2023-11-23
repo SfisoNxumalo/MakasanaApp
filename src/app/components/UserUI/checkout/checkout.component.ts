@@ -130,7 +130,6 @@ mProcess(){
       this.blCan = !this.blDis;
       this.progress = this.progress + 20;
       this.spnValue = this.progress
-      
 
       if(this.progress > 100){
         
@@ -140,8 +139,7 @@ mProcess(){
         this.blCan = this.blDis;
         this.btnTex = "please wait .."
         this.mPlaceOrder()
-
-
+        console.log(this.order)
       }
     }, 1000)
     
@@ -165,10 +163,24 @@ mPlaceOrder(){
   }
   
   this.OrderProcess.mProcessOrder(body).subscribe((data) => {
-    if(data === 'done'){
-
+    if(data.message === 'successful')
+    {
+      
+          if(this.timeou){
+        clearTimeout(this.timeou);
+      }
+  
+     this.timeou = setTimeout(() => {
+      this.btnTex = "Successful"
       this.router.navigate(['/order-confirmation'])
-
+      this.mCancel();
+      this.cart.mClear();
+      }, 5000)
+      
+    }
+    else{
+      this.mCancel();
+      this.btnTex = "Failed"
     }
   });
 }

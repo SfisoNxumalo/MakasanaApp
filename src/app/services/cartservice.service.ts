@@ -32,12 +32,20 @@ ngOnInit(): void {
 Token = this.token.getToken();
 
 mProcessOrder(body:any):Observable<any>{
-console.log("yes")
   const headers = new HttpHeaders()
     .append('Authorization', 'Bearer ' + this.Token)
     .append('content-type', 'application/json')
 
     return this.http.post(this.api + "createOrder", body, {headers});
+
+}
+
+mGetOrders():Observable<any>{
+  const headers = new HttpHeaders()
+    .append('Authorization', 'Bearer ' + this.Token)
+    .append('content-type', 'application/json')
+
+    return this.http.get(this.api + "view-orders", {headers});
 
 }
 
