@@ -8,7 +8,8 @@ import { FakeStoreService } from 'src/app/services/fake-store.service';
   templateUrl: './analytics-ui.component.html',
   styleUrls: ['./analytics-ui.component.css']
 })
-export class AnalyticsUiComponent  implements OnInit{
+
+export class AnalyticsUiComponent implements OnInit{
 
   constructor(private route:ActivatedRoute, private fakeApi:FakeStoreService){}
 
@@ -22,7 +23,7 @@ export class AnalyticsUiComponent  implements OnInit{
 
     const table:any = document.getElementById("graph");
 
-    
+
     // table.innerHTML = "";
 
 (async function() {
@@ -53,7 +54,7 @@ export class AnalyticsUiComponent  implements OnInit{
         }
       );
     })();
-    
+
   }
 
   mGetProduct(){

@@ -1,3 +1,10 @@
 .main-content__checkmark{
     width: 200px;
 }
+
+.btn{
+  position: relative;
+  top: 20px;
+  background-color:blueviolet;
+  border-color: black;
+}
