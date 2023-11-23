@@ -32,7 +32,7 @@ export class AddProductComponent  {
     price: 0,
     condition: "",
     quantity: 0,
-    promo: {onPromo:false, promoDesc:"", newPrice:0, startDate : new Date(), endDate: new Date()},
+    promo: {onPromo:false, promoDesc:"", newPrice:0, startDate : new Date(), endDate: new Date(), percentage: 0},
     added: new Date(),
     updated: new Date()
   }
@@ -82,7 +82,7 @@ export class AddProductComponent  {
       price: 0,
       condition: "",
       quantity: 0,
-      promo: {onPromo:false, promoDesc:"", newPrice:0, startDate : new Date(), endDate: new Date()},
+      promo: {onPromo:false, promoDesc:"", newPrice:0, startDate : new Date(), endDate: new Date(), percentage:0},
       added: new Date(),
       updated: new Date()
     }

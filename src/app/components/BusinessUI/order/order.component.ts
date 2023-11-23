@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { tap } from 'rxjs';
 import { OrderService } from 'src/app/services/order.service';
 
 @Component({
@@ -8,12 +9,12 @@ import { OrderService } from 'src/app/services/order.service';
 })
 export class OrderComponent {
 
-  constructor(private orderService:  OrderService){}
-  ngOnInit(): void { 
-
+  constructor(private orderService :  OrderService)
+  {
 
   }
 
-  
+
+
 
 }

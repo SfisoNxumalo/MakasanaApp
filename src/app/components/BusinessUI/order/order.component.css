@@ -54,6 +54,8 @@
   display: flex;
   justify-content: center;
   align-items: left;
+  margin-left: 10px;
+  margin-right: 25px;
 }
 .containe img{
   width:100px;
