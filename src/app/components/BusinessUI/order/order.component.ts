@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { tap } from 'rxjs';
 import { OrderService } from 'src/app/services/order.service';
 
 @Component({
@@ -6,14 +7,22 @@ import { OrderService } from 'src/app/services/order.service';
   templateUrl: './order.component.html',
   styleUrls: ['./order.component.css']
 })
-export class OrderComponent {
+export class OrderComponent implements OnInit {
 
-  constructor(private orderService:  OrderService){}
-  ngOnInit(): void { 
+  myOrder : any;
 
+  constructor(private orderService :  OrderService)
+  {
+
+  }
+  ngOnInit(): void 
+  { 
+    this.myOrder = this.orderService
 
   }
 
-  
+
+
+
 
 }

@@ -316,3 +316,11 @@ mat-progress-bar{
     }
 
 }
+
+.promoLabel{
+    background-color: greenyellow;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 10px;
+}

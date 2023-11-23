@@ -18,9 +18,16 @@ class="left" srcset="" height="30px" width="30px">
         
         <div class="prod-options">
             <div>
-                <button class="crt-promo">
+                <!-- <button class="crt-promo">
                     Create promotion +
-                </button>
+                </button> -->
+
+                <!-- Button trigger modal -->
+            <button type="button" class="crt-promo" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Create promotion +
+            </button>
+
+
             </div>
             <div *ngIf="!boolEdit" class="btn-cancel">
                 <button (click)="mCancel()"><mat-icon>clear</mat-icon></button>
@@ -109,5 +116,65 @@ class="left" srcset="" height="30px" width="30px">
             
     </div>
 
-</div>   
+</div>  
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLabel">Create promotion</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="input-fieldD">
+
+                <div class="input-fieldD">
+                    <hr>
+                    <label>On Promotion</label>
+                    <select [class]="clsEditable" type="text" [(ngModel)]="products.promo.onPromo" placeholder="Special Offer">
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+                </div>
+
+                <div class="input-fieldD">
+                    <label>Product Title</label>
+                </div>
+                
+                <input [class]="clsEditable" [(ngModel)]="products.title" [disabled]="boolEdit" type="text" placeholder="Title" value="{{products.title}}">
+            </div>
+    
+            <div class="input-fieldD">
+                <hr>
+                <label>Product Description</label>
+                <textarea [class]="clsEditable" [disabled]="boolEdit" autocomplete="on" autocorrect="true" cols="33" type="text" [(ngModel)]="products.description" placeholder="Tell customers more about your product">{{products.description}}</textarea>
+            </div>
+    
+            <div class="input-fieldD">
+                <hr>
+                <label>Product Price</label>
+                <input [class]="clsEditable" [(ngModel)]="products.price" type="text" value="{{products.price}}" placeholder="Price">
+            </div>
+    
+            <div class="input-fieldD">
+                <label>Promotion Start Date</label>
+                <input [class]="clsEditable" [(ngModel)]="products.promo.startDate" type="date" placeholder="Start Date" value="{{products.promo.startDate}}">
+            </div>
+
+            <div class="input-fieldD">
+                <label>Promotion End Date</label>
+                <input [class]="clsEditable" [(ngModel)]="products.promo.endDate" type="date" placeholder="End Date" value="{{products.promo.endDate}}">
+            </div>
+            
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary"(click)="onPromo()">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
