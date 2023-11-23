@@ -1,3 +1,6 @@
+
+
+
 .bg-top{
     background-color: purple;
     height: 80px;
@@ -72,6 +75,9 @@
     align-items: center;
     width: 100%;
   }
+
+
+  
 
   .nav-options{
     display: grid;

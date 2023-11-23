@@ -35,8 +35,8 @@ import { ThanksComponent } from './components/UserUI/thanks/thanks.component';
 
 const routes: Routes = [
 
-  { path:'',redirectTo:'/landing-page', pathMatch: 'full' },
-  { path: 'landing-page', component:LandingComponent},
+  { path:'',redirectTo:'/makasana', pathMatch: 'full' },
+  { path: 'makasana', component:LandingComponent},
 
   { path: 'dashboard', component:BusinessDashboardComponent},
   {path:'my-analytics', component:AnalyticsUiComponent},
@@ -51,6 +51,7 @@ const routes: Routes = [
 
 
    { path: "my-products", component: BusinessProductsComponent },
+   { path: "thanks", component: ThanksComponent },
    { path: "add-product", component: AddProductComponent},
    { path:"view-product/:id", component:ViewAProductComponent},
 
