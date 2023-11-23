@@ -7,20 +7,12 @@ import { OrderService } from 'src/app/services/order.service';
   templateUrl: './order.component.html',
   styleUrls: ['./order.component.css']
 })
-export class OrderComponent implements OnInit {
-
-  myOrder : any;
+export class OrderComponent {
 
   constructor(private orderService :  OrderService)
   {
 
   }
-  ngOnInit(): void 
-  { 
-    this.myOrder = this.orderService
-
-  }
-
 
 
 
