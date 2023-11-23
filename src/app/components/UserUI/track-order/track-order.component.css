@@ -94,6 +94,8 @@
     width: 100%;
     border: none;
     gap: 0px;
+    padding-left: 5px;
+   
   }
 
   .nav-item{
@@ -110,6 +112,7 @@
     padding: 0px;
     border: none;
     outline: none;
+    
   }
 
   .nav-options .nav-item:nth-child(2),

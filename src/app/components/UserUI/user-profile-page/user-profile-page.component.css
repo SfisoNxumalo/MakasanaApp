@@ -205,6 +205,7 @@ hr{
     width: 100%;
     border: none;
     gap: 0px;
+    padding-left: 5px;
   }
   
   .nav-item{
@@ -213,6 +214,7 @@ hr{
     justify-content: center;
     text-align: center;
     width: 100%;
+    margin-left: 45%;
   }
   
   .nav-item button{
@@ -222,8 +224,8 @@ hr{
     outline: none;
   }
   
-  .nav-options .nav-item:nth-child(4),
-  .nav-options .nav-item:nth-child(4) mat-icon{
+  .nav-options .nav-item:nth-child(3),
+  .nav-options .nav-item:nth-child(3) mat-icon{
     color: blueviolet;
   }
   .nav-item label{
