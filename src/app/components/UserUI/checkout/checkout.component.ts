@@ -5,6 +5,7 @@ import { BagService } from 'src/app/services/bag.service';
 import { TokenService } from 'src/app/services/token.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AddToCartService } from 'src/app/services/add-to-cart.service';
+import { CartserviceService } from 'src/app/services/cartservice.service';
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.component.html',
@@ -33,7 +34,9 @@ constructor(private fb: FormBuilder,
   private bagService: BagService, 
   private tokenService: TokenService, 
   private router: Router,
-  private cart:AddToCartService){
+  private cart:AddToCartService,
+
+private OrderProcess:CartserviceService){
   // this.profileForm = this.fb.group({
   //   name: this.name,
   //   message: this.message,
@@ -48,6 +51,8 @@ onSubmi() {
 }
 
 cartTotal = 0;
+
+order:any = []
 
 ngOnInit(): void {
   //console.log(this.dataForm)
@@ -65,6 +70,10 @@ ngOnInit(): void {
     this.cartTotal = data.length;
     this.mSortCart(data)
     // console.log(data);
+  })
+
+  this.cart.mGetOrders().subscribe((data) => {
+    this.order = data 
   })
 }
 
@@ -128,6 +137,24 @@ postToCart(){
 // pid = this.items[0].id
 // userId = this.userId  
 // console.log(this.userId)
+}
+
+mProcess(){
+
+  if(this.order.length == 0){
+    alert("Alert go back")
+  }
+  else{
+    // console.log(this.order)
+   const body = {
+      orders:this.order
+    }
+    
+    this.OrderProcess.mProcessOrder(body).subscribe((data) => {
+      console.log(data);
+    });
+  }
+
 }
 
 // clearCart() {

@@ -10,7 +10,7 @@ import { TokenService } from 'src/app/services/token.service';
   styleUrls: ['./user-login.component.css']
 })
 export class UserLoginComponent {
-  form={
+  form = {
     email:"",
     password:"",
   }

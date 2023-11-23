@@ -1,7 +1,8 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Products } from '../Interfaces/products';
+import { TokenService } from './token.service';
 
 @Injectable({
   providedIn: 'root'
@@ -9,8 +10,8 @@ import { Products } from '../Interfaces/products';
 export class CartserviceService {
 
 
-  cartItemcount  = new BehaviorSubject<any>(0);
-  cartTotal = new BehaviorSubject<any>(0);
+  // cartItemcount  = new BehaviorSubject<any>(0);
+  // cartTotal = new BehaviorSubject<any>(0);
 
   // items:any
 
@@ -21,74 +22,88 @@ export class CartserviceService {
 items: Products[] = [];
 totAmount = 0
 endpoint = "https://fakestoreapi.com/";
+api = "http://localhost:2023/makasana-api/"
 
-constructor(private http: HttpClient){}
+constructor(private http: HttpClient, private token:TokenService){}
 ngOnInit(): void {
-this.getAllItems()
-}
-addToCart(product: any ) {
-
-
-
-  const productExistInCart = this.items.find(({title}) => title === product.productName);
-  // productExistInCart.quantity = 0
-  if (!productExistInCart) {
-  this.items.push({...product});
-  this.items.length;
-  this.cartItemcount.next(this.cartItemcount.value + 1);
-  localStorage.setItem('CartCount',JSON.stringify(this.cartItemcount.value))
-  // return;
-}
+// this.getAllItems()
 }
 
-if(productExistInCart: { quantity: number; }){
-  productExistInCart.quantity = productExistInCart.quantity + 1;
-  this.cartItemcount.next(this.cartItemcount.value + 1);
-  console.log(productExistInCart.quantity)
-  this.Total()
- }
- Total() {
+Token = this.token.getToken();
 
-  this.totAmount = 0
-  this.items.forEach((item:any) => {
-    this.totAmount += (item.price * item.quantity)
-    this.cartTotal.next(this.totAmount);
-    console.log(this.totAmount)
-    localStorage.setItem('TotalAmount',JSON.stringify(this.totAmount))
-  })
+mProcessOrder(body:any):Observable<any>{
+console.log("yes")
+  const headers = new HttpHeaders()
+    .append('Authorization', 'Bearer ' + this.Token)
+    .append('content-type', 'application/json')
 
-  this.cartTotal.next(this.totAmount);
-  localStorage.setItem('CartItems', JSON.stringify(this.items))
+    return this.http.post(this.api + "createOrder", body, {headers});
 
 }
-getCount(){
-  return this.cartItemcount;
-}
 
-getTotal(){
+// addToCart(product: any ) {
 
-  return this.cartTotal;
-}
 
-getAllItems() {
-  // console.log(this.items)
-  return this.items
-};
 
-sendToCart(payload: any):Observable<any>{
-  return this.http.post<any>(this.endpoint,payload)
-}
-getUserCart():Observable<any>{
-  return this.http.get<any>(this.endpoint)
-}
+//   const productExistInCart = this.items.find(({title}) => title === product.productName);
+//   // productExistInCart.quantity = 0
+//   if (!productExistInCart) {
+//   this.items.push({...product});
+//   this.items.length;
+//   this.cartItemcount.next(this.cartItemcount.value + 1);
+//   localStorage.setItem('CartCount,JSON.stringify(this.cartItemcount.value))
+//   // return;
+// }
+// }
 
-delete(i:number){
-  this.items.splice(i,1);
-  this.getTotal();
+// if(productExistInCart: { quantity: number; }){
+//   productExistInCart.quantity = productExistInCart.quantity + 1;
+//   this.cartItemcount.next(this.cartItemcount.value + 1);
+//   console.log(productExistInCart.quantity)
+//   this.Total()
+//  }
+//  Total() {
 
-  localStorage.setItem('CartItems', JSON.stringify(this.items))
-  localStorage.setItem('TotalAmount',JSON.stringify(this.cartTotal))
-}
+//   this.totAmount = 0
+//   this.items.forEach((item:any) => {
+//     this.totAmount += (item.price * item.quantity)
+//     this.cartTotal.next(this.totAmount);
+//     console.log(this.totAmount)
+//     localStorage.setItem('TotalAmount',JSON.stringify(this.totAmount))
+//   })
+
+//   this.cartTotal.next(this.totAmount);
+//   localStorage.setItem('CartItems', JSON.stringify(this.items))
+
+// }
+// getCount(){
+//   return this.cartItemcount;
+// }
+
+// getTotal(){
+
+//   return this.cartTotal;
+// }
+
+// getAllItems() {
+//   // console.log(this.items)
+//   return this.items
+// };
+
+// sendToCart(payload: any):Observable<any>{
+//   return this.http.post<any>(this.endpoint,payload)
+// }
+// getUserCart():Observable<any>{
+//   return this.http.get<any>(this.endpoint)
+// }
+
+// delete(i:number){
+//   this.items.splice(i,1);
+//   this.getTotal();
+
+//   localStorage.setItem('CartItems', JSON.stringify(this.items))
+//   localStorage.setItem('TotalAmount',JSON.stringify(this.cartTotal))
+// }
 
 
 }
