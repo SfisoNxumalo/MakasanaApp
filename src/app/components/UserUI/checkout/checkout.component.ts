@@ -50,7 +50,12 @@ onSubmi() {
   // console.warn(this.profileForm.value);
 }
 
+mode:any = "determinate"
+spnValue = 0
 cartTotal = 0;
+blCan = true;
+blDis = false;
+btnTex = "cancel"
 
 order:any = []
 
@@ -82,6 +87,7 @@ total = 0
 
 VatPrice = 0
 cartMap = new Map<any, any>();
+
 mSortCart(data:any){
 
   for(let item of data){
@@ -104,6 +110,68 @@ mSortCart(data:any){
 
 
 }
+timeou:any;
+interva:any;
+progress = 0
+mProcess(){
+
+  if(this.order.length == 0){
+    alert("Alert go back")
+  }
+  else{
+    this.spnValue = 1
+
+    if(this.interva){
+      clearInterval(this.interva);
+    }
+
+    this.interva = setInterval(() =>{
+      this.blDis = true;
+      this.blCan = !this.blDis;
+      this.progress = this.progress + 20;
+      this.spnValue = this.progress
+      
+
+      if(this.progress > 100){
+        
+        this.mode = "indeterminate"
+        clearInterval(this.interva);
+        this.progress = 0;
+        this.blCan = this.blDis;
+        this.btnTex = "please wait .."
+        this.mPlaceOrder()
+
+
+      }
+    }, 1000)
+    
+  }
+
+}
+
+mCancel(){
+  this.blDis = false;
+  clearInterval(this.interva);
+  this.progress = 0;
+  this.spnValue = 0;
+  this.mode = "determinate"
+  this.blCan = !this.blDis;
+  this.btnTex = "cancel"
+}
+
+mPlaceOrder(){
+  const body = {
+    orders:this.order
+  }
+  
+  this.OrderProcess.mProcessOrder(body).subscribe((data) => {
+    if(data === 'done'){
+
+      this.router.navigate(['/order-confirmation'])
+
+    }
+  });
+}
 
 
 retrieveCheckout(): void {
@@ -112,6 +180,7 @@ retrieveCheckout(): void {
   // }
 
 }
+
 
 payWithAyoba(){
   //Since this is south african only, currency always set to ZAR TODO: use dynamic currencies
@@ -139,23 +208,7 @@ postToCart(){
 // console.log(this.userId)
 }
 
-mProcess(){
 
-  if(this.order.length == 0){
-    alert("Alert go back")
-  }
-  else{
-    // console.log(this.order)
-   const body = {
-      orders:this.order
-    }
-    
-    this.OrderProcess.mProcessOrder(body).subscribe((data) => {
-      console.log(data);
-    });
-  }
-
-}
 
 // clearCart() {
 

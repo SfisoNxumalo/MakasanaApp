@@ -1,21 +1,25 @@
-<div class="top-bar">
+<div class="main-holder">
+    <div class="top-bar">
 
-  <img onclick="window.history.go(-1)" src="../../../../assets/images/back-svgrepo-com.svg" alt=""
-  class="left" srcset="" height="30px" width="30px">
+
+  <button class="back-but" [disabled]="blDis" onclick="window.history.go(-1)">
+    <img src="../../../../assets/images/back-svgrepo-com.svg" alt=""   class="left" srcset="" height="30px" width="30px">
+</button> 
+
 
   <!-- <img onclick="window.history.go(-1)" src="../../../../assets/images/back-svgrepo-com.svg" alt="" style="width: 30px; height: 30px;"> -->
   <div class="text">
       <b>CONFIRM</b>
   </div>
 
-  <button>
+  <button [disabled]="blDis">
       <span></span>
       <span></span>
       <span></span>
   </button>
 
 </div>
-<div class="container align-items-center">
+<div class="container">
 
   <div class="illustration">
     <img  src="../../../../assets/images/Project_146-01.jpg"/>
@@ -27,28 +31,28 @@
                 <label class="top-header">Your Order Summary</label>
                 
             </h4>
-            <ul class="list-group mb-3 sticky-top">
-                <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <ul class="list-group mb-3">
+                <li class="list-group-item d-flex">
                     <div>
                         <!-- <h6 class="my-0"> {{item.itemname}}</h6>
                         <small class="text-muted">{{item.quantity}}</small> -->
                     </div>
                     
                 </li>
-<li class="list-group-item d-flex justify-content-between">
-<span>Items</span>
-<label>{{cartTotal}}</label>
-</li>
+                    <li class="list-group-item d-flex justify-content-between">
+                    <span>Items</span>
+                    <label>{{cartTotal}}</label>
+                    </li>
 
-<li class="list-group-item d-flex justify-content-between">
-  <span>SubTotal</span>
-  <label>{{subtotal | currency: 'R'}}</label>
-</li>
+                    <li class="list-group-item d-flex justify-content-between">
+                    <span>SubTotal</span>
+                    <label>{{subtotal | currency: 'R'}}</label>
+                    </li>
 
-<li class="list-group-item d-flex justify-content-between">
-  <span>Vat (15%)</span>
-  <label>{{VatPrice  | currency: 'R'}}</label>
-</li>
+                    <li class="list-group-item d-flex justify-content-between">
+                    <span>Vat (15%)</span>
+                    <label>{{VatPrice  | currency: 'R'}}</label>
+                    </li>
 
                 <li class="list-group-item d-flex justify-content-between">
                     <span>Total Amount</span>
@@ -61,30 +65,30 @@
     </div>
    
       <div class="dropdown">
-        <button (click)="mProcess()">Place Order</button>
+        <button [disabled]="blDis" (click)="mProcess()">Place Order</button>
 
     </div>
 </div>
-<div class="bottom-nav">
+<div  class="bottom-nav">
   
       
       <div class="nav-options" >
   
           <div class="nav-item">
-              <button routerLink="/home"><mat-icon>home</mat-icon></button>
+              <button [disabled]="blDis" routerLink="/home"><mat-icon>home</mat-icon></button>
           </div>
   
           <div class="nav-item">
-              <button routerLink="/track-order"><mat-icon>assignment</mat-icon></button>
+              <button [disabled]="blDis" routerLink="/track-order"><mat-icon>assignment</mat-icon></button>
               
           </div>
   
           <div class="nav-item">
-              <button><mat-icon>shopping_cart</mat-icon></button>
+              <button [disabled]="blDis"><mat-icon>shopping_cart</mat-icon></button>
               <label></label>
           </div>
           <div class="nav-item">
-              <button routerLink="/consumer-profile"><mat-icon>account_circle</mat-icon></button>
+              <button [disabled]="blDis" routerLink="/consumer-profile"><mat-icon>account_circle</mat-icon></button>
   
           </div>
           <!-- <div class="nav-item">
@@ -96,16 +100,23 @@
           </div> -->
   
           <div class="nav-item">
-              <button routerLink="/landing-page"><mat-icon>logout</mat-icon></button>
+              <button [disabled]="blDis" routerLink="/landing-page"><mat-icon>logout</mat-icon></button>
   
           </div>
   
       </div>
   
   </div>
-  
-  <div class="spn">
 
-  </div>
   
-  <mat-spinner class="spinner"></mat-spinner>
+  <div class="spn" *ngIf="spnValue != 0">
+    <mat-spinner style="width: 50px; height: 50px;" [mode]="mode" [value]="spnValue" class="spinner"></mat-spinner>
+    <button [disabled]="blCan" (click)="mCancel()" value="cancel">{{btnTex}}</button>
+  </div>
+
+</div>
+
+
+  
+
+  

@@ -1,3 +1,10 @@
+.main-holder{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .illustration{
   display: flex;
   justify-content: center;
@@ -409,13 +416,25 @@ outline: none;
 .nav-options .nav-item:nth-child(3) button{
 color: blueviolet;
 }
+
 .nav-item label{
 font-size: 11px;
 }
 
 .spn{
-  background-color: brown;
   height: auto;
+  position: absolute;
+  flex-direction: column;
+  display: flex;
+  z-index: 1000;
+  margin: auto;
+  background-color: white;
+  padding: 10px 25px;
+  border-radius: 10px;
+  align-self: center;
+  justify-self: center;
+  gap: 5px;
+  box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.2);
 }
 
 .spinner{
@@ -423,4 +442,19 @@ font-size: 11px;
   justify-self: center;
   align-self: center;
   margin: auto;
+  height: 50px;
+  width: 50px;
+  z-index: 1000;
+
+}
+
+.spn button{
+  background-color: transparent;
+  border: 1px solid red;
+  border-radius: 5px;
+  color: red;
+  font-weight: 400;
+  z-index: 1000;
+  font-size: 12px;
+
 }

@@ -45,11 +45,6 @@ const routes: Routes = [
   {path:"home", component:HomeUiComponent},
   {path:"order-confirmation", component:ThanksComponent},
 
-
-
-
-
-
    { path: "my-products", component: BusinessProductsComponent },
    { path: "thanks", component: ThanksComponent },
    { path: "add-product", component: AddProductComponent},
