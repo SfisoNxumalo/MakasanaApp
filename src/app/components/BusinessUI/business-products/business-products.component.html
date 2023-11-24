@@ -45,10 +45,12 @@
                     <div class="prod-text">
                         <label>{{product.title}}</label>
                         <!-- <label>{{product.rating.rate}}</label> -->
-                        <label class="price">R{{product.price}}</label>
-                        
+                        <div class="prices-product">
+                        <label class="price">R{{product.price}}</label> 
+                        <label *ngIf="product.promo.newPrice" class="newPrice">R{{product.promo.newPrice}}</label>
+                        </div>
                     </div>
-                    <label *ngIf="product.promo.onPromo" class="promoLabel">Special Offer!</label>
+                    <label *ngIf="product.promo.onPromo" class="promoLabel">Offer!</label>
                 </div>
             </div>
         </div>
