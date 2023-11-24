@@ -104,7 +104,7 @@ mSortCart(data:any){
       this.subtotal = this.subtotal + item.details.price
     } 
   }
-  this.VatPrice =  (this.subtotal * 0.15)
+  this.VatPrice = (this.subtotal * 0.15)
   this.total = this.subtotal + (this.subtotal * 0.15)
 
 

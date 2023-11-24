@@ -155,6 +155,12 @@ class="left" srcset="" height="30px" width="30px">
                 <label>Product Price</label>
                 <input [class]="clsEditable" [(ngModel)]="products.price" type="number" value="{{products.price}}" placeholder="Price">
             </div>
+
+            <div class="input-fieldD">
+                <hr>
+                <label>Product Discount</label>
+                <input [class]="clsEditable" [(ngModel)]="products.promo.percentage" type="number" value="{{products.promo.percentage}}" placeholder="Price">
+            </div>
     
             <div class="input-fieldD">
                 <label>Promotion Start Date</label>
@@ -171,7 +177,7 @@ class="left" srcset="" height="30px" width="30px">
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary"(click)="onPromo()">Save changes</button>
+          <button type="button" class="btn btn-primary"(click)="onPromo()" routerLink="/view-product/{{products._id}}">Save changes</button>
         </div>
       </div>
     </div>

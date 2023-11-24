@@ -162,12 +162,23 @@ export class ViewAProductComponent implements OnInit {
   }
 
   onPromo(){
-    this.productService.updateProduct(this.products,this.productID).subscribe(
+    if (this.products.price >= 0 && this.products.promo.percentage >= 0 && this.products.promo.percentage <= 100) 
+    {
+      const percentageDecimal = this.products.promo.percentage / 100;
+      this.products.promo.newPrice = this.products.price - (this.products.price * percentageDecimal);
+      // console.log(this.products.promo.newPrice)
+    }
+    else{
+      this.productService.updateProduct(this.products,this.productID).subscribe(
       {
         next: (response) => {
           console.log(response),
           console.log("updated")
       }})
+    }
+
+
+    
   //  console.log(this.products.promo.onPromo)
   //   if(this.products.promo.onPromo == true)
   //   {
@@ -178,8 +189,7 @@ export class ViewAProductComponent implements OnInit {
   //     {
   //       console.error('Item is not on promotion.');
   //     }
-    
+  
+  
 
-  }
-
-}
+}}

@@ -319,8 +319,31 @@ mat-progress-bar{
 
 .promoLabel{
     background-color: greenyellow;
-    padding: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #0a0909;
     border-radius: 5px;
-    margin-left: 10px;
+    margin-left: 110px;
+    
+}
+
+.prices-product{
+        display: flex;
+        flex-direction: row;
+        justify-content:left;
+        gap: 5px;
+}
+.price{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    font-size: 8px;
+    /* text-align: end; */
+    text-decoration: line-through;
+}
+
+.newPrice{
+        
+        flex-direction: row;
+        font-size: 13px;
+        /* justify-content: end; */
+        gap: 5px;
 }
