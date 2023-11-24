@@ -11,19 +11,34 @@
 
 <div class="container">
   <div class="card containe p-2 mt-4">
-    <div class="containe row">
-        <div class="col-6">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png">
+    <div *ngFor="let orderDe of order, index as i" class="order">
+
+        <hr>
+        <div class="same-line2">
+            <label>{{i+1}}</label>
+        <p class="order-number">{{orderDe.orderNo}}</p>
         </div>
-        <div class="col-6">
-          <p class="font2 mb-1"><b>Toolz</b></p>
-          <p class="font-w mb-1"><b><i>#555676</i></b></p>
-          <p class="font-w mb-1">078 768 6655</p>
-          <p class="font-w mb-1">R275</p>
-          <p class="font-w mb-1">Cash</p>
-          <br/>
-          <p class="font-w mb-1">16-11-2023</p>
-      </div>
+        <hr>+
+        <div class="same-line">
+            <label>Title:</label>
+            <p class="info">{{orderDe.title}}</p>
+        </div>
+        <div class="same-line">
+        <label>Quantity:</label>
+        <p class="info">{{orderDe.quantity}}</p>
+        </div>
+        <div class="same-line">
+        <label>Date:</label>
+        <p class="info">{{orderDe.date}}</p>
+        </div>
+        <div class="same-line">
+        <label>Total:</label>
+        <b><p class="info">{{orderDe.price | currency: 'R'}}</p></b>
+        </div>
+        <div class="same-line">
+        <label>Status:</label>
+        <p class="info it">{{orderDe.order_status}}</p>
+        </div>
         
     </div>
 <br/>
@@ -34,8 +49,6 @@
         <option value="Busy">In Progress</option>
         <option value="Out">Out for delivery</option>
         <option value="Collect">Ready for collection</option>
-        
-        
 
       </select>
     </div>
@@ -45,7 +58,6 @@
 
 
     <button type="submit">Change customer order state</button>
-
 
     <div class="bottom-nav">
 

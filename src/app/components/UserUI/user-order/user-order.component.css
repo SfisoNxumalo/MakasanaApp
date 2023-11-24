@@ -76,9 +76,6 @@
     width: 100%;
   }
 
-  .invi{
-    height: 66px;
-  }
 
   .nav-options{
     display: grid;
@@ -158,6 +155,11 @@
     width: 100%;
     text-align: end;
   }
+
+  .invi{
+    height: 66px;
+  }
+
 
 
 

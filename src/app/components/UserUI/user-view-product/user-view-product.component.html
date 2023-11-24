@@ -34,16 +34,16 @@
         </div>
 
         <div class="prod-options">
-            <div>
+            <div class="business">
                 <label>Sold by</label>
-                <p>Rocklandss Designer</p>
+                <p>{{product.business.name | titlecase}}</p>
             </div>
         </div>
 
         <div class="input-fieldD">
             <div class="prices-product">
                 <p *ngIf="product.promo.onPromo" class="lblOld">R{{product.price}}</p>
-                <p class="price">R{{product.price}}</p>
+                <p class="price">{{product.price | currency: 'R'}}</p>
             </div>
             
         </div>

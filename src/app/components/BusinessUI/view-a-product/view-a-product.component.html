@@ -130,7 +130,6 @@ class="left" srcset="" height="30px" width="30px">
             <div class="input-fieldD">
 
                 <div class="input-fieldD">
-                    <hr>
                     <label>On Promotion</label>
                     <select [class]="clsEditable" type="text" [(ngModel)]="products.promo.onPromo" placeholder="Special Offer">
                         <option value="true">Yes</option>
@@ -154,7 +153,7 @@ class="left" srcset="" height="30px" width="30px">
             <div class="input-fieldD">
                 <hr>
                 <label>Product Price</label>
-                <input [class]="clsEditable" [(ngModel)]="products.price" type="text" value="{{products.price}}" placeholder="Price">
+                <input [class]="clsEditable" [(ngModel)]="products.price" type="number" value="{{products.price}}" placeholder="Price">
             </div>
     
             <div class="input-fieldD">

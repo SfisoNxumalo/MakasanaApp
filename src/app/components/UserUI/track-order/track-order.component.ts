@@ -71,8 +71,6 @@ export class TrackOrderComponent implements OnInit{
     this.passOrder.mPassOrder(this.PassMaporders.get(id))
     // this.router.dispose()
     this.router.navigate(['/user-order'])
-
-
   }
 
 

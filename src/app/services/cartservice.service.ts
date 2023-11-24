@@ -49,6 +49,15 @@ mGetOrders():Observable<any>{
 
 }
 
+mGetBusinessOrders():Observable<any>{
+  const headers = new HttpHeaders()
+    .append('Authorization', 'Bearer ' + this.Token)
+    .append('content-type', 'application/json')
+
+    return this.http.get(this.api + "business/view-orders", {headers});
+
+}
+
 // addToCart(product: any ) {
 
 
