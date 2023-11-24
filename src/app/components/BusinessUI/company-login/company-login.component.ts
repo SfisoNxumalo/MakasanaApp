@@ -19,6 +19,8 @@ export class CompanyLoginComponent {
   @ViewChild('toastElement')
   toastElement!: ElementRef;
 
+  spnValue = 0;
+
   private toastInstance: any;
   form={
     email:"",
@@ -27,8 +29,8 @@ export class CompanyLoginComponent {
 
   constructor(private authSer: AuthService, private token:TokenService,private route:Router) { }
 
-
   mSignIn(){
+    this.spnValue = 1;
     this.authSer.mSignIn(this.form).subscribe({
       next: (response) => {
         console.log(response),
@@ -42,6 +44,7 @@ export class CompanyLoginComponent {
         console.log(error)
       }
     })
+    this.spnValue = 0;
   }
 
 

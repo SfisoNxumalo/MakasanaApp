@@ -37,20 +37,17 @@
 
         <div  class="item-holder">
             <div class="products-div-ii">
-                
                 <div *ngFor="let product of products" class="menu-item2" routerLink="/view-product/{{product._id}}">
-
                     <img class="main-logo2" src="{{product.image}}">
             
                     <div class="prod-text">
                         <label>{{product.title}}</label>
                         <!-- <label>{{product.rating.rate}}</label> -->
                         <div class="prices-product">
-                        <label class="price">R{{product.price}}</label> 
-                        <label *ngIf="product.promo.newPrice" class="newPrice">R{{product.promo.newPrice}}</label>
+                            <label class="price">R{{product.price}}</label> 
+                            <label *ngIf="product.promo.onPromo" class="promoLabel"><div class="on-pro-indi"></div></label>
                         </div>
                     </div>
-                    <label *ngIf="product.promo.onPromo" class="promoLabel">Offer!</label>
                 </div>
             </div>
         </div>

@@ -15,10 +15,12 @@ export class UserSignupComponent {
     address:"",
     phone:"",
   }
+  spnValue = 0;
   
   constructor(private auth: AuthService) { }
 
   Register(){
+    this.spnValue = 1;
     this.auth.mCSignUp(this.form).subscribe({
       next: data => {
         console.log(data)
@@ -26,8 +28,7 @@ export class UserSignupComponent {
       }
     })
 
-    console.log(this.form)
-
+    this.spnValue = 1;
   }
 
   mClear(){

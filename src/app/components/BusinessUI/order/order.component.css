@@ -72,11 +72,16 @@
   align-items: center;
 }
 
+.holder{
+  padding:15px;
+}
+
 
 .order-holder{
   display: flex;
   flex-direction: column;
-  gap: 10px
+  gap: 10px;
+  
 }
 
 .order{

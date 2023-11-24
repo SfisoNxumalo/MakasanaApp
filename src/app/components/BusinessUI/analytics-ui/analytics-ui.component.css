@@ -8,7 +8,7 @@
         display: flex;
         flex-direction: column;
         padding: 10px;
-        gap: 10px;
+        gap: 15px;
         padding-bottom: 60px;
     }
     
@@ -19,8 +19,8 @@
         padding: 10px;
         border-radius: 10px;
         gap: 20px;
-        height: auto;
-    }
+        height: auto;  
+}
     
     .item .tit{
         color: green;
@@ -34,11 +34,34 @@
       display: flex;
         flex-direction: column;
         box-shadow: 0px 1px 7px 0px rgba(0,0,0,0.2);
-        padding: 10px;
+        padding: 5px;
         border-radius: 10px;
+        gap: 2px;
         height: auto;
+        width: 100%;    
     }
 
+    .item-chart label{
+      text-align: center;
+    }
+
+    .thr{
+      margin-top: 5px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .item-chart .tit{
+      color: green;
+      font-size: 28px;
+      text-align: center;
+      margin: 0;
+      display: flex;
+      padding: 10px 0px;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+    }
 
     .lblStatus {
         display: flex;

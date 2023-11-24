@@ -24,6 +24,7 @@ export class AnalyticsUiComponent implements OnInit{
   productID:any;
 
   MaxProduct:any = 0
+  MaxSalesMonth:any = 0
 
   ngOnInit(): void {
 
@@ -117,26 +118,37 @@ export class AnalyticsUiComponent implements OnInit{
 
   mOrderSort(data:any){
     const TotalOrdersProcessed = new Map();
-    const OrdersProcessed:any = [];
+    const TotalProductsSold = new Map();
     
-    for (let order of data){
+    const OrdersProcessed:any = [];
+    const ProductsSold:any = [];
+    
+    for (let order of data) {
       const date = new Date(order.date)
       const month = this.month[date.getUTCMonth()]
 
       if(TotalOrdersProcessed.has(month)){
         let prevcount = TotalOrdersProcessed.get(month);
+        let prevQuantityCount = TotalProductsSold.get(month);
 
+
+        TotalProductsSold.set(month, (prevQuantityCount + order.quantity));
         TotalOrdersProcessed.set(month, (prevcount + 1));
         continue;
       }
 
+      TotalProductsSold.set(month, order.quantity);
       TotalOrdersProcessed.set(month, 1);
     }
 
-    TotalOrdersProcessed.forEach((value, key):any => OrdersProcessed.push({value, key}))
+    let month = new Date().getMonth();
 
+    this.MaxSalesMonth = TotalOrdersProcessed.get(this.month[month]) || 0
+
+    TotalProductsSold.forEach((value, key):any => ProductsSold.push({value, key}))
+   
     const table:any = document.getElementById("graph");
-    this.mGenerateAnalytics(table, OrdersProcessed)
+    this.mGenerateAnalytics(table, ProductsSold)
   }
 
 }

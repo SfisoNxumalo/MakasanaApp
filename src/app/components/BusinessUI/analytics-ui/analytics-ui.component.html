@@ -18,8 +18,37 @@
         </canvas>
     </div>
 
+    <div>
+        <label>Orders This Month</label>
+        <br>
+    <div class="thr">
+        
+        <div class="item-chart">
+            <label class="lblheader">Completed</label>
+            <p  class="tit">
+                {{MaxSalesMonth}}
+            </p>
+        </div>
+        <div class="item-chart">
+            <label class="lblheader">Rejected</label>
+            <p  class="tit">
+                0
+            </p>
+        </div>
+        <div class="item-chart">
+            <label class="lblheader">Pending</label>
+            <p  class="tit">
+                0
+            </p>
+        </div>
+    </div>
+    </div>
+    
+    
+    
+
     <div class="item">
-        <label class="lblheader">Fastest Selling</label>
+        <label class="lblheader">Most Selling</label>
         <div class="daa">
             <img src="{{product.image}}"/>
             <p class="tite">
@@ -27,7 +56,10 @@
             </p>
         </div>
     </div>
-    <div class="bottom-nav">
+    
+</div>
+
+<div class="bottom-nav">
 
         <div class="nav-options" >
 
@@ -57,5 +89,3 @@
         </div>
             
     </div>
-</div>
-
