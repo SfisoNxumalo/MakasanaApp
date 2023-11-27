@@ -31,6 +31,7 @@ import { UserLoginComponent } from './components/UserUI/user-login/user-login.co
 import { AnalyticsUiComponent } from './components/BusinessUI/analytics-ui/analytics-ui.component';
 import { ThanksComponent } from './components/UserUI/thanks/thanks.component';
 import { WebsiteComponent } from './components/BusinessUI/website/website.component';
+import { AddWebsiteDetailsComponent } from './components/BusinessUI/add-website-details/add-website-details.component';
 
 
 const routes: Routes = [
@@ -73,9 +74,8 @@ const routes: Routes = [
   { path: "user-order", component:UserOrderComponent},
   { path: "wish-list", component: WishlistComponent},
 
-  {'path': 'website', component:WebsiteComponent},
-
-
+  {path: 'website/:id', component:WebsiteComponent},
+  {path: 'config-website', component:AddWebsiteDetailsComponent},
 
   { path: "prof", component:ProfileComponent},
 

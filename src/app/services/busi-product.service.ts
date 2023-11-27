@@ -81,5 +81,23 @@ export class ProductService {
       return this.http.put(this.api + "update/" + id, body, {headers})
   }
 
+  mCreateWebsite(body:any):Observable<any>{
+
+    const headers = new HttpHeaders()
+    .append('Authorization', 'Bearer ' + this.Token)
+    .append('content-type', 'application/json')
+
+    return this.http.post(this.api + "save-web", body, {headers})
+  }
+
+  mViewWebsite(params:any):Observable<any>{
+    const headers = new HttpHeaders()
+    // .append('Authorization', 'Bearer ' + this.Token)
+    .append('content-type', 'application/json')
+
+    return this.http.get(this.api + "website/" + params, {headers})
+
+  }
+
 
 }

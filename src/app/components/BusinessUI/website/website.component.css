@@ -18,16 +18,16 @@
         display: flex;
         justify-content: space-between;
         padding: 15px;
-        position: fixed;
+        /* position: fixed; */
         width: 100%;
         top: 0;
-       
+       background-color: transparent;
         align-items: center;
         margin: 0;
     }
 
     header label{
-        color: white;
+        color: black;
         font-size:medium;
         font-weight: bold;
     }
@@ -48,7 +48,7 @@ header button span{
     border-radius: 8px;
     width: 20px;
     height: 3px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
 }
 
 header button span:nth-child(2){
