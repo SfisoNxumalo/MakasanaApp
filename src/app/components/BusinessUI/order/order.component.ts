@@ -18,11 +18,16 @@ export class OrderComponent implements OnInit{
     private passOrder:PassOrderService,
     private router: Router){}
 
+    
+
     ngOnInit(): void {
 
       this.orders.mGetBusinessOrders().subscribe({
         next: data => {(
-          this.mSortOrders(data.message)
+          setTimeout(() => {
+            this.mSortOrders(data.message)
+          }, 3000)
+          
         )},
         error: (err) => {
           console.log(err)

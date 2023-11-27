@@ -50,11 +50,11 @@ import { UserViewProductComponent } from './components/UserUI/user-view-product/
 import { UserProfilePageComponent } from './components/UserUI/user-profile-page/user-profile-page.component';
 import { UserLoginComponent } from './components/UserUI/user-login/user-login.component';
 import { UserSignupComponent } from './components/UserUI/user-signup/user-signup.component';
-import { WebsiteComponent } from './website/website.component';
 import { AnalyticsUiComponent } from './components/BusinessUI/analytics-ui/analytics-ui.component';
 import {MatBadgeModule} from '@angular/material/badge';
 import { TopBarComponent } from './components/UserUI/top-bar/top-bar.component';
 import { ThanksComponent } from './components/UserUI/thanks/thanks.component';
+import { WebsiteComponent } from './components/BusinessUI/website/website.component';
 
 @NgModule({
   declarations: [
@@ -93,12 +93,12 @@ import { ThanksComponent } from './components/UserUI/thanks/thanks.component';
     UserProfilePageComponent,
     UserLoginComponent,
     UserSignupComponent,
-    WebsiteComponent,
     UserProfilePageComponent,
     AnalyticsUiComponent,
     UserSignupComponent,
     TopBarComponent,
-    ThanksComponent
+    ThanksComponent,
+    WebsiteComponent
   ],
   imports: [
     BrowserModule,

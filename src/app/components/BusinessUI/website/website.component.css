@@ -1,7 +1,7 @@
 @media only screen and (max-width:700px){
 
     .main-holder{
-        background-image: url(../../assets/images/rosebox-BFdSCxmqvYc-unsplash.jpg);
+        background-image: url(../../../../assets/images/rosebox-BFdSCxmqvYc-unsplash.jpg);
     display: flex;
     flex-direction: column;
     background-size: contain;
@@ -64,7 +64,7 @@ header button span:nth-child(2){
 }
 
 section{
-    padding: 20px;
+    padding: 10px 20px;
 }
 
 #home{
@@ -99,10 +99,27 @@ section{
     margin-top: 40%;
     background-color: aliceblue;
 }
-
+#products{
+    background-color: aliceblue;
+}
 #about p{
     font-size: 15px;
 
+}
+
+.details{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.details label{
+    height: 100%;
+}
+
+.details p{
+    padding: 0px;
+    margin: 0px;
 }
 
 }

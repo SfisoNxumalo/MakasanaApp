@@ -5,6 +5,7 @@ import { TokenService } from 'src/app/services/token.service';
 import { TokenstorageService } from 'src/app/services/tokenstorage.service';
 
 import {  ViewChild, ElementRef } from '@angular/core';
+import { timeout } from 'rxjs';
 
 declare var bootstrap: any; // Declare Bootstrap variable
 
@@ -31,7 +32,8 @@ export class CompanyLoginComponent {
 
   mSignIn(){
     this.spnValue = 1;
-    this.authSer.mSignIn(this.form).subscribe({
+    setTimeout(() => {
+      this.authSer.mSignIn(this.form).subscribe({
       next: (response) => {
         console.log(response),
         this.token.saveToken(response.accessToken),
@@ -45,6 +47,8 @@ export class CompanyLoginComponent {
       }
     })
     this.spnValue = 0;
+    }, 5000)
+    
   }
 
 
