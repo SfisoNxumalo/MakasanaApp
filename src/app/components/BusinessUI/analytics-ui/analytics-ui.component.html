@@ -4,22 +4,51 @@
     <div class="item">
         <label class="lblheader">Total Available Products</label>
         <p  class="tit">
-            1000
+            {{MaxProduct}}
         </p>
         <div class="lblStatus">
             <label class="status">Status:</label><label>HEALTHY</label>
         </div>
     </div>
 
-    <div class="item">
+    <div class="item-chart">
         <label class="lblheader">Montly Product Sales</label>
         <canvas class="graph" id="graph">
 
         </canvas>
     </div>
 
+    <div>
+        <label>Orders This Month</label>
+        <br>
+    <div class="thr">
+        
+        <div class="item-chart">
+            <label class="lblheader">Completed</label>
+            <p  class="tit">
+                {{MaxSalesMonth}}
+            </p>
+        </div>
+        <div class="item-chart">
+            <label class="lblheader">Rejected</label>
+            <p  class="tit">
+                0
+            </p>
+        </div>
+        <div class="item-chart">
+            <label class="lblheader">Pending</label>
+            <p  class="tit">
+                0
+            </p>
+        </div>
+    </div>
+    </div>
+    
+    
+    
+
     <div class="item">
-        <label class="lblheader">Fastest Selling</label>
+        <label class="lblheader">Most Selling</label>
         <div class="daa">
             <img src="{{product.image}}"/>
             <p class="tite">
@@ -27,7 +56,10 @@
             </p>
         </div>
     </div>
-    <div class="bottom-nav">
+    
+</div>
+
+<div class="bottom-nav">
 
         <div class="nav-options" >
 
@@ -50,12 +82,10 @@
             </div>
 
             <div class="nav-item">
-                <button><mat-icon>account_circle</mat-icon></button>
+                <button routerLink="/buss-profile"><mat-icon>account_circle</mat-icon></button>
                 
             </div>
 
         </div>
             
     </div>
-</div>
-

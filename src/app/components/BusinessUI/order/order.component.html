@@ -1,59 +1,48 @@
 <div class="holder">
   <br/>
-
-  <h1><b>Customer Order History</b></h1>
-  <hr/>
-  <!-- here -->
-  <br/>
   <h2><b>Ongoing Orders</b></h2>
-    <div class="card containe p-2 mt-4" routerLink="/process">
-        <div class="containe row">
-            <div class="col-6">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png">
-            </div>
-            <div class="col-6">
-                <p class="font2 mb-1"><b>Thulane</b></p>
-                <p class="font-w mb-1"><b><i>#555676</i></b></p>
-                <p class="font-w mb-1">078 768 6655</p>
-                <p class="font-w mb-1">R275</p>
-                <p class="font-w mb-1">Cash</p>
-                <br/>
-                <p class="font-w mb-1">16-11-2023</p>
-            </div>
-        </div>
+    <div class="order-holder">
+
+    <div *ngFor="let orderDe of Maporders.entries()" (click)="OpenOrder(orderDe[0])" class="order">
+
+        <p class="order-number"># {{orderDe[0]}}</p>
+        <hr>
+        <div class="same-line">
+        <label>Quantity:</label>
+        <p class="info">{{orderDe[1].quantity}}</p>
+                    </div>
+<div class="same-line">
+        <label>Date:</label>
+        <p class="info">{{orderDe[1].order.date}}</p>
     </div>
-    <br/>
-    <br/>
-    <h2><b>Completed Orders</b></h2>
-    <!-- here -->
-    <div class="card containe p-2 mt-4">
-      <div class="containe row">
-          <div class="col-6">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png">
+    <div class="same-line">
+      <label>Total:</label>
+          <b><p class="info">{{orderDe[1].Total | currency: 'R'}}</p></b>
           </div>
-          <div class="col-6">
-              <p class="font2 mb-1"><b>Mr AP</b></p>
-              <p class="font-w mb-1"><b><i>#565440</i></b></p>
-              <p class="font-w mb-1">071 055 4234</p>
-              <p class="font-w mb-1">R150</p>
-              <p class="font-w mb-1">Cash on Collection</p>
-              <br/>
-              <p class="font-w mb-1">16-11-2023</p>
+          <hr>
+        <div class="same-line">
+              <label>Status:</label>
+        <p class="info it">{{orderDe[1].order.order_status}}</p>
           </div>
+
+    
       </div>
   </div>
 
-    <div class="card containe p-2 mt-4">
+<div class="invi">
+
+</div>
+
+    <!-- <div class="card">
         <p class="font2 mb-1"><b>Get Order Upates</b></p>
         <p class="font-w mb-1">Track updates with Makasana Wallet</p>
-    </div>
-
-
-
-
-
+    </div> -->
 
 <!-- Nav-bar -->
+
+
+</div>
+
   <div class="bottom-nav">
 
       <div class="nav-options" >
@@ -94,7 +83,3 @@
       </div>
 
   </div>
-
-</div>
-
-

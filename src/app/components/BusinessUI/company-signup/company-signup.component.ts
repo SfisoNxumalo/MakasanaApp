@@ -25,9 +25,12 @@ export class CompanySignupComponent {
     address:"",
     phone:"",
   }
+
+  spnValue = 0;
   constructor(private authSer: AuthService, private route:Router) { }
 
   signUp(){
+    this.spnValue = 1;
     this.authSer.mSignUp(this.form).subscribe(data=> {
         console.log(data)
         this.showToast();
@@ -35,6 +38,7 @@ export class CompanySignupComponent {
           this.route.navigate(["/company-login"])
         }, 2000);
   })
+  this.spnValue = 0;
   }
 
   showToast() {

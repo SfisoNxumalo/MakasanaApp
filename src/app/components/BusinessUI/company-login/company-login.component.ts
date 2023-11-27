@@ -5,6 +5,7 @@ import { TokenService } from 'src/app/services/token.service';
 import { TokenstorageService } from 'src/app/services/tokenstorage.service';
 
 import {  ViewChild, ElementRef } from '@angular/core';
+import { timeout } from 'rxjs';
 
 declare var bootstrap: any; // Declare Bootstrap variable
 
@@ -19,6 +20,8 @@ export class CompanyLoginComponent {
   @ViewChild('toastElement')
   toastElement!: ElementRef;
 
+  spnValue = 0;
+
   private toastInstance: any;
   form={
     email:"",
@@ -27,9 +30,10 @@ export class CompanyLoginComponent {
 
   constructor(private authSer: AuthService, private token:TokenService,private route:Router) { }
 
-
   mSignIn(){
-    this.authSer.mSignIn(this.form).subscribe({
+    this.spnValue = 1;
+    setTimeout(() => {
+      this.authSer.mSignIn(this.form).subscribe({
       next: (response) => {
         console.log(response),
         this.token.saveToken(response.accessToken),
@@ -42,6 +46,9 @@ export class CompanyLoginComponent {
         console.log(error)
       }
     })
+    this.spnValue = 0;
+    }, 5000)
+    
   }
 
 

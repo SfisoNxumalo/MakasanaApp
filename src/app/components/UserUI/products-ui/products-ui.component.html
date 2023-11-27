@@ -41,7 +41,7 @@
     <div *ngIf="products.length" class="holder">
 
         <div class="item-holder">
-            <label class="lblHeaders">{{title | uppercase}}</label>
+            <label class="lblHeaders">{{title | titlecase}}</label>
         </div>
         
 
@@ -49,7 +49,7 @@
             <div class="products-div-ii">
                 
                 <div *ngFor="let product of products" class="menu-item4" routerLink="/product-details/{{product._id}}">
-                    <label *ngIf="product.promo.onPromo" class="promo">Sale</label>
+                    
                     <div class="menu-item2">
                         <img class="main-logo2" src="{{product.image}}">
                 
@@ -62,7 +62,7 @@
                             </div>
                             
                         </div>
-            
+                        <label *ngIf="product.promo.onPromo" class="promoLabel">Special Offer!</label>
                     </div>
                     
                 </div>
@@ -106,7 +106,7 @@
             </div>
     
             <div class="nav-item">
-                <button routerLink="/track-order"><mat-icon>assignment</mat-icon></button>
+                <button routerLink="/order"><mat-icon>assignment</mat-icon></button>
                 
             </div>
     
@@ -117,7 +117,7 @@
 
           
             <div class="nav-item">
-                <button routerLink="/consumer-profile" ><mat-icon>account_circle</mat-icon></button>
+                <button routerLink="/buss-profile" ><mat-icon>account_circle</mat-icon></button>
                 
             </div>
             <!-- <div class="nav-item">

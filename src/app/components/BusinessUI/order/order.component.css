@@ -54,6 +54,8 @@
   display: flex;
   justify-content: center;
   align-items: left;
+  margin-left: 10px;
+  margin-right: 25px;
 }
 .containe img{
   width:100px;
@@ -70,5 +72,52 @@
   align-items: center;
 }
 
+.holder{
+  padding:15px;
+}
+
+
+.order-holder{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  
+}
+
+.order{
+  border: 1px solid rgb(192, 192, 192);
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.order p{
+  margin: 0px;
+}
+
+.order hr{
+  margin: 8px 0px;
+}
+
+.same-line{
+  display: flex;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.info{
+  width: 100%;
+}
+
+.it{
+  font-style: italic;
+}
+
+
+.invi{
+  height: 66px;
+}
 
 

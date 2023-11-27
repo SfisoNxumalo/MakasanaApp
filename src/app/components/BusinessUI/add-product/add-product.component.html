@@ -14,7 +14,7 @@ class="left" srcset="" height="30px" width="30px">
             <div class="btn-upload">
                 <mat-icon>camera_enhance</mat-icon>
                 <input type="file" accept="image/png, image/jpeg" (change)= "loadImage($event)">
-                <img [src]="productDetail.image">
+                <img [src]="imageee">
             </div>
 
         </div>
@@ -111,6 +111,10 @@ class="left" srcset="" height="30px" width="30px">
         </div>
             
     </div>
+
+    <button class="spn" *ngIf="spnValue != 0">
+        <mat-spinner style="width: 50px; height: 50px;" mode="indeterminate" class="spinner"></mat-spinner>
+      </button>
 
 </div>    
 

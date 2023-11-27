@@ -94,5 +94,12 @@ export class AddToCartService {
     return this.FinalOrder;
   }
 
+  mClear(){
+    this.cart  = new BehaviorSubject<any>({});
+    this.FinalOrder  = new BehaviorSubject<any>({});
+    localStorage.removeItem('cart')
+
+  }
+
 
 }

@@ -16,17 +16,19 @@ export class UserLoginComponent {
   }
 
   toasts: any[] = [];
+  spnValue = 0;
 
   constructor(private auth: AuthService,private route:Router, private token:TokenService) { }
 
   signIn(){
+    this.spnValue = 1
     this.auth.mCSignIn(this.form).subscribe({
-      next: data=> {
-        console.log(data)
+      next: data => {
         this.token.saveToken(data.accessToken),
         this.route.navigate(["/home"])
       }
     })
+    this.spnValue = 0
   }
 
 

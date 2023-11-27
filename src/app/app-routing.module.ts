@@ -1,4 +1,4 @@
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { LandingComponent } from './Home/landing/landing.component';
@@ -27,10 +27,10 @@ import { UserProfilePageComponent } from './components/UserUI/user-profile-page/
 
 import { UserSignupComponent } from './components/UserUI/user-signup/user-signup.component';
 import { UserLoginComponent } from './components/UserUI/user-login/user-login.component';
-import { WebsiteComponent } from './website/website.component';
 
 import { AnalyticsUiComponent } from './components/BusinessUI/analytics-ui/analytics-ui.component';
 import { ThanksComponent } from './components/UserUI/thanks/thanks.component';
+import { WebsiteComponent } from './components/BusinessUI/website/website.component';
 
 
 const routes: Routes = [
@@ -58,7 +58,7 @@ const routes: Routes = [
   { path: "company-login", component: CompanyLoginComponent },
   { path: "user-signup", component: UserSignupComponent},
   { path: "user-login", component: UserLoginComponent},
-  {path: "website",component:WebsiteComponent},
+  // {path: "website", component:WebsiteComponent},y
 
   { path: "products/:category", component: ProductsUiComponent},
 
@@ -72,6 +72,8 @@ const routes: Routes = [
 
   { path: "user-order", component:UserOrderComponent},
   { path: "wish-list", component: WishlistComponent},
+
+  {'path': 'website', component:WebsiteComponent},
 
 
 

@@ -62,7 +62,7 @@
   .bottom-nav{
     background-color: brown;
     background-color: white;
-    padding: 8px;
+    padding: 5px;
     position: fixed;
     bottom: 0;
     display: flex;
@@ -76,8 +76,6 @@
     width: 100%;
   }
 
-
-  
 
   .nav-options{
     display: grid;
@@ -112,3 +110,56 @@
     font-size: 11px;
   }
   
+  
+  .order-holder{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .order{
+    /* border: 1px solid rgb(192, 192, 192); */
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    padding: 10px;
+  }
+
+  .order p{
+    margin: 0px;
+  }
+
+  .order hr{
+    margin: 8px 0px;
+  }
+
+  .same-line{
+    display: flex;
+    gap: 8px;
+    font-weight: 600;
+  }
+
+  .info{
+    width: 100%;
+  }
+
+  .it{
+    font-style: italic;
+  }
+
+  .same-line2{
+    display: flex;
+  }
+
+  .same-line2 p{
+    width: 100%;
+    text-align: end;
+  }
+
+  .invi{
+    height: 66px;
+  }
+
+
+
+

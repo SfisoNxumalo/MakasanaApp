@@ -28,22 +28,24 @@
 
         <div *ngIf="product.promo.onPromo" class="promo">
             <p>
-                product of promo
+                Promotion
             </p>
 
         </div>
 
         <div class="prod-options">
-            <div>
+            <div class="business">
                 <label>Sold by</label>
-                <p>Rocklandss Designer</p>
+                <p>{{product.business.name | titlecase}}</p>
             </div>
         </div>
 
         <div class="input-fieldD">
             <div class="prices-product">
-                <p *ngIf="product.promo.onPromo" class="lblOld">R{{product.price}}</p>
-                <p class="price">R{{product.price}}</p>
+                <p *ngIf="product.promo.onPromo" class="lblOld">{{product.price | currency: 'R'}}</p>
+                <p *ngIf="product.promo.onPromo" class="price">{{product.promo.newPrice | currency: 'R'}}</p>
+                <p *ngIf="!product.promo.onPromo" class="price">{{product.price | currency: 'R'}}</p>
+
             </div>
             
         </div>

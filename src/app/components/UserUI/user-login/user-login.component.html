@@ -18,22 +18,23 @@
 
       <button class="submit" (click)="signIn()" type="button">Login</button>
 
-      <div>
-        <h5>Don't have an account? <a routerLink="/user-signup" id="loginName"> Register </a></h5>
-    <h5><a routerLink="/company-login" id="loginName">Business </a> sign in</h5>
+      <div class="btt">
+        <h5>Don't have an account? <b><a routerLink="/user-signup" id="loginName"> Register </a></b></h5>
+    <h5> <b><a routerLink="/company-login" id="loginName">Business?</a></b> sign in</h5>
       </div>
   
     </div>
   </div>
 
-<div class="divvv"><img src="https://i.postimg.cc/Jn8SxX40/vecteezy-login-concept-with-security-username-and-password-people-removebg-preview.png"/>
+<div class="divvv">
+  <img src="https://i.postimg.cc/Jn8SxX40/vecteezy-login-concept-with-security-username-and-password-people-removebg-preview.png"/>
   </div>
-  <div class="container"> 
-    
+  <button class="spn" *ngIf="spnValue != 0">
+  <mat-spinner style="width: 50px; height: 50px;" mode="indeterminate" class="spinner"></mat-spinner>
+</button>
 </div>
-  
-  
-</div>
+
+
 
 
 

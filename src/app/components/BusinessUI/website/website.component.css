@@ -1,0 +1,125 @@
+@media only screen and (max-width:700px){
+
+    .main-holder{
+        background-image: url(../../../../assets/images/rosebox-BFdSCxmqvYc-unsplash.jpg);
+    display: flex;
+    flex-direction: column;
+    background-size: contain;
+    background-repeat: no-repeat;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    }
+
+    header{
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+       
+        align-items: center;
+        margin: 0;
+    }
+
+    header label{
+        color: white;
+        font-size:medium;
+        font-weight: bold;
+    }
+
+header button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 5px;
+    display: flex;
+    gap: 3px;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+}
+
+header button span{
+    border-radius: 8px;
+    width: 20px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+}
+
+header button span:nth-child(2){
+    width: 15px;
+}
+
+.body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+section{
+    padding: 10px 20px;
+}
+
+#home{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 40%;
+}
+
+.home-holder{
+
+    border-radius: 0px 0px 50px 50px;
+    height: auto;
+    
+    margin: 0;
+}
+
+.home-holder h1{
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    letter-spacing: 2px;
+    font-size: xx-large;
+}
+
+.home-holder p{
+    color: white;
+
+}
+
+#about{
+    margin-top: 40%;
+    background-color: aliceblue;
+}
+#products{
+    background-color: aliceblue;
+}
+#about p{
+    font-size: 15px;
+
+}
+
+.details{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.details label{
+    height: 100%;
+}
+
+.details p{
+    padding: 0px;
+    margin: 0px;
+}
+
+}

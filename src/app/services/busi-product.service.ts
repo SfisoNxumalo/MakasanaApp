@@ -63,7 +63,11 @@ export class ProductService {
 
     const headers = new HttpHeaders()
     .append('Authorization', 'Bearer ' + this.Token)
-    .append('content-type', 'application/json')
+    // .append('content-type', 'application/json')
+    .append('Accept', '*/*')
+    // .append("content-type", "multipart/form-data")
+
+    console.log(body.get("title"))
 
     return this.http.post(this.api + "create-product", body, {headers});
 

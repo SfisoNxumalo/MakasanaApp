@@ -329,7 +329,7 @@
         padding: 0;
         margin: 0;
         font-weight: 600;
-        font-size: x-large;
+        font-size: large;
         text-align: end;
       }
 
@@ -346,5 +346,11 @@
         font-size: 13px;
         text-align: end;
         text-decoration: line-through;
+      }
+
+      .business p{
+        text-decoration: underline;
+        font-size: 15px;
+        
       }
     }

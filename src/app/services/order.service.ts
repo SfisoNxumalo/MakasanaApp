@@ -1,7 +1,11 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient , HttpHeaders  } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Order } from '../order';
+
+const httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+};
+
 
 @Injectable({
   providedIn: 'root',
@@ -11,12 +15,21 @@ export class OrderService {
 
   constructor(private http: HttpClient) {}
 
-  getOrders(): Observable<Order[]> {
-    return this.http.get<Order[]>(this.apiUrl);
+  createOrder(id:string,username:string, image:string, price:Number, paymentMethod:string, 
+    orderNumber:string, orderStatus:string, contactNumber:string) :Observable<any> {
+    return this.http.post(`${this.apiUrl}createOrder/${id}`,{username,image, price, paymentMethod, orderNumber,
+    orderStatus,contactNumber},httpOptions)
   }
-
-  addOrder(order: Order): Observable<Order> {
-    return this.http.post<Order>(this.apiUrl, order);
+  getOrderById(id:string):Observable<any>{
+    return this.http.get(this.apiUrl+"getOrder/"+id,httpOptions)
+  }
+  updateOrder(id:string,username:string, image:string, price:Number, paymentMethod:string, 
+    orderNumber:string, orderStatus:string, contactNumber:string) :Observable<any> {
+      return this.http.put(this.apiUrl+"updateOrder/"+id,{username,image, price, paymentMethod, orderNumber,
+        orderStatus,contactNumber}, httpOptions)
+  }
+  getAllOrders(id:string):Observable<any>{
+    return this.http.get(this.apiUrl+"findAll/"+id,httpOptions)
   }
 
 }
