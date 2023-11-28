@@ -11,8 +11,8 @@ const httpOptions = {
 })
 export class AuthService {
 
-  business_api = "http://localhost:2023/makasana-api/auth/business/"
-  user_api = "http://localhost:2023/makasana-api/auth/customer/"
+  business_api = "http://51.20.8.149:2023/makasana-api/auth/business/"
+  user_api = "http://51.20.8.149:2023/makasana-api/auth/customer/"
 
   constructor(private http: HttpClient) { }
 
