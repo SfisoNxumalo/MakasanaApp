@@ -21,11 +21,19 @@ class="left" srcset="" height="30px" width="30px">
                 <!-- <button class="crt-promo">
                     Create promotion +
                 </button> -->
-
-                <!-- Button trigger modal -->
-            <button type="button" class="crt-promo" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <div *ngIf="!products.promo.onPromo">
+            <!-- Button trigger modal -->
+            <button type="button" class="crt-promo" data-bs-toggle="modal" data-bs-target="#createPromo">
                 Create promotion +
-            </button>
+            </button>   
+            </div>
+            
+            
+            <div *ngIf="products.promo.onPromo">
+                <button type="button" class="end-promo" data-bs-toggle="modal" data-bs-target="#endPromo">
+                End current promotion
+            </button></div>
+            
 
 
             </div>
@@ -119,7 +127,7 @@ class="left" srcset="" height="30px" width="30px">
 </div>  
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="createPromo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
