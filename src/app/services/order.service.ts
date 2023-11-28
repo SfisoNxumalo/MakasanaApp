@@ -11,7 +11,7 @@ const httpOptions = {
   providedIn: 'root',
 })
 export class OrderService {
-  private apiUrl = 'http://localhost:2023/order';
+  private apiUrl = 'https://makasana.shaper.co.za/order';
 
   constructor(private http: HttpClient) {}
 
