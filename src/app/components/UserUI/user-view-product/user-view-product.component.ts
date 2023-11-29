@@ -50,11 +50,11 @@ export class UserViewProductComponent {
   }
   viewItem(){
     const id = this.route.snapshot.params[('id')]
-    console.log(id)
+    
     this.products.getOneProduct(id).subscribe({
       next: (data) => {
         this.product = data
-        console.log(data)
+        
       }, 
       error: (error)=>{
         console.log("Some error occured",error)
@@ -68,10 +68,13 @@ icon = "add_shopping_cart";
   timeoutObj:any;
 
   mAddToCart(product:any){
+    // if(product.promo.onPromo){
+    //   product.price = product.promo.newPrice
+
+    // }
     this.cart.AddToCart(product);
     this.icon = "done"
 
-    
     this.audio.play()
 
     if(this.timeoutObj){

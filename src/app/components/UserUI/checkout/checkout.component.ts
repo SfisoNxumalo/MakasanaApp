@@ -59,6 +59,8 @@ btnTex = "cancel"
 
 order:any = []
 
+
+
 ngOnInit(): void {
   //console.log(this.dataForm)
   // this.retrieveCheckout()
@@ -69,12 +71,17 @@ ngOnInit(): void {
   // this.userId = user.id
 
   //this.items =this.totalItems.length
- 
 
   this.cart.mShowCart().subscribe((data) => {
     this.cartTotal = data.length;
-    this.mSortCart(data)
-    // console.log(data);
+    if(this.cartTotal == 0){
+      this.router.navigate(['/home'])
+      return 
+    }
+    else{
+      this.mSortCart(data)
+    }
+    
   })
 
   this.cart.mGetOrders().subscribe((data) => {
@@ -172,7 +179,7 @@ mPlaceOrder(){
   
      this.timeou = setTimeout(() => {
       this.btnTex = "Successful"
-      this.router.navigate(['/order-confirmation'])
+      this.router.navigate(['/order-confirmation/' + data.orderId])
       this.mCancel();
       this.cart.mClear();
       }, 5000)

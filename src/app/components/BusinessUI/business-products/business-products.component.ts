@@ -3,6 +3,7 @@ import { Products } from 'src/app/Interfaces/products';
 import { FakeStoreService } from 'src/app/services/fake-store.service';
 import { ProductService } from 'src/app/services/busi-product.service';
 import { TokenstorageService } from 'src/app/services/tokenstorage.service';
+import { TokenService } from 'src/app/services/token.service';
 
 
 @Component({
@@ -15,14 +16,22 @@ export class BusinessProductsComponent implements OnInit {
   business:any= {}
   products:Products[] = [];
 
-  constructor(private fakeApi:FakeStoreService, private productService: ProductService, private tokenService:TokenstorageService){}
+  constructor(private fakeApi:FakeStoreService, private productService: ProductService, private tokenService:TokenstorageService,private token:TokenService){}
   image = "https://media.istockphoto.com/id/620737858/photo/cape-town-and-the-12-apostels-from-above.jpg?s=612x612&w=is&k=20&c=WBxI8OmAFXoGz5I5QjU0eI87I5C6K8h0Xs4JmArrEQQ=";
 
+
+  CompanyDetails:any = {};
 
   ngOnInit(): void {
     this.business = this.tokenService.getUser()
     // this.mGet();
     this.getAllProduct()
+
+    this.token.mShow().subscribe((data) =>{
+      this.CompanyDetails = data
+      console.log(data)
+
+    })
   }
 
   mGet(){

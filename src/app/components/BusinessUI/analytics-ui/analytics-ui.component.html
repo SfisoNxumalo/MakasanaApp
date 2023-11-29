@@ -21,24 +21,30 @@
     <div>
         <label>Orders This Month</label>
         <br>
+        <div class="item-chart">
+            <p  class="tit">
+                {{MaxSalesMonth}}
+            </p>
+
+        </div>
     <div class="thr">
         
         <div class="item-chart">
             <label class="lblheader">Completed</label>
             <p  class="tit">
-                {{MaxSalesMonth}}
+                {{OrderCompleted}}
             </p>
         </div>
         <div class="item-chart">
             <label class="lblheader">Rejected</label>
             <p  class="tit">
-                0
+                {{OrderRejected}}
             </p>
         </div>
         <div class="item-chart">
             <label class="lblheader">Pending</label>
             <p  class="tit">
-                0
+                {{OrderPending}}
             </p>
         </div>
     </div>
@@ -50,9 +56,9 @@
     <div class="item">
         <label class="lblheader">Most Selling</label>
         <div class="daa">
-            <img src="{{product.image}}"/>
+            <img src="{{MostSellingProduct.image}}"/>
             <p class="tite">
-                {{product.title}}
+                {{MostSellingProduct.title}}
             </p>
         </div>
     </div>

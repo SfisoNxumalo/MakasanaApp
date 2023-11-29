@@ -127,6 +127,9 @@ mat-progress-bar{
         height: 100%;
     }
 
+    #search-box{
+        background-color: transparent;
+    }
     .holder1 label{
         color: rgb(160, 160, 160);
     }
@@ -194,7 +197,6 @@ mat-progress-bar{
         height: 100px;
         max-height: 100%;
         max-width: 100%;
-        
         align-self: center;
     }
     

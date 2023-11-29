@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 const TOKEN_KEY = 'auth-token';
 // const USER_KEY = 'auth-user';
@@ -22,6 +23,16 @@ export class TokenService {
   public getToken(): string | null{
     return window.sessionStorage.getItem(TOKEN_KEY)
   }
+
+   logData = new BehaviorSubject<any>({});
+
+   sendData(data:any){
+    this.logData.next(data);
+   }
+
+   mShow(){
+    return this.logData;
+   }
 
   // public saveUser(user: any): void{
   //   window.sessionStorage.removeItem(USER_KEY)

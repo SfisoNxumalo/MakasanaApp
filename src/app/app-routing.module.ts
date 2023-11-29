@@ -36,7 +36,7 @@ import { AddWebsiteDetailsComponent } from './components/BusinessUI/add-website-
 
 const routes: Routes = [
 
-  { path:'',redirectTo:'/makasana', pathMatch: 'full' },
+  { path:'', redirectTo:'/makasana', pathMatch: 'full' },
   { path: 'makasana', component:LandingComponent},
 
   { path: 'dashboard', component:BusinessDashboardComponent},
@@ -44,7 +44,7 @@ const routes: Routes = [
 
   { path: 'orders', component:OrderComponent},
   {path:"home", component:HomeUiComponent},
-  {path:"order-confirmation", component:ThanksComponent},
+  {path:"order-confirmation/:id", component:ThanksComponent},
 
    { path: "my-products", component: BusinessProductsComponent },
    { path: "thanks", component: ThanksComponent },

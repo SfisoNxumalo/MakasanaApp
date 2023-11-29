@@ -25,10 +25,12 @@ export class UserSignupComponent {
       next: data => {
         console.log(data)
         this.mClear();
-      }
+      }, error(err) {
+        
+      },
     })
 
-    this.spnValue = 1;
+    this.spnValue = 0;
   }
 
   mClear(){

@@ -18,7 +18,7 @@ import { FakeStoreService } from 'src/app/services/fake-store.service';
 })
 export class ProductsUiComponent  implements OnInit {
 
-  foundUsers$!: Observable<any[]>;
+  foundProducts$!: Observable<any[]>;
   private searchTerms = new Subject<string>();
 
   search(term: string): void {
@@ -39,23 +39,18 @@ export class ProductsUiComponent  implements OnInit {
     this.cart.mShowCart().subscribe((data) => {
       this.cartCount = data.length;
     })
-
-
- 
   
-    
 
+    this.foundProducts$ = this.searchTerms.pipe(
+      // wait 300ms after each keystroke before considering the term
+      debounceTime(300),
 
-    // this.foundUsers$ = this.searchTerms.pipe(
-    //   // wait 300ms after each keystroke before considering the term
-    //   debounceTime(300),
+      // ignore new term if same as previous term
+      distinctUntilChanged(),
 
-    //   // ignore new term if same as previous term
-    //   distinctUntilChanged(),
-
-    //   // switch to new search observable each time the term changes
-    //   switchMap((term: string) => this.fakeApi.mGetProducts()),
-    // );
+      // switch to new search observable each time the term changes
+      switchMap((term: string) => this.mGetSearch(term)),
+    );
 
     this.route.paramMap.subscribe(params => {
       this.selectedCategory = params.get("category");
@@ -72,11 +67,12 @@ export class ProductsUiComponent  implements OnInit {
 
   mGetSearch(term:string):Observable<any>{
 
-    const oo = [1, 2, 3, 5]
+    console.log("hyhh")
 
     const ssearchData = new BehaviorSubject<any>({});
+    ssearchData.next(term)
 
-    // BehaviorSubject bh = new BehaviorSubject();
+    
 
     return ssearchData;
   }

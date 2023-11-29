@@ -10,17 +10,19 @@ export class BusinessDashboardComponent implements OnInit {
 
   constructor(private token:TokenService){}
 
+  CompanyName = "Makasana"
+  CompanyDetails:any = {};
+
   ngOnInit(): void {
 
-    if(!this.token.getToken()){
-      alert()
-    }
-    else{
-      console.log(this.token.getToken())
-    }
+   
+      this.token.mShow().subscribe((data) =>{
+        this.CompanyDetails = data
+        console.log(data)
+
+      })
     
   }
-
   
   image = "https://media.istockphoto.com/id/620737858/photo/cape-town-and-the-12-apostels-from-above.jpg?s=612x612&w=is&k=20&c=WBxI8OmAFXoGz5I5QjU0eI87I5C6K8h0Xs4JmArrEQQ=";
   

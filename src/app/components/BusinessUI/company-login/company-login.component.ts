@@ -35,7 +35,7 @@ export class CompanyLoginComponent {
     setTimeout(() => {
       this.authSer.mSignIn(this.form).subscribe({
       next: (response) => {
-        console.log(response),
+        this.token.sendData(response);
         this.token.saveToken(response.accessToken),
         this.showToast();
         setTimeout(() => {
