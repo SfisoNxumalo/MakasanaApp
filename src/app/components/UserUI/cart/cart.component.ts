@@ -134,7 +134,7 @@ mDecrementCart(product:any) {
     }
   }
 
-  mCheckout(){
+  mCheckout(){ 
     const orders:any = []
     
 

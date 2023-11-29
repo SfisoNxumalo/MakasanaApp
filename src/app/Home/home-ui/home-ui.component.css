@@ -143,6 +143,7 @@
     width: 100%;
     border: none;
     gap: 0px;
+    padding-left: 5px;
   }
 
   .nav-item{
@@ -151,6 +152,7 @@
     justify-content: center;
     text-align: center;
     width: 100%;
+    margin-left: 45%;
   }
 
   .nav-item button{
@@ -160,8 +162,8 @@
     outline: none;
   }
 
-  .nav-options .nav-item:nth-child(3),
-  .nav-options .nav-item:nth-child(3) button{
+  .nav-options .nav-item:nth-child(1),
+  .nav-options .nav-item:nth-child(1) button{
     color: blueviolet;
   }
   .nav-item label{

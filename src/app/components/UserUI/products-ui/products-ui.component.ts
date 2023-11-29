@@ -17,6 +17,7 @@ import { FakeStoreService } from 'src/app/services/fake-store.service';
   styleUrls: ['./products-ui.component.css']
 })
 export class ProductsUiComponent  implements OnInit {
+  selectedValue!: string;
 
   foundProducts$!: Observable<any[]>;
   private searchTerms = new Subject<string>();
@@ -108,5 +109,34 @@ export class ProductsUiComponent  implements OnInit {
 
   mAddToCart(){
     alert("added to cart")
+  }
+  onSale(){ 
+    console.log(1-2)
+
+  }
+
+
+  onChange(){
+    console.log(this.selectedValue)
+    if(this.selectedValue === "A-Z"){
+      const sortedProducts = this.products.sort((a: { title: string; }, b: { title: any; }) => a.title.localeCompare(b.title));
+      console.log(sortedProducts);      
+    }
+    if(this.selectedValue == "Price-L"){
+      const sortedItems = this.products.sort((a: { price: number; }, b: { price: number; }) => (a.price > b.price ? 1 : -1))
+      console.log(sortedItems);      
+    }
+    if(this.selectedValue == "Price-H"){
+      const sortedItems = this.products.sort((a: { price: number; }, b: { price: number; }) => (a.price > b.price ? -1 : 1))
+      console.log(sortedItems);      
+    }
+    if(this.selectedValue === "sale"){
+      console.log(this.products)
+      let array:any = []
+      array = this.products
+      this.products = array.filter((x:any)=>x.promo.onPromo === true)
+
+    }
+
   }
 }

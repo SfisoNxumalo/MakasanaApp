@@ -14,24 +14,13 @@
 
             <div class="fil-sor">
                 <div class="filter-item">
-                    <mat-icon>filter_list</mat-icon>
-                    <select>
-                        <option>Filter</option>
-                        <option>Sale</option>
-                    </select>
-                </div>
-
-                <div class="filter-item">
                     <mat-icon>sort</mat-icon>
-                    <select>
-                        <option>Sort</option>
-                        <option>A-Z</option>
-                        <option>Latest</option>
-                        <option>Oldest</option>
-                        <option>Price(High)</option>
-                        <option>Price(low)</option>
-                    </select>
-                    
+                    <select [(ngModel)]="selectedValue" (change)="onChange()">
+                        <option value="sale">Sale</option>
+                        <option value="A-Z">A-Z</option>
+                        <option value="Price-H">Price(High)</option>
+                        <option value="Price-L">Price(low)</option>
+                    </select>  
                 </div>
             </div>
         </div>
