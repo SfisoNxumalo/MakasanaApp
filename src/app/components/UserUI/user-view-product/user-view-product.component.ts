@@ -29,7 +29,26 @@ export class UserViewProductComponent {
     private products: CustProductsService, 
     private cart:AddToCartService){}
 
-  product:any = {}
+  product:any = {
+    title : "",
+  image: "",
+  description:"",
+  category:"",
+  price:0,
+  condition:"",
+  quantity:0,
+ 
+  promo :{
+      onPromo:false,
+      promoDesc:"",
+      newPrice:0,
+      startDate:"",
+      endDate:""
+  },
+  added: "",
+  updated: "",
+  business: ""
+  }
 
   productID:any;
 
