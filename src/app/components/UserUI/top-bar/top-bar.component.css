@@ -5,7 +5,7 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-
+padding-right: 10px;
 }
 
 .top-bar button{

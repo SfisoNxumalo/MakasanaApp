@@ -9,6 +9,9 @@
 
     /* ----------NAV---------- */
 
+    .tra{
+        height: 65px;
+      }
     nav
     {
         background-color: blueviolet;

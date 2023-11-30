@@ -31,7 +31,10 @@ export class AnalyticsUiComponent implements OnInit{
   OrderPending = 0
   OrderRejected = 0
 
-  MostSellingProduct:any
+  MostSellingProduct:any = {
+    image:"",
+    title:""
+  }
 
   ngOnInit(): void {
 
