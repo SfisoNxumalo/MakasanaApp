@@ -121,7 +121,7 @@
 .bottom-nav{
     background-color: brown;
     background-color: white;
-    padding: 8px;
+    padding: 5px;
     position: fixed;
     bottom: 0;
     display: flex;
@@ -135,15 +135,18 @@
     width: 100%;
   }
 
+  .tra{
+    height: 65px;
+  }
+
   .nav-options{
     display: grid;
     flex-direction: row;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     background-color: transparent;
     width: 100%;
     border: none;
     gap: 0px;
-    padding-left: 5px;
   }
 
   .nav-item{
@@ -152,7 +155,6 @@
     justify-content: center;
     text-align: center;
     width: 100%;
-    margin-left: 45%;
   }
 
   .nav-item button{

@@ -32,7 +32,7 @@ export class TrackOrderComponent implements OnInit{
   mSortOrders(data:any){
     
 
-    for(let ode of data){
+    for(let ode of data.reverse()){
       
       if(this.Maporders.has(ode.orderNo))
       {

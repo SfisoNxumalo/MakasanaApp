@@ -266,7 +266,7 @@
       .nav-options{
         display: grid;
         flex-direction: row;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         background-color: transparent;
         width: 100%;
         border: none;
@@ -279,6 +279,10 @@
         justify-content: center;
         text-align: center;
         width: 100%;
+      }
+
+      .tra{
+        height: 15px;
       }
     
       .nav-item button{

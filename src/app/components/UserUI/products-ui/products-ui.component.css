@@ -124,7 +124,7 @@ mat-progress-bar{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100%;
+        height: 100vh;
     }
 
     #search-box{
@@ -246,7 +246,7 @@ mat-progress-bar{
 
     .prod-text label{
         font-size: 14px;
-        max-height: 30px;
+        /* max-height: 30px; */
         text-overflow: ellipsis;
         /* white-space: nowrap; */
         text-wrap:wrap;
@@ -295,6 +295,10 @@ mat-progress-bar{
         width: 100%;
         border: none;
         gap: 0px;
+      }
+
+      .tra{
+        height: 10px;
       }
     
       .nav-item{

@@ -19,7 +19,6 @@ export class UserOrderComponent implements OnInit{
 
   ngOnInit(): void {
     this.getOrder.mGetOrder().subscribe((data) => {
-      console.log(data)
       this.order = data
       this.orderID = data.orderNo
     })

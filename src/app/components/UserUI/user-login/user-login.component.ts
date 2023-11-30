@@ -26,7 +26,14 @@ export class UserLoginComponent {
       next: data => {
         this.token.saveToken(data.accessToken),
         this.route.navigate(["/home"])
-      }
+      }, error(err) {
+        if(err.status == 401){
+          alert("Incorrect login details")
+        }
+        else{
+          alert("We have encountered an error")
+        }
+      },
     })
     this.spnValue = 0
   }
