@@ -9,29 +9,18 @@
             
             <div class="stock-details">
                 <mat-icon>search</mat-icon>
-                <input #searchBox (input)="search(searchBox.value)" type="search" placeholder="Search..">
+                <input id="search-box" #searchBox (input)="search(searchBox.value)" type="search" placeholder="Search..">
             </div>
 
             <div class="fil-sor">
                 <div class="filter-item">
-                    <mat-icon>filter_list</mat-icon>
-                    <select>
-                        <option>Filter</option>
-                        <option>Sale</option>
-                    </select>
-                </div>
-
-                <div class="filter-item">
                     <mat-icon>sort</mat-icon>
-                    <select>
-                        <option>Sort</option>
-                        <option>A-Z</option>
-                        <option>Latest</option>
-                        <option>Oldest</option>
-                        <option>Price(High)</option>
-                        <option>Price(low)</option>
-                    </select>
-                    
+                    <select [(ngModel)]="selectedValue" (change)="onChange()">
+                        <option value="sale">Sale</option>
+                        <option value="A-Z">A-Z</option>
+                        <option value="Price-H">Price(High)</option>
+                        <option value="Price-L">Price(low)</option>
+                    </select>  
                 </div>
             </div>
         </div>
@@ -49,7 +38,7 @@
             <div class="products-div-ii">
                 
                 <div *ngFor="let product of products" class="menu-item4" routerLink="/product-details/{{product._id}}">
-                    
+                    <label *ngIf="product.quantity == 0" class="promo">Out of Stock</label>
                     <div class="menu-item2">
                         <img class="main-logo2" src="{{product.image}}">
                 
@@ -57,7 +46,8 @@
                             <label>{{product.title}}</label>
                             <!-- <label>{{product.rating.rate}}</label> -->
                             <div class="pr">
-                                <label class="price">R{{product.price}}</label>
+                                <label *ngIf="!product.promo.onPromo" class="price">R{{product.price}}</label>
+                                <label *ngIf="product.promo.onPromo" class="price">R{{product.promo.newPrice}}</label>
                                 <!-- <button (click)="mAddToCart()" type="button"><mat-icon>add_shopping_cart</mat-icon></button> -->
                             </div>
                             
@@ -106,7 +96,7 @@
             </div>
     
             <div class="nav-item">
-                <button routerLink="/order"><mat-icon>assignment</mat-icon></button>
+                <button routerLink="/track-order"><mat-icon>assignment</mat-icon></button>
                 
             </div>
     

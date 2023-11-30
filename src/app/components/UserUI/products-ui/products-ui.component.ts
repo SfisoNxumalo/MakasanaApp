@@ -17,8 +17,9 @@ import { FakeStoreService } from 'src/app/services/fake-store.service';
   styleUrls: ['./products-ui.component.css']
 })
 export class ProductsUiComponent  implements OnInit {
+  selectedValue!: string;
 
-  foundUsers$!: Observable<any[]>;
+  foundProducts$!: Observable<any[]>;
   private searchTerms = new Subject<string>();
 
   search(term: string): void {
@@ -39,23 +40,18 @@ export class ProductsUiComponent  implements OnInit {
     this.cart.mShowCart().subscribe((data) => {
       this.cartCount = data.length;
     })
-
-
- 
   
-    
 
+    this.foundProducts$ = this.searchTerms.pipe(
+      // wait 300ms after each keystroke before considering the term
+      debounceTime(300),
 
-    // this.foundUsers$ = this.searchTerms.pipe(
-    //   // wait 300ms after each keystroke before considering the term
-    //   debounceTime(300),
+      // ignore new term if same as previous term
+      distinctUntilChanged(),
 
-    //   // ignore new term if same as previous term
-    //   distinctUntilChanged(),
-
-    //   // switch to new search observable each time the term changes
-    //   switchMap((term: string) => this.fakeApi.mGetProducts()),
-    // );
+      // switch to new search observable each time the term changes
+      switchMap((term: string) => this.mGetSearch(term)),
+    );
 
     this.route.paramMap.subscribe(params => {
       this.selectedCategory = params.get("category");
@@ -72,11 +68,12 @@ export class ProductsUiComponent  implements OnInit {
 
   mGetSearch(term:string):Observable<any>{
 
-    const oo = [1, 2, 3, 5]
+    console.log("hyhh")
 
     const ssearchData = new BehaviorSubject<any>({});
+    ssearchData.next(term)
 
-    // BehaviorSubject bh = new BehaviorSubject();
+    
 
     return ssearchData;
   }
@@ -112,5 +109,34 @@ export class ProductsUiComponent  implements OnInit {
 
   mAddToCart(){
     alert("added to cart")
+  }
+  onSale(){ 
+    console.log(1-2)
+
+  }
+
+
+  onChange(){
+    console.log(this.selectedValue)
+    if(this.selectedValue === "A-Z"){
+      const sortedProducts = this.products.sort((a: { title: string; }, b: { title: any; }) => a.title.localeCompare(b.title));
+      console.log(sortedProducts);      
+    }
+    if(this.selectedValue == "Price-L"){
+      const sortedItems = this.products.sort((a: { price: number; }, b: { price: number; }) => (a.price > b.price ? 1 : -1))
+      console.log(sortedItems);      
+    }
+    if(this.selectedValue == "Price-H"){
+      const sortedItems = this.products.sort((a: { price: number; }, b: { price: number; }) => (a.price > b.price ? -1 : 1))
+      console.log(sortedItems);      
+    }
+    if(this.selectedValue === "sale"){
+      console.log(this.products)
+      let array:any = []
+      array = this.products
+      this.products = array.filter((x:any)=>x.promo.onPromo === true)
+
+    }
+
   }
 }

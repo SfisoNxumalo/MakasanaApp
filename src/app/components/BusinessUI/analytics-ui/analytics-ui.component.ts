@@ -17,7 +17,8 @@ export class AnalyticsUiComponent implements OnInit{
 
   constructor(private route:ActivatedRoute, 
     private fakeApi:FakeStoreService,
-    private analyticsService:AnalyticsService){}
+    private analyticsService:AnalyticsService,
+    private productService:ProductService){}
 
   product:any = {}
 
@@ -25,6 +26,12 @@ export class AnalyticsUiComponent implements OnInit{
 
   MaxProduct:any = 0
   MaxSalesMonth:any = 0
+
+  OrderCompleted = 0
+  OrderPending = 0
+  OrderRejected = 0
+
+  MostSellingProduct:any
 
   ngOnInit(): void {
 
@@ -114,11 +121,14 @@ export class AnalyticsUiComponent implements OnInit{
     }
   }
 
+
+
   private month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
   mOrderSort(data:any){
     const TotalOrdersProcessed = new Map();
     const TotalProductsSold = new Map();
+    const MostSelling = new Map();
     
     const OrdersProcessed:any = [];
     const ProductsSold:any = [];
@@ -127,14 +137,40 @@ export class AnalyticsUiComponent implements OnInit{
       const date = new Date(order.date)
       const month = this.month[date.getUTCMonth()]
 
-      if(TotalOrdersProcessed.has(month)){
+      console.log(">>> " ,order.productId)
+
+      if(MostSelling.has(order.productId)){
+        const cun = MostSelling.get(order.productId);
+
+        MostSelling.set(order.productId, (cun + 1))
+
+      }
+      else{
+        MostSelling.set(order.productId, 1)
+      }
+
+      if(TotalOrdersProcessed.has(month))
+      {
         let prevcount = TotalOrdersProcessed.get(month);
         let prevQuantityCount = TotalProductsSold.get(month);
 
-
         TotalProductsSold.set(month, (prevQuantityCount + order.quantity));
         TotalOrdersProcessed.set(month, (prevcount + 1));
+
+        switch(order.order_status) {
+          case "pending":
+            this.OrderPending = this.OrderPending + 1
+            break;
+            case "completed":
+            this.OrderCompleted = this.OrderCompleted + 1
+            break;
+            case "rejected":
+            this.OrderRejected = this.OrderRejected + 1
+            break;
+        }
+
         continue;
+
       }
 
       TotalProductsSold.set(month, order.quantity);
@@ -147,8 +183,34 @@ export class AnalyticsUiComponent implements OnInit{
 
     TotalProductsSold.forEach((value, key):any => ProductsSold.push({value, key}))
    
+    const Most = {product:"", num:0}
     const table:any = document.getElementById("graph");
     this.mGenerateAnalytics(table, ProductsSold)
+    // console.log(MostSelling)
+    MostSelling.forEach((value, key):any => {
+        if(value > Most.num){
+        Most.product = key,
+      Most.num = value
+      }
+    }
+
+    
+    )
+
+   if(Most.product != ""){
+      this.productService.getOneProduct(Most.product).subscribe({
+            next: (product) => {(
+              this.MostSellingProduct = product,
+              console.log(product)
+            )},
+            error: (err) => {
+              console.log(err)
+              // this.blLoadComplete = false
+            }
+          });
+   }
+
+    
   }
 
 }

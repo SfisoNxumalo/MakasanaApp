@@ -22,6 +22,8 @@ export class AddToCartService {
 
   AddToCart(data:any){
 
+    console.log(data)
+
     let product = {
       id:data._id,
       price:data.price,

@@ -1,19 +1,19 @@
 
-
-<div class="main-holder">
-    <header>
-        <label>Makasana</label>
+<header>
+        <label>{{companyDetails.name}}</label>
         <button>
             <span></span>
             <span></span>
             <span></span>
         </button>
     </header>
+<div class="main-holder">
+    
     
     <div class="body">
         <section id="home">
             <div class="home-holder">
-                <h1>Makasana</h1>
+                <h1>{{companyDetails.name}}</h1>
                 <p>we help build solid foundations</p>
             </div>
         </section>
@@ -21,13 +21,7 @@
         <section id="about">
             <h2>About Us</h2>
             <p>
-                Lorem ipsum dolor sit amet consectetur, 
-                adipisicing elit. Iusto earum nostrum soluta 
-                sit fuga ex delectus qui, quibusdam recusandae, 
-                quos beatae rerum quod perferendis architecto numquam 
-                sequi accusamus laborum natus?
-
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates odit blanditiis aspernatur, laudantium esse id accusantium ea eos fugit sit, porro obcaecati alias facere libero pariatur dicta ducimus qui velit.
+                {{companyDetails.about}}
             </p>
 
         </section>
@@ -35,8 +29,7 @@
         <section id="services">
             <h2>Services</h2>
             <p>
-                Lorem ipsum dolor sit amet consectetur, 
-                adipisicing elit. Iusto earum nostrum soluta 
+                {{companyDetails.services}}
                
             </p>
 
@@ -56,29 +49,23 @@
             <h2>Where you can find us</h2>
 
             <div class="details">
-                <label><mat-icon> pin_drop</mat-icon></label>
+                <label><mat-icon>pin_drop</mat-icon></label>
                 <p>
-                    address
+                    {{companyDetails.address}}
                 </p>
             </div>
 
             <div class="details">
-                <label><mat-icon> call</mat-icon></label>
+                <label><mat-icon>call</mat-icon></label>
                 <p>
-                    number
+                    {{companyDetails.phone}}
                 </p>
             </div>
 
             <div class="details">
-                <label><mat-icon> pin_drop</mat-icon></label>
-                <p>
-                    aadd
-                </p>
+                <a></a>
             </div>
-            
-
         </section>
-        
     
     </div>
 </div>

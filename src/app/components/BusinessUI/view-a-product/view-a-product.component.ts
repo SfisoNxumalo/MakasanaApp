@@ -166,30 +166,40 @@ export class ViewAProductComponent implements OnInit {
     {
       const percentageDecimal = this.products.promo.percentage / 100;
       this.products.promo.newPrice = this.products.price - (this.products.price * percentageDecimal);
-      // console.log(this.products.promo.newPrice)
-    }
-    else{
+      console.log(this.products.promo.newPrice)
+       
       this.productService.updateProduct(this.products,this.productID).subscribe(
       {
         next: (response) => {
           console.log(response),
           console.log("updated")
+          console.log(this.products.promo.onPromo)
       }})
     }
-
-
-    
-  //  console.log(this.products.promo.onPromo)
-  //   if(this.products.promo.onPromo == true)
-  //   {
+    else{
+    if(this.products.promo.onPromo == true)
+    {
       
-  //     this.mUpdateProduct()
-  //   }
-  //     else if(!this.products.promo.onPromo)
-  //     {
-  //       console.error('Item is not on promotion.');
-  //     }
+      this.mUpdateProduct()
+    }
+      else if(!this.products.promo.onPromo)
+      {
+        console.error('Item is not on promotion.');
+      }
   
   
 
+}
+  }
+
+promotion(){
+  if(this.products.promo.onPromo === true){
+    this.productService.updateProduct(this.products,this.productID).subscribe(
+      {
+        next: (response) => {
+          console.log(response),
+          console.log("updated")
+          console.log(this.products.promo.onPromo)
+      }})
+  }
 }}

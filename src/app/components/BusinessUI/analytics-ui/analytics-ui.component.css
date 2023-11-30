@@ -91,7 +91,24 @@
         padding: 0;
     }
 
-    .daa{display: flex;}
+    .daa{
+      display: flex;
+      gap: 10px;
+    }
+
+    .daa img{
+      border-radius: 10px;
+
+    }
+
+    .daa .tite{
+      font-size: 18px;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      width: 100%;
+    }
 
     
   .bottom-nav{

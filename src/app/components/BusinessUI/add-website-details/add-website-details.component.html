@@ -1,0 +1,44 @@
+<div class="holder">
+
+    <div class="holder2">
+      <div class="header">
+        <h1 >We need just a few things for your website</h1>
+      </div>
+  
+      <div class="login-div">
+  
+    <div class="form-group" id="about">
+      <label class="addressInput" for="name">Tell us more about your business:</label>
+      <textarea class="form-control" cols="8" placeholder="About" [(ngModel)]="form.about"></textarea>
+    </div>
+
+    <div class="form-group" id="services">
+        <label class="addressInput" for="name">What servies do you provide:</label>
+        <textarea class="form-control" cols="8" placeholder="Services" [(ngModel)]="form.services"></textarea>
+      </div>
+  
+  
+    <button class="submit" (click)="mCreate()" type="submit">CREATE</button>
+    
+      </div>
+  
+    </div>
+  <button class="spn" *ngIf="spnValue != 0">
+    <mat-spinner style="width: 50px; height: 50px;" mode="indeterminate" class="spinner"></mat-spinner>
+  </button>
+  
+  </div>
+  
+<!--   
+  
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div #toastElement class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Welcome To Makasna</strong>
+        <button type="button" class="btn-close" (click)="hideToast()" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Registration successful! Welcome to our community. </div>
+    </div>
+  </div> -->
+  

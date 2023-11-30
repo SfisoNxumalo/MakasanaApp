@@ -64,6 +64,8 @@ export class CartComponent implements OnInit {
 
     for(let item of data){
 
+      console.log(item)
+
       if(this.cartMap.has(item.id))
       {
         let newItem = ((this.cartMap.get(item.id) || {}));
@@ -103,7 +105,18 @@ mDecrementCart(product:any) {
   mIncrementCart(product:any) {
     for(let obj of this.cartMap.entries()){
 
+      console.log(">>>", obj[1].product)
+      // console.log()
+
       if(obj[1].product == product){
+
+      //   // if(product.promo.onPromo){
+      //   //   product.price = product.promo.newPrice
+
+      //   // }
+
+      //   console.log(product)
+
 
         const prod = {
           _id:product.id,
@@ -121,7 +134,7 @@ mDecrementCart(product:any) {
     }
   }
 
-  mCheckout(){
+  mCheckout(){ 
     const orders:any = []
     
 
