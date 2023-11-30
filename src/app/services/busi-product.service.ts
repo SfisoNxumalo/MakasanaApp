@@ -13,7 +13,7 @@ import { TokenService } from './token.service';
 })
 export class ProductService {
 
-  api = "http://localhost:2023/makasana-api/business/"
+  api = "https://makasana.shaper.co.za/makasana-api/business/"
 
   constructor( private http: HttpClient, private token:TokenService){}
 
