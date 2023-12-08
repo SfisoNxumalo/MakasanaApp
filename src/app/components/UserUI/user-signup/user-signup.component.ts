@@ -26,7 +26,7 @@ export class UserSignupComponent {
         console.log(data)
         this.mClear();
       }, error(err) {
-        
+        console.log(err)
       },
     })
 

@@ -15,16 +15,17 @@ body {
   }
   
   .sidenav {
-    height: 600px;
+    height: 100vh;
     width: 300px;
     position: fixed;
     z-index: 1000;
     top: 0;
     left: 0;
-    background-color: black;
+    background-color:blueviolet;
     /* overflow-x: hidden; */
     transition: 0.5s;
     padding-top: 60px;
+    border-right: 1px solid white;
   }
   .no{
     display: none;
