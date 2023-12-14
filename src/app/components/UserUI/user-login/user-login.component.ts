@@ -1,6 +1,7 @@
 import { Component, TemplateRef } from '@angular/core';
 
 import {Router} from '@angular/router'; // import router from angular router
+import { finalize } from 'rxjs/operators';
 import { AuthService } from 'src/app/services/auth.service';
 import { TokenService } from 'src/app/services/token.service';
 
@@ -16,26 +17,32 @@ export class UserLoginComponent {
   }
 
   toasts: any[] = [];
-  spnValue = 0;
+  spnValue:any = 0;
 
   constructor(private auth: AuthService,private route:Router, private token:TokenService) { }
 
   signIn(){
     this.spnValue = 1
-    this.auth.mCSignIn(this.form).subscribe({
+
+    setTimeout(() => {
+      this.auth.mCSignIn(this.form).pipe(
+      finalize(() => {
+        this.spnValue = 0;
+      })
+    ).subscribe({
       next: data => {
         this.token.saveToken(data.accessToken),
         this.route.navigate(["/home"])
       }, error(err) {
         if(err.status == 401){
-          alert("Incorrect login details")
+          alert(err.error.message)
         }
         else{
           alert("We have encountered an error")
         }
       },
     })
-    this.spnValue = 0
+    }, 2000)
   }
 
 

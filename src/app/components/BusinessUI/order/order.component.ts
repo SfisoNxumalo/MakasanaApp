@@ -18,19 +18,19 @@ export class OrderComponent implements OnInit{
     private passOrder:PassOrderService,
     private router: Router){}
 
-    
+    spnValue = 0
 
     ngOnInit(): void {
-
+this.spnValue = 1
       this.orders.mGetBusinessOrders().subscribe({
+        
         next: data => {(
-          setTimeout(() => {
+          this.spnValue = 0,
             this.mSortOrders(data.message)
-          }, 3000)
-          
         )},
         error: (err) => {
-          console.log(err)
+          this.spnValue = 0
+          alert(err)
         }
       });
     }
@@ -39,8 +39,8 @@ export class OrderComponent implements OnInit{
   PassMaporders = new Map();
 
   mSortOrders(data:any){
+    this.spnValue = 1;
     
-
     for(let ode of data){
       
       if(this.Maporders.has(ode.orderNo))
@@ -73,6 +73,7 @@ export class OrderComponent implements OnInit{
         this.PassMaporders.set(ode.orderNo, arr);
       }
     }
+    this.spnValue = 0
   }
 
   OpenOrder(id:any){

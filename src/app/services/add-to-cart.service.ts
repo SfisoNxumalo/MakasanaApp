@@ -22,14 +22,22 @@ export class AddToCartService {
 
   AddToCart(data:any){
 
-    console.log(data)
+    let price = data.price;
+
+    if(data.promo){
+      if(data.promo.onPromo ){
+     price = data.promo.newPrice
+    }
+    }
+    
+    
 
     let product = {
       id:data._id,
-      price:data.price,
+      price:price,
       business:data.business._id,
       image:data.image,
-      title:data.title
+      title:data.title,
     }
 
     const item = localStorage.getItem("cart") || "[]";

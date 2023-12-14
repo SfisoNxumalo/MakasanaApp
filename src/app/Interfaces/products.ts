@@ -7,7 +7,7 @@ export interface Products {
   price: number;
   condition: string;
   quantity: number;
-  promo: {onPromo:boolean, promoDesc:string, newPrice:number,startDate:Date,endDate:Date, percentage:number};
+  promo: {onPromo:boolean, promoDesc:string, newPrice:number,startDate:Date,endDate:Date,};
   added:Date;
   updated:Date;
 }

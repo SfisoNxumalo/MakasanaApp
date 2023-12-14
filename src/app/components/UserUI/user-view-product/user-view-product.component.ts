@@ -73,6 +73,7 @@ export class UserViewProductComponent {
     this.products.getOneProduct(id).subscribe({
       next: (data) => {
         this.product = data
+        console.log(this.product)
         
       }, 
       error: (error)=>{

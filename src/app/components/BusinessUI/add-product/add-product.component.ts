@@ -31,7 +31,7 @@ export class AddProductComponent  {
     price: 0,
     condition: "",
     quantity: 0,
-    promo: {onPromo:false, promoDesc:"", newPrice:0, startDate : new Date(), endDate: new Date(), percentage: 0},
+    promo: {onPromo:false, promoDesc:"", newPrice:0, startDate : new Date(), endDate: new Date()},
     added: new Date(),
     updated: new Date()
   }
@@ -75,13 +75,12 @@ export class AddProductComponent  {
     this.productService.mCreateProduct(formData).subscribe({
         next: (message) => {
           // this.products = product,
-          console.log(message),
           this. showToast()
           this.mClear()
           this.spnValue = 0;
         },
         error: (err) => {
-          console.log(err)
+          alert(err)
            this.spnValue = 0;
           // this.blLoadComplete = false
         },
@@ -98,7 +97,7 @@ export class AddProductComponent  {
       price: 0,
       condition: "",
       quantity: 0,
-      promo: {onPromo:false, promoDesc:"", newPrice:0, startDate : new Date(), endDate: new Date(), percentage:0},
+      promo: {onPromo:false, promoDesc:"", newPrice:0, startDate : new Date(), endDate: new Date()},
       added: new Date(),
       updated: new Date()
     }

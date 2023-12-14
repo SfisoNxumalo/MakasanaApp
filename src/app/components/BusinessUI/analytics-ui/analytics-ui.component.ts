@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import Chart from 'chart.js/auto';
+import { finalize } from 'rxjs';
 import { AnalyticsService } from 'src/app/services/analytics.service';
 import { ProductService } from 'src/app/services/busi-product.service';
 import { CartserviceService } from 'src/app/services/cartservice.service';
@@ -31,6 +32,8 @@ export class AnalyticsUiComponent implements OnInit{
   OrderPending = 0
   OrderRejected = 0
 
+  blLoadComplete = true;
+
   MostSellingProduct:any = {
     image:"",
     title:""
@@ -39,8 +42,13 @@ export class AnalyticsUiComponent implements OnInit{
   ngOnInit(): void {
 
     // this.mGetProduct()
-    this.mGetProductData();
-    this.mGetOrderData();
+    this.blLoadComplete = true;
+
+    setTimeout(() => {
+      this.mGetProductData();
+      this.mGetOrderData();
+    }, 2000)
+    
 
     // table.innerHTML = "";
 
@@ -76,7 +84,7 @@ export class AnalyticsUiComponent implements OnInit{
   }
 
   async mGenerateAnalytics(table:any, data:any){
-    console.log(data)
+    this.blLoadComplete = true;
         new Chart(
           table,
           {
@@ -93,42 +101,71 @@ export class AnalyticsUiComponent implements OnInit{
             }
           }
         );
+
+        this.blLoadComplete = false;
   }
 
   mGetProductData(){
-    this.analyticsService.mGetProductData().subscribe({
+    this.blLoadComplete = true;
+    this.analyticsService.mGetProductData()
+    .pipe(finalize(() => {this.blLoadComplete = false;})).subscribe({
       next: data => {(
         this.mSort(data)
       )},
       error: (err) => {
-        console.log(err)
+        alert(err)
       }
     });
   }
 
   mGetOrderData(){
-    this.analyticsService.mGetOrderData().subscribe({
+    this.blLoadComplete = true;
+    this.analyticsService.mGetOrderData()
+    .pipe(finalize(() => {this.blLoadComplete = false;})).subscribe({
       next: data => {(
         // console.log(data.message)
         this.mOrderSort(data.message)
       )},
       error: (err) => {
-        console.log(err)
+        alert(err)
       }
     });
   }
 
+  Prod_status = "Empty"
+  prod_count = 0
+
   mSort(data:any){
+    this.blLoadComplete = true;
     for (let product of data){
       this.MaxProduct += product.quantity;
+      this.prod_count++
     }
+
+    if(this.MaxProduct == 0){
+      this.Prod_status = "empty"
+
+    }
+    else if(this.MaxProduct <= 10){
+      this.Prod_status = "Critical"
+    }
+
+    else if((this.MaxProduct / 2) <= 20){
+      this.Prod_status = "Low"
+    }
+    else{
+      this.Prod_status = "Healthy"
+    }
+
+    this.blLoadComplete = false;
   }
-
-
 
   private month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
   mOrderSort(data:any){
+
+    this.blLoadComplete = true;
+
     const TotalOrdersProcessed = new Map();
     const TotalProductsSold = new Map();
     const MostSelling = new Map();
@@ -160,22 +197,22 @@ export class AnalyticsUiComponent implements OnInit{
         TotalProductsSold.set(month, (prevQuantityCount + order.quantity));
         TotalOrdersProcessed.set(month, (prevcount + 1));
 
-        switch(order.order_status) {
-          case "pending":
-            this.OrderPending = this.OrderPending + 1
-            break;
-            case "completed":
-            this.OrderCompleted = this.OrderCompleted + 1
-            break;
-            case "rejected":
-            this.OrderRejected = this.OrderRejected + 1
-            break;
-        }
+        
 
         continue;
 
       }
-
+        switch(order.order_status) {
+                  case "pending":
+                    this.OrderPending = this.OrderPending + 1
+                    break;
+                    case "completed":
+                    this.OrderCompleted = this.OrderCompleted + 1
+                    break;
+                    case "rejected":
+                    this.OrderRejected = this.OrderRejected + 1
+                    break;
+                }
       TotalProductsSold.set(month, order.quantity);
       TotalOrdersProcessed.set(month, 1);
     }
@@ -196,8 +233,6 @@ export class AnalyticsUiComponent implements OnInit{
       Most.num = value
       }
     }
-
-    
     )
 
    if(Most.product != ""){
@@ -213,7 +248,7 @@ export class AnalyticsUiComponent implements OnInit{
           });
    }
 
-    
+   this.blLoadComplete = false;
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { finalize, tap } from 'rxjs/operators';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -21,16 +22,31 @@ export class UserSignupComponent {
 
   Register(){
     this.spnValue = 1;
-    this.auth.mCSignUp(this.form).subscribe({
+
+    setTimeout(() => {
+      this.auth.mCSignUp(this.form).pipe(
+      finalize(() => {
+        this.spnValue = 0;
+      })
+    ).subscribe({
       next: data => {
-        console.log(data)
         this.mClear();
+        alert(data.message)
+
       }, error(err) {
-        console.log(err)
+        if(err.status == 409){
+          alert(err.error.message)
+        }
+        else{
+          alert("We have encountered an error")
+        }
+        // this.spnValue = 0;
       },
     })
+    }, 2000)
+    
 
-    this.spnValue = 0;
+    // this.spnValue = 0;
   }
 
   mClear(){

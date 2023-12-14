@@ -1,5 +1,6 @@
 <div class="holder">
     <p>Your Progress</p>
+    <mat-progress-bar *ngIf="blLoadComplete" mode="indeterminate"></mat-progress-bar>
 
     <div class="item">
         <label class="lblheader">Total Available Products</label>
@@ -7,7 +8,7 @@
             {{MaxProduct}}
         </p>
         <div class="lblStatus">
-            <label class="status">Status:</label><label>HEALTHY</label>
+            <label class="status">Status:</label><label>{{Prod_status | uppercase}}</label>
         </div>
     </div>
 
@@ -27,6 +28,8 @@
             </p>
 
         </div>
+        <br>
+        Overall
     <div class="thr">
         
         <div class="item-chart">
@@ -56,7 +59,7 @@
     <div class="item">
         <label class="lblheader">Most Selling</label>
         <div class="daa">
-            <img src="{{MostSellingProduct.image}}"/>
+            <img *ngIf="MostSellingProduct.image" src="{{MostSellingProduct.image}}"/>
             <p class="tite">
                 {{MostSellingProduct.title}}
             </p>

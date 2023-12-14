@@ -18,6 +18,7 @@ padding-right: 10px;
     flex-direction: column;
     justify-content:center ;
     align-items: center;
+    cursor: pointer;
 }
 
 .top-bar button span{

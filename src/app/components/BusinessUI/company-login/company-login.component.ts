@@ -5,7 +5,7 @@ import { TokenService } from 'src/app/services/token.service';
 import { TokenstorageService } from 'src/app/services/tokenstorage.service';
 
 import {  ViewChild, ElementRef } from '@angular/core';
-import { timeout } from 'rxjs';
+import { finalize, timeout } from 'rxjs';
 
 declare var bootstrap: any; // Declare Bootstrap variable
 
@@ -30,24 +30,37 @@ export class CompanyLoginComponent {
 
   constructor(private authSer: AuthService, private token:TokenService,private route:Router) { }
 
+
+  
   mSignIn(){
+
     this.spnValue = 1;
+    
     setTimeout(() => {
-      this.authSer.mSignIn(this.form).subscribe({
+      this.authSer.mSignIn(this.form).pipe(
+        finalize(() => {
+          this.spnValue = 0;
+        })
+      ).subscribe({
       next: (response) => {
         this.token.sendData(response);
         this.token.saveToken(response.accessToken),
         this.showToast();
-        setTimeout(() => {
           this.route.navigate(["/dashboard"])
-        }, 2000);
       },
       error: (error) => {
-        console.log(error)
+
+        if(error.status == 401){
+          alert(error.error.message)
+
+        }
+        else{
+          alert("We have encountered an error")
+        }
       }
     })
-    this.spnValue = 0;
-    }, 5000)
+    
+    }, 2000)
     
   }
 

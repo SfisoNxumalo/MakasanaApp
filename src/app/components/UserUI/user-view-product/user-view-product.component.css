@@ -355,6 +355,7 @@
       .business p{
         text-decoration: underline;
         font-size: 15px;
+        cursor: pointer;
         
       }
     }

@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
@@ -11,12 +12,15 @@ import { CartserviceService } from 'src/app/services/cartservice.service';
 import { CustProductsService } from 'src/app/services/cust-products.service';
 import { FakeStoreService } from 'src/app/services/fake-store.service';
 
+
+
 @Component({
-  selector: 'app-products-ui',
-  templateUrl: './products-ui.component.html',
-  styleUrls: ['./products-ui.component.css']
+  selector: 'app-view-business-products',
+  templateUrl: './view-business-products.component.html',
+  styleUrls: ['./view-business-products.component.css']
 })
-export class ProductsUiComponent implements OnInit {
+export class ViewBusinessProductsComponent implements OnInit{
+
   selectedValue!: string;
 
   foundProducts$!: Observable<any[]>;
@@ -36,7 +40,7 @@ export class ProductsUiComponent implements OnInit {
   image = "https://media.istockphoto.com/id/620737858/photo/cape-town-and-the-12-apostels-from-above.jpg?s=612x612&w=is&k=20&c=WBxI8OmAFXoGz5I5QjU0eI87I5C6K8h0Xs4JmArrEQQ=";
 
   
-  selectedCategory?:String | null;
+  BusinessID?:String | null;
   ngOnInit(): void {
     this.cart.mShowCart().subscribe((data) => {
       this.cartCount = data.length;
@@ -56,26 +60,23 @@ export class ProductsUiComponent implements OnInit {
     );
 
     this.route.paramMap.subscribe(params => {
-      this.selectedCategory = params.get("category");
-      this.mViewProducts(this.selectedCategory);
-      this.title = this.selectedCategory || "products";
+      this.BusinessID = params.get("id");
+      const BusinessName = params.get("business");
+      this.mViewProducts(this.BusinessID);
+      this.title = BusinessName + " Products" || "Unknown Business";
       // this.mViewProduct(this.productID);
     });
 
     // this.mGet();
   }
 
-  title:any = "products"
+  title:any = "Unknown Business"
   cartCount = 0
 
   mGetSearch(term:string):Observable<any>{
 
-    console.log("hyhh")
-
     const ssearchData = new BehaviorSubject<any>({});
     ssearchData.next(term)
-
-    
 
     return ssearchData;
   }
@@ -83,28 +84,14 @@ export class ProductsUiComponent implements OnInit {
   blLoadComplete = true;
   products:any = [];
 
-  mGet(){
-    this.fakeApi.mGetProducts().subscribe({
-      next: (res) => {(
-        this.products = res,
-        console.log(res),
-        this.blLoadComplete = false
-      )},
-      error: (err) => {
-        console.log(err)
-        this.blLoadComplete = false
-      }
-    })
-  }
-
-  mViewProducts(category:any){
-    this.productService.getProducts(category).subscribe({
+  mViewProducts(id:any){
+    this.productService.getBusinessProducts(id, "").subscribe({
       next: (response) => {(
         this.products = response,
         this.blLoadComplete = false
       )},
       error: (error) => {
-        console.log(error)
+        alert(error)
       }
     })
   }
@@ -137,8 +124,7 @@ export class ProductsUiComponent implements OnInit {
       let array:any = []
       array = this.products
       this.products = array.filter((x:any)=>x.promo.onPromo === true)
-
     }
-
   }
+
 }

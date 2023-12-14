@@ -183,10 +183,11 @@ mat-progress-bar{
     }
 
     .on-pro-indi{
-        height: 10px;
-        width: 10px;
+        height: 8px;
+        width: 8px;
         border-radius: 50%;
         background-color: green;
+        margin-left: 5px;
     }
 
     .main-logo2{
@@ -232,10 +233,17 @@ mat-progress-bar{
         display: flex;
         flex-direction: row;
         gap:5px;
+        justify-content: flex-end;
+        align-items: center;
     }
 
     .price{
         width: 100%;
+    }
+
+    .price-s{
+        text-decoration: line-through;
+
     }
 
     .promoLabel{

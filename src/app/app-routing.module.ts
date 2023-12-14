@@ -32,6 +32,7 @@ import { AnalyticsUiComponent } from './components/BusinessUI/analytics-ui/analy
 import { ThanksComponent } from './components/UserUI/thanks/thanks.component';
 import { WebsiteComponent } from './components/BusinessUI/website/website.component';
 import { AddWebsiteDetailsComponent } from './components/BusinessUI/add-website-details/add-website-details.component';
+import { ViewBusinessProductsComponent } from './components/UserUI/view-business-products/view-business-products.component';
 
 
 const routes: Routes = [
@@ -50,6 +51,7 @@ const routes: Routes = [
    { path: "thanks", component: ThanksComponent },
    { path: "add-product", component: AddProductComponent},
    { path:"view-product/:id", component:ViewAProductComponent},
+   { path:"products/:business/:id", component:ViewBusinessProductsComponent},
 
   { path: 'track-order', component:TrackOrderComponent},
   { path: 'product-details/:id', component:UserViewProductComponent},

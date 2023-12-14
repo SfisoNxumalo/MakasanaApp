@@ -15,12 +15,18 @@ export class CustProductsService {
   api = "https://makasana-api.vercel.app/makasana-api/products/"
 
   getProducts(category:any):Observable<any>{
+    const headers = new HttpHeaders()
+    .append('Authorization', 'Bearer ' + this.Token)
+    .append('content-type', 'application/json')
+    return this.http.get(this.api + category, {headers});
+  }
+
+  getBusinessProducts(id:any, gt:any):Observable<any>{
 
     const headers = new HttpHeaders()
     .append('Authorization', 'Bearer ' + this.Token)
     .append('content-type', 'application/json')
-    console.log(this.api+category)
-    return this.http.get(this.api + category, {headers});
+    return this.http.get(this.api + "business/" + id, {headers});
   }
 
 

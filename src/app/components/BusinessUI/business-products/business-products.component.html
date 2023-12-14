@@ -44,7 +44,8 @@
                         <label>{{product.title}}</label>
                         <!-- <label>{{product.rating.rate}}</label> -->
                         <div class="prices-product">
-                            <label class="price">R{{product.price}}</label> 
+                            <label *ngIf="!product.promo.onPromo" class="price">R{{product.price}}</label> 
+                            <label *ngIf="product.promo.onPromo" class="price-s">R{{product.price}}</label> 
                             <label *ngIf="product.promo.onPromo" class="promoLabel">R{{product.promo.newPrice}}<div class="on-pro-indi"></div></label>
                         </div>
                     </div>

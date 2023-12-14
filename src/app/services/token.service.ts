@@ -16,7 +16,6 @@ export class TokenService {
   }
 
   public saveToken(token: string): void{
-    this.signOut();
     window.sessionStorage.setItem(TOKEN_KEY, token)
   }
 
@@ -28,9 +27,13 @@ export class TokenService {
 
    sendData(data:any){
     this.logData.next(data);
+    // alert(JSON.stringify(data))
+    window.sessionStorage.setItem("user", JSON.stringify(data))
    }
 
    mShow(){
+    this.logData.next(JSON.parse(window.sessionStorage.getItem("user") || "{}"));
+    
     return this.logData;
    }
 

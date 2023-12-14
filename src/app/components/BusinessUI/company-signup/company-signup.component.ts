@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import {  ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
+import { finalize } from 'rxjs/operators';
 
 declare var bootstrap: any; // Declare Bootstrap variable
 
@@ -31,14 +32,40 @@ export class CompanySignupComponent {
 
   signUp(){
     this.spnValue = 1;
-    this.authSer.mSignUp(this.form).subscribe(data=> {
-        console.log(data)
-        this.showToast();
-        setTimeout(() => {
-          this.route.navigate(["/company-login"])
-        }, 2000);
-  })
-  this.spnValue = 0;
+
+    setTimeout(() => {
+      this.authSer.mSignUp(this.form)
+        .pipe(
+          finalize(() => {
+            this.spnValue = 0;
+          })
+        ).subscribe({
+              next: data => {
+                this.mClear();
+                alert(data.message)
+                this.route.navigate(["/company-login"])
+        
+              }, error(err) {
+         
+                  alert(err.error.message)
+                
+                // this.spnValue = 0;
+              },
+            
+      })
+    })
+    
+  }
+
+  mClear(){
+    this.form = {
+      name:"",
+      email:"",
+      password:"",
+      industry: "",
+      address:"",
+      phone:"",
+    }
   }
 
   showToast() {
