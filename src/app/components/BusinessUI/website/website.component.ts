@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from 'src/app/services/busi-product.service';
 
 @Component({
@@ -8,9 +8,12 @@ import { ProductService } from 'src/app/services/busi-product.service';
   styleUrls: ['./website.component.css']
 })
 export class WebsiteComponent implements OnInit{
-  constructor(private route:ActivatedRoute, private busi:ProductService){}
+  constructor(private route:ActivatedRoute, private busi:ProductService, private router:Router){}
 
   companyDetails:any = []
+  spnValue = 1
+
+  hasWebsite:number = 0
 
 ngOnInit(): void {
   this.route.paramMap.subscribe(params => {
@@ -19,17 +22,40 @@ ngOnInit(): void {
   });
 }
 
+timeFetch:any
+timerRedirect:any
+
+ngOnDestroy(){
+  clearTimeout(this.timerRedirect)
+  clearTimeout(this.timeFetch)
+  
+}
+
 Company(id:any){
-  this.busi.mViewWebsite(id).subscribe({
-    next: (comp) => {(
-      this.companyDetails = comp.message[0],
-      console.log(this.companyDetails)
-    )},
-    error: (err) => {
-      console.log(err)
-      // this.blLoadComplete = false
-    }
-  });
+  this.spnValue = 1
+  this.timeFetch = setTimeout(() => {
+    this.busi.mViewWebsite(id).subscribe({
+      next: (comp) => {(
+        
+        this.spnValue = 0,
+        this.hasWebsite = 1
+        ,this.companyDetails = comp.message
+      )},
+      error: (err) => {
+        if(err.error.message == "Company has no website"){
+          this.hasWebsite = 2,
+          this.spnValue = 0
+          this.timerRedirect = setTimeout(() => {
+            this.router.navigate(["/makasana"])
+          },3000)
+        }
+        else{
+          alert("Unexpected error occured")
+        }
+      }
+    });
+}, 2000)
+
 
 }
 

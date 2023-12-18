@@ -1,6 +1,6 @@
 <div class="holder">
 
-    <div class="holder2">
+    <div *ngIf="hasWebsite == 2" class="holder2">
       <div class="header">
         <h1 >We need just a few things for your website</h1>
       </div>
@@ -23,11 +23,18 @@
       </div>
   
     </div>
+
+    <div *ngIf="hasWebsite == 1" class="vie">
+      <a class="viewW" routerLink="/website/{{CompanyDetails.id}}">View website</a>
+      <mat-icon>launch</mat-icon>
+    </div>
+    
   <button class="spn" *ngIf="spnValue != 0">
     <mat-spinner style="width: 50px; height: 50px;" mode="indeterminate" class="spinner"></mat-spinner>
   </button>
   
-  </div>
+</div>
+
   
 <!--   
   
@@ -41,4 +48,4 @@
         Registration successful! Welcome to our community. </div>
     </div>
   </div> -->
-  
+  <app-bottom-nav></app-bottom-nav>

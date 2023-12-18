@@ -91,38 +91,8 @@ class="left" srcset="" height="30px" width="30px">
         Item updated successfully!.</div>
     </div>
   </div>
-    <div class="bottom-nav">
-        <div class="nav-options" >
-            <div class="nav-item">
-                <button routerLink="/dashboard"><mat-icon>home</mat-icon></button>
-            </div>
 
-            <div class="nav-item">
-                <button  routerLink="/your-cart"><mat-icon>assignment</mat-icon></button>
-                
-            </div>
-
-            <div class="nav-item">
-                <button routerLink="/my-products"><mat-icon>store</mat-icon></button>
-                <label>Products</label>
-            </div>
-
-            <!-- <div class="nav-item">
-                <button><mat-icon>launch</mat-icon></button>
-                
-            </div> -->
-
-            <div class="nav-item">
-                <button routerLink="/consumer-profile"><mat-icon>account_circle</mat-icon></button>
-            </div>
-
-            <div class="nav-item">
-                <button routerLink="/makasana"><mat-icon>logout</mat-icon></button>
-            </div>
-
-        </div>
-            
-    </div>
+ 
 
     <app-spinner-component *ngIf="spnValue != 0" style="
 position: absolute;
@@ -243,6 +213,6 @@ width: 100%;"></app-spinner-component>
       </div>
     </div>
   </div>
-
+ <app-bottom-nav></app-bottom-nav>
 
 

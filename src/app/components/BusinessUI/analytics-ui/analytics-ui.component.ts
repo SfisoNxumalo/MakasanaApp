@@ -177,8 +177,18 @@ export class AnalyticsUiComponent implements OnInit{
       const date = new Date(order.date)
       const month = this.month[date.getUTCMonth()]
 
-      console.log(">>> " ,order.productId)
-
+      switch(order.order_status) {
+        case "pending":
+          this.OrderPending = this.OrderPending + 1
+          break;
+          case "completed":
+          this.OrderCompleted = this.OrderCompleted + 1
+          break;
+          case "rejected":
+          this.OrderRejected = this.OrderRejected + 1
+          break;
+      }
+      
       if(MostSelling.has(order.productId)){
         const cun = MostSelling.get(order.productId);
 
@@ -197,22 +207,10 @@ export class AnalyticsUiComponent implements OnInit{
         TotalProductsSold.set(month, (prevQuantityCount + order.quantity));
         TotalOrdersProcessed.set(month, (prevcount + 1));
 
-        
-
         continue;
-
       }
-        switch(order.order_status) {
-                  case "pending":
-                    this.OrderPending = this.OrderPending + 1
-                    break;
-                    case "completed":
-                    this.OrderCompleted = this.OrderCompleted + 1
-                    break;
-                    case "rejected":
-                    this.OrderRejected = this.OrderRejected + 1
-                    break;
-                }
+
+       
       TotalProductsSold.set(month, order.quantity);
       TotalOrdersProcessed.set(month, 1);
     }

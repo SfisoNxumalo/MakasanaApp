@@ -4,16 +4,23 @@
     width: 100%;
     height: 100%;
     padding-bottom: 30px;
+    align-items: center;
 }
 
 .holder2{
     padding: 20px;
-    height: 100%;
+    height: auto;
 }
 
 .header h1{
     font-weight: 600;
 
+}
+
+.viewW{
+    text-decoration: underline;
+    display: flex;
+    font-size: medium;
 }
 
 .login-div{
@@ -116,6 +123,14 @@ input{
     z-index: 1000;
   
   }
+
+  .vie{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 4px;
+  }
   
   .spn button{
     background-color: transparent;
@@ -126,4 +141,14 @@ input{
     z-index: 1000;
     font-size: 12px;
   
+  }
+
+  mat-icon{
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    color: #03a994;
   }

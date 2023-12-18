@@ -1,5 +1,5 @@
-
-<header>
+<div *ngIf="hasWebsite == 1">
+    <header>
         <label>{{companyDetails.name}}</label>
         <button>
             <span></span>
@@ -7,8 +7,8 @@
             <span></span>
         </button>
     </header>
+
 <div class="main-holder">
-    
     
     <div class="body">
         <section id="home">
@@ -63,9 +63,26 @@
             </div>
 
             <div class="details">
-                <a></a>
+                <label><mat-icon>email</mat-icon></label>
+                <p>
+                    {{companyDetails.email}}
+                </p>
             </div>
         </section>
     
     </div>
+</div>
+</div>
+
+<div *ngIf="spnValue != 0">
+    <mat-progress-bar  mode="indeterminate"></mat-progress-bar>
+</div>
+
+<div class="not-found" *ngIf="hasWebsite == 2">
+    
+    <img src="../../../../assets/images/Not-found.jpg"/>
+
+    <label>Company doesn't not have a website</label>
+    <label>redirecting to <a routerLink="/makasana">Home</a>, in 3 secs</label>
+    
 </div>

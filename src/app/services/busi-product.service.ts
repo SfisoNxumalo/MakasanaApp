@@ -17,27 +17,6 @@ export class ProductService {
 
   constructor( private http: HttpClient, private token:TokenService){}
 
-  // createProduct(id:string,title:string, image:string, price:string, description:string, 
-  //   category:string, quantity:string, conduction:string) :Observable<any> {
-  //   return this.http.post(`${this.api}create/${id}`,{title,image, price, description, category,
-  //   quantity,conduction},httpOptions)
-  // }
-  
-  // getProuctById(id:string):Observable<any>{
-  //   return this.http.get(this.api+"getById/"+id,httpOptions)
-  // }
-
-  // updateProduct(id:string, title:string, image:string, price: string, description:string, 
-  //   category:string,quantity:string,conduction:string):Observable<any>{
-  //     return this.http.put(this.api+"update/"+id,{title, image, price, description,category,
-  //     quantity,conduction}, httpOptions)
-  // }
-
-  // findAll(id:string):Observable<any>{
-  //   return this.http.get(this.api+"findAll/"+id,httpOptions)
-  // }
-
-
    Token = this.token.getToken();
 
   getMyProducts():Observable<any>{
@@ -48,7 +27,6 @@ export class ProductService {
 
     return this.http.get(this.api + "my-products", {headers});
   }
-
 
   getOneProduct(id:any):Observable<any>{
 

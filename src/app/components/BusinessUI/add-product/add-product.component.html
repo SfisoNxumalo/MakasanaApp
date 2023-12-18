@@ -73,50 +73,14 @@ class="left" srcset="" height="30px" width="30px">
             </div>
         </div>
     </div>
-    
-
-    <div class="bottom-nav">
-
-        <div class="nav-options" >
-
-            <div class="nav-item">
-                <button routerLink="/dashboard"><mat-icon>home</mat-icon></button>
-            </div>
-
-            <div class="nav-item">
-                <button routerLink="/orders"><mat-icon>assignment</mat-icon></button>
-                
-            </div>
-
-            <div class="nav-item">
-                <button routerLink="/my-products"><mat-icon>store</mat-icon></button>
-                <label>Products</label>
-            </div>
-
-            <!-- <div class="nav-item">
-                <button><mat-icon>launch</mat-icon></button>
-                
-            </div> -->
-
-            <div class="nav-item">
-                <button  routerLink="/buss-profile"><mat-icon>account_circle</mat-icon></button>
-                
-            </div>
-
-            <div class="nav-item">
-                <button routerLink="/makasana"><mat-icon>logout</mat-icon></button>
-                
-            </div>
-
-        </div>
-            
-    </div>
 
     <button class="spn" *ngIf="spnValue != 0">
         <mat-spinner style="width: 50px; height: 50px;" mode="indeterminate" class="spinner"></mat-spinner>
       </button>
 
-</div>    
+</div>  
+
+<app-bottom-nav></app-bottom-nav>
 
 
 <div class="toast-container  position-fixed bottom-0 end-0 p-3" >

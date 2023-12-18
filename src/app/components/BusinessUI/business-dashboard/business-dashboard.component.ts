@@ -19,7 +19,6 @@ export class BusinessDashboardComponent implements OnInit {
       this.token.mShow().subscribe((data) =>{
         this.CompanyDetails = data
         console.log(data)
-
       })
     
   }

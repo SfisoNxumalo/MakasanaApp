@@ -1,10 +1,10 @@
-<div class="holder">
-    <app-business-top></app-business-top>
+    
     <app-spinner-component *ngIf="spnValue != 0" style="
 position: absolute;
 height: auto;
 width: 100%;"></app-spinner-component>
-  <br/>
+<app-business-top></app-business-top>
+<div class="holder">
   <h2><b>Orders</b></h2>
     <div class="order-holder">
 
@@ -47,44 +47,4 @@ width: 100%;"></app-spinner-component>
 
 
 </div>
-
-  <div class="bottom-nav">
-
-      <div class="nav-options" >
-
-          <div class="nav-item">
-              <button routerLink="/dashboard"><mat-icon>home</mat-icon></button>
-              <label>Home</label>
-          </div>
-
-          <div class="nav-item">
-              <button><mat-icon>assignment</mat-icon></button>
-              <label>Orders</label>
-          </div>
-
-          <div class="nav-item">
-              <button routerLink="/my-products"><mat-icon>store</mat-icon></button>
-              <label>Products</label>
-
-          </div>
-
-          <!-- <div class="nav-item">
-              <button><mat-icon>launch</mat-icon></button>
-
-          </div> -->
-
-          <div class="nav-item">
-              <button routerLink="/buss-profile"><mat-icon>account_circle</mat-icon></button>
-              <label>Profile</label>         
-
-          </div>
-
-          <div class="nav-item">
-            <button routerLink="/makasana"><mat-icon>logout</mat-icon></button>
-            <label>Logout</label>
-
-        </div>
-
-      </div>
-
-  </div>
+<app-bottom-nav></app-bottom-nav>

@@ -58,7 +58,8 @@ import { WebsiteComponent } from './components/BusinessUI/website/website.compon
 import { AddWebsiteDetailsComponent } from './components/BusinessUI/add-website-details/add-website-details.component';
 import { SpinnerComponentComponent } from './spinner-component/spinner-component.component';
 import { ViewBusinessProductsComponent } from './components/UserUI/view-business-products/view-business-products.component';
-import { BusinessTopComponent } from './business-top/business-top.component';
+import { BusinessTopComponent } from './components/BusinessUI/business-top/business-top.component';
+import { BottomNavComponent } from './bottom-nav/bottom-nav.component';
 
 @NgModule({
   declarations: [
@@ -106,7 +107,8 @@ import { BusinessTopComponent } from './business-top/business-top.component';
     AddWebsiteDetailsComponent,
     SpinnerComponentComponent,
     ViewBusinessProductsComponent,
-    BusinessTopComponent
+    BusinessTopComponent,
+    BottomNavComponent
   ],
   imports: [
     BrowserModule,
