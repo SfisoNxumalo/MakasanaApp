@@ -29,8 +29,14 @@ this.spnValue = 1
             this.mSortOrders(data.message)
         )},
         error: (err) => {
+          if(err.status == 405){
+            alert("Session expired, Login again")
+            this.router.navigate(["/company-login"])
+          }
+          else{
+            alert(err.error.message)
+          }
           this.spnValue = 0
-          alert(err)
         }
       });
     }

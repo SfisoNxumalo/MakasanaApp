@@ -80,7 +80,13 @@ export class AddProductComponent  {
           this.spnValue = 0;
         },
         error: (err) => {
-          alert(err)
+          if(err.status == 405){
+            alert("Session expired, Login again")
+            this.route.navigate(["/company-login"])
+          }
+          else{
+            alert(err.error.message)
+          }
            this.spnValue = 0;
           // this.blLoadComplete = false
         },

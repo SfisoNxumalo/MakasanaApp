@@ -13,7 +13,7 @@ import { TokenService } from './token.service';
 })
 export class ProductService {
 
-  api = "https://makasana-api.vercel.app/makasana-api/business/"
+  api = "http://localhost:2023/makasana-api/business/"
 
   constructor( private http: HttpClient, private token:TokenService){}
 

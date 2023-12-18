@@ -11,7 +11,7 @@ const httpOptions = {
   providedIn: 'root',
 })
 export class OrderService {
-  private apiUrl = 'https://makasana-api.vercel.app/order';
+  private apiUrl = 'http://localhost:2023/order';
 
   constructor(private http: HttpClient) {}
 

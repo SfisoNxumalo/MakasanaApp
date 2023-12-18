@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { TokenService } from 'src/app/services/token.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { TokenService } from 'src/app/services/token.service';
 })
 export class BusinessDashboardComponent implements OnInit {
 
-  constructor(private token:TokenService){}
+  constructor(private token:TokenService, private route:Router){}
 
   CompanyName = "Makasana"
   CompanyDetails:any = {};
@@ -18,7 +19,6 @@ export class BusinessDashboardComponent implements OnInit {
    
       this.token.mShow().subscribe((data) =>{
         this.CompanyDetails = data
-        console.log(data)
       })
     
   }
