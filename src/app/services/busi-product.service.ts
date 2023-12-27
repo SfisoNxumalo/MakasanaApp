@@ -45,7 +45,7 @@ export class ProductService {
     .append('Accept', '*/*')
     // .append("content-type", "multipart/form-data")
 
-    console.log(body.get("title"))
+    // console.log(body.get("title"))
 
     return this.http.post(this.api + "create-product", body, {headers});
 
