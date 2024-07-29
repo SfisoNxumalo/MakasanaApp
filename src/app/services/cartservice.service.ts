@@ -22,7 +22,7 @@ export class CartserviceService {
 items: Products[] = [];
 totAmount = 0
 endpoint = "https://fakestoreapi.com/";
-api = "https://makasana-api.vercel.app/makasana-api/"
+api = "http://localhost:5500/makasana-api/"
 
 constructor(private http: HttpClient, private token:TokenService){}
 ngOnInit(): void {

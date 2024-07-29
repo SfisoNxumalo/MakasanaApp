@@ -10,9 +10,9 @@ export class CustProductsService {
 
   constructor( private http: HttpClient, private token:TokenService) { }
 
-  Token = this.token.getToken();
+  private Token = this.token.getToken();
 
-  api = "https://makasana-api.vercel.app/makasana-api/products/"
+  private api = "http://localhost:5500/makasana-api/products/"
 
   getProducts(category:any):Observable<any>{
     const headers = new HttpHeaders()

@@ -20,7 +20,6 @@ export class BusinessProductsComponent implements OnInit {
   constructor(private fakeApi:FakeStoreService, private productService: ProductService, private tokenService:TokenstorageService,private token:TokenService, private route:Router){}
   image = "https://media.istockphoto.com/id/620737858/photo/cape-town-and-the-12-apostels-from-above.jpg?s=612x612&w=is&k=20&c=WBxI8OmAFXoGz5I5QjU0eI87I5C6K8h0Xs4JmArrEQQ=";
 
-
   CompanyDetails:any = {};
 
   ngOnInit(): void {
@@ -33,18 +32,18 @@ export class BusinessProductsComponent implements OnInit {
     })
   }
 
-  mGet(){
-    this.fakeApi.mGetProducts().subscribe({
-      next: (res) => {(
-        // this.products = res,
-        this.blLoadComplete = false
-      )},
-      error: (err) => {
-        console.log(err)
-        this.blLoadComplete = false
-      }
-    })
-  }
+  // mGet(){
+  //   this.fakeApi.mGetProducts().subscribe({
+  //     next: (res) => {(
+  //       // this.products = res,
+  //       this.blLoadComplete = false
+  //     )},
+  //     error: (err) => {
+  //       console.log(err)
+  //       this.blLoadComplete = false
+  //     }
+  //   })
+  // }
   
   getAllProduct(){
     this.productService.getMyProducts().subscribe({

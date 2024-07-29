@@ -374,6 +374,7 @@ nav
         height: 100%;
         gap: 5px;
         color: white;
+        justify-content: center;
         width: 100%;
     }
 

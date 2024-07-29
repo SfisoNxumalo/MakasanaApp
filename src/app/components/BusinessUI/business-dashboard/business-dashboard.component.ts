@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NotificationsService } from 'src/app/services/notifications.service';
 import { TokenService } from 'src/app/services/token.service';
 
 @Component({
@@ -9,17 +10,27 @@ import { TokenService } from 'src/app/services/token.service';
 })
 export class BusinessDashboardComponent implements OnInit {
 
-  constructor(private token:TokenService, private route:Router){}
+  constructor(private token:TokenService, private route:Router, private Noti: NotificationsService){}
 
-  CompanyName = "Makasana"
+   CompanyName = "Makasana"
   CompanyDetails:any = {};
+  CompanyNotification:any = [];
 
   ngOnInit(): void {
-
-   
       this.token.mShow().subscribe((data) =>{
         this.CompanyDetails = data
-      })
+      });
+
+      this.Noti.getMyNotifications().subscribe((data:Array<{}>) => {
+
+        if(data.length){
+          this.CompanyNotification = data.slice(0, 3)
+        }
+        else{
+          this.CompanyNotification = ["No new notifications"]
+        }
+        
+      });
     
   }
   

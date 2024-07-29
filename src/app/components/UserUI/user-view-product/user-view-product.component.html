@@ -36,7 +36,7 @@
         <div class="prod-options">
             <div class="business">
                 <label>Sold by</label>
-                <p routerLink="/products/{{product.business.name}}/{{product.business._id}}">{{product.business.name | titlecase}}</p>
+                <p routerLink="/products/{{product.business.name}}/{{product.business._id}}">{{product.business.name || "Unknown" | titlecase}}</p>
             </div>
         </div>
 

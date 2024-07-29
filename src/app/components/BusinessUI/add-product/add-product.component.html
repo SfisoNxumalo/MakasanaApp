@@ -13,7 +13,7 @@ class="left" srcset="" height="30px" width="30px">
         
             <div class="btn-upload">
                 <mat-icon>camera_enhance</mat-icon>
-                <input type="file" accept="image/png, image/jpeg" (change)= "loadImage($event)">
+                <input type="file" accept=".png, .jpeg, .jpg" (change)= "loadImage($event)">
                 <img [src]="imageee">
             </div>
 

@@ -8,7 +8,7 @@ export class PassOrderService {
 
   constructor() { }
 
-   currentOrder = new BehaviorSubject<any>([]);
+  private currentOrder = new BehaviorSubject<any>([]);
 
   mPassOrder(data:any){
     this.mClear();

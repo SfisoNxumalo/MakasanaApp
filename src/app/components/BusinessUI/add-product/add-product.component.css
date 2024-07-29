@@ -1,5 +1,3 @@
-@media only screen and (max-width:700px){
-
 .holder{
     background-color: white;
     min-width: 100%;
@@ -8,7 +6,28 @@
     flex-direction: column;
     align-items: center;
     padding: 10px;
+    padding-top: 18px;
 }
+
+.input-field input, 
+.input-field textarea, 
+.input-field select{
+  padding: 5px 50px;
+  border: 1px solid black;
+  border-radius: 5px;
+  outline: none;
+  font-size: medium;
+}
+
+
+.input-field input, 
+.input-field select{
+ height: 40px;
+}
+
+@media only screen and (max-width:700px){
+
+
 
 .details-holder{
   width: 100%;
@@ -98,14 +117,6 @@
     flex-direction: column;
   }
 
-  .input-field input, 
-  .input-field textarea, 
-  .input-field select{
-    padding: 5px;
-    border: 1px solid black;
-    border-radius: 5px;
-    outline: none;
-  }
 
   .input-field textarea{
     resize: none
@@ -254,6 +265,7 @@
   flex-direction: column;
   align-items: center;
   padding: 10px;
+  
 }
 
 .details-holder{

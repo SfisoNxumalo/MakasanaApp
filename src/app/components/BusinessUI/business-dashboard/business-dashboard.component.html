@@ -21,12 +21,8 @@
 
         <div class="Noti-panel">
 
-            <div class="noti-item">
-                <label>Product running low</label>
-            </div>
-
-            <div class="noti-item">
-                <label>New Order Received</label>
+            <div *ngFor="let noti of CompanyNotification" class="noti-item">
+                <label>{{noti}}</label>
             </div>
 
         </div>

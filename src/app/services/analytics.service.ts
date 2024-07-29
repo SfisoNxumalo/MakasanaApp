@@ -11,9 +11,9 @@ export class AnalyticsService {
   constructor(private http:HttpClient,
     private token:TokenService) { }
 
-  products_api = "https://makasana-api.vercel.app/makasana-api/business/"
-  orders_api = "https://makasana-api.vercel.app/makasana-api/"
-  Token = this.token.getToken();
+    private products_api = "http://localhost:5500/makasana-api/business/"
+    private orders_api = "http://localhost:5500/makasana-api/"
+    private Token = this.token.getToken();
 
   mGetProductData():Observable<any>{
 

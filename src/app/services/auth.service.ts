@@ -11,8 +11,8 @@ const httpOptions = {
 })
 export class AuthService {
 
-  business_api = "https://makasana-api.vercel.app/makasana-api/auth/business/"
-  user_api = "https://makasana-api.vercel.app/makasana-api/auth/customer/"
+  private business_api = "http://localhost:5500/makasana-api/auth/business/"
+  private user_api = "http://localhost:5500/makasana-api/auth/customer/"
   
 
   constructor(private http: HttpClient) { }

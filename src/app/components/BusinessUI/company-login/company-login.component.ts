@@ -30,8 +30,6 @@ export class CompanyLoginComponent {
 
   constructor(private authSer: AuthService, private token:TokenService,private route:Router) { }
 
-
-  
   mSignIn(){
 
     this.spnValue = 1;
@@ -52,7 +50,6 @@ export class CompanyLoginComponent {
 
         if(error.status == 401){
           alert(error.error.message)
-
         }
         else{
           alert("We have encountered an error")

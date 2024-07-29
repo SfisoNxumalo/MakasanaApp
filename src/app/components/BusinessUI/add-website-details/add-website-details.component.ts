@@ -57,12 +57,9 @@ export class AddWebsiteDetailsComponent implements OnInit{
             alert("Unexpected error occured")
           }
           // this.blLoadComplete = false
-  
         }
       });
-    }, 2000)
-    
-      
+    }, 2000)  
   }
 
   mCreate() {

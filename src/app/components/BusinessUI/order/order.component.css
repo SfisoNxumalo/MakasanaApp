@@ -73,3 +73,19 @@
 }
 
 
+.holder1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.holder1 label{
+  color: rgb(160, 160, 160);
+}
+
+.holder1 img{
+  width: 100px;
+  height: 100px;
+}

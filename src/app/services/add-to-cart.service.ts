@@ -14,11 +14,11 @@ export class AddToCartService {
   }
 
   // Tcart = new BehaviorSubject<Map<String, Object>>();
-  cart = new BehaviorSubject<any>([]);
-  FinalOrder = new BehaviorSubject<any>([]);
+  private cart = new BehaviorSubject<any>([]);
+  private FinalOrder = new BehaviorSubject<any>([]);
 
-  CartMap = new Map();
-  cartt:any = []
+  private CartMap = new Map();
+  private cartt:any = []
 
   AddToCart(data:any){
 

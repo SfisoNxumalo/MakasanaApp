@@ -16,7 +16,7 @@ declare var bootstrap: any; // Declare Bootstrap variable
 })
 export class AddProductComponent  {
 
-  imageee = "https://paymentcloudinc.com/blog/wp-content/uploads/2021/08/product-ideas-to-sell-300x200.webp";
+  imageee = "../../../../assets/gallery-2.png";
 
   business:any ={}
   @ViewChild('toastElement')
@@ -44,7 +44,9 @@ export class AddProductComponent  {
   async loadImage(event:any){
     const selectedFile = event.target.files[0];
     const reader = new FileReader();
+
     this.productDetail.image = event.target.files[0]
+    
     reader.onload = async (event:any) => {
 
      this.imageee = event.target.result
@@ -97,7 +99,7 @@ export class AddProductComponent  {
   mClear(){
     this.productDetail = {
       title: "",
-      image: "https://paymentcloudinc.com/blog/wp-content/uploads/2021/08/product-ideas-to-sell-300x200.webp",
+      image: "../../../../assets/gallery-2.png",
       description: "",
       category: "",
       price: 0,
@@ -107,6 +109,7 @@ export class AddProductComponent  {
       added: new Date(),
       updated: new Date()
     }
+    this.imageee = "../../../../assets/gallery-2.png"
   }
   
   showToast() {

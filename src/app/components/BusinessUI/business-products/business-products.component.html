@@ -10,7 +10,7 @@
     
             <div class="hamburger-icon">
                 <div class="noti" routerLink="/add-product">
-                    <mat-icon>add</mat-icon>
+                    <mat-icon style="cursor: pointer;">add</mat-icon>
                 </div>
                 
                 <img class="prof" src={{image}}/>
@@ -38,7 +38,7 @@
         <div  class="item-holder">
             <div class="products-div-ii">
                 <div *ngFor="let product of products" class="menu-item2" routerLink="/view-product/{{product._id}}">
-                    <img class="main-logo2" src="{{product.image}}">
+                    <img loading="lazy" class="main-logo2" alt="{{product.image}}" src="{{product.image}}">
             
                     <div class="prod-text">
                         <label>{{product.title}}</label>
