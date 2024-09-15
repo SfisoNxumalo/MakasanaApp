@@ -22,7 +22,7 @@ export class CartserviceService {
 items: Products[] = [];
 totAmount = 0
 endpoint = "https://fakestoreapi.com/";
-api = "http://localhost:2023/makasana-api/"
+api = "https://makasana.shaper.co.za/makasana-api/"
 
 constructor(private http: HttpClient, private token:TokenService){}
 ngOnInit(): void {
